@@ -222,7 +222,7 @@ class ClaudeProcess:
 
 class ClaudeManager:
     """Manages multiple Claude Code processes."""
-    
+
     def __init__(self):
         self.processes: Dict[str, ClaudeProcess] = {}
         self.max_concurrent = settings.max_concurrent_sessions
@@ -236,20 +236,86 @@ class ClaudeManager:
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE
             )
-            
+
             stdout, stderr = await result.communicate()
-            
+
             if result.returncode == 0:
                 version = stdout.decode().strip()
                 return version
             else:
                 error = stderr.decode().strip()
                 raise Exception(f"Claude version check failed: {error}")
-                
+
         except FileNotFoundError:
             raise Exception(f"Claude binary not found at: {settings.claude_binary_path}")
         except Exception as e:
             raise Exception(f"Failed to get Claude version: {str(e)}")
+
+    async def get_mcp_status(self) -> Dict[str, Any]:
+        """Get MCP server status using 'claude mcp list'."""
+        try:
+            result = await asyncio.create_subprocess_exec(
+                settings.claude_binary_path,
+                "mcp",
+                "list",
+                stdout=asyncio.subprocess.PIPE,
+                stderr=asyncio.subprocess.PIPE
+            )
+
+            stdout, stderr = await result.communicate()
+
+            mcp_servers = {}
+            if result.returncode == 0:
+                output = stdout.decode().strip()
+                lines = output.split('\n')
+
+                # Parse MCP server status
+                # Expected format: "server-name: command - ✓ Connected" or "server-name: command - ✗ Error"
+                for line in lines:
+                    if ':' in line and ('-' in line):
+                        # Parse line like "chrome-devtools: npx -y chrome-devtools-mcp@latest - ✓ Connected"
+                        parts = line.split(':', 1)
+                        if len(parts) == 2:
+                            server_name = parts[0].strip()
+                            rest = parts[1].strip()
+
+                            # Check if connected
+                            is_connected = '✓' in rest or 'Connected' in rest
+                            status = "connected" if is_connected else "disconnected"
+
+                            # Don't include command to avoid exposing tokens
+                            mcp_servers[server_name] = {
+                                "status": status
+                            }
+
+                return {
+                    "available": True,
+                    "servers": mcp_servers,
+                    "total": len(mcp_servers),
+                    "connected": sum(1 for s in mcp_servers.values() if s["status"] == "connected")
+                }
+            else:
+                # MCP command failed
+                error = stderr.decode().strip() or stdout.decode().strip()
+                return {
+                    "available": False,
+                    "error": error or "MCP command failed",
+                    "servers": {}
+                }
+
+        except FileNotFoundError:
+            return {
+                "available": False,
+                "error": f"Claude binary not found at: {settings.claude_binary_path}",
+                "servers": {}
+            }
+        except Exception as e:
+            logger.error("Failed to get MCP status", error=str(e))
+            return {
+                "available": False,
+                "error": str(e),
+                "servers": {}
+            }
     
     async def create_session(
         self,

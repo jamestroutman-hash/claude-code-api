@@ -128,24 +128,36 @@ async def global_exception_handler(request, exc):
 
 @app.get("/health")
 async def health_check():
-    """Health check endpoint."""
+    """Health check endpoint with MCP server status."""
     try:
         # Check Claude Code availability
         claude_version = await app.state.claude_manager.get_version()
-        
-        return {
-            "status": "healthy",
+
+        # Check MCP server status
+        mcp_status = await app.state.claude_manager.get_mcp_status()
+
+        # Determine overall health
+        is_healthy = mcp_status.get("available", False)
+        status_code = 200 if is_healthy else 200  # Always return 200 but indicate status
+
+        response = {
+            "status": "healthy" if is_healthy else "degraded",
             "version": "1.0.0",
             "claude_version": claude_version,
-            "active_sessions": len(app.state.session_manager.active_sessions)
+            "active_sessions": len(app.state.session_manager.active_sessions),
+            "mcp": mcp_status
         }
+
+        return JSONResponse(status_code=status_code, content=response)
+
     except Exception as e:
         logger.error("Health check failed", error=str(e))
         return JSONResponse(
             status_code=503,
             content={
                 "status": "unhealthy",
-                "error": str(e)
+                "error": str(e),
+                "mcp": {"available": False, "error": "Health check failed"}
             }
         )
 

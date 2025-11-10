@@ -247,6 +247,14 @@ Key settings in `claude_code_api/core/config.py`:
 - `database_url`: Database connection string
 - `require_auth`: Enable/disable authentication
 
+### MCP Server Configuration
+
+The Docker image includes two pre-installed MCP servers:
+- **Atlassian Confluence** - Access Confluence spaces, pages, and search
+- **Monday.com** - Interact with Monday.com boards and items
+
+For detailed configuration instructions, see [MCP_CONFIGURATION.md](MCP_CONFIGURATION.md).
+
 ## Design Principles
 
 1. **Simple & Focused**: No over-engineering
@@ -265,11 +273,29 @@ Response:
 ```json
 {
   "status": "healthy",
-  "version": "1.0.0", 
+  "version": "1.0.0",
   "claude_version": "1.x.x",
-  "active_sessions": 0
+  "active_sessions": 0,
+  "mcp": {
+    "available": true,
+    "servers": {
+      "atlassian-confluence": {
+        "status": "connected"
+      },
+      "monday-api": {
+        "status": "connected"
+      }
+    },
+    "total": 2,
+    "connected": 2
+  }
 }
 ```
+
+**Status Values:**
+- `healthy` - All systems operational, MCP servers available
+- `degraded` - API operational but MCP servers unavailable or misconfigured
+- `unhealthy` - Critical failure (returns 503)
 
 ## License
 

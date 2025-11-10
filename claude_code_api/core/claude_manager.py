@@ -69,12 +69,19 @@ class ClaudeProcess:
                 *cmd,
                 cwd=src_dir,
                 stdout=asyncio.subprocess.PIPE,
-                stderr=asyncio.subprocess.PIPE
+                stderr=asyncio.subprocess.PIPE,
+                env=os.environ.copy()
             )
             
             # Wait for process to complete and capture all output
             stdout, stderr = await self.process.communicate()
-            
+            # Log stdout and stderr for debugging
+            # Debug logging MUST be here, before any error checking
+            logger.error(f"=== DEBUG: Exit code: {self.process.returncode} ===")
+            if stderr:
+                logger.error(f"=== DEBUG: Claude stderr: {stderr.decode()} ===")
+            if stdout:
+                logger.info(f"=== DEBUG: Claude stdout: {stdout.decode()[:1000]} ===")
             logger.info(
                 "Claude process completed",
                 session_id=self.session_id,

@@ -1,103 +1,98 @@
-# Use Ubuntu as base for better Claude Code support
-FROM ubuntu:22.04
+# Multi-stage build for smaller final image with MCP support
+# Builds from local code with Atlassian Confluence and Monday.com MCP servers
 
-# Prevent interactive prompts during build
-ENV DEBIAN_FRONTEND=noninteractive
+FROM python:3.11-slim as builder
 
-# Install system dependencies including Node.js
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     curl \
     git \
-    python3.10 \
-    python3-pip \
-    ca-certificates \
-    bash \
-    sudo \
-    jq \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Upgrade pip and setuptools to latest versions
-RUN pip3 install --upgrade pip setuptools wheel
-
-# Install Node.js 18+ (required for Claude Code)
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+# Install Node.js (required for Claude Code CLI and MCP servers)
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get install -y nodejs && \
-    node --version && npm --version
+    rm -rf /var/lib/apt/lists/*
 
-# Install Claude Code CLI globally as root (before switching to non-root user)
-RUN npm install -g @anthropic-ai/claude-code && \
-    claude --version
+# Copy dependency files
+COPY pyproject.toml setup.py ./
+COPY claude_code_api ./claude_code_api
 
-# Create non-root user for running Claude Code
-RUN useradd -m -s /bin/bash claudeuser && \
-    echo "claudeuser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir .
 
-# Switch to non-root user
-USER claudeuser
-WORKDIR /home/claudeuser
+# Install Claude Code CLI globally
+RUN npm install -g @anthropic-ai/claude-code
 
-# Create Claude config directory
-RUN mkdir -p /home/claudeuser/.config/claude
+# Install MCP servers
+RUN npm install -g @aashari/mcp-server-atlassian-confluence@latest && \
+    npm install -g @mondaydotcomorg/monday-api-mcp@latest
 
-# Create workspace directory for Claude Code
-RUN mkdir -p /home/claudeuser/workspace
+# Final stage
+FROM python:3.11-slim
 
-# Set up working directory
-WORKDIR /home/claudeuser/app
+# Install runtime dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    git \
+    && rm -rf /var/lib/apt/lists/*
 
-# Clone claude-code-api
-RUN git clone https://github.com/christag/claude-code-api.git .
+# Install Node.js (required for Claude Code CLI and MCP servers)
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs && \
+    rm -rf /var/lib/apt/lists/*
 
-# Install dependencies using modern pip (avoiding deprecated setup.py)
-RUN pip3 install --user --upgrade pip && \
-    pip3 install --user -e . --use-pep517 || \
-    pip3 install --user -e .
+# Copy Python packages from builder
+COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+COPY --from=builder /usr/local/bin /usr/local/bin
 
-# Add user's local bin to PATH
-ENV PATH="/home/claudeuser/.local/bin:${PATH}"
+# Copy Claude Code CLI from builder
+COPY --from=builder /usr/lib/node_modules/@anthropic-ai/claude-code /usr/lib/node_modules/@anthropic-ai/claude-code
+RUN ln -s /usr/lib/node_modules/@anthropic-ai/claude-code/cli.js /usr/local/bin/claude && \
+    chmod +x /usr/lib/node_modules/@anthropic-ai/claude-code/cli.js
 
-# Expose API port
+# Copy MCP servers from builder
+COPY --from=builder /usr/lib/node_modules/@aashari/mcp-server-atlassian-confluence /usr/lib/node_modules/@aashari/mcp-server-atlassian-confluence
+COPY --from=builder /usr/lib/node_modules/@mondaydotcomorg/monday-api-mcp /usr/lib/node_modules/@mondaydotcomorg/monday-api-mcp
+
+# Set working directory
+WORKDIR /app
+
+# Copy application code from local repository
+COPY claude_code_api ./claude_code_api
+COPY pyproject.toml setup.py ./
+COPY docker-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+# Create necessary directories
+RUN mkdir -p /app/data /root/.config/claude
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV PORT=8000
+ENV HOST=0.0.0.0
+
+# MCP Server Configuration
+# Set these environment variables when running the container:
+# - ATLASSIAN_SITE_NAME: Your Atlassian site name (e.g., mycompany)
+# - ATLASSIAN_USER_EMAIL: Your Atlassian email
+# - ATLASSIAN_API_TOKEN: Your Atlassian API token
+# - MONDAY_TOKEN: Your Monday.com API token
+# - ANTHROPIC_API_KEY: Your Anthropic API key (optional if using Claude Max)
+
+# Expose port
 EXPOSE 8000
 
-# Environment variables (set these at runtime)
-ENV ANTHROPIC_API_KEY=""
-ENV HOST=0.0.0.0
-ENV PORT=8000
-
-# Health check
+# Health check with MCP verification
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:8000/health || exit 1
+    CMD curl -f http://localhost:8000/health -o /tmp/health.json && \
+        grep -q '"status".*"healthy\|degraded"' /tmp/health.json || exit 1
 
-# Create entrypoint script - DO NOT configure with API key if using Claude Max
-RUN echo '#!/bin/bash\n\
-set -e\n\
-\n\
-# Only configure API key if explicitly provided and not using Claude Max\n\
-if [ -n "$ANTHROPIC_API_KEY" ] && [ "$USE_CLAUDE_MAX" != "true" ]; then\n\
-  echo "Configuring Claude Code with API key..."\n\
-  mkdir -p ~/.config/claude\n\
-  cat > ~/.config/claude/config.json << EOF\n\
-{\n\
-  "apiKey": "$ANTHROPIC_API_KEY",\n\
-  "autoUpdate": false\n\
-}\n\
-EOF\n\
-  echo "Claude Code configured with API key"\n\
-elif [ "$USE_CLAUDE_MAX" = "true" ]; then\n\
-  echo "Using Claude Max subscription - please run: docker exec -it claude-code-api claude"\n\
-  echo "Then authenticate via browser when prompted"\n\
-else\n\
-  echo "No authentication configured. Set ANTHROPIC_API_KEY or USE_CLAUDE_MAX=true"\n\
-fi\n\
-\n\
-# Test Claude Code\n\
-echo "Testing Claude Code..."\n\
-claude --version || echo "Claude Code installed"\n\
-\n\
-echo "Starting API server..."\n\
-cd /home/claudeuser/app\n\
-exec python3 -m claude_code_api.main' > /home/claudeuser/entrypoint.sh && \
-    chmod +x /home/claudeuser/entrypoint.sh
-
-# Start the API server with entrypoint
-ENTRYPOINT ["/home/claudeuser/entrypoint.sh"]
+# Set entrypoint and command
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+CMD ["python", "-m", "uvicorn", "claude_code_api.main:app", "--host", "0.0.0.0", "--port", "8000"]

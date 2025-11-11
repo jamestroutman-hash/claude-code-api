@@ -2,7 +2,7 @@
 set -e
 
 # Generate MCP configuration from environment variables in ~/.claude.json
-cat > /root/.claude.json <<EOF
+cat > ~/.claude.json <<EOF
 {
   "mcpServers": {
     "atlassian-confluence": {
@@ -19,7 +19,7 @@ cat > /root/.claude.json <<EOF
 EOF
 
 echo "MCP configuration generated at ~/.claude.json"
-cat /root/.claude.json
+cat ~/.claude.json
 
 # Execute the main command
 exec "$@"

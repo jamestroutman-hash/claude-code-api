@@ -1,7 +1,7 @@
 # Multi-stage build for smaller final image with MCP support
 # Builds from local code with Atlassian Confluence and Monday.com MCP servers
 
-FROM python:3.11-slim as builder
+FROM python:3.11-slim AS builder
 
 # Set working directory
 WORKDIR /app
@@ -48,6 +48,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get install -y nodejs && \
     rm -rf /var/lib/apt/lists/*
 
+# Create non-root user for running Claude Code
+RUN groupadd -r claudeuser && useradd -r -g claudeuser -m -d /home/claudeuser claudeuser
+
 # Copy Python packages from builder
 COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
@@ -65,14 +68,15 @@ COPY --from=builder /usr/lib/node_modules/@mondaydotcomorg/monday-api-mcp /usr/l
 # Set working directory
 WORKDIR /app
 
-# Copy application code from local repository
-COPY claude_code_api ./claude_code_api
-COPY pyproject.toml setup.py ./
+# Copy application code from local repository (with correct ownership)
+COPY --chown=claudeuser:claudeuser claude_code_api ./claude_code_api
+COPY --chown=claudeuser:claudeuser pyproject.toml setup.py ./
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-# Create necessary directories
-RUN mkdir -p /app/data /root/.config/claude
+# Create necessary directories with correct ownership
+RUN mkdir -p /app/data /home/claudeuser/.config/claude && \
+    chown -R claudeuser:claudeuser /app /home/claudeuser
 
 # Set environment variables optimized for low memory
 ENV PYTHONUNBUFFERED=1
@@ -97,6 +101,9 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8000/health -o /tmp/health.json && \
         grep -q '"status".*"healthy\|degraded"' /tmp/health.json || exit 1
+
+# Switch to non-root user
+USER claudeuser
 
 # Set entrypoint and command with memory-optimized settings
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]

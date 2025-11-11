@@ -8,7 +8,12 @@ from enum import Enum
 
 class ClaudeModel(str, Enum):
     """Available Claude models - matching Claude Code CLI supported models."""
-    OPUS_4 = "claude-opus-4-20250514"
+    # Latest models (Claude Code 2.0.37)
+    SONNET_45 = "claude-sonnet-4-5-20250929"  # Default - Smartest for daily use
+    HAIKU_45 = "claude-haiku-4-5-20251001"    # Fastest for simple tasks
+    OPUS_4 = "claude-opus-4-20250514"         # Legacy - Reaches limits faster
+
+    # Legacy models (still supported)
     SONNET_4 = "claude-sonnet-4-20250514"
     SONNET_37 = "claude-3-7-sonnet-20250219"
     HAIKU_35 = "claude-3-5-haiku-20241022"
@@ -125,7 +130,7 @@ class ClaudeProjectConfig(BaseModel):
     project_id: str = Field(..., description="Project ID")
     name: str = Field(..., description="Project name")
     path: str = Field(..., description="Project path")
-    default_model: str = Field(ClaudeModel.HAIKU_35, description="Default model")
+    default_model: str = Field(ClaudeModel.SONNET_45, description="Default model")
     system_prompt: Optional[str] = Field(None, description="Default system prompt")
     tools_enabled: List[ClaudeToolType] = Field(default_factory=list, description="Enabled tools")
     max_tokens: Optional[int] = Field(None, description="Maximum tokens per request")
@@ -194,31 +199,82 @@ class ClaudeModelInfo(BaseModel):
     supports_tools: bool = Field(True, description="Whether model supports tool use")
 
 
+# Model aliases mapping (Claude Code CLI aliases)
+MODEL_ALIASES = {
+    # Official aliases
+    "sonnet": ClaudeModel.SONNET_45,
+    "haiku": ClaudeModel.HAIKU_45,
+    "opus": ClaudeModel.OPUS_4,
+
+    # OpenAI-style compatibility aliases
+    "gpt-4": ClaudeModel.SONNET_45,
+    "gpt-4-turbo": ClaudeModel.SONNET_45,
+    "gpt-3.5-turbo": ClaudeModel.HAIKU_45,
+
+    # Legacy Claude API style names
+    "claude-3-opus": ClaudeModel.OPUS_4,
+    "claude-3-sonnet": ClaudeModel.SONNET_45,
+    "claude-3-haiku": ClaudeModel.HAIKU_45,
+    "claude-3-5-sonnet": ClaudeModel.SONNET_45,
+    "claude-3-5-haiku": ClaudeModel.HAIKU_35,
+}
+
+
 # Utility functions for model validation
 def validate_claude_model(model: str) -> str:
-    """Validate and normalize Claude model name."""
-    # Direct Claude model names
+    """Validate and normalize Claude model name.
+
+    Accepts:
+    - Direct Claude model IDs (claude-sonnet-4-5-20250929)
+    - Claude Code aliases (sonnet, haiku, opus)
+    - OpenAI-style names (gpt-4, gpt-3.5-turbo)
+    - Legacy Claude names (claude-3-opus, claude-3-5-sonnet)
+    """
+    # Check if it's already a valid model ID
     valid_models = [model.value for model in ClaudeModel]
-    
     if model in valid_models:
         return model
-    
-    # Default to Haiku for testing
-    return ClaudeModel.HAIKU_35
+
+    # Check if it's an alias
+    if model.lower() in MODEL_ALIASES:
+        return MODEL_ALIASES[model.lower()]
+
+    # Default to Sonnet 4.5 (matches Claude Code default)
+    return ClaudeModel.SONNET_45
 
 
 def get_default_model() -> str:
-    """Get the default Claude model."""
-    return ClaudeModel.HAIKU_35
+    """Get the default Claude model (Sonnet 4.5 - matches Claude Code default)."""
+    return ClaudeModel.SONNET_45
 
 
 def get_model_info(model_id: str) -> ClaudeModelInfo:
     """Get information about a Claude model."""
     model_info = {
+        ClaudeModel.SONNET_45: ClaudeModelInfo(
+            id=ClaudeModel.SONNET_45,
+            name="Claude Sonnet 4.5",
+            description="Smartest model for daily use (Default in Claude Code)",
+            max_tokens=200000,
+            input_cost_per_1k=3.0,
+            output_cost_per_1k=15.0,
+            supports_streaming=True,
+            supports_tools=True
+        ),
+        ClaudeModel.HAIKU_45: ClaudeModelInfo(
+            id=ClaudeModel.HAIKU_45,
+            name="Claude Haiku 4.5",
+            description="Fastest model for simple tasks",
+            max_tokens=200000,
+            input_cost_per_1k=0.25,
+            output_cost_per_1k=1.25,
+            supports_streaming=True,
+            supports_tools=True
+        ),
         ClaudeModel.OPUS_4: ClaudeModelInfo(
             id=ClaudeModel.OPUS_4,
             name="Claude Opus 4",
-            description="Most powerful Claude model for complex reasoning",
+            description="Legacy: Most powerful model (reaches usage limits faster)",
             max_tokens=500000,
             input_cost_per_1k=15.0,
             output_cost_per_1k=75.0,
@@ -228,7 +284,7 @@ def get_model_info(model_id: str) -> ClaudeModelInfo:
         ClaudeModel.SONNET_4: ClaudeModelInfo(
             id=ClaudeModel.SONNET_4,
             name="Claude Sonnet 4",
-            description="Latest Sonnet model with enhanced capabilities",
+            description="Legacy: Previous Sonnet model",
             max_tokens=500000,
             input_cost_per_1k=3.0,
             output_cost_per_1k=15.0,
@@ -238,7 +294,7 @@ def get_model_info(model_id: str) -> ClaudeModelInfo:
         ClaudeModel.SONNET_37: ClaudeModelInfo(
             id=ClaudeModel.SONNET_37,
             name="Claude Sonnet 3.7",
-            description="Advanced Sonnet model for complex tasks",
+            description="Legacy: Advanced Sonnet model",
             max_tokens=200000,
             input_cost_per_1k=3.0,
             output_cost_per_1k=15.0,
@@ -248,7 +304,7 @@ def get_model_info(model_id: str) -> ClaudeModelInfo:
         ClaudeModel.HAIKU_35: ClaudeModelInfo(
             id=ClaudeModel.HAIKU_35,
             name="Claude Haiku 3.5",
-            description="Fast and cost-effective model for quick tasks",
+            description="Legacy: Fast model for quick tasks",
             max_tokens=200000,
             input_cost_per_1k=0.25,
             output_cost_per_1k=1.25,
@@ -256,8 +312,8 @@ def get_model_info(model_id: str) -> ClaudeModelInfo:
             supports_tools=True
         )
     }
-    
-    return model_info.get(model_id, model_info[ClaudeModel.HAIKU_35])
+
+    return model_info.get(model_id, model_info[ClaudeModel.SONNET_45])
 
 
 def get_available_models() -> List[ClaudeModelInfo]:

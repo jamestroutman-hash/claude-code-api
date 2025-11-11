@@ -29,18 +29,18 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Install Claude Code CLI globally
 RUN npm install -g @anthropic-ai/claude-code
 
-# Install MCP servers
+# Install MCP servers and clean cache to reduce image size
 RUN npm install -g @aashari/mcp-server-atlassian-confluence@latest && \
     npm install -g @mondaydotcomorg/agent-toolkit@latest && \
-    npm install -g @mondaydotcomorg/monday-api-mcp@latest
+    npm install -g @mondaydotcomorg/monday-api-mcp@latest && \
+    npm cache clean --force
 
 # Final stage
 FROM python:3.11-slim
 
-# Install runtime dependencies
+# Install minimal runtime dependencies (removed git to save memory)
 RUN apt-get update && apt-get install -y \
     curl \
-    git \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js (required for Claude Code CLI and MCP servers)
@@ -74,10 +74,13 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 # Create necessary directories
 RUN mkdir -p /app/data /root/.config/claude
 
-# Set environment variables
+# Set environment variables optimized for low memory
 ENV PYTHONUNBUFFERED=1
 ENV PORT=8000
 ENV HOST=0.0.0.0
+ENV NODE_ENV=production
+ENV NODE_OPTIONS="--max-old-space-size=256"
+ENV PYTHONOPTIMIZE=1
 
 # MCP Server Configuration
 # Set these environment variables when running the container:
@@ -95,6 +98,6 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8000/health -o /tmp/health.json && \
         grep -q '"status".*"healthy\|degraded"' /tmp/health.json || exit 1
 
-# Set entrypoint and command
+# Set entrypoint and command with memory-optimized settings
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-CMD ["python", "-m", "uvicorn", "claude_code_api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "-m", "uvicorn", "claude_code_api.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1", "--limit-concurrency", "10"]

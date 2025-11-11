@@ -152,12 +152,48 @@ curl http://localhost:8000/v1/models
 curl -X POST http://localhost:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "claude-3-5-haiku-20241022", 
+    "model": "claude-3-5-haiku-20241022",
     "messages": [
       {"role": "user", "content": "Tell me a joke"}
     ],
     "stream": true
   }'
+```
+
+### Multi-Turn Conversations
+
+The API supports maintaining conversation context across multiple requests using session IDs:
+
+```bash
+# First message - creates a new session
+curl -X POST http://localhost:8000/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "claude-3-5-haiku-20241022",
+    "messages": [
+      {"role": "user", "content": "My name is Alice"}
+    ]
+  }'
+
+# Extract session_id from response, then continue conversation:
+curl -X POST http://localhost:8000/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "claude-3-5-haiku-20241022",
+    "messages": [
+      {"role": "user", "content": "My name is Alice"},
+      {"role": "assistant", "content": "Hello Alice! How can I help you?"},
+      {"role": "user", "content": "What is my name?"}
+    ],
+    "session_id": "550e8400-e29b-41d4-a716-446655440000"
+  }'
+```
+
+**See [MULTI_TURN_CONVERSATIONS.md](MULTI_TURN_CONVERSATIONS.md) for detailed guide with Python/JavaScript examples.**
+
+**Test multi-turn conversations:**
+```bash
+./test-multi-turn.sh
 ```
 
 ## Project Structure

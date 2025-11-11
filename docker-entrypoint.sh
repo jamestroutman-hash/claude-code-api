@@ -13,13 +13,6 @@ cat > /root/.claude.json <<EOF
         "ATLASSIAN_USER_EMAIL": "${ATLASSIAN_USER_EMAIL:-}",
         "ATLASSIAN_API_TOKEN": "${ATLASSIAN_API_TOKEN:-}"
       }
-    },
-    "monday-api": {
-      "command": "npx",
-      "args": ["-y", "@mondaydotcomorg/monday-api-mcp@latest", "-t", "${MONDAY_TOKEN:-}"],
-      "env": {
-        "monday_token": "${MONDAY_TOKEN:-}"
-      }
     }
   }
 }

@@ -31,6 +31,7 @@ RUN npm install -g @anthropic-ai/claude-code
 
 # Install MCP servers
 RUN npm install -g @aashari/mcp-server-atlassian-confluence@latest && \
+    npm install -g @mondaydotcomorg/agent-toolkit@latest && \
     npm install -g @mondaydotcomorg/monday-api-mcp@latest
 
 # Final stage
@@ -58,6 +59,7 @@ RUN ln -s /usr/lib/node_modules/@anthropic-ai/claude-code/cli.js /usr/local/bin/
 
 # Copy MCP servers from builder
 COPY --from=builder /usr/lib/node_modules/@aashari/mcp-server-atlassian-confluence /usr/lib/node_modules/@aashari/mcp-server-atlassian-confluence
+COPY --from=builder /usr/lib/node_modules/@mondaydotcomorg/agent-toolkit /usr/lib/node_modules/@mondaydotcomorg/agent-toolkit
 COPY --from=builder /usr/lib/node_modules/@mondaydotcomorg/monday-api-mcp /usr/lib/node_modules/@mondaydotcomorg/monday-api-mcp
 
 # Set working directory

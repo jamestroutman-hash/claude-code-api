@@ -330,3 +330,6 @@ docs/typescript-translation-plan.md
 
 # Note: test scripts in tests/ directory should be tracked in git
 fix_env.patch
+
+# Claude OAuth credentials (persisted for Docker builds)
+data/.credentials.json

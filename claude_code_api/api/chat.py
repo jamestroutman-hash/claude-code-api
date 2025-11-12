@@ -120,14 +120,36 @@ async def create_chat_completion(
                 detail={
                     "error": {
                         "message": "At least one user message is required",
-                        "type": "invalid_request_error", 
+                        "type": "invalid_request_error",
                         "code": "missing_user_message"
                     }
                 }
             )
-        
-        user_prompt = user_messages[-1].get_text_content()
-        
+
+        # Build conversation context if this is a multi-turn conversation
+        if len(request.messages) > 1:
+            # Format the full conversation history for Claude
+            conversation_parts = []
+            for msg in request.messages:
+                if msg.role == "system":
+                    continue  # System prompts handled separately
+                elif msg.role == "user":
+                    conversation_parts.append(f"User: {msg.get_text_content()}")
+                elif msg.role == "assistant":
+                    conversation_parts.append(f"Assistant: {msg.get_text_content()}")
+
+            # Combine with a note that this is a continuation
+            user_prompt = "This is a continuation of a previous conversation. Here is the full context:\n\n" + "\n\n".join(conversation_parts)
+
+            logger.info(
+                "Built multi-turn conversation context",
+                message_count=len(request.messages),
+                conversation_length=len(user_prompt)
+            )
+        else:
+            # Single message - just use it directly
+            user_prompt = user_messages[-1].get_text_content()
+
         # Extract system prompt
         system_messages = [msg for msg in request.messages if msg.role == "system"]
         system_prompt = system_messages[0].get_text_content() if system_messages else request.system_prompt
@@ -190,7 +212,16 @@ async def create_chat_completion(
         
         # Use Claude's actual session ID
         claude_session_id = claude_process.session_id
-        
+
+        # If Claude returned a different session_id, rename our session
+        if not request.session_id and claude_session_id != session_id:
+            await session_manager.rename_session(session_id, claude_session_id)
+            logger.info(
+                "Session ID updated from Claude",
+                original_id=session_id,
+                claude_id=claude_session_id
+            )
+
         # Update session with user message
         await session_manager.update_session(
             session_id=claude_session_id,

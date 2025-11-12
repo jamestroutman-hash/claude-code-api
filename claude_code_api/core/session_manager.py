@@ -130,6 +130,59 @@ class SessionManager:
         
         return None
     
+    async def rename_session(self, old_session_id: str, new_session_id: str):
+        """Rename/update session ID (for Claude Code session ID updates)."""
+        if old_session_id == new_session_id:
+            return  # No change needed
+
+        # Get existing session
+        session_info = await self.get_session(old_session_id)
+        if not session_info:
+            logger.warning(
+                "Cannot rename session - old session not found",
+                old_session_id=old_session_id,
+                new_session_id=new_session_id
+            )
+            return
+
+        # Update session_id
+        session_info.session_id = new_session_id
+
+        # Move in active sessions
+        if old_session_id in self.active_sessions:
+            del self.active_sessions[old_session_id]
+        self.active_sessions[new_session_id] = session_info
+
+        # Update database
+        try:
+            # Create new session record with correct ID
+            session_data = {
+                "id": new_session_id,
+                "project_id": session_info.project_id,
+                "model": session_info.model,
+                "system_prompt": session_info.system_prompt,
+                "title": f"Session {new_session_id[:8]}",
+                "created_at": session_info.created_at,
+                "updated_at": session_info.updated_at
+            }
+            await db_manager.create_session(session_data)
+
+            # Note: We don't delete the old session from DB to maintain history
+            # The old_session_id record will become inactive when cleanup runs
+        except Exception as e:
+            logger.error(
+                "Error updating session in database",
+                old_session_id=old_session_id,
+                new_session_id=new_session_id,
+                error=str(e)
+            )
+
+        logger.info(
+            "Session ID updated",
+            old_session_id=old_session_id,
+            new_session_id=new_session_id
+        )
+
     async def update_session(
         self,
         session_id: str,

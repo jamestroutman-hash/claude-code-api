@@ -44,11 +44,15 @@ class ClaudeProcess:
             
             if model:
                 cmd.extend(["--model", model])
-            
+
+            # Add session resumption if provided
+            if resume_session:
+                cmd.extend(["--resume", resume_session])
+
             # Always use stream-json output format (exact order from working example)
             cmd.extend([
                 "--output-format", "stream-json",
-                "--verbose", 
+                "--verbose",
                 "--dangerously-skip-permissions"
             ])
             

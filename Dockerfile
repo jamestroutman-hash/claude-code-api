@@ -75,8 +75,14 @@ COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Create necessary directories with correct ownership
-RUN mkdir -p /app/data /home/claudeuser/.config/claude && \
+RUN mkdir -p /app/data /home/claudeuser/.config/claude /home/claudeuser/.claude/debug && \
     chown -R claudeuser:claudeuser /app /home/claudeuser
+
+# Copy persisted Claude state (credentials, settings, history, etc.)
+COPY --chown=claudeuser:claudeuser data/claude-state /home/claudeuser/.claude
+
+# Secure the credentials file
+RUN chmod 600 /home/claudeuser/.claude/.credentials.json
 
 # Set environment variables optimized for low memory
 ENV PYTHONUNBUFFERED=1

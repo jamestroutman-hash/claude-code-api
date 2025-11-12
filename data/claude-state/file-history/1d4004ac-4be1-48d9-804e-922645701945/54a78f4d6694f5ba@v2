@@ -1,0 +1,138 @@
+'use client';
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { SyncButton } from './SyncButton';
+import { EditWorkstreamModal } from './EditWorkstreamModal';
+
+interface WorkstreamHeaderProps {
+  workstream: {
+    id: string;
+    name: string;
+    description?: string | null;
+    color?: string | null;
+    monday_epic_board_id?: string | null;
+    monday_feature_board_id?: string | null;
+    monday_story_board_id?: string | null;
+    confluence_page_id?: string | null;
+  };
+  slug: string;
+  confluenceBaseUrl?: string;
+  confluenceSpaceKey?: string;
+}
+
+export function WorkstreamHeader({
+  workstream,
+  slug,
+  confluenceBaseUrl,
+  confluenceSpaceKey
+}: WorkstreamHeaderProps) {
+  const router = useRouter();
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+
+  const handleSyncComplete = () => {
+    // Refresh the page data after sync
+    router.refresh();
+  };
+
+  return (
+    <>
+      <div className="flex items-start gap-4">
+        {workstream.color && (
+          <div
+            className="h-16 w-16 rounded-lg flex-shrink-0"
+            style={{ backgroundColor: workstream.color }}
+          />
+        )}
+        <div className="flex-1">
+          <div className="flex items-start justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">{workstream.name}</h1>
+              {workstream.description && (
+                <p className="mt-2 text-gray-600">{workstream.description}</p>
+              )}
+              {(workstream.monday_epic_board_id ||
+                workstream.monday_feature_board_id ||
+                workstream.monday_story_board_id ||
+                workstream.confluence_page_id) && (
+                <div className="mt-3 space-y-1 text-sm text-gray-600">
+                  {workstream.monday_epic_board_id && (
+                    <div className="flex items-center gap-2">
+                      <span className="text-gray-500">Epic Board:</span>
+                      <a
+                        href={`https://veritasprime-products.monday.com/boards/${workstream.monday_epic_board_id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-blue-600 hover:text-blue-800 hover:underline"
+                      >
+                        {workstream.monday_epic_board_id}
+                      </a>
+                    </div>
+                  )}
+                  {workstream.monday_feature_board_id && (
+                    <div className="flex items-center gap-2">
+                      <span className="text-gray-500">Feature Board:</span>
+                      <a
+                        href={`https://veritasprime-products.monday.com/boards/${workstream.monday_feature_board_id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-blue-600 hover:text-blue-800 hover:underline"
+                      >
+                        {workstream.monday_feature_board_id}
+                      </a>
+                    </div>
+                  )}
+                  {workstream.monday_story_board_id && (
+                    <div className="flex items-center gap-2">
+                      <span className="text-gray-500">Story Board:</span>
+                      <a
+                        href={`https://veritasprime-products.monday.com/boards/${workstream.monday_story_board_id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-blue-600 hover:text-blue-800 hover:underline"
+                      >
+                        {workstream.monday_story_board_id}
+                      </a>
+                    </div>
+                  )}
+                  {workstream.confluence_page_id && confluenceBaseUrl && confluenceSpaceKey && (
+                    <div className="flex items-center gap-2">
+                      <span className="text-gray-500">Confluence:</span>
+                      <a
+                        href={`${confluenceBaseUrl}/wiki/spaces/${confluenceSpaceKey}/pages/${workstream.confluence_page_id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 hover:underline"
+                      >
+                        View Page
+                      </a>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setIsEditModalOpen(true)}
+                className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                Edit
+              </button>
+              {(workstream.monday_epic_board_id ||
+                workstream.monday_feature_board_id ||
+                workstream.monday_story_board_id) && (
+                <SyncButton workstreamSlug={slug} onSyncComplete={handleSyncComplete} />
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <EditWorkstreamModal
+        workstream={{ ...workstream, slug }}
+        isOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
+      />
+    </>
+  );
+}

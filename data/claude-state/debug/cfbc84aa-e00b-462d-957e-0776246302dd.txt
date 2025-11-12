@@ -1,0 +1,475 @@
+[DEBUG] Watching for changes in setting files /home/jamestroutman/.claude/settings.json, /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 13 allow rule(s) to destination 'localSettings': ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)"]
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/jamestroutman/.claude/skills, project=/home/jamestroutman/code/experiments/claude-code-api/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+[DEBUG] Looking for shell config file: /home/jamestroutman/.zshrc
+[DEBUG] Snapshots directory: /home/jamestroutman/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /home/jamestroutman/.claude/shell-snapshots/snapshot-zsh-1762796475870-eie50p.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/cfbc84aa-e00b-462d-957e-0776246302dd-agent-cfbc84aa-e00b-462d-957e-0776246302dd.json.tmp.125950.1762796475876
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/cfbc84aa-e00b-462d-957e-0776246302dd-agent-cfbc84aa-e00b-462d-957e-0776246302dd.json.tmp.125950.1762796475876 to /home/jamestroutman/.claude/todos/cfbc84aa-e00b-462d-957e-0776246302dd-agent-cfbc84aa-e00b-462d-957e-0776246302dd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/cfbc84aa-e00b-462d-957e-0776246302dd-agent-cfbc84aa-e00b-462d-957e-0776246302dd.json written atomically
+[DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/x64-linux/rg)
+[DEBUG] MCP server "chrome-devtools": Starting connection with timeout of 30000ms
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796476092
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46270 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796476092 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796476155
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46165 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796476155 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796476166
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46165 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796476166 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796476172
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46165 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796476172 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] performStartupChecks called
+[DEBUG] Starting background plugin installations
+[DEBUG] performBackgroundPluginInstallations called
+[DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+[DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+[ERROR] MCP server "chrome-devtools" Server stderr: chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,
+debug, and modify any data in the browser or DevTools.
+Avoid sharing sensitive or personal information that you do not want to share with MCP clients.
+[DEBUG] MCP server "ide": Starting connection with timeout of 30000ms
+[DEBUG] Shell snapshot created successfully (19795 bytes)
+[DEBUG] MCP server "chrome-devtools": Successfully connected to stdio server in 1526ms
+[DEBUG] MCP server "chrome-devtools": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"0.10.1"}}
+[DEBUG] MCP server "ide": Successfully connected to ws-ide server in 119ms
+[DEBUG] MCP server "ide": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Claude Code VSCode MCP","version":"2.0.34"}}
+[DEBUG] Summarizing last 3 of 228 messages (~125474 tokens)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796478601
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46165 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796478601 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796478607
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46165 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796478607 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796478613
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46165 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796478613 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796478624
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46270 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796478624 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvaWMFo24W8gRFjzsJ"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 0)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796478745
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46270 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796478745 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcveSEqt4eZJJCFKQyN"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 3)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcveXCRiBFjFWSU4isP"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 2)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcveZBRkQFejByyHrui"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 1)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcveYgcNSKrR8UBc9Xv"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 4)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error streaming, falling back to non-streaming mode: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcveSEb6Eg71KjYGRpv"}
+[ERROR] Error streaming, falling back to non-streaming mode: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvevkf4pAcfT68mjf7"}
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfLoik5qkNxTFsneH"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 15)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfPHXETnqfTtW2NAY"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 22)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfHb5ohCd1mgx5pvU"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 13)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfQ2spkVNxbUKUPPc"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 24)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfJL6UjaBgqThLm9A"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 21)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfJpy6CTMGgwp33jE"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 23)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfPnHuFD2ubbsksdt"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 16)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfJaKxeEnYpd6MEHL"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 12)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfPnKKtcr9djsuFva"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 25)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfPHbq4bR38eJSEZi"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 18)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfKpDLANT8MndrZbh"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 14)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfQH3BUEnHFPMKZsB"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 19)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfFrCUechxZTvvKQD"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 17)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfah3zZgPAnVpaXMc"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 20)
+    at async ZEA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:2396)
+    at async od2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3396:482)
+[ERROR] Error in non-streaming fallback: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfeR7QRGWgki5RAja"}
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfeR7QRGWgki5RAja"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Vc2.FA1.model (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14776)
+    at async FA1 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2745:39781)
+    at async Vc2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14930)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8667
+    at async $A0 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:1970)
+    at async l8A (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8637)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[ERROR] Error in non-streaming fallback: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfawUiLVk2urHff7G"}
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfawUiLVk2urHff7G"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Vc2.FA1.model (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14776)
+    at async FA1 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2745:39781)
+    at async Vc2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14930)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8435
+    at async $A0 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:1970)
+    at async PS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8406)
+[ERROR] Error streaming, falling back to non-streaming mode: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvfhtAZk6R3qaCsvQs"}
+[DEBUG] Summarizing last 11 of 13 messages (~148992 tokens)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvg5i5oSRxegkG1ehK"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 8)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvg5xGUEKaJPtY3wTV"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 10)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvgCetFSewXAamCEXz"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 5)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvgCeu63DeV5QZ4Ta6"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 11)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvgGNgY6mbeqeyLJj9"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 6)
+[ERROR] Error streaming, falling back to non-streaming mode: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvgJMfX8DUZiEFMydN"}
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvgNpDHKKwsCbeW8AM"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 7)
+[ERROR] Error in non-streaming fallback: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvgFdUq9BHJzvoWvSr"}
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvgFdUq9BHJzvoWvSr"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Vc2.FA1.model (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14776)
+    at async FA1 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2745:39781)
+    at async Vc2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14930)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8667
+    at async $A0 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:1970)
+    at async l8A (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8637)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvgYjoqsp42ioeBdFi"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MVA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1313:8767)
+    at async bwA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1088)
+    at async h01 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3386:1297)
+    at async Promise.all (index 9)
+[ERROR] Error in non-streaming fallback: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvgiuCbJ5RXYP4ZCo5"}
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvgiuCbJ5RXYP4ZCo5"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Vc2.FA1.model (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14776)
+    at async FA1 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2745:39781)
+    at async Vc2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14930)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8435
+    at async $A0 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:1970)
+    at async PS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8406)
+[DEBUG] Summarizing last 26 of 378 messages (~122614 tokens)
+[ERROR] Error streaming, falling back to non-streaming mode: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcvhazgoCRDkXBtC2Vi"}
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Telemetry flushed successfully
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796479722
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46270 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796479722 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796479731
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45886 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796479731 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[ERROR] Error in non-streaming fallback: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcviCCxXvP3SDRTM4VE"}
+[ERROR] Error: Error: 403 {"type":"error","error":{"type":"permission_error","message":"OAuth authentication is currently not allowed for this organization."},"request_id":"req_011CUzcviCCxXvP3SDRTM4VE"}
+    at $4.generate (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:206:83135)
+    at Dk.makeStatusError (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:2117)
+    at Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:5341)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Vc2.FA1.model (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14776)
+    at async FA1 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2745:39781)
+    at async Vc2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14930)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8435
+    at async $A0 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:1970)
+    at async PS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8406)
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /home/jamestroutman/.claude/shell-snapshots/snapshot-zsh-1762796475870-eie50p.sh
+[DEBUG] MCP server "chrome-devtools": Sending SIGINT to MCP server process
+[DEBUG] LSP server manager shut down successfully
+[DEBUG] MCP server "chrome-devtools": SIGINT failed, sending SIGTERM to MCP server process
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] MCP server "chrome-devtools": MCP server process exited cleanly
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.125950.1762796480179
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46266 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.125950.1762796480179 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically

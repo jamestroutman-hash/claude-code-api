@@ -1,0 +1,14 @@
+-- Migration: Add confluence_page_id to workstreams
+-- Description: Adds a column to link workstreams directly to their root Confluence page
+
+-- Add confluence_page_id column to workstreams table
+ALTER TABLE workstreams
+ADD COLUMN confluence_page_id VARCHAR(100);
+
+-- Create an index for the new column
+CREATE INDEX idx_workstreams_confluence_page
+ON workstreams(confluence_page_id)
+WHERE confluence_page_id IS NOT NULL;
+
+-- Add comment explaining the column
+COMMENT ON COLUMN workstreams.confluence_page_id IS 'Confluence page ID for the workstream root page (e.g., "Clarity Tax" page)';

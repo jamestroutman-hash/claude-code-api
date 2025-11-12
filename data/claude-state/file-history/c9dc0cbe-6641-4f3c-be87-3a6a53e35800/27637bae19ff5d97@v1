@@ -1,0 +1,271 @@
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import rehypeSanitize from 'rehype-sanitize';
+import { StoryCreationModal } from './StoryCreationModal';
+
+interface Story {
+  id: string;
+  key: string | null;
+  title: string;
+  description: string | null;
+  status: string;
+  priority: string | null;
+  monday_item_id: string | null;
+  tasks?: Array<{
+    id: string;
+    key: string | null;
+    title: string;
+    status: string;
+  }>;
+}
+
+interface Feature {
+  id: string;
+  key: string | null;
+  title: string;
+  description: string | null;
+  status: string;
+  confluence_page_id: string | null;
+}
+
+interface Epic {
+  id: string;
+  key: string | null;
+  title: string;
+}
+
+interface Workstream {
+  id: string;
+  name: string;
+  slug: string;
+}
+
+interface FeatureDetailClientProps {
+  feature: Feature;
+  epic: Epic;
+  workstream: Workstream;
+  workspace_id: string;
+  stories: Story[];
+}
+
+/**
+ * Feature detail view with story management
+ * @see /docs/specs/feature-spec.md#overview
+ * Displays feature with child stories and enables story creation
+ * Shows completion metrics and progress tracking
+ */
+export function FeatureDetailClient({
+  feature,
+  epic,
+  workstream,
+  workspace_id,
+  stories,
+}: FeatureDetailClientProps) {
+  const [showStoryModal, setShowStoryModal] = useState(false);
+
+  /**
+   * Calculate story statistics for progress tracking
+   * Supports completion percentage calculation shown in UI
+   */
+  const completedStories = stories.filter((s) => s.status === 'completed').length;
+  const inProgressStories = stories.filter((s) => s.status === 'in_progress').length;
+
+  return (
+    <>
+      {/* Stats */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-4 mb-8">
+        <div className="rounded-lg border border-gray-200 bg-white p-6">
+          <div className="text-sm font-medium text-gray-500">Total Stories</div>
+          <div className="mt-2 text-3xl font-bold text-gray-900">{stories.length}</div>
+        </div>
+        <div className="rounded-lg border border-gray-200 bg-white p-6">
+          <div className="text-sm font-medium text-gray-500">Completed</div>
+          <div className="mt-2 text-3xl font-bold text-green-600">{completedStories}</div>
+        </div>
+        <div className="rounded-lg border border-gray-200 bg-white p-6">
+          <div className="text-sm font-medium text-gray-500">In Progress</div>
+          <div className="mt-2 text-3xl font-bold text-blue-600">{inProgressStories}</div>
+        </div>
+        <div className="rounded-lg border border-gray-200 bg-white p-6">
+          <div className="text-sm font-medium text-gray-500">Completion</div>
+          <div className="mt-2 text-3xl font-bold text-gray-900">
+            {stories.length > 0 ? Math.round((completedStories / stories.length) * 100) : 0}%
+          </div>
+        </div>
+      </div>
+
+      {/* Stories Section Header with Add Button */}
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-2xl font-bold text-gray-900">Stories</h2>
+        <button
+          onClick={() => setShowStoryModal(true)}
+          className="inline-flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        >
+          <svg
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 4v16m8-8H4"
+            />
+          </svg>
+          Create Story with AI
+        </button>
+      </div>
+
+      {/* Stories List */}
+      {stories.length === 0 ? (
+        <div className="rounded-lg border border-gray-200 bg-white p-8 text-center">
+          <p className="text-gray-500 mb-4">No stories found for this feature</p>
+          <button
+            onClick={() => setShowStoryModal(true)}
+            className="inline-flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+          >
+            <svg
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+            Create Your First Story
+          </button>
+        </div>
+      ) : (
+        <div className="space-y-3">
+          {stories.map((story) => (
+            <div
+              key={story.id}
+              className="rounded-lg border border-gray-200 bg-white p-6 hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-sm font-mono text-gray-500">{story.key}</span>
+                    <span
+                      className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                        story.status === 'in_progress'
+                          ? 'bg-blue-100 text-blue-800'
+                          : story.status === 'completed'
+                          ? 'bg-green-100 text-green-800'
+                          : story.status === 'blocked'
+                          ? 'bg-red-100 text-red-800'
+                          : 'bg-gray-100 text-gray-800'
+                      }`}
+                    >
+                      {story.status}
+                    </span>
+                    {story.priority && (
+                      <span
+                        className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                          story.priority === 'critical'
+                            ? 'bg-red-100 text-red-800'
+                            : story.priority === 'high'
+                            ? 'bg-orange-100 text-orange-800'
+                            : story.priority === 'medium'
+                            ? 'bg-yellow-100 text-yellow-800'
+                            : 'bg-gray-100 text-gray-800'
+                        }`}
+                      >
+                        {story.priority}
+                      </span>
+                    )}
+                  </div>
+                  <Link
+                    href={`/stories/${story.id}`}
+                    className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors"
+                  >
+                    {story.title}
+                  </Link>
+                  {story.description && (
+                    <div className="mt-2 prose prose-sm max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-blue-600 prose-strong:text-gray-900 prose-code:text-pink-600 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 prose-pre:text-gray-100">
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={[rehypeRaw, rehypeSanitize]}
+                      >
+                        {story.description}
+                      </ReactMarkdown>
+                    </div>
+                  )}
+                  {story.monday_item_id && (
+                    <p className="mt-2 text-xs text-gray-500">
+                      Monday Item: {story.monday_item_id}
+                    </p>
+                  )}
+                </div>
+              </div>
+
+              {/* Tasks for this story */}
+              {story.tasks && story.tasks.length > 0 && (
+                <div className="mt-4 space-y-2 border-t border-gray-100 pt-4">
+                  <h4 className="text-sm font-medium text-gray-700">Tasks:</h4>
+                  {story.tasks.map((task) => (
+                    <div
+                      key={task.id}
+                      className="flex items-center justify-between rounded-md bg-gray-50 px-3 py-2"
+                    >
+                      <div className="flex items-center gap-2 flex-1">
+                        <span className="text-xs font-mono text-gray-500">{task.key}</span>
+                        <span className="text-sm text-gray-900">{task.title}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${
+                            task.status === 'in_progress'
+                              ? 'bg-blue-100 text-blue-800'
+                              : task.status === 'done'
+                              ? 'bg-green-100 text-green-800'
+                              : task.status === 'review'
+                              ? 'bg-purple-100 text-purple-800'
+                              : 'bg-gray-100 text-gray-800'
+                          }`}
+                        >
+                          {task.status}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Story Creation Modal */}
+      {showStoryModal && (
+        <StoryCreationModal
+          feature={{
+            id: feature.id,
+            key: feature.key || '',
+            title: feature.title,
+            description: feature.description,
+            status: feature.status,
+            confluence_page_id: feature.confluence_page_id,
+          }}
+          epic={{ title: epic.title }}
+          workstream={{ id: workstream.id, slug: workstream.slug }}
+          workspace_id={workspace_id}
+          epicKey={epic.key || ''}
+          onClose={() => setShowStoryModal(false)}
+        />
+      )}
+    </>
+  );
+}

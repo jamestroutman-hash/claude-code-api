@@ -1,0 +1,1520 @@
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for 9e87c4d3-0667-470b-8f99-8c731e9f33ca, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761578812361
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 277631 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761578812361 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761578812372
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276918 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761578812372 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] FileHistory: Making snapshot for message 48864710-9a4c-4a10-8bbe-b0fa51dbfdb1
+[DEBUG] FileHistory: Added snapshot for 48864710-9a4c-4a10-8bbe-b0fa51dbfdb1, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/model</command-name>
+            <command-message>model</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "model" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761578830922
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276918 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761578830922 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761578830933
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761578830933 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 642s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 644s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761578833499
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761578833499 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 183911s
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 37376050-156e-491d-8bb1-53a6b310927d
+[DEBUG] FileHistory: Added snapshot for 37376050-156e-491d-8bb1-53a6b310927d, tracking 0 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Glob
+[DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Glob
+[DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[ERROR] Error: Error: EISDIR: illegal operation on a directory, read
+    at Module.readFileSync (node:fs:440:20)
+    at Object.readFileSync (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:9:299)
+    at sb2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3567:956)
+    at Object.call (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3399:947)
+    at call.next (<anonymous>)
+    at vj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:65482)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Eq2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:62539)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:61708
+    at async UhA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:725:1714)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Grep
+[DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] No hook environment files found
+[DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761578948032
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761578948032 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761578948035
+[DEBUG] Temp file written successfully, size: 662 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761578948035 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761578960277
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761578960277 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761578960281
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 666 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761578960281 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/configurations/route.ts
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/configurations/route.ts.tmp.5063.1761578960359
+[DEBUG] Temp file written successfully, size: 1992 bytes
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/configurations/route.ts.tmp.5063.1761578960359 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/configurations/route.ts
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/configurations/route.ts written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761578987280
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761578987280 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761578987284
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 668 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761578987284 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761578987332
+[DEBUG] Temp file written successfully, size: 7848 bytes
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761578987332 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761578996957
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761578996957 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761578996961
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 670 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761578996961 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/layout.tsx
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/layout.tsx.tmp.5063.1761578997011
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2138 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/layout.tsx.tmp.5063.1761578997011 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/layout.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/layout.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579004162
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579004162 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579004166
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 672 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579004166 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: BashOutput
+[DEBUG] Getting matching hook commands for PreToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: KillShell
+[DEBUG] Getting matching hook commands for PreToolUse with query: KillShell
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "KillShell" (0 before deduplication)
+[DEBUG] BackgroundShell dbe065 kill requested
+[DEBUG] Getting matching hook commands for PostToolUse with query: KillShell
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "KillShell" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/configurations/route.ts.tmp.5063.1761579058369
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2012 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/configurations/route.ts.tmp.5063.1761579058369 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/configurations/route.ts
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/configurations/route.ts written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761579065073
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 7855 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761579065073 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__chrome-devtools__navigate_page
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__chrome-devtools__navigate_page
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__chrome-devtools__navigate_page" (0 before deduplication)
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579091400
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1432 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579091400 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["mcp__chrome-devtools__navigate_page"]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "chrome-devtools": Calling MCP tool: navigate_page
+[ERROR] MCP server "chrome-devtools" Protocol error (Target.setDiscoverTargets): Target closed
+[DEBUG] MCP server "chrome-devtools": Tool 'navigate_page' failed after 3s: Protocol error (Target.setDiscoverTargets): Target closed
+[ERROR] Error: Error: Protocol error (Target.setDiscoverTargets): Target closed
+    at PWQ (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1399:7538)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.call (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1399:18874)
+    at async vj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:65482)
+    at async Eq2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:62539)
+    at async _j6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:61391)
+    at async yj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:60874)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:57634)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:58880)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:58880)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_navigate
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_navigate
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_navigate" (0 before deduplication)
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "context7": HTTP connection dropped after 961s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 966s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 183589s
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579224757
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1475 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579224757 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["mcp__playwright__browser_navigate"]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_navigate
+[DEBUG] MCP server "playwright": Received ListRoots request from server
+[DEBUG] MCP server "playwright": Tool 'browser_navigate' completed successfully in 2s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_navigate
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_navigate" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_wait_for
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_wait_for
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_wait_for" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_take_screenshot
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_take_screenshot
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_take_screenshot" (0 before deduplication)
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579246927
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1518 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579246927 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["mcp__playwright__browser_wait_for"]
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_wait_for
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579247758
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1568 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579247758 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["mcp__playwright__browser_take_screenshot"]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_take_screenshot
+[DEBUG] MCP server "playwright": Tool 'browser_take_screenshot' completed successfully in 114ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_take_screenshot
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_take_screenshot" (0 before deduplication)
+[DEBUG] MCP server "playwright": Tool 'browser_wait_for' completed successfully in 2s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_wait_for
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_wait_for" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579257162
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579257162 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579257166
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579257166 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761579270203
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761579270203 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761579270230
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761579270230 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761579270245
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276897 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761579270245 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message f34a3414-8739-4471-b058-1834e9412382
+[DEBUG] FileHistory: Added snapshot for f34a3414-8739-4471-b058-1834e9412382, tracking 3 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579315083
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579315083 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579315087
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 652 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579315087 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579328398
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579328398 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579328402
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 656 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579328402 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/[id]/route.ts
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/[id]/route.ts.tmp.5063.1761579328457
+[DEBUG] Temp file written successfully, size: 2148 bytes
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/[id]/route.ts.tmp.5063.1761579328457 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/[id]/route.ts
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/[id]/route.ts written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579335502
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579335502 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579335506
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 658 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579335506 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Glob
+[DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/EditWorkstreamConfigModal.tsx
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/EditWorkstreamConfigModal.tsx.tmp.5063.1761579388730
+[DEBUG] Temp file written successfully, size: 17563 bytes
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/EditWorkstreamConfigModal.tsx.tmp.5063.1761579388730 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/EditWorkstreamConfigModal.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/EditWorkstreamConfigModal.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579402689
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579402689 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579402693
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 660 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579402693 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761579402752
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 8046 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761579402752 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761579409663
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 8046 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761579409663 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761579422469
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 8839 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761579422469 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761579433662
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 9185 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx.tmp.5063.1761579433662 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/settings/workstreams/page.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579441622
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579441622 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579441625
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 662 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579441625 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_navigate
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_navigate
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_navigate" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_navigate
+[DEBUG] MCP server "playwright": Tool 'browser_navigate' completed successfully in 508ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_navigate
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_navigate" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_wait_for
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_wait_for
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_wait_for" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_take_screenshot
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_take_screenshot
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_take_screenshot" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_wait_for
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_take_screenshot
+[DEBUG] MCP server "playwright": Tool 'browser_take_screenshot' completed successfully in 107ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_take_screenshot
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_take_screenshot" (0 before deduplication)
+[DEBUG] MCP server "playwright": Tool 'browser_wait_for' completed successfully in 4s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_wait_for
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_wait_for" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_click
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_click
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_click" (0 before deduplication)
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "context7": HTTP connection dropped after 1281s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 1290s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 183265s
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579521356
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1608 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579521356 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["mcp__playwright__browser_click"]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_click
+[DEBUG] MCP server "playwright": Tool 'browser_click' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_click
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_click" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_take_screenshot
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_take_screenshot
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_take_screenshot" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_take_screenshot
+[DEBUG] MCP server "playwright": Tool 'browser_take_screenshot' completed successfully in 76ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_take_screenshot
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_take_screenshot" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_type
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_type
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_type" (0 before deduplication)
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579584030
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1647 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761579584030 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["mcp__playwright__browser_type"]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_type
+[DEBUG] MCP server "playwright": Tool 'browser_type' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_type
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_type" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_click
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_click
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_click" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_click
+[DEBUG] MCP server "playwright": Tool 'browser_click' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_click
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_click" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: BashOutput
+[DEBUG] Getting matching hook commands for PreToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Glob
+[DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/[slug]/route.ts
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/[slug]/route.ts.tmp.5063.1761579646828
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2892 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/[slug]/route.ts.tmp.5063.1761579646828 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/[slug]/route.ts
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/api/workstreams/[slug]/route.ts written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/EditWorkstreamConfigModal.tsx.tmp.5063.1761579654807
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 17565 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/EditWorkstreamConfigModal.tsx.tmp.5063.1761579654807 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/EditWorkstreamConfigModal.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/EditWorkstreamConfigModal.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_navigate
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_navigate
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_navigate" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_navigate
+[DEBUG] MCP server "playwright": Tool 'browser_navigate' completed successfully in 371ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_navigate
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_navigate" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_wait_for
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_wait_for
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_wait_for" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_wait_for
+[DEBUG] MCP server "playwright": Tool 'browser_wait_for' completed successfully in 2s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_wait_for
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_wait_for" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_click
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_click
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_click" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_click
+[DEBUG] MCP server "playwright": Tool 'browser_click' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_click
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_click" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_click
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_click
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_click" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_click
+[DEBUG] MCP server "playwright": Tool 'browser_click' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_click
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_click" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_type
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_type
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_type" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_type
+[DEBUG] MCP server "playwright": Tool 'browser_type' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_type
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_type" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_type
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_type
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_type" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_type
+[DEBUG] MCP server "playwright": Tool 'browser_type' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_type
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_type" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_type
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_type
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_type" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_type
+[DEBUG] MCP server "playwright": Tool 'browser_type' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_type
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_type" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_click
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_click
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_click" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_click
+[DEBUG] MCP server "playwright": Tool 'browser_click' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_click
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_click" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__playwright__browser_take_screenshot
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__playwright__browser_take_screenshot
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_take_screenshot" (0 before deduplication)
+[DEBUG] MCP server "playwright": Calling MCP tool: browser_take_screenshot
+[DEBUG] MCP server "playwright": Tool 'browser_take_screenshot' completed successfully in 84ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__playwright__browser_take_screenshot
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__playwright__browser_take_screenshot" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579702105
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761579702105 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579702109
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761579702109 to /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/bcd76508-4be0-4c30-9915-02e205646699-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761579714507
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276897 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761579714507 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761579714534
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276897 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761579714534 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761579714545
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276996 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761579714545 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "context7": HTTP connection dropped after 1601s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 1615s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 182940s
+[DEBUG] MCP server "context7": HTTP connection dropped after 1921s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 1937s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 182618s
+[DEBUG] MCP server "context7": HTTP connection dropped after 2241s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 2259s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 182296s
+[DEBUG] MCP server "context7": HTTP connection dropped after 2560s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 2582s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 181973s
+[DEBUG] MCP server "context7": HTTP connection dropped after 2880s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 2904s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 181651s
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 3ac64c49-854d-45ea-aeba-9729adab4bf1
+[DEBUG] FileHistory: Missing tracked file: apps/web/app/api/workstreams/[id]/route.ts
+[DEBUG] FileHistory: Added snapshot for 3ac64c49-854d-45ea-aeba-9729adab4bf1, tracking 6 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761581144240
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276996 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761581144240 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Streaming aborted by user: Request was aborted.
+[ERROR] Error in non-streaming fallback: Request was aborted.
+[ERROR] Error: Error: Request was aborted.
+    at uy.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:357:3850)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at runNextTicks (node:internal/process/task_queues:69:3)
+    at process.processTimers (node:internal/timers:540:9)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761581144268
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276996 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761581144268 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761581144279
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276994 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761581144279 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)

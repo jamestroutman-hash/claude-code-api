@@ -1,0 +1,128 @@
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for f7e8363c-bbe8-4710-b274-7e376289fd83, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1087425.1761941325206
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1087425.1761941325206 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 10ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 62e95b4f-15c5-462e-b0b3-5de0e45bddf0
+[DEBUG] FileHistory: Added snapshot for 62e95b4f-15c5-462e-b0b3-5de0e45bddf0, tracking 0 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 46ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 22ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 24ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 6ms
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/workstreams/[slug]/epics/[epicKey]/features/[featureKey]/page.tsx
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/workstreams/[slug]/epics/[epicKey]/features/[featureKey]/page.tsx.tmp.1087425.1761941387436
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 5781 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/workstreams/[slug]/epics/[epicKey]/features/[featureKey]/page.tsx.tmp.1087425.1761941387436 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/workstreams/[slug]/epics/[epicKey]/features/[featureKey]/page.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/app/workstreams/[slug]/epics/[epicKey]/features/[featureKey]/page.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 37ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1087425.1761941396604
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1087425.1761941396604 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1087425.1761941396627
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1087425.1761941396627 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 19889s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 19896s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 584574s
+[DEBUG] MCP server "context7": HTTP connection dropped after 20191s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 20200s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 584269s
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)

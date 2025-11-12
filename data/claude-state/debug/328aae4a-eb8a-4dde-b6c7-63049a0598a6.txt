@@ -1,0 +1,35 @@
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for 807aa963-ab8a-4e58-a0c0-fc42203bb0ef, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1063672.1761928002525
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1063672.1761928002525 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 7371s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": HTTP connection dropped after 7709s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": HTTP connection dropped after 8044s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 42 rule(s): ["Bash(claude --print --output-format stream-json)","Bash(claude --print --verbose --output-format stream-json)","Bash(npx supabase migration:*)","Bash(npx supabase:*)","Bash(psql:*)","Bash(npm run build:*)","Read(//tmp/**)","Bash(curl:*)","Bash(npm run dev:*)","Bash(mkdir:*)","Bash(find:*)","Bash(docker exec:*)","Bash(node:*)","mcp__atlassian__getAccessibleAtlassianResources","mcp__atlassian__searchConfluenceUsingCql","Bash(lsof:*)","Bash(xargs kill:*)","Bash(turbo run:*)","Bash(pkill:*)","Read(//home/jamestroutman/.npm/_logs/**)","Bash(docker logs:*)","Bash(timeout 30 bash -c 'tail -f /dev/null & BG_PID=$!; kill $BG_PID 2>/dev/null; echo \"\"Waiting for next save attempt...\"\"')","Bash(cat:*)","Bash(npm run check-types:*)","Bash(npx tsc:*)","Bash(npm install:*)","Bash(test:*)","Bash(npx tsx:*)","mcp__monday__get_board_info","mcp__monday__create_item","mcp__monday__change_item_column_values","mcp__atlassian__createConfluencePage","mcp__chrome-devtools__navigate_page","mcp__playwright__browser_navigate","mcp__playwright__browser_wait_for","mcp__playwright__browser_take_screenshot","mcp__playwright__browser_click","mcp__playwright__browser_type","mcp__supabase__execute_sql","mcp__monday__get_board_items_page","mcp__playwright__browser_console_messages","mcp__atlassian__getConfluencePage"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 43 rule(s): ["Bash(claude --print --output-format stream-json)","Bash(claude --print --verbose --output-format stream-json)","Bash(npx supabase migration:*)","Bash(npx supabase:*)","Bash(psql:*)","Bash(npm run build:*)","Read(//tmp/**)","Bash(curl:*)","Bash(npm run dev:*)","Bash(mkdir:*)","Bash(find:*)","Bash(docker exec:*)","Bash(node:*)","mcp__atlassian__getAccessibleAtlassianResources","mcp__atlassian__searchConfluenceUsingCql","Bash(lsof:*)","Bash(xargs kill:*)","Bash(turbo run:*)","Bash(pkill:*)","Read(//home/jamestroutman/.npm/_logs/**)","Bash(docker logs:*)","Bash(timeout 30 bash -c 'tail -f /dev/null & BG_PID=$!; kill $BG_PID 2>/dev/null; echo \"\"Waiting for next save attempt...\"\"')","Bash(cat:*)","Bash(npm run check-types:*)","Bash(npx tsc:*)","Bash(npm install:*)","Bash(test:*)","Bash(npx tsx:*)","mcp__monday__get_board_info","mcp__monday__create_item","mcp__monday__change_item_column_values","mcp__atlassian__createConfluencePage","mcp__chrome-devtools__navigate_page","mcp__playwright__browser_navigate","mcp__playwright__browser_wait_for","mcp__playwright__browser_take_screenshot","mcp__playwright__browser_click","mcp__playwright__browser_type","mcp__supabase__execute_sql","mcp__monday__get_board_items_page","mcp__playwright__browser_console_messages","mcp__atlassian__getConfluencePage","mcp__atlassian__getConfluencePageDescendants"]
+[DEBUG] MCP server "context7": HTTP connection dropped after 8379s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": HTTP connection dropped after 8714s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found

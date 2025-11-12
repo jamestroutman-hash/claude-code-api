@@ -1,0 +1,57 @@
+# AI Prompt Templates
+
+This directory contains prompt templates used for AI-powered feature and story generation in the Clarity PM Assistant.
+
+## Overview
+
+Templates are written in Markdown and use a simple variable replacement system with `{{VARIABLE_NAME}}` placeholders.
+
+## Available Templates
+
+### story-generation.md
+
+Used for generating user stories from feature context.
+
+**Variables:**
+- `{{FEATURE_CONTEXT}}` - Feature, epic, and status information
+- `{{CONFLUENCE_CONTEXT}}` - Confluence page IDs and instructions for fetching context
+- `{{USER_PROMPT}}` - The user's description of what story they want
+- `{{TEMPLATE_CONTENT}}` - The story template structure from the database
+- `{{CONFLUENCE_INSTRUCTIONS}}` - Instructions for using Confluence context
+- `{{CONFLUENCE_ENHANCEMENT}}` - Additional instructions for Confluence integration
+- `{{CONFLUENCE_BASE}}` - Base instructions for Confluence usage
+
+**Used by:** `/api/generate-story/stream/route.ts`
+
+## How to Modify Templates
+
+1. Open the template file (e.g., `story-generation.md`)
+2. Edit the prompt text while preserving the `{{VARIABLE_NAME}}` placeholders
+3. Save the file
+4. Restart the Next.js development server to pick up changes
+
+## Template Engine
+
+The template engine is located at `apps/web/lib/utils/template-engine.ts` and provides:
+
+- `loadTemplate(templateName)` - Load a template file
+- `populateTemplate(template, variables)` - Replace variables in a template
+- `renderTemplate(templateName, variables)` - Load and populate in one step
+
+## Adding New Templates
+
+1. Create a new `.md` file in this directory
+2. Use `{{VARIABLE_NAME}}` syntax for dynamic content
+3. Load it in your API route using `renderTemplate('template-name', { VARIABLE_NAME: 'value' })`
+
+## Example Usage
+
+```typescript
+import { renderTemplate } from '../lib/utils/template-engine';
+
+const prompt = renderTemplate('story-generation', {
+  FEATURE_CONTEXT: 'Feature: User Authentication',
+  USER_PROMPT: 'Create a login story',
+  TEMPLATE_CONTENT: '## {{STORY_NAME}}...',
+});
+```

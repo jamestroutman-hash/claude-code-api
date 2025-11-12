@@ -1,0 +1,53 @@
+[DEBUG] Watching for changes in setting files /home/jamestroutman/.claude/settings.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+[DEBUG] Looking for shell config file: /home/jamestroutman/.zshrc
+[DEBUG] Snapshots directory: /home/jamestroutman/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /home/jamestroutman/.claude/shell-snapshots/snapshot-zsh-1761750218535-hzkkm4.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/021f8fb6-9dfe-4050-94ca-105220a22a3b-agent-021f8fb6-9dfe-4050-94ca-105220a22a3b.json.tmp.4080.1761750218539
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/021f8fb6-9dfe-4050-94ca-105220a22a3b-agent-021f8fb6-9dfe-4050-94ca-105220a22a3b.json.tmp.4080.1761750218539 to /home/jamestroutman/.claude/todos/021f8fb6-9dfe-4050-94ca-105220a22a3b-agent-021f8fb6-9dfe-4050-94ca-105220a22a3b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/021f8fb6-9dfe-4050-94ca-105220a22a3b-agent-021f8fb6-9dfe-4050-94ca-105220a22a3b.json written atomically
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/jamestroutman/.claude/skills, project=/home/jamestroutman/code/experiments/clarity-ai/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] MCP server "chrome-devtools": Starting connection with timeout of 30000ms
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/vendor/ripgrep/x64-linux/rg)
+[DEBUG] Summarizing last 9 of 12 messages (~126556 tokens)
+[DEBUG] Shell snapshot created successfully (19673 bytes)
+[ERROR] Failed to save config with lock: Error: Lock file is already being held
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.4080.1761750218690
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 277904 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.4080.1761750218690 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.4080.1761750218744
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 277904 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.4080.1761750218744 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.4080.1761750218793
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 277904 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.4080.1761750218793 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[ERROR] MCP server "chrome-devtools" Server stderr: chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,
+debug, and modify any data in the browser or DevTools.
+Avoid sharing sensitive or personal information that you do not want to share with MCP clients.
+[DEBUG] MCP server "chrome-devtools": Successfully connected to stdio server in 1583ms
+[DEBUG] MCP server "chrome-devtools": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"0.9.0"}}
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /home/jamestroutman/.claude/shell-snapshots/snapshot-zsh-1761750218535-hzkkm4.sh
+[DEBUG] MCP server "chrome-devtools": Sending SIGINT to MCP server process
+[DEBUG] MCP server "chrome-devtools": SIGINT failed, sending SIGTERM to MCP server process
+[DEBUG] MCP server "chrome-devtools": STDIO connection closed after 1s (cleanly)
+[DEBUG] MCP server "chrome-devtools": MCP server process exited cleanly

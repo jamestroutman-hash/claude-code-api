@@ -1,0 +1,1299 @@
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for b141693b-60fb-4cc9-9a74-a1dc2d1fde69, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761581146018
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276994 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761581146018 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761581146033
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276995 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761581146033 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message dac47916-17f4-4ed9-8feb-2ed3ceb1430a
+[DEBUG] FileHistory: Added snapshot for dac47916-17f4-4ed9-8feb-2ed3ceb1430a, tracking 0 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761581245322
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761581245322 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761581245325
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761581245325 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761581245329
+[DEBUG] Temp file written successfully, size: 595 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761581245329 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761581359095
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1683 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761581359095 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["mcp__supabase__execute_sql"]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[ERROR] MCP server "supabase" {"error":{"name":"PgMetaDatabaseError","message":"column \"title\" does not exist"}}
+[DEBUG] MCP server "supabase": Tool 'execute_sql' failed after 0s: {"error":{"name":"PgMetaDatabaseError","message":"column \"title\" does not exist"}}
+[ERROR] Error: Error: {"error":{"name":"PgMetaDatabaseError","message":"column \"title\" does not exist"}}
+    at PWQ (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1399:7538)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.call (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1399:18874)
+    at async vj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:65482)
+    at async Eq2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:62539)
+    at async _j6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:61391)
+    at async yj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:60874)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:57634)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:58880)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:58880)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 104ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 235ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761581377582
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761581377582 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761581377586
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761581377586 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761581377590
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 597 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761581377590 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__monday__get_board_info
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__monday__get_board_info
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__monday__get_board_info" (0 before deduplication)
+[DEBUG] MCP server "monday": Calling MCP tool: get_board_info
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 181366s
+[DEBUG] MCP server "monday": Tool 'get_board_info' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__monday__get_board_info
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__monday__get_board_info" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "context7": HTTP connection dropped after 3201s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] executePreToolHooks called for tool: mcp__monday__get_board_items_page
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__monday__get_board_items_page
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__monday__get_board_items_page" (0 before deduplication)
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "monday": SSE connection dropped after 3513s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 181042s
+[DEBUG] MCP server "context7": HTTP connection dropped after 3520s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761581968204
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1726 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json.tmp.5063.1761581968204 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["mcp__monday__get_board_items_page"]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "monday": Calling MCP tool: get_board_items_page
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 180779s
+[DEBUG] MCP server "monday": Tool 'get_board_items_page' completed successfully in 1s
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__monday__get_board_items_page
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__monday__get_board_items_page" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 174ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761582001842
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761582001842 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761582001846
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761582001846 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761582001849
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 599 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761582001849 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 153ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[ERROR] MCP server "supabase" {"error":{"name":"PgMetaDatabaseError","message":"column \"created_at\" does not exist"}}
+[DEBUG] MCP server "supabase": Tool 'execute_sql' failed after 0s: {"error":{"name":"PgMetaDatabaseError","message":"column \"created_at\" does not exist"}}
+[ERROR] Error: Error: {"error":{"name":"PgMetaDatabaseError","message":"column \"created_at\" does not exist"}}
+    at PWQ (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1399:7538)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.call (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1399:18874)
+    at async vj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:65482)
+    at async Eq2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:62539)
+    at async _j6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:61391)
+    at async yj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:60874)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:57634)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:58880)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:58880)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 98ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 158ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] MCP server "context7": HTTP connection dropped after 3842s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] executePreToolHooks called for tool: BashOutput
+[DEBUG] Getting matching hook commands for PreToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 171ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 166ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761582075184
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761582075184 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761582075188
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761582075188 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761582075191
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 601 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761582075191 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 163ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 189ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[ERROR] MCP server "supabase" {"error":{"name":"PgMetaDatabaseError","message":"column \"page_id\" does not exist"}}
+[DEBUG] MCP server "supabase": Tool 'execute_sql' failed after 0s: {"error":{"name":"PgMetaDatabaseError","message":"column \"page_id\" does not exist"}}
+[ERROR] Error: Error: {"error":{"name":"PgMetaDatabaseError","message":"column \"page_id\" does not exist"}}
+    at PWQ (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1399:7538)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.call (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1399:18874)
+    at async vj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:65482)
+    at async Eq2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:62539)
+    at async _j6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:61391)
+    at async yj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:60874)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:57634)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:58880)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:58880)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 101ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 148ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[ERROR] MCP server "supabase" {"error":{"name":"PgMetaDatabaseError","message":"invalid input syntax for type uuid: \"1042382849\""}}
+[DEBUG] MCP server "supabase": Tool 'execute_sql' failed after 0s: {"error":{"name":"PgMetaDatabaseError","message":"invalid input syntax for type uuid: \"1042382849\""}}
+[ERROR] Error: Error: {"error":{"name":"PgMetaDatabaseError","message":"invalid input syntax for type uuid: \"1042382849\""}}
+    at PWQ (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1399:7538)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.call (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1399:18874)
+    at async vj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:65482)
+    at async Eq2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:62539)
+    at async _j6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:61391)
+    at async yj6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:60874)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:57634)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:58880)
+    at async IS (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2685:58880)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 174ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: mcp__supabase__execute_sql
+[DEBUG] Getting matching hook commands for PreToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] MCP server "supabase": Calling MCP tool: execute_sql
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Tool 'execute_sql' completed successfully in 191ms
+[DEBUG] Getting matching hook commands for PostToolUse with query: mcp__supabase__execute_sql
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "mcp__supabase__execute_sql" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761582180068
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761582180068 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761582180076
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761582180076 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761582180080
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 766 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761582180080 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/lib/integrations/monday-multi-board-sync.ts
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/lib/integrations/monday-multi-board-sync.ts.tmp.5063.1761582204607
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 21852 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/lib/integrations/monday-multi-board-sync.ts.tmp.5063.1761582204607 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/lib/integrations/monday-multi-board-sync.ts
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/lib/integrations/monday-multi-board-sync.ts written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761582213781
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json.tmp.5063.1761582213781 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-1d4004ac-4be1-48d9-804e-922645701945.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761582213785
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json.tmp.5063.1761582213785 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-bcd76508-4be0-4c30-9915-02e205646699.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761582213788
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json.tmp.5063.1761582213788 to /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/d7d539de-8716-47fb-87cd-b1b18e35507b-agent-d7d539de-8716-47fb-87cd-b1b18e35507b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761582228364
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276995 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761582228364 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761582228863
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 276995 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761582228863 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.5063.1761582228890
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 277171 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.5063.1761582228890 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "monday": SSE connection dropped after 4100s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 180455s
+[DEBUG] MCP server "context7": HTTP connection dropped after 4163s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 4423s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 180132s
+[DEBUG] MCP server "context7": HTTP connection dropped after 4483s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 4746s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 179810s
+[DEBUG] MCP server "context7": HTTP connection dropped after 4803s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 5069s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 179486s
+[DEBUG] MCP server "context7": HTTP connection dropped after 5125s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 5393s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 179162s
+[DEBUG] MCP server "context7": HTTP connection dropped after 5445s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 5715s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 178840s
+[DEBUG] MCP server "context7": HTTP connection dropped after 5766s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 6038s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 178515s
+[DEBUG] MCP server "context7": HTTP connection dropped after 6087s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 6364s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 178191s
+[DEBUG] MCP server "context7": HTTP connection dropped after 6408s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 6687s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 177868s
+[DEBUG] MCP server "context7": HTTP connection dropped after 6729s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 7010s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 177545s
+[DEBUG] MCP server "context7": HTTP connection dropped after 7050s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 7334s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 177221s
+[DEBUG] MCP server "context7": HTTP connection dropped after 7371s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 7658s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 176897s
+[DEBUG] MCP server "context7": HTTP connection dropped after 7692s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 7982s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 176573s
+[DEBUG] MCP server "context7": HTTP connection dropped after 8013s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 8306s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 176248s
+[DEBUG] MCP server "context7": HTTP connection dropped after 8335s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 8631s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 175924s
+[DEBUG] MCP server "context7": HTTP connection dropped after 8656s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 8955s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 175600s
+[DEBUG] MCP server "context7": HTTP connection dropped after 8977s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 9279s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 175276s
+[DEBUG] MCP server "context7": HTTP connection dropped after 9301s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 9603s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 174952s
+[DEBUG] MCP server "context7": HTTP connection dropped after 9622s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 9927s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 174628s
+[DEBUG] MCP server "context7": HTTP connection dropped after 9944s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 10248s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 174307s
+[DEBUG] MCP server "context7": HTTP connection dropped after 10260s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 10557s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 173997s
+[DEBUG] MCP server "context7": HTTP connection dropped after 10567s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 10864s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 173691s
+[DEBUG] MCP server "context7": HTTP connection dropped after 10871s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "atlassian": SSE connection dropped after 11149s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Token expires in -8967s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "monday": SSE connection dropped after 11169s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 173387s
+[DEBUG] MCP server "context7": HTTP connection dropped after 11173s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 11473s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "context7": HTTP connection dropped after 11475s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 173082s
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": HTTP connection dropped after 11777s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "monday": SSE connection dropped after 11777s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 172778s
+[DEBUG] MCP server "context7": HTTP connection dropped after 12079s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12081s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 172474s
+[DEBUG] MCP server "context7": HTTP connection dropped after 12380s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12386s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 172169s
+[DEBUG] MCP server "context7": HTTP connection dropped after 12682s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12690s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 171865s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 12980s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "context7": HTTP connection dropped after 12984s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 1469s
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12994s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 171561s
+[DEBUG] MCP server "context7": HTTP connection dropped after 13286s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 13299s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 171256s
+[DEBUG] MCP server "context7": HTTP connection dropped after 13588s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 13603s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 170952s
+[DEBUG] MCP server "monday": SSE connection dropped after 13694s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 170861s
+[DEBUG] MCP server "context7": HTTP connection dropped after 13890s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 13999s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 170556s
+[DEBUG] MCP server "context7": HTTP connection dropped after 14192s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 14304s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 170251s
+[DEBUG] MCP server "context7": HTTP connection dropped after 14493s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 14608s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 169947s
+[DEBUG] MCP server "context7": HTTP connection dropped after 14795s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 14913s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 169642s
+[DEBUG] MCP server "context7": HTTP connection dropped after 15097s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 15217s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 169338s
+[DEBUG] MCP server "context7": HTTP connection dropped after 15399s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 15522s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 169033s
+[DEBUG] MCP server "context7": HTTP connection dropped after 15701s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 15827s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 168728s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16003s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 16132s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 168423s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16305s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 16436s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 168119s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16607s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 16741s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 167814s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16909s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 17045s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 167510s
+[DEBUG] MCP server "context7": HTTP connection dropped after 17211s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 17350s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 167205s
+[DEBUG] MCP server "context7": HTTP connection dropped after 17514s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 17654s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 166901s
+[DEBUG] MCP server "context7": HTTP connection dropped after 17816s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 17960s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 166595s
+[DEBUG] MCP server "context7": HTTP connection dropped after 18118s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 18264s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 166291s
+[DEBUG] MCP server "context7": HTTP connection dropped after 18420s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 18569s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 165986s
+[DEBUG] MCP server "context7": HTTP connection dropped after 18722s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 18874s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 165682s
+[DEBUG] MCP server "context7": HTTP connection dropped after 19024s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 19178s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 165377s
+[DEBUG] MCP server "context7": HTTP connection dropped after 19326s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 19483s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 165072s
+[DEBUG] MCP server "context7": HTTP connection dropped after 19629s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 19788s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 164767s
+[DEBUG] MCP server "context7": HTTP connection dropped after 19931s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 20092s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 164463s
+[DEBUG] MCP server "context7": HTTP connection dropped after 20233s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 20397s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 164158s
+[DEBUG] MCP server "context7": HTTP connection dropped after 20535s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 20702s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 163853s
+[DEBUG] MCP server "context7": HTTP connection dropped after 20838s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 21007s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 163548s
+[DEBUG] MCP server "context7": HTTP connection dropped after 21140s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 21311s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 163244s
+[DEBUG] MCP server "context7": HTTP connection dropped after 21442s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 21616s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 162939s
+[DEBUG] MCP server "context7": HTTP connection dropped after 21745s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 21921s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 162634s
+[DEBUG] MCP server "context7": HTTP connection dropped after 22047s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 22226s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 162329s
+[DEBUG] MCP server "context7": HTTP connection dropped after 22349s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 22531s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 162024s
+[DEBUG] MCP server "context7": HTTP connection dropped after 22652s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found

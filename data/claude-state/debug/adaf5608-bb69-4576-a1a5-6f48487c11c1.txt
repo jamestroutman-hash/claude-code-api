@@ -1,0 +1,76 @@
+[DEBUG] Watching for changes in setting files /home/jamestroutman/.claude/settings.json, /home/jamestroutman/code/experiments/clarity-ai/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["Bash(mkdir:*)"]
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+[DEBUG] Looking for shell config file: /home/jamestroutman/.zshrc
+[DEBUG] Snapshots directory: /home/jamestroutman/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /home/jamestroutman/.claude/shell-snapshots/snapshot-zsh-1761756928216-5rneoy.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/adaf5608-bb69-4576-a1a5-6f48487c11c1-agent-adaf5608-bb69-4576-a1a5-6f48487c11c1.json.tmp.9025.1761756928231
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/adaf5608-bb69-4576-a1a5-6f48487c11c1-agent-adaf5608-bb69-4576-a1a5-6f48487c11c1.json.tmp.9025.1761756928231 to /home/jamestroutman/.claude/todos/adaf5608-bb69-4576-a1a5-6f48487c11c1-agent-adaf5608-bb69-4576-a1a5-6f48487c11c1.json
+[DEBUG] File /home/jamestroutman/.claude/todos/adaf5608-bb69-4576-a1a5-6f48487c11c1-agent-adaf5608-bb69-4576-a1a5-6f48487c11c1.json written atomically
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/vendor/ripgrep/x64-linux/rg)
+[DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/jamestroutman/.claude/skills, project=/home/jamestroutman/code/experiments/clarity-ai/.claude/skills
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] MCP server "chrome-devtools": Starting connection with timeout of 30000ms
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9025.1761756928605
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 277904 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9025.1761756928605 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[ERROR] AxiosError: AxiosError: Request failed with status code 401
+    at pN (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:713:1075)
+    at IncomingMessage.<anonymous> (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:714:9910)
+    at IncomingMessage.emit (node:events:520:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at cQ1.request (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:716:2078)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async lIA (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:877:25947)
+[DEBUG] Shell snapshot created successfully (19673 bytes)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9025.1761756928742
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 277904 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9025.1761756928742 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at pN (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:713:1075)
+    at IncomingMessage.<anonymous> (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:714:9910)
+    at IncomingMessage.emit (node:events:520:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at cQ1.request (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:716:2078)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async fe2 (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:1939:1471)
+    at async $v (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:3416:10719)
+    at async bF (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:1034:6082)
+    at async HI6 (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:1365:5060)
+    at async nn2 (file:///home/jamestroutman/.vscode-server/extensions/anthropic.claude-code-2.0.10/resources/claude-code/cli.js:1365:5306)
+[ERROR] MCP server "chrome-devtools" Server stderr: chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,
+debug, and modify any data in the browser or DevTools.
+Avoid sharing sensitive or personal information that you do not want to share with MCP clients.
+[DEBUG] MCP server "chrome-devtools": Successfully connected to stdio server in 2098ms
+[DEBUG] MCP server "chrome-devtools": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"0.9.0"}}
+[DEBUG] Failed to fetch Grove notice config: AxiosError: Request failed with status code 401
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /home/jamestroutman/.claude/shell-snapshots/snapshot-zsh-1761756928216-5rneoy.sh
+[DEBUG] MCP server "chrome-devtools": Sending SIGINT to MCP server process
+[DEBUG] MCP server "chrome-devtools": SIGINT failed, sending SIGTERM to MCP server process
+[DEBUG] MCP server "chrome-devtools": STDIO connection closed after 0s (cleanly)
+[DEBUG] MCP server "chrome-devtools": MCP server process exited cleanly

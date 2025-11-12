@@ -1,0 +1,403 @@
+/**
+ * AI-powered feature generation API with streaming responses
+ * @see /docs/specs/ai-writer-spec.md
+ * @see /docs/specs/feature-spec.md#BR-010
+ *
+ * Implements:
+ * - AI Writer BR-001: Session Management (creates unique session ID)
+ * - AI Writer BR-002: Context Assembly (epic, workstream, Confluence, templates)
+ * - AI Writer BR-003: Template-Based Generation
+ * - AI Writer BR-004: Confluence Integration for Context
+ * - AI Writer BR-006: Streaming Protocol (SSE with JSON events)
+ * - AI Writer BR-007: Console Output Transparency
+ */
+import { NextRequest } from 'next/server';
+import { spawn } from 'child_process';
+import { randomUUID } from 'crypto';
+import { createServerClient } from '../../../../lib/db/supabase-server';
+import { renderTemplate } from '../../../../lib/utils/template-engine';
+
+export const dynamic = 'force-dynamic';
+
+export async function POST(request: NextRequest) {
+  const encoder = new TextEncoder();
+
+  const stream = new ReadableStream({
+    async start(controller) {
+      try {
+        const { prompt, epicContext, workstreamId } = await request.json();
+
+        // Validate prompt
+        // @see /docs/specs/ai-writer-spec.md#BR-014
+        if (!prompt || !prompt.trim()) {
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({ type: 'error', content: 'Prompt is required' })}\n\n`
+            )
+          );
+          controller.close();
+          return;
+        }
+
+        if (prompt.trim().length < 10) {
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({ type: 'error', content: 'Prompt must be at least 10 characters' })}\n\n`
+            )
+          );
+          controller.close();
+          return;
+        }
+
+        // Fetch the default feature template with fallback
+        // @see /docs/specs/ai-writer-spec.md#BR-012
+        const supabase = createServerClient();
+        const { data: template, error: templateError} = await supabase
+          .from('templates')
+          .select('*')
+          .eq('type', 'feature')
+          .eq('is_default', true)
+          .single();
+
+        if (templateError) {
+          console.warn('Template fetch failed, using fallback template:', templateError);
+          // Graceful fallback - continue with hardcoded template
+        }
+
+        // Fetch Confluence pages for this workstream (if workstreamId provided)
+        const CLARITY_OVERVIEW_PAGE_ID = '989364236';
+        let confluencePageIds: string[] = [CLARITY_OVERVIEW_PAGE_ID];
+        let confluenceCloudId: string | null = null;
+
+        if (workstreamId) {
+          const { data: workstream, error: workstreamError } = await supabase
+            .from('workstreams')
+            .select('workspace_id')
+            .eq('id', workstreamId)
+            .single();
+
+          if (workstreamError) {
+            console.error('Error fetching workstream:', workstreamError);
+          } else if (workstream) {
+            const { data: workspace, error: workspaceError } = await supabase
+              .from('workspaces')
+              .select('confluence_base_url')
+              .eq('id', workstream.workspace_id)
+              .single();
+
+            if (workspaceError) {
+              console.error('Error fetching workspace:', workspaceError);
+            } else if (workspace?.confluence_base_url) {
+              confluenceCloudId = workspace.confluence_base_url;
+            }
+
+            const { data: confluencePages, error: confluenceError } = await supabase
+              .from('confluence_pages')
+              .select('confluence_page_id, title')
+              .eq('workstream_id', workstreamId)
+              .order('last_used_at', { ascending: false, nullsFirst: false })
+              .limit(100);
+
+            if (confluenceError) {
+              // Graceful degradation: continue without Confluence context
+              // @see /docs/specs/ai-writer-spec.md#BR-012
+              console.warn('Confluence fetch failed, continuing without context:', confluenceError);
+            } else if (confluencePages && confluencePages.length > 0) {
+              const workstreamPageIds = confluencePages.map(p => p.confluence_page_id);
+              confluencePageIds.push(...workstreamPageIds);
+            }
+          }
+        }
+
+        if (!confluenceCloudId) {
+          confluenceCloudId = process.env.CONFLUENCE_BASE_URL || null;
+        }
+
+        const templateContent = template?.content || `### {{FEATURE_ID}}: {{FEATURE_NAME}}
+
+**Priority**: {{PRIORITY}}
+**Status**: {{STATUS}}
+**Sprint Target**: {{SPRINT_TARGET}}
+
+**Description**: {{DESCRIPTION}}
+
+**Key Capabilities**:
+- {{CAPABILITY_1}}
+- {{CAPABILITY_2}}
+- {{CAPABILITY_3}}
+
+## Summary
+{{SUMMARY}}`;
+
+        const epicContextStr = epicContext ? `
+Epic: ${epicContext.title}
+Description: ${epicContext.description || 'N/A'}
+Status: ${epicContext.status}
+` : 'No epic context provided';
+
+        const confluenceContextStr = confluencePageIds.length > 0 && confluenceCloudId
+          ? `
+
+IMPORTANT: Use the Atlassian MCP to read relevant Confluence pages for additional context.
+Confluence cloudId/URL: ${confluenceCloudId}
+Confluence Page IDs to reference: ${confluencePageIds.join(', ')}
+
+The FIRST page (${confluencePageIds[0]}) is the Clarity Overview - this contains essential product context and should always be read first.
+
+Before writing the feature specification, use the mcp__atlassian__getConfluencePage tool to fetch these pages and incorporate relevant information into your specification. For each page, call:
+mcp__atlassian__getConfluencePage with cloudId="${confluenceCloudId}" and pageId="<page_id>"
+`
+          : '';
+
+        // Use template engine to build the prompt
+        const fullPrompt = renderTemplate('feature-generation', {
+          EPIC_CONTEXT: epicContextStr,
+          CONFLUENCE_CONTEXT: confluenceContextStr,
+          USER_PROMPT: prompt,
+          TEMPLATE_CONTENT: templateContent,
+          CONFLUENCE_INSTRUCTIONS: confluencePageIds.length > 0
+            ? 'FIRST, use the mcp__atlassian__getConfluencePage tool to read the Confluence pages listed above for context. Extract relevant requirements, design decisions, and technical constraints.'
+            : 'Generate a complete feature specification based on the user request above',
+          CONFLUENCE_ENHANCEMENT: confluencePageIds.length > 0 ? ', incorporating insights from the Confluence pages' : '',
+          CONFLUENCE_BASE: confluencePageIds.length > 0 ? ', and the Confluence documentation' : '',
+        }).trim();
+
+        // Generate a session ID
+        const sessionId = randomUUID();
+        const projectRoot = process.cwd();
+
+        // Track AI generation start
+        // @see /docs/specs/ai-writer-spec.md#BR-011
+        const startTime = Date.now();
+        let generationId: string | null = null;
+
+        // Send session ID immediately
+        controller.enqueue(
+          encoder.encode(
+            `data: ${JSON.stringify({ type: 'sessionId', content: sessionId })}\n\n`
+          )
+        );
+
+        // Spawn Claude CLI process with stream-json for detailed output
+        const claudeProcess = spawn(
+          'claude',
+          [
+            '--print',
+            '--verbose',
+            '--output-format',
+            'stream-json',
+            '--include-partial-messages',
+            '--allowedTools',
+            'mcp__atlassian__*',
+            '--permission-mode',
+            'bypassPermissions',
+            '--session-id',
+            sessionId,
+          ],
+          {
+            cwd: projectRoot,
+            env: { ...process.env },
+          }
+        );
+
+        // Send the prompt to stdin
+        claudeProcess.stdin.write(fullPrompt);
+        claudeProcess.stdin.end();
+
+        let finalMarkdown = '';
+        let buffer = '';
+
+        // Stream stdout - now in stream-json format with detailed events
+        claudeProcess.stdout.on('data', (chunk) => {
+          buffer += chunk.toString();
+          const lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+
+          for (const line of lines) {
+            if (!line.trim()) continue;
+
+            try {
+              const event = JSON.parse(line);
+
+              // Handle different event types from Claude CLI stream-json
+              if (event.type === 'system' && event.subtype === 'init') {
+                // System initialization
+                controller.enqueue(
+                  encoder.encode(
+                    `data: ${JSON.stringify({ type: 'console', content: `🚀 Session started\n` })}\n\n`
+                  )
+                );
+              } else if (event.type === 'assistant') {
+                // Assistant message with tool_use or text content
+                const message = event.message;
+                if (message?.content) {
+                  for (const content of message.content) {
+                    if (content.type === 'tool_use') {
+                      const toolInfo = `\n🔧 Using tool: ${content.name}\n${JSON.stringify(content.input, null, 2)}\n\n`;
+                      controller.enqueue(
+                        encoder.encode(
+                          `data: ${JSON.stringify({ type: 'console', content: toolInfo })}\n\n`
+                        )
+                      );
+                    } else if (content.type === 'text') {
+                      // Accumulate text for final output
+                      finalMarkdown += content.text || '';
+                    }
+                  }
+                }
+              } else if (event.type === 'user') {
+                // Tool results
+                const message = event.message;
+                if (message?.content) {
+                  for (const content of message.content) {
+                    if (content.type === 'tool_result') {
+                      const contentStr = typeof content.content === 'string' ? content.content : JSON.stringify(content.content);
+                      const preview = contentStr.substring(0, 200);
+                      const resultInfo = `✅ Tool result (${contentStr.length} chars): ${preview}...\n\n`;
+                      controller.enqueue(
+                        encoder.encode(
+                          `data: ${JSON.stringify({ type: 'console', content: resultInfo })}\n\n`
+                        )
+                      );
+                    }
+                  }
+                }
+              } else if (event.type === 'result') {
+                // Final result
+                controller.enqueue(
+                  encoder.encode(
+                    `data: ${JSON.stringify({ type: 'console', content: `\n✅ Complete! Duration: ${event.duration_ms}ms\n` })}\n\n`
+                  )
+                );
+                if (finalMarkdown) {
+                  controller.enqueue(
+                    encoder.encode(
+                      `data: ${JSON.stringify({ type: 'markdown', content: finalMarkdown })}\n\n`
+                    )
+                  );
+                }
+              }
+            } catch (e) {
+              // Not JSON, might be plain text fallback
+              console.error('Failed to parse JSON event:', e);
+            }
+          }
+        });
+
+        // Stream stderr (error messages)
+        claudeProcess.stderr.on('data', (data) => {
+          const content = data.toString();
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({ type: 'console', content: `[stderr] ${content}` })}\n\n`
+            )
+          );
+        });
+
+        // Handle process completion
+        claudeProcess.on('close', async (code) => {
+          const duration = Date.now() - startTime;
+
+          if (code === 0) {
+            // If we haven't sent markdown yet, send it now
+            if (finalMarkdown) {
+              controller.enqueue(
+                encoder.encode(
+                  `data: ${JSON.stringify({ type: 'markdown', content: finalMarkdown })}\n\n`
+                )
+              );
+            }
+
+            // Track successful generation
+            // @see /docs/specs/ai-writer-spec.md#BR-011
+            try {
+              const { data: generation } = await supabase
+                .from('ai_generations')
+                .insert({
+                  workspace_id: workstreamId ? await supabase
+                    .from('workstreams')
+                    .select('workspace_id')
+                    .eq('id', workstreamId)
+                    .single()
+                    .then(r => r.data?.workspace_id) : null,
+                  entity_type: 'feature',
+                  prompt,
+                  response: finalMarkdown,
+                  model: 'claude-3-5-sonnet-20241022',
+                  status: 'success',
+                  context_sources: confluencePageIds.length > 0 ? JSON.stringify({
+                    epic: epicContext,
+                    confluencePages: confluencePageIds
+                  }) : JSON.stringify({ epic: epicContext }),
+                })
+                .select('id')
+                .single();
+
+              if (generation) {
+                generationId = generation.id;
+              }
+            } catch (err) {
+              console.error('Failed to track AI generation:', err);
+              // Don't fail the request if tracking fails
+            }
+          } else {
+            controller.enqueue(
+              encoder.encode(
+                `data: ${JSON.stringify({ type: 'error', content: `Claude CLI exited with code ${code}` })}\n\n`
+              )
+            );
+
+            // Track failed generation
+            // @see /docs/specs/ai-writer-spec.md#BR-011
+            try {
+              await supabase
+                .from('ai_generations')
+                .insert({
+                  workspace_id: workstream ? await supabase
+                    .from('workstreams')
+                    .select('workspace_id')
+                    .eq('id', workstreamId)
+                    .single()
+                    .then(r => r.data?.workspace_id) : null,
+                  entity_type: 'feature',
+                  prompt,
+                  model: 'claude-3-5-sonnet-20241022',
+                  status: 'error',
+                  error_message: `Claude CLI exited with code ${code}`,
+                  context_sources: JSON.stringify({ epic: epicContext }),
+                });
+            } catch (err) {
+              console.error('Failed to track AI generation error:', err);
+            }
+          }
+          controller.close();
+        });
+
+        claudeProcess.on('error', (error) => {
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({ type: 'error', content: error.message })}\n\n`
+            )
+          );
+          controller.close();
+        });
+      } catch (error: any) {
+        console.error('Error in stream:', error);
+        controller.enqueue(
+          encoder.encode(
+            `data: ${JSON.stringify({ type: 'error', content: error.message })}\n\n`
+          )
+        );
+        controller.close();
+      }
+    },
+  });
+
+  return new Response(stream, {
+    headers: {
+      'Content-Type': 'text/event-stream',
+      'Cache-Control': 'no-cache',
+      Connection: 'keep-alive',
+    },
+  });
+}

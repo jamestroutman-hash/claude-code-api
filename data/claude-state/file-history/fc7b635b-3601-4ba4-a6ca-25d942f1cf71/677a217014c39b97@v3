@@ -1,0 +1,28 @@
+# Claude Code API Configuration
+
+# Anthropic API Key (required)
+# Get your key from: https://console.anthropic.com/
+ANTHROPIC_API_KEY=your_api_key_here
+
+# Server Configuration
+PORT=8000
+HOST=0.0.0.0
+
+# Authentication (optional)
+REQUIRE_AUTH=false
+
+# Database (optional)
+DATABASE_URL=sqlite:///data/claude_code_api.db
+
+# Claude Code CLI Path (optional, defaults to 'claude-code')
+CLAUDE_BINARY_PATH=claude-code
+
+# Project Root (optional)
+PROJECT_ROOT=/app/workspace
+
+# Logging Level (optional)
+LOG_LEVEL=INFO
+
+# Advanced: Base64-encoded Claude Config for build-time injection
+# Create with: tar -czf - -C .claude-config . | base64
+# CLAUDE_CONFIG_B64=

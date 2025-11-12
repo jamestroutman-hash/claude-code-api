@@ -1,0 +1,129 @@
+'use client';
+
+import Link from 'next/link';
+
+type WorkstreamCardProps = {
+  workstream: {
+    id: string;
+    slug: string;
+    name: string;
+    description: string | null;
+    color: string | null;
+    confluence_page_id: string | null;
+    monday_epic_board_id: string | null;
+    monday_feature_board_id: string | null;
+    monday_story_board_id: string | null;
+    confluence_page?: {
+      title: string;
+      confluence_space_key: string;
+    } | null;
+    workspace?: {
+      name: string;
+      confluence_base_url: string | null;
+    } | null;
+  };
+};
+
+export default function WorkstreamCard({ workstream }: WorkstreamCardProps) {
+  return (
+    <Link
+      href={`/workstreams/${workstream.slug}`}
+      className="block rounded-lg border border-gray-200 bg-white p-6 hover:shadow-md transition-shadow"
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          {workstream.color && (
+            <div
+              className="h-12 w-12 rounded-lg"
+              style={{ backgroundColor: workstream.color }}
+            />
+          )}
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900">
+              {workstream.name}
+            </h2>
+            {workstream.description && (
+              <p className="mt-1 text-gray-600">{workstream.description}</p>
+            )}
+            {(workstream.confluence_page ||
+              workstream.monday_epic_board_id ||
+              workstream.monday_feature_board_id ||
+              workstream.monday_story_board_id) && (
+              <div className="mt-2 text-sm space-y-1">
+                {workstream.confluence_page && workstream.workspace?.confluence_base_url && (
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-500">Confluence:</span>
+                    <a
+                      href={`${workstream.workspace.confluence_base_url}/wiki/spaces/${workstream.confluence_page.confluence_space_key}/pages/${workstream.confluence_page_id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 hover:underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {workstream.confluence_page.title}
+                    </a>
+                  </div>
+                )}
+                {workstream.monday_epic_board_id && (
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-500">Epic Board:</span>
+                    <a
+                      href={`https://monday.com/boards/${workstream.monday_epic_board_id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 hover:underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {workstream.monday_epic_board_id}
+                    </a>
+                  </div>
+                )}
+                {workstream.monday_feature_board_id && (
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-500">Feature Board:</span>
+                    <a
+                      href={`https://monday.com/boards/${workstream.monday_feature_board_id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 hover:underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {workstream.monday_feature_board_id}
+                    </a>
+                  </div>
+                )}
+                {workstream.monday_story_board_id && (
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-500">Story Board:</span>
+                    <a
+                      href={`https://monday.com/boards/${workstream.monday_story_board_id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 hover:underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {workstream.monday_story_board_id}
+                    </a>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+        <svg
+          className="h-6 w-6 text-gray-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </div>
+    </Link>
+  );
+}

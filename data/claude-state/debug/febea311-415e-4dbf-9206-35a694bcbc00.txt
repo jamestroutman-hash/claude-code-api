@@ -1,0 +1,61 @@
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for e45bdb69-d28f-426e-a8cc-83520c91461d, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1087425.1761941890814
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1087425.1761941890814 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 20494s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 20505s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 583965s
+[DEBUG] MCP server "context7": HTTP connection dropped after 20796s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 20810s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 583660s
+[DEBUG] MCP server "context7": HTTP connection dropped after 21098s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 21115s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 583355s
+[DEBUG] MCP server "context7": HTTP connection dropped after 21400s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 21419s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 583050s
+[DEBUG] MCP server "context7": HTTP connection dropped after 21703s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 21724s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 582746s

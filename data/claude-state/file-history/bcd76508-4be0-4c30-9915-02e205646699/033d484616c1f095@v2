@@ -1,0 +1,72 @@
+import { NextResponse } from 'next/server';
+import { createServerClient } from '../../../../lib/db/supabase-server';
+import type { WorkstreamSettings } from '../../../../types/workstream-settings';
+
+export const dynamic = 'force-dynamic';
+
+/**
+ * GET /api/workstreams/configurations
+ * Fetches all workstream configurations including Monday board IDs,
+ * Confluence page IDs, and settings (column mappings)
+ */
+export async function GET() {
+  try {
+    const supabase = createServerClient();
+
+    // Fetch all workstreams with their configurations
+    const { data: workstreams, error } = await supabase
+      .from('workstreams')
+      .select(
+        `
+        id,
+        name,
+        slug,
+        monday_epic_board_id,
+        monday_feature_board_id,
+        monday_story_board_id,
+        confluence_page_id,
+        settings,
+        workspace_id,
+        workspaces (
+          name,
+          confluence_space_key,
+          monday_workspace_id
+        )
+      `
+      )
+      .order('name');
+
+    if (error) {
+      console.error('Error fetching workstream configurations:', error);
+      return NextResponse.json(
+        { error: 'Failed to fetch workstream configurations' },
+        { status: 500 }
+      );
+    }
+
+    // Transform the data to include parsed settings
+    const configurations = workstreams?.map((ws) => ({
+      id: ws.id,
+      name: ws.name,
+      slug: ws.slug,
+      workspace: ws.workspaces,
+      monday: {
+        epic_board_id: ws.monday_epic_board_id,
+        feature_board_id: ws.monday_feature_board_id,
+        story_board_id: ws.monday_story_board_id,
+      },
+      confluence: {
+        page_id: ws.confluence_page_id,
+      },
+      settings: (ws.settings as WorkstreamSettings) || {},
+    }));
+
+    return NextResponse.json({ workstreams: configurations });
+  } catch (error) {
+    console.error('Unexpected error in workstream configurations:', error);
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+}

@@ -1,0 +1,160 @@
+#!/bin/bash
+
+# Script to build Docker image with Claude Code config and push to registry
+# This allows secure deployment to cloud platforms like Render.com
+
+set -e
+
+echo "Claude Code API - Build and Push to Registry"
+echo "============================================="
+echo ""
+
+# Configuration
+REGISTRY_USER="${DOCKER_REGISTRY_USER:-your-username}"
+IMAGE_NAME="claude-code-api"
+IMAGE_TAG="${DOCKER_IMAGE_TAG:-latest}"
+FULL_IMAGE="$REGISTRY_USER/$IMAGE_NAME:$IMAGE_TAG"
+
+# Parse command line arguments
+PUSH_IMAGE=false
+USE_SECRETS=false
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --push)
+            PUSH_IMAGE=true
+            shift
+            ;;
+        --user)
+            REGISTRY_USER="$2"
+            FULL_IMAGE="$REGISTRY_USER/$IMAGE_NAME:$IMAGE_TAG"
+            shift 2
+            ;;
+        --tag)
+            IMAGE_TAG="$2"
+            FULL_IMAGE="$REGISTRY_USER/$IMAGE_NAME:$IMAGE_TAG"
+            shift 2
+            ;;
+        --secrets)
+            USE_SECRETS=true
+            shift
+            ;;
+        --help)
+            echo "Usage: $0 [OPTIONS]"
+            echo ""
+            echo "Options:"
+            echo "  --push           Push image to registry after building"
+            echo "  --user USER      Docker registry username (default: $REGISTRY_USER)"
+            echo "  --tag TAG        Image tag (default: latest)"
+            echo "  --secrets        Use Docker build secrets (requires .claude-config.tar.gz)"
+            echo "  --help           Show this help message"
+            echo ""
+            echo "Environment variables:"
+            echo "  DOCKER_REGISTRY_USER   Default registry username"
+            echo "  DOCKER_IMAGE_TAG       Default image tag"
+            echo ""
+            echo "Examples:"
+            echo "  $0 --user myname --push"
+            echo "  $0 --user myname --tag v1.0 --push"
+            echo "  $0 --secrets --push"
+            exit 0
+            ;;
+        *)
+            echo "Unknown option: $1"
+            echo "Use --help for usage information"
+            exit 1
+            ;;
+    esac
+done
+
+# Check if .claude-config directory exists
+if [ ! -d ".claude-config" ] || [ -z "$(ls -A .claude-config)" ]; then
+    echo "⚠️  Warning: .claude-config directory is empty or doesn't exist"
+    echo ""
+    echo "Run ./copy-claude-config.sh first to copy your Claude Code configuration"
+    echo ""
+    read -p "Continue anyway? (y/N) " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        exit 1
+    fi
+fi
+
+# Build the image
+echo ""
+echo "Building Docker image: $FULL_IMAGE"
+echo "Using secrets: $USE_SECRETS"
+echo ""
+
+if [ "$USE_SECRETS" = true ]; then
+    # Create tarball for build secrets
+    if [ -d ".claude-config" ] && [ -n "$(ls -A .claude-config)" ]; then
+        echo "Creating tarball of Claude config..."
+        tar -czf .claude-config.tar.gz -C .claude-config .
+
+        echo "Building with Docker build secrets..."
+        docker build \
+            --secret id=claude_config,src=.claude-config.tar.gz \
+            -f Dockerfile.secure \
+            -t "$FULL_IMAGE" \
+            .
+
+        # Clean up tarball
+        rm -f .claude-config.tar.gz
+        echo "✓ Cleaned up temporary tarball"
+    else
+        echo "✗ Error: .claude-config directory is empty, cannot use --secrets"
+        exit 1
+    fi
+else
+    # Standard build (bakes config into image)
+    echo "Building with standard Dockerfile..."
+    docker build -t "$FULL_IMAGE" .
+fi
+
+echo ""
+echo "✓ Build completed successfully!"
+echo ""
+
+# Show image info
+echo "Image details:"
+docker images "$FULL_IMAGE" --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}\t{{.CreatedAt}}"
+echo ""
+
+# Push to registry if requested
+if [ "$PUSH_IMAGE" = true ]; then
+    echo "Pushing image to registry..."
+    echo ""
+
+    # Check if logged in
+    if ! docker info | grep -q "Username:"; then
+        echo "Not logged into Docker registry. Running docker login..."
+        docker login
+    fi
+
+    docker push "$FULL_IMAGE"
+
+    echo ""
+    echo "✓ Image pushed successfully!"
+    echo ""
+    echo "Deploy on Render.com:"
+    echo "  1. Create a new Private Service"
+    echo "  2. Use image: $FULL_IMAGE"
+    echo "  3. Set environment variable: ANTHROPIC_API_KEY"
+    echo ""
+fi
+
+echo "Next steps:"
+if [ "$PUSH_IMAGE" = false ]; then
+    echo "  1. Test locally: docker run -p 8000:8000 -e ANTHROPIC_API_KEY=your_key $FULL_IMAGE"
+    echo "  2. Push to registry: $0 --push"
+fi
+echo "  3. Deploy on Render.com using this image"
+echo ""
+
+echo "⚠️  Security reminder:"
+echo "  - Your Claude Code auth tokens are baked into this image"
+echo "  - Do not push to public registries"
+echo "  - Anyone with access to the image can extract the tokens"
+echo "  - Rotate your API keys regularly"
+echo ""

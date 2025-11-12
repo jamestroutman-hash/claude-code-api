@@ -1,0 +1,376 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { serverTables } from '../../../../lib/db/supabase-server';
+import { createConfluencePage } from '../../../../lib/integrations/confluence';
+import { createMondayItem } from '../../../../lib/integrations/monday';
+import { markdownToConfluence } from '../../../../lib/utils/markdown-to-confluence';
+import { getMondayColumnId, type WorkstreamSettings } from '../../../../types/workstream-settings';
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+
+    console.log('[Story Save] Received request body:', {
+      title: body.title,
+      workspace_id: body.workspace_id,
+      workstream_id: body.workstream_id,
+      feature_id: body.feature_id,
+      status: body.status,
+    });
+
+    const {
+      title,
+      description, // Markdown content
+      workspace_id,
+      workstream_id,
+      feature_id,
+      status = 'planned',
+      priority,
+      user_role,
+      user_goal,
+      user_benefit,
+      acceptance_criteria,
+      story_points,
+    } = body;
+
+    // Validate required fields
+    if (!title || typeof title !== 'string') {
+      return NextResponse.json(
+        { error: 'Title is required and must be a string' },
+        { status: 400 }
+      );
+    }
+
+    if (!description || typeof description !== 'string') {
+      return NextResponse.json(
+        { error: 'Description is required and must be a string' },
+        { status: 400 }
+      );
+    }
+
+    if (!workspace_id || typeof workspace_id !== 'string') {
+      return NextResponse.json(
+        { error: 'Workspace ID is required' },
+        { status: 400 }
+      );
+    }
+
+    if (!workstream_id || typeof workstream_id !== 'string') {
+      return NextResponse.json(
+        { error: 'Workstream ID is required' },
+        { status: 400 }
+      );
+    }
+
+    if (!feature_id || typeof feature_id !== 'string') {
+      return NextResponse.json(
+        { error: 'Feature ID is required' },
+        { status: 400 }
+      );
+    }
+
+    // =========================================================================
+    // Step 1: Get workspace, workstream, and feature info
+    // =========================================================================
+    const { data: workspace, error: workspaceError } = await serverTables
+      .workspaces()
+      .select('id, confluence_space_key')
+      .eq('id', workspace_id)
+      .single();
+
+    if (workspaceError || !workspace) {
+      return NextResponse.json(
+        { error: 'Workspace not found' },
+        { status: 404 }
+      );
+    }
+
+    const { data: workstream, error: workstreamError } = await serverTables
+      .workstreams()
+      .select('id, name, slug, settings, monday_story_board_id')
+      .eq('id', workstream_id)
+      .single();
+
+    if (workstreamError || !workstream) {
+      console.error('[Story Save] Workstream lookup failed:', {
+        workstream_id,
+        error: workstreamError,
+        data: workstream,
+      });
+      return NextResponse.json(
+        { error: 'Workstream not found', details: workstreamError?.message },
+        { status: 404 }
+      );
+    }
+
+    const { data: feature, error: featureError } = await serverTables
+      .features()
+      .select('id, key, title, confluence_page_id')
+      .eq('id', feature_id)
+      .single();
+
+    if (featureError || !feature) {
+      return NextResponse.json(
+        { error: 'Feature not found' },
+        { status: 404 }
+      );
+    }
+
+    // =========================================================================
+    // Step 2: Generate story key
+    // @see /docs/specs/document-id-keys-spec.md#BR-005
+    // Format: STORY-{WORKSTREAM_KEY}-{INCREMENT}
+    // =========================================================================
+    // Get workstream key for story key generation
+    const { data: workstreamWithKey } = await serverTables
+      .workstreams()
+      .select('key')
+      .eq('id', workstream_id)
+      .single();
+
+    if (!workstreamWithKey?.key) {
+      return NextResponse.json(
+        { error: 'Workstream key not found. Please ensure workstream has a valid key.' },
+        { status: 400 }
+      );
+    }
+
+    // Get the last story number for this workstream
+    const { data: existingStories } = await serverTables
+      .stories()
+      .select('key')
+      .eq('workstream_id', workstream_id)
+      .order('created_at', { ascending: false })
+      .limit(1);
+
+    let storyNumber = 1;
+    if (existingStories && existingStories.length > 0) {
+      const lastKey = existingStories[0]?.key;
+      if (lastKey) {
+        // Match STORY-XXX-001 pattern
+        const match = lastKey.match(/STORY-[A-Z]+-(\d+)/);
+        if (match) {
+          storyNumber = parseInt(match[1], 10) + 1;
+        }
+      }
+    }
+
+    const storyKey = `STORY-${workstreamWithKey.key}-${storyNumber.toString().padStart(3, '0')}`;
+
+    // =========================================================================
+    // Step 3: Create the story in the database first
+    // =========================================================================
+    const insertData: any = {
+      title,
+      description,
+      workspace_id,
+      workstream_id,
+      feature_id,
+      key: storyKey,
+      status,
+      priority: priority || null,
+      user_role: user_role || null,
+      user_goal: user_goal || null,
+      user_benefit: user_benefit || null,
+      acceptance_criteria: acceptance_criteria || null,
+      story_points: story_points || null,
+      ai_generated: true,
+    };
+
+    const { data: story, error: storyError } = await serverTables
+      .stories()
+      .insert(insertData)
+      .select()
+      .single();
+
+    if (storyError) {
+      console.error('[Story Save] Error creating story:', storyError);
+      return NextResponse.json(
+        { error: 'Failed to create story', details: storyError.message },
+        { status: 500 }
+      );
+    }
+
+    console.log('[Story Save] Created story:', story.id);
+
+    // =========================================================================
+    // Step 4: Create Confluence page as child of feature page (or workstream if feature has no page)
+    // =========================================================================
+    let confluencePageId: string | undefined;
+
+    if (!workspace.confluence_space_key) {
+      console.warn('[Story Save] No Confluence space key configured for workspace');
+    } else {
+      try {
+        // Determine parent page: prefer feature's page, fallback to workstream's page
+        let parentPageId = feature.confluence_page_id;
+
+        if (!parentPageId) {
+          console.log('[Story Save] Feature has no Confluence page, checking workstream...');
+          const { data: workstreamWithPage } = await serverTables
+            .workstreams()
+            .select('confluence_page_id')
+            .eq('id', workstream_id)
+            .single();
+
+          parentPageId = workstreamWithPage?.confluence_page_id;
+
+          if (!parentPageId) {
+            console.warn('[Story Save] Neither feature nor workstream has a Confluence page');
+          }
+        }
+
+        if (parentPageId) {
+          console.log('[Story Save] Creating Confluence page:', {
+            spaceKey: workspace.confluence_space_key,
+            title,
+            parentId: parentPageId,
+          });
+
+          // Convert markdown to Confluence storage format (HTML)
+          const htmlContent = markdownToConfluence(description);
+
+          const confluencePage = await createConfluencePage({
+            spaceId: workspace.confluence_space_key,
+            title: `${storyKey}: ${title}`,
+            body: {
+              representation: 'storage',
+              value: htmlContent,
+            },
+            parentId: parentPageId,
+          });
+
+          if (confluencePage) {
+            confluencePageId = confluencePage.id;
+            console.log('[Story Save] Created Confluence page:', confluencePageId);
+
+            // Update story with confluence_page_id
+            await serverTables
+              .stories()
+              .update({ confluence_page_id: confluencePageId })
+              .eq('id', story.id);
+          }
+        }
+      } catch (error: any) {
+        console.error('[Story Save] Error creating Confluence page:', error);
+        // Don't fail the entire operation if Confluence fails
+      }
+    }
+
+    // =========================================================================
+    // Step 5: Save to confluence_pages table (for caching)
+    // =========================================================================
+    if (confluencePageId && workspace.confluence_space_key) {
+      try {
+        await serverTables.confluencePages().insert({
+          workspace_id,
+          workstream_id,
+          confluence_page_id: confluencePageId,
+          confluence_space_key: workspace.confluence_space_key,
+          title: `${storyKey}: ${title}`,
+          content: description,
+          version: 1,
+        });
+        console.log('[Story Save] Saved to confluence_pages table');
+      } catch (error: any) {
+        console.error('[Story Save] Error saving to confluence_pages:', error);
+        // Continue - this is just a cache
+      }
+    }
+
+    // =========================================================================
+    // Step 6: Create Monday item on the workstream story board
+    // =========================================================================
+    let mondayItemId: string | undefined;
+
+    if (workstream.monday_story_board_id) {
+      try {
+        console.log('[Story Save] Creating Monday item on board:', workstream.monday_story_board_id);
+
+        // Get the feature's Monday item ID to link the story
+        const { data: featureMonday } = await serverTables
+          .mondayItems()
+          .select('monday_item_id')
+          .eq('entity_id', feature_id)
+          .eq('entity_type', 'feature')
+          .single();
+
+        // Prepare column values for the story using configurable column mappings
+        const settings = workstream.settings as WorkstreamSettings;
+        const columnValues: Record<string, any> = {};
+
+        // Set status if provided and column is configured
+        const statusColumn = getMondayColumnId(settings, 'story', 'status');
+        if (status && statusColumn) {
+          columnValues[statusColumn] = { label: status };
+        }
+
+        // Set priority if provided and column is configured
+        const priorityColumn = getMondayColumnId(settings, 'story', 'priority');
+        if (priority && priorityColumn) {
+          columnValues[priorityColumn] = { label: priority };
+        }
+
+        // Link to parent feature if it exists in Monday and column is configured
+        const parentFeatureColumn = getMondayColumnId(settings, 'story', 'parent_feature');
+        if (featureMonday?.monday_item_id && parentFeatureColumn) {
+          columnValues[parentFeatureColumn] = { item_ids: [parseInt(featureMonday.monday_item_id)] };
+        }
+
+        // Create the Monday item
+        const mondayItem = await createMondayItem({
+          boardId: workstream.monday_story_board_id,
+          itemName: `${storyKey}: ${title}`,
+          columnValues,
+        });
+
+        if (mondayItem) {
+          mondayItemId = mondayItem.id;
+          console.log('[Story Save] Created Monday item:', mondayItemId);
+
+          // Save the Monday item mapping
+          await serverTables.mondayItems().insert({
+            workspace_id,
+            workstream_id,
+            entity_type: 'story',
+            entity_id: story.id,
+            monday_item_id: mondayItemId,
+            monday_board_id: workstream.monday_story_board_id,
+            last_synced_at: new Date().toISOString(),
+          });
+
+          // Update story with monday_item_id
+          await serverTables
+            .stories()
+            .update({ monday_item_id: mondayItemId })
+            .eq('id', story.id);
+        }
+      } catch (error: any) {
+        console.error('[Story Save] Error creating Monday item:', error);
+        // Don't fail - Monday sync can be done later
+      }
+    } else {
+      console.log('[Story Save] No Monday story board configured for workstream');
+    }
+
+    // =========================================================================
+    // Step 7: Return success response
+    // =========================================================================
+    return NextResponse.json(
+      {
+        data: story,
+        integrations: {
+          confluence: confluencePageId ? { pageId: confluencePageId } : null,
+          monday: mondayItemId ? { itemId: mondayItemId } : null,
+        },
+      },
+      { status: 201 }
+    );
+  } catch (error: any) {
+    console.error('[Story Save] Unexpected error:', error);
+    return NextResponse.json(
+      { error: 'Internal server error', details: error.message },
+      { status: 500 }
+    );
+  }
+}
+

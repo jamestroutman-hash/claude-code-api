@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code API - Admin Console</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background: #252526;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #9cdcfe;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            background: #1e1e1e;
+            border: 1px solid #3e3e42;
+            border-radius: 4px;
+            color: #d4d4d4;
+            font-family: 'Courier New', monospace;
+        }
+
+        button {
+            background: #0e639c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background: #1177bb;
+        }
+
+        button:disabled {
+            background: #3e3e42;
+            cursor: not-allowed;
+        }
+
+        .output {
+            background: #1e1e1e;
+            border: 1px solid #3e3e42;
+            border-radius: 4px;
+            padding: 15px;
+            min-height: 300px;
+            max-height: 500px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .output .stdout {
+            color: #d4d4d4;
+        }
+
+        .output .stderr {
+            color: #f48771;
+        }
+
+        .output .success {
+            color: #4ec9b0;
+        }
+
+        .output .error {
+            color: #f48771;
+        }
+
+        .status {
+            background: #1e1e1e;
+            border: 1px solid #3e3e42;
+            border-radius: 4px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+
+        .status-item {
+            margin-bottom: 8px;
+        }
+
+        .status-label {
+            color: #9cdcfe;
+            display: inline-block;
+            width: 150px;
+        }
+
+        .status-value {
+            color: #4ec9b0;
+        }
+
+        .quick-commands {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Claude Code API - Admin Console</h1>
+
+        <!-- Status Section -->
+        <div class="section">
+            <h2>📊 Status</h2>
+            <div class="status" id="status">
+                Click "Check Status" to load...
+            </div>
+            <br>
+            <button onclick="checkStatus()">Check Status</button>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="section">
+            <h2>⚡ Quick Actions</h2>
+            <div class="quick-commands">
+                <button onclick="quickCommand('/login')">Login</button>
+                <button onclick="quickCommand('/logout')">Logout</button>
+                <button onclick="quickCommand('--version')">Check Version</button>
+                <button onclick="quickCommand('/help')">Help</button>
+            </div>
+        </div>
+
+        <!-- Set API Key -->
+        <div class="section">
+            <h2>🔑 Set API Key</h2>
+            <div class="input-group">
+                <label>Anthropic API Key:</label>
+                <input type="password" id="apiKey" placeholder="sk-ant-...">
+            </div>
+            <button onclick="setApiKey()">Set API Key</button>
+        </div>
+
+        <!-- Custom Command -->
+        <div class="section">
+            <h2>💻 Execute Command</h2>
+            <div class="input-group">
+                <label>Command (e.g., /login, --help):</label>
+                <input type="text" id="command" placeholder="/login" value="/login">
+            </div>
+            <button onclick="executeCommand()" id="executeBtn">Execute</button>
+            <button onclick="clearOutput()">Clear Output</button>
+        </div>
+
+        <!-- Output -->
+        <div class="section">
+            <h2>📤 Output</h2>
+            <div class="output" id="output"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+
+        function appendOutput(text, className = '') {
+            const output = document.getElementById('output');
+            const line = document.createElement('div');
+            line.className = className;
+            line.textContent = text;
+            output.appendChild(line);
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function clearOutput() {
+            document.getElementById('output').innerHTML = '';
+        }
+
+        async function checkStatus() {
+            try {
+                const response = await fetch(`${API_BASE}/admin/status`);
+                const data = await response.json();
+
+                const statusDiv = document.getElementById('status');
+                statusDiv.innerHTML = `
+                    <div class="status-item">
+                        <span class="status-label">Claude Binary:</span>
+                        <span class="status-value">${data.claude_binary || 'unknown'}</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Claude Version:</span>
+                        <span class="status-value">${data.claude_version || 'unknown'}</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Has API Key:</span>
+                        <span class="status-value">${data.has_api_key ? 'Yes ✓' : 'No ✗'}</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Config Directory:</span>
+                        <span class="status-value">${data.config_directory || 'unknown'}</span>
+                    </div>
+                `;
+            } catch (error) {
+                document.getElementById('status').innerHTML =
+                    `<div class="error">Error: ${error.message}</div>`;
+            }
+        }
+
+        async function setApiKey() {
+            const apiKey = document.getElementById('apiKey').value.trim();
+            if (!apiKey) {
+                alert('Please enter an API key');
+                return;
+            }
+
+            clearOutput();
+            appendOutput('Setting API key...', 'stdout');
+
+            try {
+                const response = await fetch(`${API_BASE}/admin/set-api-key?api_key=${encodeURIComponent(apiKey)}`, {
+                    method: 'POST'
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    appendOutput('✓ API key set successfully!', 'success');
+                    appendOutput(`Claude version: ${data.version}`, 'stdout');
+                    checkStatus();
+                } else {
+                    appendOutput('✗ Failed to set API key', 'error');
+                    appendOutput(data.error || data.message, 'stderr');
+                }
+            } catch (error) {
+                appendOutput(`✗ Error: ${error.message}`, 'error');
+            }
+        }
+
+        async function executeCommand() {
+            const command = document.getElementById('command').value.trim();
+            if (!command) {
+                alert('Please enter a command');
+                return;
+            }
+
+            const executeBtn = document.getElementById('executeBtn');
+            executeBtn.disabled = true;
+            clearOutput();
+
+            appendOutput(`> claude ${command}`, 'stdout');
+            appendOutput('', 'stdout');
+
+            try {
+                const response = await fetch(`${API_BASE}/admin/execute`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        command: 'claude',
+                        args: command.split(' ')
+                    })
+                });
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    const text = decoder.decode(value);
+                    const lines = text.split('\n').filter(l => l.trim());
+
+                    for (const line of lines) {
+                        try {
+                            const data = JSON.parse(line);
+
+                            if (data.type === 'stream') {
+                                appendOutput(data.data, data.stream === 'stderr' ? 'stderr' : 'stdout');
+                            } else if (data.type === 'complete') {
+                                appendOutput('', 'stdout');
+                                appendOutput(`Command completed with exit code ${data.exit_code}`,
+                                    data.success ? 'success' : 'error');
+                            } else if (data.type === 'error') {
+                                appendOutput(`Error: ${data.error}`, 'error');
+                            }
+                        } catch (e) {
+                            appendOutput(line, 'stdout');
+                        }
+                    }
+                }
+            } catch (error) {
+                appendOutput(`Error: ${error.message}`, 'error');
+            } finally {
+                executeBtn.disabled = false;
+            }
+        }
+
+        function quickCommand(args) {
+            document.getElementById('command').value = args;
+            executeCommand();
+        }
+
+        // Auto-load status on page load
+        window.addEventListener('load', checkStatus);
+    </script>
+</body>
+</html>

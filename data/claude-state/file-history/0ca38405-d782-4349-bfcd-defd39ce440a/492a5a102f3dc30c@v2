@@ -1,0 +1,35 @@
+-- Migration: Add Monday.com column mapping documentation to workstream settings
+-- This migration documents the expected structure of the settings JSONB column
+-- for Monday.com column mappings.
+--
+-- The settings.monday_column_mappings object allows configuring which Monday.com
+-- columns are used for different fields when creating stories.
+--
+-- Example structure:
+-- {
+--   "monday_column_mappings": {
+--     "story": {
+--       "status": "status",           -- Column ID for story status
+--       "priority": "priority",       -- Column ID for story priority
+--       "parent_feature": "connect_boards" -- Column ID for linking to parent feature
+--     }
+--   }
+-- }
+--
+-- Note: This migration is documentation only - the settings column already exists
+-- and can store arbitrary JSONB data. No schema changes are needed.
+
+COMMENT ON COLUMN workstreams.settings IS 'Configuration settings for the workstream. Includes monday_column_mappings for configurable Monday.com board column IDs.';
+
+-- Example of updating a workstream with Monday column mappings:
+-- UPDATE workstreams
+-- SET settings = settings || jsonb_build_object(
+--   'monday_column_mappings', jsonb_build_object(
+--     'story', jsonb_build_object(
+--       'status', 'status',
+--       'priority', 'priority',
+--       'parent_feature', 'connect_boards'
+--     )
+--   )
+-- )
+-- WHERE id = 'your-workstream-id';

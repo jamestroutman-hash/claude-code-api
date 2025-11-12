@@ -1,0 +1,612 @@
+/**
+ * Multi-board Monday.com sync for complex hierarchies
+ * Handles syncing from multiple Monday boards with connected items
+ */
+
+import {
+  fetchBoardItems,
+  extractConnectedItemIds,
+  mapMondayItemToEpic,
+  parseColumnValues,
+} from './monday';
+import { serverTables } from '../db/supabase-server';
+
+interface WorkstreamBoardConfig {
+  epicBoardId?: string; // Board containing Epics
+  featureBoardId?: string; // Board containing Features (linked to Epics)
+  storyBoardId?: string; // Board containing Stories/Tasks (linked to Features)
+}
+
+interface MultiBoardSyncResult {
+  epics: {
+    created: number;
+    updated: number;
+  };
+  features: {
+    created: number;
+    updated: number;
+  };
+  stories: {
+    created: number;
+    updated: number;
+  };
+  tasks: {
+    created: number;
+    updated: number;
+  };
+  errors: string[];
+}
+
+/**
+ * Sync from multiple Monday boards
+ * Handles Epic → Feature → Story hierarchy across different boards
+ */
+export async function syncMultipleBoards(
+  workspaceId: string,
+  workstreamId: string,
+  workstreamSlug: string,
+  boardConfig: WorkstreamBoardConfig
+): Promise<MultiBoardSyncResult> {
+  const results: MultiBoardSyncResult = {
+    epics: { created: 0, updated: 0 },
+    features: { created: 0, updated: 0 },
+    stories: { created: 0, updated: 0 },
+    tasks: { created: 0, updated: 0 },
+    errors: [],
+  };
+
+  // Step 1: Sync Epics from Epic board
+  const epicIdMap = new Map<string, string>(); // Monday ID -> DB ID
+
+  if (boardConfig.epicBoardId) {
+    try {
+      const mondayEpics = await fetchBoardItems(boardConfig.epicBoardId, {
+        includeSubitems: false,
+      });
+
+      for (const mondayEpic of mondayEpics) {
+        try {
+          const epicData = mapMondayItemToEpic(mondayEpic);
+          const dbEpicId = await syncEpic(
+            workspaceId,
+            workstreamId,
+            workstreamSlug,
+            epicData,
+            results
+          );
+          if (dbEpicId) {
+            epicIdMap.set(mondayEpic.id, dbEpicId);
+          }
+        } catch (error) {
+          results.errors.push(
+            `Error syncing epic ${mondayEpic.name}: ${error instanceof Error ? error.message : 'Unknown error'}`
+          );
+        }
+      }
+    } catch (error) {
+      results.errors.push(
+        `Error fetching epic board: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
+    }
+  }
+
+  // Step 2: Sync Features from Feature board (with links to Epics)
+  const featureIdMap = new Map<string, string>(); // Monday ID -> DB ID
+
+  if (boardConfig.featureBoardId) {
+    try {
+      const mondayFeatures = await fetchBoardItems(boardConfig.featureBoardId, {
+        includeSubitems: false,
+      });
+
+      // Fetch functional areas for this workstream
+      const functionalAreas = await serverTables
+        .functionalAreas()
+        .select('id, name')
+        .eq('workstream_id', workstreamId);
+      const functionalAreaMap = new Map<string, string>();
+      if (functionalAreas.data) {
+        console.log(`[Feature Board] Found ${functionalAreas.data.length} functional areas for workstream`);
+        for (const area of functionalAreas.data) {
+          functionalAreaMap.set(area.name, area.id);
+          console.log(`[Feature Board] Mapped functional area: "${area.name}" -> ${area.id}`);
+        }
+      } else {
+        console.log(`[Feature Board] No functional areas found for workstream ${workstreamId}`);
+      }
+
+      for (const mondayFeature of mondayFeatures) {
+        try {
+          const columns = parseColumnValues(mondayFeature.column_values);
+
+          // Find the column that links to epics
+          // Check all board-relation columns and see if any connected IDs match our Epic IDs
+          let linkedEpicId: string | undefined;
+          for (const col of mondayFeature.column_values) {
+            if (col.type === 'board_relation') {
+              console.log(`[Feature ${mondayFeature.name}] Found board-relation column:`, {
+                columnId: col.id,
+                linkedItemIds: col.linked_item_ids,
+              });
+              const connectedIds = extractConnectedItemIds(col.value, col.linked_item_ids);
+              console.log(`[Feature ${mondayFeature.name}] Extracted IDs:`, connectedIds);
+              console.log(`[Feature ${mondayFeature.name}] Epic map has:`, Array.from(epicIdMap.keys()));
+              // Check if any of these IDs are in our Epic map
+              for (const connectedId of connectedIds) {
+                const mappedEpicId = epicIdMap.get(connectedId);
+                if (mappedEpicId) {
+                  linkedEpicId = mappedEpicId;
+                  console.log(`[Feature ${mondayFeature.name}] Matched epic ${connectedId} -> ${mappedEpicId}`);
+                  break;
+                } else {
+                  console.log(`[Feature ${mondayFeature.name}] No match for connected ID ${connectedId}`);
+                }
+              }
+              if (linkedEpicId) break;
+            }
+          }
+
+          if (!linkedEpicId) {
+            console.log(`[Feature ${mondayFeature.name}] WARNING: No linked epic found!`);
+          }
+
+          // Map functional area from Monday columns
+          let functionalAreaId: string | undefined;
+          const functionalAreaValue =
+            columns.treasury_functional_area ||
+            columns.foundation_functional_area ||
+            columns.functional_area;
+
+          console.log(`[Feature ${mondayFeature.name}] Checking functional area columns:`, {
+            treasury_functional_area: columns.treasury_functional_area,
+            foundation_functional_area: columns.foundation_functional_area,
+            functional_area: columns.functional_area,
+            foundValue: functionalAreaValue,
+          });
+
+          if (functionalAreaValue) {
+            if (functionalAreaMap.has(functionalAreaValue)) {
+              functionalAreaId = functionalAreaMap.get(functionalAreaValue);
+              console.log(`[Feature ${mondayFeature.name}] Matched functional area: "${functionalAreaValue}" -> ${functionalAreaId}`);
+            } else {
+              console.log(`[Feature ${mondayFeature.name}] WARNING: Functional area value "${functionalAreaValue}" not found in map. Available: [${Array.from(functionalAreaMap.keys()).join(', ')}]`);
+            }
+          }
+
+          // Extract Confluence page ID from link columns
+          let confluencePageId: string | undefined;
+          console.log(`[Feature ${mondayFeature.name}] Checking ${mondayFeature.column_values.length} columns for Confluence link`);
+          for (const col of mondayFeature.column_values) {
+            if (col.type === 'link') {
+              console.log(`[Feature ${mondayFeature.name}] Found link column ${col.id}:`, {
+                hasValue: !!col.value,
+                value: col.value,
+                text: col.text,
+              });
+              if (col.value) {
+                try {
+                  const linkData = typeof col.value === 'string' ? JSON.parse(col.value) : col.value;
+                  const url = linkData.url || '';
+                  console.log(`[Feature ${mondayFeature.name}] Parsed link URL: ${url}`);
+                  // Match Confluence page URLs: /pages/1234567890
+                  const match = url.match(/\/pages\/(\d+)/);
+                  if (match) {
+                    confluencePageId = match[1];
+                    console.log(`[Feature ${mondayFeature.name}] ✓ Found Confluence page ID: ${confluencePageId} from column ${col.id}`);
+                    break;
+                  }
+                } catch (e) {
+                  console.log(`[Feature ${mondayFeature.name}] Error parsing link column ${col.id}:`, e);
+                }
+              }
+            }
+          }
+          if (!confluencePageId) {
+            console.log(`[Feature ${mondayFeature.name}] WARNING: No Confluence page ID found`);
+          }
+
+          const featureData = {
+            title: mondayFeature.name,
+            description: columns.description || columns.text || columns.long_text || '',
+            monday_item_id: mondayFeature.id,
+            status: mapStatus(columns.status || mondayFeature.state || 'draft'),
+            priority: mapPriority(columns.priority || 'medium'),
+            business_value: columns.business_value || columns.value || '',
+            target_users: columns.target_users || columns.users || '',
+            epic_id: linkedEpicId || undefined,
+            functional_area_id: functionalAreaId || undefined,
+            confluence_page_id: confluencePageId || undefined,
+          };
+
+          const dbFeatureId = await syncFeature(
+            workspaceId,
+            workstreamId,
+            workstreamSlug,
+            featureData,
+            results
+          );
+
+          if (dbFeatureId) {
+            featureIdMap.set(mondayFeature.id, dbFeatureId);
+          }
+        } catch (error) {
+          results.errors.push(
+            `Error syncing feature ${mondayFeature.name}: ${error instanceof Error ? error.message : 'Unknown error'}`
+          );
+        }
+      }
+    } catch (error) {
+      results.errors.push(
+        `Error fetching feature board: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
+    }
+  }
+
+  // Step 3: Sync Stories/Tasks from Story board (with links to Features and subitasks)
+  if (boardConfig.storyBoardId) {
+    try {
+      const mondayStories = await fetchBoardItems(boardConfig.storyBoardId, {
+        includeSubitems: true, // Subtasks
+      });
+
+      for (const mondayStory of mondayStories) {
+        try {
+          const columns = parseColumnValues(mondayStory.column_values);
+
+          // Find linked feature
+          // Check all board-relation columns and match against our Feature IDs
+          let linkedFeatureId: string | undefined;
+          for (const col of mondayStory.column_values) {
+            if (col.type === 'board_relation') {
+              console.log(`[Story ${mondayStory.name}] Found board-relation column:`, {
+                columnId: col.id,
+                linkedItemIds: col.linked_item_ids,
+              });
+              const connectedIds = extractConnectedItemIds(col.value, col.linked_item_ids);
+              console.log(`[Story ${mondayStory.name}] Extracted IDs:`, connectedIds);
+              console.log(`[Story ${mondayStory.name}] Feature map has:`, Array.from(featureIdMap.keys()));
+              // Check if any of these IDs are in our Feature map
+              for (const connectedId of connectedIds) {
+                const mappedFeatureId = featureIdMap.get(connectedId);
+                if (mappedFeatureId) {
+                  linkedFeatureId = mappedFeatureId;
+                  console.log(`[Story ${mondayStory.name}] Matched feature ${connectedId} -> ${mappedFeatureId}`);
+                  break;
+                } else {
+                  console.log(`[Story ${mondayStory.name}] No match for connected ID ${connectedId}`);
+                }
+              }
+              if (linkedFeatureId) break;
+            }
+          }
+
+          if (!linkedFeatureId) {
+            console.log(`[Story ${mondayStory.name}] WARNING: No linked feature found!`);
+          }
+
+          const storyData = {
+            title: mondayStory.name,
+            description: columns.description || columns.text || columns.long_text || '',
+            monday_item_id: mondayStory.id,
+            status: mapStatus(columns.status || mondayStory.state || 'draft'),
+            priority: mapPriority(columns.priority || 'medium'),
+            story_points: columns.story_points
+              ? parseInt(columns.story_points, 10)
+              : undefined,
+            feature_id: linkedFeatureId || undefined,
+          };
+
+          const dbStoryId = await syncStory(
+            workspaceId,
+            workstreamId,
+            workstreamSlug,
+            storyData,
+            results
+          );
+
+          // Sync subtasks if they exist
+          if (dbStoryId && mondayStory.subitems && mondayStory.subitems.length > 0) {
+            for (let i = 0; i < mondayStory.subitems.length; i++) {
+              const subitem = mondayStory.subitems[i];
+              if (!subitem) continue;
+
+              try {
+                const subtaskColumns = parseColumnValues(subitem.column_values);
+                const taskData = {
+                  title: subitem.name,
+                  description: subtaskColumns.description || subtaskColumns.text || '',
+                  monday_item_id: subitem.id,
+                  status: mapStatus(subtaskColumns.status || subitem.state || 'todo', true),
+                  priority: mapPriority(subtaskColumns.priority || 'medium'),
+                  story_id: dbStoryId,
+                  position: i,
+                };
+
+                await syncTask(workspaceId, workstreamId, taskData, results);
+              } catch (error) {
+                results.errors.push(
+                  `Error syncing task ${subitem.name}: ${error instanceof Error ? error.message : 'Unknown error'}`
+                );
+              }
+            }
+          }
+        } catch (error) {
+          results.errors.push(
+            `Error syncing story ${mondayStory.name}: ${error instanceof Error ? error.message : 'Unknown error'}`
+          );
+        }
+      }
+    } catch (error) {
+      results.errors.push(
+        `Error fetching story board: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
+    }
+  }
+
+  return results;
+}
+
+// Helper functions for syncing individual entities
+
+async function syncEpic(
+  workspaceId: string,
+  workstreamId: string,
+  workstreamSlug: string,
+  epicData: any,
+  results: MultiBoardSyncResult
+): Promise<string | undefined> {
+  const existing = await serverTables
+    .epics()
+    .select('*')
+    .eq('monday_item_id', epicData.monday_item_id)
+    .eq('workstream_id', workstreamId)
+    .single();
+
+  if (existing.data) {
+    const result = await serverTables
+      .epics()
+      .update({
+        title: epicData.title,
+        description: epicData.description,
+        status: epicData.status,
+        priority: epicData.priority,
+        custom_fields: epicData.custom_fields || {},
+        updated_at: new Date().toISOString(),
+      })
+      .eq('id', existing.data.id);
+
+    if (!result.error) {
+      results.epics.updated++;
+      return existing.data.id;
+    }
+  } else {
+    const result = await serverTables
+      .epics()
+      .insert({
+        workspace_id: workspaceId,
+        workstream_id: workstreamId,
+        title: epicData.title,
+        description: epicData.description,
+        monday_item_id: epicData.monday_item_id,
+        status: epicData.status,
+        priority: epicData.priority,
+        custom_fields: epicData.custom_fields || {},
+        key: `EPIC-${workstreamSlug.toUpperCase()}-${String(results.epics.created + 1).padStart(3, '0')}`,
+      })
+      .select()
+      .single();
+
+    if (!result.error && result.data) {
+      results.epics.created++;
+      return result.data.id;
+    }
+  }
+
+  return undefined;
+}
+
+async function syncFeature(
+  workspaceId: string,
+  workstreamId: string,
+  workstreamSlug: string,
+  featureData: any,
+  results: MultiBoardSyncResult
+): Promise<string | undefined> {
+  const existing = await serverTables
+    .features()
+    .select('*')
+    .eq('monday_item_id', featureData.monday_item_id)
+    .eq('workstream_id', workstreamId)
+    .single();
+
+  if (existing.data) {
+    const result = await serverTables
+      .features()
+      .update({
+        title: featureData.title,
+        description: featureData.description,
+        status: featureData.status,
+        priority: featureData.priority,
+        business_value: featureData.business_value,
+        target_users: featureData.target_users,
+        epic_id: featureData.epic_id,
+        functional_area_id: featureData.functional_area_id,
+        confluence_page_id: featureData.confluence_page_id,
+        updated_at: new Date().toISOString(),
+      })
+      .eq('id', existing.data.id);
+
+    if (!result.error) {
+      results.features.updated++;
+      return existing.data.id;
+    }
+  } else {
+    const result = await serverTables
+      .features()
+      .insert({
+        workspace_id: workspaceId,
+        workstream_id: workstreamId,
+        epic_id: featureData.epic_id,
+        title: featureData.title,
+        description: featureData.description,
+        monday_item_id: featureData.monday_item_id,
+        status: featureData.status,
+        priority: featureData.priority,
+        business_value: featureData.business_value,
+        target_users: featureData.target_users,
+        functional_area_id: featureData.functional_area_id,
+        confluence_page_id: featureData.confluence_page_id,
+        key: `FEAT-${workstreamSlug.toUpperCase()}-${String(results.features.created + 1).padStart(3, '0')}`,
+      })
+      .select()
+      .single();
+
+    if (!result.error && result.data) {
+      results.features.created++;
+      return result.data.id;
+    }
+  }
+
+  return undefined;
+}
+
+async function syncStory(
+  workspaceId: string,
+  workstreamId: string,
+  workstreamSlug: string,
+  storyData: any,
+  results: MultiBoardSyncResult
+): Promise<string | undefined> {
+  const existing = await serverTables
+    .stories()
+    .select('*')
+    .eq('monday_item_id', storyData.monday_item_id)
+    .eq('workstream_id', workstreamId)
+    .single();
+
+  if (existing.data) {
+    const result = await serverTables
+      .stories()
+      .update({
+        title: storyData.title,
+        description: storyData.description,
+        status: storyData.status,
+        priority: storyData.priority,
+        story_points: storyData.story_points,
+        feature_id: storyData.feature_id,
+        updated_at: new Date().toISOString(),
+      })
+      .eq('id', existing.data.id);
+
+    if (!result.error) {
+      results.stories.updated++;
+      return existing.data.id;
+    }
+  } else {
+    const result = await serverTables
+      .stories()
+      .insert({
+        workspace_id: workspaceId,
+        workstream_id: workstreamId,
+        feature_id: storyData.feature_id,
+        title: storyData.title,
+        description: storyData.description,
+        monday_item_id: storyData.monday_item_id,
+        status: storyData.status,
+        priority: storyData.priority,
+        story_points: storyData.story_points,
+        key: `STORY-${workstreamSlug.toUpperCase()}-${String(results.stories.created + 1).padStart(3, '0')}`,
+      })
+      .select()
+      .single();
+
+    if (!result.error && result.data) {
+      results.stories.created++;
+      return result.data.id;
+    }
+  }
+
+  return undefined;
+}
+
+async function syncTask(
+  workspaceId: string,
+  workstreamId: string,
+  taskData: any,
+  results: MultiBoardSyncResult
+): Promise<void> {
+  const existing = await serverTables
+    .tasks()
+    .select('*')
+    .eq('monday_item_id', taskData.monday_item_id)
+    .eq('workstream_id', workstreamId)
+    .single();
+
+  if (existing.data) {
+    const result = await serverTables
+      .tasks()
+      .update({
+        title: taskData.title,
+        description: taskData.description,
+        status: taskData.status,
+        priority: taskData.priority,
+        story_id: taskData.story_id,
+        position: taskData.position,
+        updated_at: new Date().toISOString(),
+      })
+      .eq('id', existing.data.id);
+
+    if (!result.error) {
+      results.tasks.updated++;
+    }
+  } else {
+    const result = await serverTables.tasks().insert({
+      workspace_id: workspaceId,
+      workstream_id: workstreamId,
+      story_id: taskData.story_id,
+      title: taskData.title,
+      description: taskData.description,
+      monday_item_id: taskData.monday_item_id,
+      status: taskData.status,
+      priority: taskData.priority,
+      position: taskData.position,
+      key: `TASK-${results.tasks.created + 1}`,
+    });
+
+    if (!result.error) {
+      results.tasks.created++;
+    }
+  }
+}
+
+// Status and priority mapping helpers
+function mapStatus(status: string, isTask: boolean = false): string {
+  // Task statuses: todo, in_progress, review, done, cancelled
+  // Story/Feature/Epic statuses: draft, planned, ready, in_progress, review, completed, cancelled
+
+  const statusMap: Record<string, string> = {
+    'Not Started': isTask ? 'todo' : 'draft',
+    'Working on it': 'in_progress',
+    'Done': isTask ? 'done' : 'completed',
+    'Stuck': 'in_progress',
+    'Planned': isTask ? 'todo' : 'planned',
+    'Ready': isTask ? 'todo' : 'ready',
+    'Ready to start': isTask ? 'todo' : 'ready',
+    'In Progress': 'in_progress',
+    'Review': 'review',
+    'Completed': isTask ? 'done' : 'completed',
+  };
+
+  return statusMap[status] || (isTask ? 'todo' : 'draft');
+}
+
+function mapPriority(priority: string): string {
+  const priorityMap: Record<string, string> = {
+    'Critical': 'critical',
+    'High': 'high',
+    'Medium': 'medium',
+    'Low': 'low',
+  };
+
+  return priorityMap[priority] || 'medium';
+}

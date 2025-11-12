@@ -1,0 +1,81 @@
+/**
+ * Script to check Monday.com board columns
+ * Usage: MONDAY_API_TOKEN=your_token node scripts/check-monday-columns.js BOARD_ID
+ */
+
+const MONDAY_API_URL = 'https://api.monday.com/v2';
+
+async function getBoardColumns(boardId) {
+  const apiToken = process.env.MONDAY_API_TOKEN;
+
+  if (!apiToken) {
+    console.error('Error: MONDAY_API_TOKEN environment variable is not set');
+    process.exit(1);
+  }
+
+  const query = `
+    query {
+      boards(ids: [${boardId}]) {
+        id
+        name
+        columns {
+          id
+          title
+          type
+          settings_str
+        }
+      }
+    }
+  `;
+
+  try {
+    const response = await fetch(MONDAY_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': apiToken,
+        'API-Version': '2024-10',
+      },
+      body: JSON.stringify({ query }),
+    });
+
+    const data = await response.json();
+
+    if (data.errors) {
+      console.error('Monday API errors:', JSON.stringify(data.errors, null, 2));
+      process.exit(1);
+    }
+
+    if (!data.data || !data.data.boards || data.data.boards.length === 0) {
+      console.error('No board found with ID:', boardId);
+      process.exit(1);
+    }
+
+    const board = data.data.boards[0];
+    console.log(`\nBoard: ${board.name} (ID: ${board.id})\n`);
+    console.log('Columns:');
+    console.log('========\n');
+
+    board.columns.forEach(col => {
+      console.log(`ID: ${col.id}`);
+      console.log(`Title: ${col.title}`);
+      console.log(`Type: ${col.type}`);
+      if (col.type === 'link') {
+        console.log('  ⭐ This is a LINK column - can be used for confluence_document');
+      }
+      console.log('---');
+    });
+
+  } catch (error) {
+    console.error('Error fetching board columns:', error);
+    process.exit(1);
+  }
+}
+
+const boardId = process.argv[2];
+if (!boardId) {
+  console.error('Usage: node scripts/check-monday-columns.js BOARD_ID');
+  process.exit(1);
+}
+
+getBoardColumns(boardId);

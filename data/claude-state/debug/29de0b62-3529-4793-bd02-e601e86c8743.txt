@@ -1,0 +1,2541 @@
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for e5cd48af-dc68-44b2-aa0f-ce9138295009, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761071982651
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 267346 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761071982651 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761071982667
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 267430 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761071982667 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 2979a97f-ed21-46cc-9bed-c0c02b3d7f7a
+[DEBUG] FileHistory: Added snapshot for 2979a97f-ed21-46cc-9bed-c0c02b3d7f7a, tracking 0 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "monday": SSE connection dropped after 446s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] No hook environment files found
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 84536s
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761072069273
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 267430 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761072069273 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761072069301
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 267430 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761072069301 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761072069320
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 267585 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761072069320 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 608s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 751s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 84231s
+[DEBUG] MCP server "context7": HTTP connection dropped after 910s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 1055s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 83927s
+[DEBUG] MCP server "context7": HTTP connection dropped after 1212s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 1359s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 83623s
+[DEBUG] MCP server "context7": HTTP connection dropped after 1514s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 1664s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 83319s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 1734s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Token expires in -25s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "context7": HTTP connection dropped after 1816s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 1968s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 83014s
+[DEBUG] MCP server "context7": HTTP connection dropped after 2118s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 2272s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 82710s
+[DEBUG] MCP server "context7": HTTP connection dropped after 2419s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 2577s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 82406s
+[DEBUG] MCP server "context7": HTTP connection dropped after 2721s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 2881s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 82101s
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 49484479-15b8-4f66-a589-3faecbf5fd7d
+[DEBUG] FileHistory: Added snapshot for 49484479-15b8-4f66-a589-3faecbf5fd7d, tracking 0 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761074592661
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 268819 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761074592661 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761074592685
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 268819 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761074592685 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761074592696
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 268933 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761074592696 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 3023s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 3155s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 81827s
+[DEBUG] MCP server "context7": HTTP connection dropped after 3325s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 3460s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 81522s
+[DEBUG] MCP server "context7": HTTP connection dropped after 3627s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 3764s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 81218s
+[DEBUG] MCP server "context7": HTTP connection dropped after 3929s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 4069s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 80914s
+[DEBUG] MCP server "context7": HTTP connection dropped after 4231s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 4373s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 80609s
+[DEBUG] MCP server "context7": HTTP connection dropped after 4533s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 4678s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 80305s
+[DEBUG] MCP server "context7": HTTP connection dropped after 4835s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 4863s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 80119s
+[DEBUG] MCP server "context7": HTTP connection dropped after 5137s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 5168s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 79815s
+[DEBUG] MCP server "context7": HTTP connection dropped after 5439s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 5472s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 79510s
+[DEBUG] MCP server "context7": HTTP connection dropped after 5741s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 5777s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 79205s
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 74c59a83-ee31-42f2-b81e-04a08e889734
+[DEBUG] FileHistory: Added snapshot for 74c59a83-ee31-42f2-b81e-04a08e889734, tracking 0 files
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761077422819
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 268933 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761077422819 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761077422850
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 268933 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761077422850 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 6043s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 6081s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 78901s
+[DEBUG] MCP server "context7": HTTP connection dropped after 6345s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 6386s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 78596s
+[DEBUG] MCP server "context7": HTTP connection dropped after 6647s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 6691s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 78292s
+[DEBUG] MCP server "context7": HTTP connection dropped after 6949s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 6995s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 77987s
+[DEBUG] MCP server "context7": HTTP connection dropped after 7252s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 7300s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 77682s
+[DEBUG] MCP server "context7": HTTP connection dropped after 7554s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 7605s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 77378s
+[DEBUG] MCP server "monday": SSE connection dropped after 7678s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 77304s
+[DEBUG] MCP server "context7": HTTP connection dropped after 7856s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 7983s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 76999s
+[DEBUG] MCP server "context7": HTTP connection dropped after 8158s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 8288s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 76695s
+[DEBUG] MCP server "context7": HTTP connection dropped after 8460s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 8592s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 76390s
+[DEBUG] MCP server "context7": HTTP connection dropped after 8762s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 8897s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 76085s
+[DEBUG] MCP server "context7": HTTP connection dropped after 9065s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 9202s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 75780s
+[DEBUG] MCP server "context7": HTTP connection dropped after 9367s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 9506s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 75476s
+[DEBUG] MCP server "context7": HTTP connection dropped after 9669s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 9811s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 75171s
+[DEBUG] MCP server "context7": HTTP connection dropped after 9972s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 10119s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 74863s
+[DEBUG] MCP server "context7": HTTP connection dropped after 10274s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 10424s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 74558s
+[DEBUG] MCP server "context7": HTTP connection dropped after 10576s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 10729s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 74253s
+[DEBUG] MCP server "context7": HTTP connection dropped after 10879s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 11034s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 73949s
+[DEBUG] MCP server "context7": HTTP connection dropped after 11181s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761082830311
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761082830311 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 11339s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 73644s
+[DEBUG] MCP server "context7": HTTP connection dropped after 11483s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 11643s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 73339s
+[DEBUG] MCP server "context7": HTTP connection dropped after 11786s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 11948s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 73034s
+[DEBUG] MCP server "context7": HTTP connection dropped after 12088s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12253s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 72729s
+[DEBUG] MCP server "context7": HTTP connection dropped after 12391s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12558s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 72424s
+[DEBUG] MCP server "context7": HTTP connection dropped after 12693s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12863s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 72119s
+[DEBUG] MCP server "context7": HTTP connection dropped after 12995s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761084633918
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761084633918 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 13168s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 71814s
+[DEBUG] MCP server "context7": HTTP connection dropped after 13298s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 13473s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 71509s
+[DEBUG] MCP server "context7": HTTP connection dropped after 13600s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 13778s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 71204s
+[DEBUG] MCP server "context7": HTTP connection dropped after 13903s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 14083s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 70899s
+[DEBUG] MCP server "monday": SSE connection dropped after 14154s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 70828s
+[DEBUG] MCP server "context7": HTTP connection dropped after 14205s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 14459s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 70523s
+[DEBUG] MCP server "context7": HTTP connection dropped after 14508s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 14765s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 70218s
+[DEBUG] MCP server "context7": HTTP connection dropped after 14810s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761086438223
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761086438223 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 15070s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 69912s
+[DEBUG] MCP server "context7": HTTP connection dropped after 15113s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 15375s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 69607s
+[DEBUG] MCP server "context7": HTTP connection dropped after 15416s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 15684s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 69298s
+[DEBUG] MCP server "context7": HTTP connection dropped after 15718s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 15989s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 68993s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16021s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 16295s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 68688s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16324s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 16600s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 68382s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16627s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761088244137
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761088244137 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 16905s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 68077s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16929s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 17211s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 67772s
+[DEBUG] MCP server "context7": HTTP connection dropped after 17232s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 17516s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 67466s
+[DEBUG] MCP server "context7": HTTP connection dropped after 17535s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "atlassian": SSE connection dropped after 17794s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Token expires in -2170s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "monday": SSE connection dropped after 17822s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 67160s
+[DEBUG] MCP server "context7": HTTP connection dropped after 17838s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 18127s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 66855s
+[DEBUG] MCP server "context7": HTTP connection dropped after 18141s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 18433s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 66549s
+[DEBUG] MCP server "context7": HTTP connection dropped after 18444s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761090051021
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761090051021 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 18738s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 66244s
+[DEBUG] MCP server "context7": HTTP connection dropped after 18747s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 19044s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 65938s
+[DEBUG] MCP server "context7": HTTP connection dropped after 19050s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "atlassian": SSE connection dropped after 19341s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 1754s
+[DEBUG] MCP server "monday": SSE connection dropped after 19349s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 65633s
+[DEBUG] MCP server "context7": HTTP connection dropped after 19353s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 19575s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 65407s
+[DEBUG] MCP server "context7": HTTP connection dropped after 19656s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 19881s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 65101s
+[DEBUG] MCP server "context7": HTTP connection dropped after 19959s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 20187s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 64796s
+[DEBUG] MCP server "context7": HTTP connection dropped after 20262s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761091858395
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761091858395 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 20493s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 64490s
+[DEBUG] MCP server "context7": HTTP connection dropped after 20565s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 20798s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 64184s
+[DEBUG] MCP server "context7": HTTP connection dropped after 20868s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 21104s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 63878s
+[DEBUG] MCP server "context7": HTTP connection dropped after 21172s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 21410s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 63572s
+[DEBUG] MCP server "context7": HTTP connection dropped after 21475s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 21716s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 63266s
+[DEBUG] MCP server "context7": HTTP connection dropped after 21778s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 22021s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 62961s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761093667262
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761093667262 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 22081s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 22327s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 62655s
+[DEBUG] MCP server "context7": HTTP connection dropped after 22385s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 22633s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 62349s
+[DEBUG] MCP server "context7": HTTP connection dropped after 22688s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 22939s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 62043s
+[DEBUG] MCP server "context7": HTTP connection dropped after 22991s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 23244s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 61738s
+[DEBUG] MCP server "context7": HTTP connection dropped after 23294s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 23550s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 61432s
+[DEBUG] MCP server "context7": HTTP connection dropped after 23598s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 23856s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 61126s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761095479319
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761095479319 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 23901s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 24162s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 60820s
+[DEBUG] MCP server "context7": HTTP connection dropped after 24204s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 24468s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 60514s
+[DEBUG] MCP server "context7": HTTP connection dropped after 24508s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 24776s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 60207s
+[DEBUG] MCP server "context7": HTTP connection dropped after 24813s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 25085s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 59897s
+[DEBUG] MCP server "context7": HTTP connection dropped after 25120s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 25395s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 59587s
+[DEBUG] MCP server "context7": HTTP connection dropped after 25428s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "atlassian": SSE connection dropped after 25523s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Token expires in -225s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "monday": SSE connection dropped after 25706s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 59276s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761097301116
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761097301116 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 25736s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 26021s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 58961s
+[DEBUG] MCP server "context7": HTTP connection dropped after 26046s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 26332s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 58650s
+[DEBUG] MCP server "context7": HTTP connection dropped after 26354s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 26644s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 58339s
+[DEBUG] MCP server "context7": HTTP connection dropped after 26663s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 26955s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 58027s
+[DEBUG] MCP server "context7": HTTP connection dropped after 26972s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 27220s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 57762s
+[DEBUG] MCP server "context7": HTTP connection dropped after 27282s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 27534s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 57448s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761099144994
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761099144994 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "context7": HTTP connection dropped after 27591s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "atlassian": SSE connection dropped after 27597s uptime
+[DEBUG] MCP server "atlassian": Connection reset - server may have crashed or restarted
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 1227s
+[DEBUG] MCP server "monday": SSE connection dropped after 27846s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 57137s
+[DEBUG] MCP server "context7": HTTP connection dropped after 27900s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 28158s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 56824s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 28201s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 623s
+[DEBUG] MCP server "context7": HTTP connection dropped after 28210s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 28470s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 56512s
+[DEBUG] MCP server "context7": HTTP connection dropped after 28520s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 28783s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 56199s
+[DEBUG] MCP server "context7": HTTP connection dropped after 28829s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 29096s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 55886s
+[DEBUG] MCP server "context7": HTTP connection dropped after 29139s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761100993061
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761100993061 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 29408s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 55574s
+[DEBUG] MCP server "context7": HTTP connection dropped after 29449s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 29721s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 55261s
+[DEBUG] MCP server "context7": HTTP connection dropped after 29759s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 30034s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 54948s
+[DEBUG] MCP server "context7": HTTP connection dropped after 30069s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 30347s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 54635s
+[DEBUG] MCP server "context7": HTTP connection dropped after 30380s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 30660s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 54322s
+[DEBUG] MCP server "context7": HTTP connection dropped after 30690s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 30974s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 54008s
+[DEBUG] MCP server "context7": HTTP connection dropped after 31001s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761102845326
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761102845326 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 31287s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 53695s
+[DEBUG] MCP server "context7": HTTP connection dropped after 31312s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 31601s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 53381s
+[DEBUG] MCP server "context7": HTTP connection dropped after 31623s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 31915s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 53067s
+[DEBUG] MCP server "context7": HTTP connection dropped after 31934s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 32229s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 52753s
+[DEBUG] MCP server "context7": HTTP connection dropped after 32245s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 32542s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 52440s
+[DEBUG] MCP server "context7": HTTP connection dropped after 32556s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 32856s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 52126s
+[DEBUG] MCP server "context7": HTTP connection dropped after 32867s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761104701292
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761104701292 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 33174s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 51809s
+[DEBUG] MCP server "context7": HTTP connection dropped after 33180s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 33489s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "context7": HTTP connection dropped after 33491s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 51493s
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": HTTP connection dropped after 33802s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 33806s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 51176s
+[DEBUG] MCP server "context7": HTTP connection dropped after 34114s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 34122s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 50860s
+[DEBUG] MCP server "monday": SSE connection dropped after 34172s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 50810s
+[DEBUG] MCP server "context7": HTTP connection dropped after 34247s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": HTTP connection dropped after 34254s uptime
+[DEBUG] MCP server "context7": Connection error: fetch failed
+[DEBUG] MCP server "context7": HTTP connection dropped after 34254s uptime
+[DEBUG] MCP server "context7": Connection error: Failed to reconnect SSE stream: fetch failed
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": HTTP connection dropped after 34261s uptime
+[DEBUG] MCP server "context7": Connection error: fetch failed
+[DEBUG] MCP server "context7": HTTP connection dropped after 34261s uptime
+[DEBUG] MCP server "context7": Connection error: Failed to reconnect SSE stream: fetch failed
+[DEBUG] MCP server "context7": HTTP connection dropped after 34261s uptime
+[DEBUG] MCP server "context7": Connection error: Maximum reconnection attempts (2) exceeded.
+[DEBUG] MCP server "monday": SSE connection dropped after 34487s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 50495s
+[DEBUG] MCP server "monday": SSE connection dropped after 34801s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 50181s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761106560209
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761106560209 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 35115s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 49867s
+[DEBUG] MCP server "monday": SSE connection dropped after 35430s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 49551s
+[DEBUG] MCP server "monday": SSE connection dropped after 35745s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 49237s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 35777s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Token expires in -1358s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "monday": SSE connection dropped after 36060s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 48922s
+[DEBUG] MCP server "monday": SSE connection dropped after 36374s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 48608s
+[DEBUG] MCP server "monday": SSE connection dropped after 36689s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 48293s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761108422782
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761108422782 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 37004s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 47978s
+[DEBUG] MCP server "monday": SSE connection dropped after 37319s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 47663s
+[DEBUG] MCP server "monday": SSE connection dropped after 37634s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 47347s
+[DEBUG] MCP server "monday": SSE connection dropped after 37950s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 47032s
+[DEBUG] MCP server "monday": SSE connection dropped after 38266s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 46717s
+[DEBUG] MCP server "monday": SSE connection dropped after 38581s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 46401s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761110288469
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761110288469 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 38896s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 46086s
+[DEBUG] MCP server "monday": SSE connection dropped after 39212s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 45770s
+[DEBUG] MCP server "monday": SSE connection dropped after 39343s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 45639s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 39452s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Token expires in -374s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "monday": SSE connection dropped after 39658s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 45323s
+[DEBUG] MCP server "monday": SSE connection dropped after 39975s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 45007s
+[DEBUG] MCP server "monday": SSE connection dropped after 40115s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 44867s
+[DEBUG] MCP server "monday": SSE connection dropped after 40432s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 44550s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761112157892
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761112157892 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 40748s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 44233s
+[DEBUG] MCP server "monday": SSE connection dropped after 41065s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 43917s
+[DEBUG] MCP server "monday": SSE connection dropped after 41381s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 43601s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 41408s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 1345s
+[DEBUG] MCP server "monday": SSE connection dropped after 41697s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 43285s
+[DEBUG] MCP server "monday": SSE connection dropped after 42014s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 42967s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 42020s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 732s
+[DEBUG] MCP server "monday": SSE connection dropped after 42331s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 42651s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761114030034
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761114030034 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 42647s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 42335s
+[DEBUG] MCP server "monday": SSE connection dropped after 42964s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 42018s
+[DEBUG] MCP server "monday": SSE connection dropped after 43282s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 41700s
+[DEBUG] MCP server "monday": SSE connection dropped after 43598s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 41384s
+[DEBUG] MCP server "monday": SSE connection dropped after 43915s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 41067s
+[DEBUG] MCP server "monday": SSE connection dropped after 44232s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 40750s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761115905125
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761115905125 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 44549s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 40433s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 44653s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Token expires in -1902s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "monday": SSE connection dropped after 44866s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 40116s
+[DEBUG] MCP server "monday": SSE connection dropped after 45183s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 39799s
+[DEBUG] MCP server "monday": SSE connection dropped after 45501s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 39480s
+[DEBUG] MCP server "monday": SSE connection dropped after 45819s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 39163s
+[DEBUG] MCP server "monday": SSE connection dropped after 46137s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 38846s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761117783622
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761117783622 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 46454s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 38528s
+[DEBUG] MCP server "monday": SSE connection dropped after 46772s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 38210s
+[DEBUG] MCP server "monday": SSE connection dropped after 47090s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 37892s
+[DEBUG] MCP server "monday": SSE connection dropped after 47408s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 37574s
+[DEBUG] MCP server "monday": SSE connection dropped after 47726s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 37255s
+[DEBUG] MCP server "monday": SSE connection dropped after 48045s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 36937s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761119666359
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761119666359 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 48364s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 36619s
+[DEBUG] MCP server "monday": SSE connection dropped after 48682s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 36300s
+[DEBUG] MCP server "monday": SSE connection dropped after 49001s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 35981s
+[DEBUG] MCP server "monday": SSE connection dropped after 49320s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 35663s
+[DEBUG] MCP server "monday": SSE connection dropped after 49638s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 35344s
+[DEBUG] MCP server "monday": SSE connection dropped after 49957s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 35024s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761121552708
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761121552708 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 50277s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 34705s
+[DEBUG] MCP server "monday": SSE connection dropped after 50596s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 34386s
+[DEBUG] MCP server "monday": SSE connection dropped after 50915s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 34067s
+[DEBUG] MCP server "monday": SSE connection dropped after 51235s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 33748s
+[DEBUG] MCP server "monday": SSE connection dropped after 51554s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 33428s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 51563s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Token expires in -3606s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761123442650
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761123442650 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 51873s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 33109s
+[DEBUG] MCP server "monday": SSE connection dropped after 52193s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 32789s
+[DEBUG] MCP server "monday": SSE connection dropped after 52514s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 32468s
+[DEBUG] MCP server "monday": SSE connection dropped after 52833s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 32149s
+[DEBUG] MCP server "monday": SSE connection dropped after 53153s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 31829s
+[DEBUG] MCP server "monday": SSE connection dropped after 53473s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 31509s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761125335519
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761125335519 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 53793s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 31189s
+[DEBUG] MCP server "monday": SSE connection dropped after 54113s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 30869s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 54175s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 693s
+[DEBUG] MCP server "monday": SSE connection dropped after 54433s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 30549s
+[DEBUG] MCP server "monday": SSE connection dropped after 54758s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 30225s
+[DEBUG] MCP server "monday": SSE connection dropped after 55078s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 29904s
+[DEBUG] MCP server "monday": SSE connection dropped after 55398s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 29584s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761127232103
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761127232103 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 55719s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 29264s
+[DEBUG] MCP server "monday": SSE connection dropped after 56039s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 28943s
+[DEBUG] MCP server "monday": SSE connection dropped after 56360s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 28622s
+[DEBUG] MCP server "monday": SSE connection dropped after 56681s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 28300s
+[DEBUG] MCP server "monday": SSE connection dropped after 57004s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 27978s
+[DEBUG] MCP server "monday": SSE connection dropped after 57326s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 27656s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761129131575
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761129131575 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 57647s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 27335s
+[DEBUG] MCP server "monday": SSE connection dropped after 57968s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 27014s
+[DEBUG] MCP server "monday": SSE connection dropped after 58289s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 26693s
+[DEBUG] MCP server "monday": SSE connection dropped after 58615s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 26365s
+[DEBUG] MCP server "monday": SSE connection dropped after 58937s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 26045s
+[DEBUG] MCP server "monday": SSE connection dropped after 59260s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 25723s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761131033711
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761131033711 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 59581s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 25401s
+[DEBUG] MCP server "monday": SSE connection dropped after 59902s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 25080s
+[DEBUG] MCP server "monday": SSE connection dropped after 60098s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 24885s
+[DEBUG] MCP server "monday": SSE connection dropped after 60111s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 24872s
+[DEBUG] MCP server "monday": SSE connection dropped after 60432s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 24550s
+[DEBUG] MCP server "monday": SSE connection dropped after 60753s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 24229s
+[DEBUG] MCP server "monday": SSE connection dropped after 61077s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 23905s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761132937791
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761132937791 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 61399s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 23584s
+[DEBUG] MCP server "monday": SSE connection dropped after 61721s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 23262s
+[DEBUG] MCP server "monday": SSE connection dropped after 62043s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 22938s
+[DEBUG] MCP server "monday": SSE connection dropped after 62366s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 22616s
+[DEBUG] MCP server "monday": SSE connection dropped after 62689s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 22294s
+[DEBUG] MCP server "monday": SSE connection dropped after 63011s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 21972s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761134845403
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761134845403 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 63333s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 21649s
+[DEBUG] MCP server "monday": SSE connection dropped after 63655s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 21327s
+[DEBUG] MCP server "monday": SSE connection dropped after 63666s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 21315s
+[DEBUG] MCP server "monday": SSE connection dropped after 63729s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 21251s
+[DEBUG] MCP server "monday": SSE connection dropped after 64054s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 20928s
+[DEBUG] MCP server "monday": SSE connection dropped after 64357s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 20625s
+[DEBUG] MCP server "monday": SSE connection dropped after 64362s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 20620s
+[DEBUG] MCP server "monday": SSE connection dropped after 64685s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 20296s
+[DEBUG] MCP server "monday": SSE connection dropped after 65009s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 19973s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761136755631
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761136755631 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 65332s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 19650s
+[DEBUG] MCP server "monday": SSE connection dropped after 65654s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 19328s
+[DEBUG] MCP server "monday": SSE connection dropped after 65977s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 19005s
+[DEBUG] MCP server "monday": SSE connection dropped after 66300s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 18682s
+[DEBUG] MCP server "monday": SSE connection dropped after 66623s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 18359s
+[DEBUG] MCP server "monday": SSE connection dropped after 66947s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 18034s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761138671366
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761138671366 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 67272s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 17710s
+[DEBUG] MCP server "monday": SSE connection dropped after 67596s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 17386s
+[DEBUG] MCP server "monday": SSE connection dropped after 67919s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 17063s
+[DEBUG] MCP server "monday": SSE connection dropped after 68172s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 16810s
+[DEBUG] MCP server "monday": SSE connection dropped after 68183s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 16800s
+[DEBUG] MCP server "monday": SSE connection dropped after 68506s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 16476s
+[DEBUG] MCP server "monday": SSE connection dropped after 68830s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 16150s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761140584462
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761140584462 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 69155s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 15827s
+[DEBUG] MCP server "monday": SSE connection dropped after 69479s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 15503s
+[DEBUG] MCP server "monday": SSE connection dropped after 69802s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 15180s
+[DEBUG] MCP server "monday": SSE connection dropped after 70126s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 14856s
+[DEBUG] MCP server "monday": SSE connection dropped after 70450s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 14532s
+[DEBUG] MCP server "monday": SSE connection dropped after 70774s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 14208s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761142500957
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761142500957 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 71098s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 13882s
+[DEBUG] MCP server "monday": SSE connection dropped after 71424s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 13558s
+[DEBUG] MCP server "monday": SSE connection dropped after 71750s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 13233s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 71839s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Token expires in -16971s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "monday": SSE connection dropped after 72074s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 12908s
+[DEBUG] MCP server "monday": SSE connection dropped after 72399s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 12584s
+[DEBUG] MCP server "monday": SSE connection dropped after 72723s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 12259s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761144423123
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761144423123 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 73048s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 11935s
+[DEBUG] MCP server "monday": SSE connection dropped after 73372s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 11610s
+[DEBUG] MCP server "monday": SSE connection dropped after 73699s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 11283s
+[DEBUG] MCP server "monday": SSE connection dropped after 74024s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 10958s
+[DEBUG] MCP server "monday": SSE connection dropped after 74349s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 10633s
+[DEBUG] MCP server "monday": SSE connection dropped after 74674s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 10308s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761146347143
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761146347143 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 74999s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 9983s
+[DEBUG] MCP server "monday": SSE connection dropped after 75324s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 9658s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 75499s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 3223s
+[DEBUG] MCP server "monday": SSE connection dropped after 75649s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 9333s
+[DEBUG] MCP server "monday": SSE connection dropped after 75974s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 9006s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 75992s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 2730s
+[DEBUG] MCP server "monday": SSE connection dropped after 76302s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 8680s
+[DEBUG] MCP server "monday": SSE connection dropped after 76627s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 8355s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761148273526
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761148273526 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 76953s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 8029s
+[DEBUG] MCP server "monday": SSE connection dropped after 77278s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 7704s
+[DEBUG] MCP server "monday": SSE connection dropped after 77604s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 7378s
+[DEBUG] MCP server "monday": SSE connection dropped after 77929s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 7053s
+[DEBUG] MCP server "monday": SSE connection dropped after 78255s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 6725s
+[DEBUG] MCP server "monday": SSE connection dropped after 78583s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 6399s
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761150202553
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761150202553 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 78909s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 6073s
+[DEBUG] MCP server "monday": SSE connection dropped after 79235s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 5747s
+[DEBUG] MCP server "monday": SSE connection dropped after 79561s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 5421s
+[DEBUG] MCP server "monday": SSE connection dropped after 79887s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 5095s
+[DEBUG] MCP server "monday": SSE connection dropped after 80213s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 4769s
+[DEBUG] MCP server "monday": SSE connection dropped after 80539s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 4441s
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.92758.1761152133043
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 270898 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.92758.1761152133043 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 80867s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 4115s

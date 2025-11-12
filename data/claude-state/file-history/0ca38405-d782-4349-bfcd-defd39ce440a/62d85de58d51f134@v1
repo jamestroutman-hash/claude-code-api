@@ -1,0 +1,51 @@
+-- Migration: Add Confluence Page Foreign Keys
+-- Description: Replaces confluence_page_id string columns with foreign key relationships to confluence_pages table
+
+-- ============================================================================
+-- ADD CONFLUENCE PAGE FOREIGN KEYS
+-- ============================================================================
+
+-- Add FK column to workstreams
+ALTER TABLE workstreams
+ADD COLUMN confluence_page_id UUID REFERENCES confluence_pages(id) ON DELETE SET NULL;
+
+CREATE INDEX idx_workstreams_confluence_page ON workstreams(confluence_page_id) WHERE confluence_page_id IS NOT NULL;
+
+COMMENT ON COLUMN workstreams.confluence_page_id IS 'Link to the Confluence page that documents this workstream';
+
+-- Add FK column to epics
+ALTER TABLE epics
+ADD COLUMN confluence_page_id UUID REFERENCES confluence_pages(id) ON DELETE SET NULL;
+
+CREATE INDEX idx_epics_confluence_page ON epics(confluence_page_id) WHERE confluence_page_id IS NOT NULL;
+
+COMMENT ON COLUMN epics.confluence_page_id IS 'Link to the Confluence page that documents this epic';
+
+-- Add FK column to features
+ALTER TABLE features
+ADD COLUMN confluence_page_id UUID REFERENCES confluence_pages(id) ON DELETE SET NULL;
+
+CREATE INDEX idx_features_confluence_page ON features(confluence_page_id) WHERE confluence_page_id IS NOT NULL;
+
+COMMENT ON COLUMN features.confluence_page_id IS 'Link to the Confluence page that documents this feature';
+
+-- Add FK column to stories
+ALTER TABLE stories
+ADD COLUMN confluence_page_id UUID REFERENCES confluence_pages(id) ON DELETE SET NULL;
+
+CREATE INDEX idx_stories_confluence_page ON stories(confluence_page_id) WHERE confluence_page_id IS NOT NULL;
+
+COMMENT ON COLUMN stories.confluence_page_id IS 'Link to the Confluence page that documents this story';
+
+-- Update functional_areas to use FK instead of string
+-- First drop the old string column and index
+DROP INDEX IF EXISTS idx_functional_areas_confluence_parent;
+ALTER TABLE functional_areas DROP COLUMN IF EXISTS confluence_parent_page_id;
+
+-- Add new FK column
+ALTER TABLE functional_areas
+ADD COLUMN confluence_parent_page_id UUID REFERENCES confluence_pages(id) ON DELETE SET NULL;
+
+CREATE INDEX idx_functional_areas_confluence_parent ON functional_areas(confluence_parent_page_id) WHERE confluence_parent_page_id IS NOT NULL;
+
+COMMENT ON COLUMN functional_areas.confluence_parent_page_id IS 'Link to the Confluence page where features for this functional area should be created as child pages';

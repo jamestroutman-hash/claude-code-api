@@ -1,0 +1,2453 @@
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for ba480e70-2e69-4452-b13d-8927f6c2af3c, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762883519894
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47511 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762883519894 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T17_52_00_481Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 495ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 70282558-38b2-4486-b56d-193f55f5c821
+[DEBUG] FileHistory: Added snapshot for 70282558-38b2-4486-b56d-193f55f5c821, tracking 0 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 137ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: BashOutput
+[DEBUG] Getting matching hook commands for PreToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: BashOutput
+[DEBUG] Getting matching hook commands for PreToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: BashOutput
+[DEBUG] Getting matching hook commands for PreToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 66ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883584683
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883584683 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883584687
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883584687 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883584691
+[DEBUG] Temp file written successfully, size: 1043 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883584691 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 31ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 10ms
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/claude-code-api/Dockerfile
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/Dockerfile.tmp.192951.1762883600709
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 4222 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/Dockerfile.tmp.192951.1762883600709 to /home/jamestroutman/code/experiments/claude-code-api/Dockerfile
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/Dockerfile written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 38ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 26ms
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/Dockerfile.tmp.192951.1762883612240
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 4265 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/Dockerfile.tmp.192951.1762883612240 to /home/jamestroutman/code/experiments/claude-code-api/Dockerfile
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/Dockerfile written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883612317
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883612317 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883612321
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883612321 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883612325
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1047 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883612325 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 34ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 16ms
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/claude-code-api/docker-entrypoint.sh
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/docker-entrypoint.sh.tmp.192951.1762883624884
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 596 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/docker-entrypoint.sh.tmp.192951.1762883624884 to /home/jamestroutman/code/experiments/claude-code-api/docker-entrypoint.sh
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/docker-entrypoint.sh written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883626489
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883626489 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883626499
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883626499 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883626508
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1049 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883626508 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 52ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "render": HTTP connection dropped after 16719s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 69ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] MCP server "render": No token data found
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 8ms
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/Dockerfile.tmp.192951.1762883676019
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 4265 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/Dockerfile.tmp.192951.1762883676019 to /home/jamestroutman/code/experiments/claude-code-api/Dockerfile
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/Dockerfile written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 97ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883694409
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883694409 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883694420
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883694420 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883694435
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 1051 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883694435 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 79ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 51ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 8ms
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/claude-code-api/DEPLOYMENT_NOTES.md
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/DEPLOYMENT_NOTES.md.tmp.192951.1762883745437
+[DEBUG] Temp file written successfully, size: 6287 bytes
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/DEPLOYMENT_NOTES.md.tmp.192951.1762883745437 to /home/jamestroutman/code/experiments/claude-code-api/DEPLOYMENT_NOTES.md
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/DEPLOYMENT_NOTES.md written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883745539
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883745539 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883745544
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883745544 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883745548
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883745548 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 48ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 37ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762883763517
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47511 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762883763517 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762883763550
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47511 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762883763550 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Metrics opt-out API response: enabled=true
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 14,
+  "rejected_count": 0
+}
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 15ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 9f372785-db4a-452e-9fe4-c3ee5deb6c96
+[DEBUG] FileHistory: Added snapshot for 9f372785-db4a-452e-9fe4-c3ee5deb6c96, tracking 3 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 41ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "lsof:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json.tmp.192951.1762883850453
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 4033 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json.tmp.192951.1762883850453 to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["Bash(lsof:*)"]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 65ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T17_57_33_078Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883859295
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762883859295 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883859301
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762883859301 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883859308
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 770 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762883859308 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 136ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "render": HTTP connection dropped after 17025s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 7,
+  "rejected_count": 0
+}
+[DEBUG] MCP server "render": HTTP connection dropped after 17328s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 17631s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762884762259
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762884762259 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762884762264
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762884762264 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762884762269
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 772 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762884762269 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 43ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T18_12_43_116Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762884774124
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762884774124 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762884774131
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762884774131 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762884774138
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 774 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762884774138 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 94ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762884793043
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762884793043 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762884793049
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762884793049 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762884793056
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 776 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762884793056 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 49ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: BashOutput
+[DEBUG] Getting matching hook commands for PreToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 37ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T18_13_32_348Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762884815595
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762884815595 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762884815601
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762884815601 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762884815606
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 778 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762884815606 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 55ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 38ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 39ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 29ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Grep
+[DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 21ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 33ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 24ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "render": HTTP connection dropped after 17936s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 32ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] MCP server "render": No token data found
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T18_15_01_791Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 29ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762884929872
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47511 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762884929872 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762884935434
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json.tmp.192951.1762884935434 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-d61a4838-54ef-4b88-9241-ba25419351bd.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762884935440
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json.tmp.192951.1762884935440 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-bdf401c1-544e-42d8-af8e-55ad70a5e070.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762884935445
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json.tmp.192951.1762884935445 to /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json
+[DEBUG] File /home/jamestroutman/.claude/todos/528d736f-c797-41b3-b282-1a7d4479875b-agent-528d736f-c797-41b3-b282-1a7d4479875b.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 46ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762884949541
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47511 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762884949541 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 30ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762884970181
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47511 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762884970181 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762884970226
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47511 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762884970226 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 6,
+  "rejected_count": 0
+}
+[DEBUG] MCP server "render": HTTP connection dropped after 18240s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 18543s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 18846s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 19149s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 19452s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 19756s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T18_45_09_769Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] MCP server "render": HTTP connection dropped after 20059s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 20362s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 20665s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 20969s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 21272s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T19_15_18_904Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] MCP server "render": HTTP connection dropped after 21575s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 21880s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 22188s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 22496s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 22805s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 23113s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T19_45_54_685Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] MCP server "render": HTTP connection dropped after 23422s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890467510
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47014 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890467510 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890467518
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47014 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890467518 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890467526
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890467526 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890488619
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47014 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890488619 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890488626
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47014 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890488626 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890488870
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890488870 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T19_48_09_695Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 17ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message ef48b9fe-1e6f-4d69-9dab-bbc1bd028a57
+[DEBUG] FileHistory: Added snapshot for ef48b9fe-1e6f-4d69-9dab-bbc1bd028a57, tracking 3 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 34ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 25ms
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/claude-code-api/test-api.sh
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/test-api.sh.tmp.192951.1762890544193
+[DEBUG] Temp file written successfully, size: 10359 bytes
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/test-api.sh.tmp.192951.1762890544193 to /home/jamestroutman/code/experiments/claude-code-api/test-api.sh
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/test-api.sh written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 42ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 7ms
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/claude-code-api/CURL_EXAMPLES.md
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/CURL_EXAMPLES.md.tmp.192951.1762890594251
+[DEBUG] Temp file written successfully, size: 11003 bytes
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/CURL_EXAMPLES.md.tmp.192951.1762890594251 to /home/jamestroutman/code/experiments/claude-code-api/CURL_EXAMPLES.md
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/CURL_EXAMPLES.md written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "./test-api.sh:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json.tmp.192951.1762890616708
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 4064 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json.tmp.192951.1762890616708 to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["Bash(./test-api.sh:*)"]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T19_50_18_117Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 23ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890645564
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47014 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890645564 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890645570
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47014 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890645570 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890645580
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890645580 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890649666
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890649666 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890649686
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890649686 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890658643
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47014 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890658643 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890658651
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47014 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890658651 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762890658923
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762890658923 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T19_50_59_534Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] MCP server "render": HTTP connection dropped after 23733s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] Metrics opt-out API response: enabled=true
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 11,
+  "rejected_count": 0
+}
+[DEBUG] MCP server "render": HTTP connection dropped after 24043s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 24352s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 1,
+  "rejected_count": 0
+}
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 25ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 4aa988a2-ce5b-4b98-a355-9b91da73d711
+[DEBUG] FileHistory: Added snapshot for 4aa988a2-ce5b-4b98-a355-9b91da73d711, tracking 5 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 38ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 43ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 26ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 16ms
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py.tmp.192951.1762891439220
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 11359 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py.tmp.192951.1762891439220 to /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 428ms
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py.tmp.192951.1762891441406
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 12403 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py.tmp.192951.1762891441406 to /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 493ms
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py.tmp.192951.1762891444798
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 12404 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py.tmp.192951.1762891444798 to /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 314ms
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py.tmp.192951.1762891447270
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 13123 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py.tmp.192951.1762891447270 to /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/models/claude.py written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 80ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 42ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Grep
+[DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 30ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 18ms
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/core/config.py
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/core/config.py.tmp.192951.1762891468692
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 3853 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/core/config.py.tmp.192951.1762891468692 to /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/core/config.py
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/claude_code_api/core/config.py written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 36ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 70ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "render": HTTP connection dropped after 24671s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 10,
+  "rejected_count": 0
+}
+[DEBUG] MCP server "render": HTTP connection dropped after 24981s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 25290s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 25600s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T20_23_10_859Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 42ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 34ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Grep
+[DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 24ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 32ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 39ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 40ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 37ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 35ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 49ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Permission suggestions for Bash: []
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T20_25_54_651Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "echo:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json.tmp.192951.1762892757317
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 4086 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json.tmp.192951.1762892757317 to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["Bash(echo:*)"]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 28ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Stream started - received first chunk
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T20_25_58_338Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762892771224
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762892771224 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Streaming aborted by user: Request was aborted.
+[ERROR] Error in non-streaming fallback: Request was aborted.
+[ERROR] Error: Error: Request was aborted.
+    at cl._createMessage (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:210:4515)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at runNextTicks (node:internal/process/task_queues:68:3)
+    at process.processTimers (node:internal/timers:538:9)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762892771286
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762892771286 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 33ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message c0661997-b6f3-4704-9367-d314c22f044a
+[DEBUG] FileHistory: Added snapshot for c0661997-b6f3-4704-9367-d314c22f044a, tracking 7 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 33ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "render": HTTP connection dropped after 25911s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 47ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 61ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 7,
+  "rejected_count": 0
+}
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 17ms
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/claude-code-api/MODEL_MAPPINGS.md
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/claude-code-api/MODEL_MAPPINGS.md.tmp.192951.1762892941609
+[DEBUG] Temp file written successfully, size: 9736 bytes
+[DEBUG] Renaming /home/jamestroutman/code/experiments/claude-code-api/MODEL_MAPPINGS.md.tmp.192951.1762892941609 to /home/jamestroutman/code/experiments/claude-code-api/MODEL_MAPPINGS.md
+[DEBUG] File /home/jamestroutman/code/experiments/claude-code-api/MODEL_MAPPINGS.md written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 76ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 68ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762892967960
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762892967960 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762892967999
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762892967999 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "render": HTTP connection dropped after 26222s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 10,
+  "rejected_count": 0
+}
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 26ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 7d1343d2-adcf-494c-89a4-c9ae94c8b9a6
+[DEBUG] FileHistory: Added snapshot for 7d1343d2-adcf-494c-89a4-c9ae94c8b9a6, tracking 8 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 45ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 240ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T20_36_25_741Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 77ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 59ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 96ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 66ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762893456995
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762893456995 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762893457050
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47119 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762893457050 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "render": HTTP connection dropped after 26538s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 7,
+  "rejected_count": 0
+}
+[DEBUG] MCP server "render": HTTP connection dropped after 26848s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 27159s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 27469s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 27780s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 28090s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T21_07_17_660Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] MCP server "render": HTTP connection dropped after 28401s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 28712s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 29023s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 29334s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 29646s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 29957s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T21_38_14_513Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] MCP server "render": HTTP connection dropped after 30269s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 30580s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 30892s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 31204s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 31516s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 31829s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T22_09_15_583Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] MCP server "render": HTTP connection dropped after 32141s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 32453s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 32766s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 33078s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 33391s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 33704s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T22_40_20_857Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] MCP server "render": HTTP connection dropped after 34017s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 34330s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 34643s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 34956s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 35270s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)

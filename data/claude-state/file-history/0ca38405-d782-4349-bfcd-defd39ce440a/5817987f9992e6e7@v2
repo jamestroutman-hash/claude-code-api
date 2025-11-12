@@ -1,0 +1,169 @@
+/**
+ * Convert markdown to Confluence Storage Format (HTML)
+ * @see https://confluence.atlassian.com/doc/confluence-storage-format-790796544.html
+ */
+
+import MarkdownIt from 'markdown-it';
+
+const md = new MarkdownIt({
+  html: true,
+  linkify: true,
+  typographer: true,
+  breaks: true,
+});
+
+/**
+ * Convert markdown to Confluence storage format
+ * Handles headings, lists, code blocks, checkboxes, and more
+ */
+export function markdownToConfluence(markdown: string): string {
+  // First pass: convert markdown to HTML
+  let html = md.render(markdown);
+
+  // Post-processing for Confluence-specific features
+
+  // 1. Convert checkboxes to Confluence tasks
+  html = html.replace(
+    /<input[^>]*type="checkbox"[^>]*disabled[^>]*>/g,
+    (match) => {
+      const checked = match.includes('checked');
+      const taskId = generateTaskId();
+      const status = checked ? 'complete' : 'incomplete';
+      return `<ac:task><ac:task-id>${taskId}</ac:task-id><ac:task-status>${status}</ac:task-status><ac:task-body>`;
+    }
+  );
+
+  // Close task tags after checkbox list items
+  html = html.replace(
+    /(<ac:task-body>)(.*?)(<\/li>)/g,
+    '$1$2</ac:task-body></ac:task>$3'
+  );
+
+  // 2. Convert code blocks to Confluence code macros
+  html = html.replace(
+    /<pre><code class="language-(\w+)">([\s\S]*?)<\/code><\/pre>/g,
+    (match, language, code) => {
+      // Unescape HTML entities
+      const unescapedCode = unescapeHtml(code);
+      return `<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">${language}</ac:parameter><ac:plain-text-body><![CDATA[${unescapedCode}]]></ac:plain-text-body></ac:structured-macro>`;
+    }
+  );
+
+  // Handle code blocks without language
+  html = html.replace(
+    /<pre><code>([\s\S]*?)<\/code><\/pre>/g,
+    (match, code) => {
+      const unescapedCode = unescapeHtml(code);
+      return `<ac:structured-macro ac:name="code"><ac:plain-text-body><![CDATA[${unescapedCode}]]></ac:plain-text-body></ac:structured-macro>`;
+    }
+  );
+
+  // 3. Convert tables to Confluence table macros (if present)
+  html = convertTablesToConfluence(html);
+
+  // 4. Clean up empty paragraphs
+  html = html.replace(/<p>\s*<\/p>/g, '');
+
+  return html.trim();
+}
+
+/**
+ * Generate a unique task ID for Confluence tasks
+ */
+function generateTaskId(): string {
+  return Math.random().toString(36).substring(2, 15);
+}
+
+/**
+ * Unescape HTML entities
+ */
+function unescapeHtml(text: string): string {
+  const entities: Record<string, string> = {
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&quot;': '"',
+    '&#39;': "'",
+    '&#x2F;': '/',
+  };
+
+  return text.replace(/&[^;]+;/g, (entity) => entities[entity] || entity);
+}
+
+/**
+ * Convert HTML tables to Confluence table format
+ * This is a basic implementation - complex tables might need more work
+ */
+function convertTablesToConfluence(html: string): string {
+  // Confluence uses standard HTML tables, but we can add some cleanup
+  // Replace table tags with Confluence-friendly versions
+  html = html.replace(/<table>/g, '<table class="confluenceTable">');
+  html = html.replace(/<thead>/g, '<thead class="confluenceTableHeader">');
+  html = html.replace(/<tbody>/g, '<tbody class="confluenceTableBody">');
+
+  return html;
+}
+
+/**
+ * Advanced: Convert markdown to Confluence with custom rendering for specific elements
+ * This version provides more control over the conversion process
+ */
+export function markdownToConfluenceAdvanced(
+  markdown: string,
+  options?: {
+    convertTables?: boolean;
+    convertCodeBlocks?: boolean;
+    convertTasks?: boolean;
+  }
+): string {
+  const {
+    convertTables = true,
+    convertCodeBlocks = true,
+    convertTasks = true,
+  } = options || {};
+
+  let html = md.render(markdown);
+
+  if (convertTasks) {
+    html = html.replace(
+      /<input[^>]*type="checkbox"[^>]*disabled[^>]*>/g,
+      (match) => {
+        const checked = match.includes('checked');
+        const taskId = generateTaskId();
+        const status = checked ? 'complete' : 'incomplete';
+        return `<ac:task><ac:task-id>${taskId}</ac:task-id><ac:task-status>${status}</ac:task-status><ac:task-body>`;
+      }
+    );
+
+    html = html.replace(
+      /(<ac:task-body>)(.*?)(<\/li>)/g,
+      '$1$2</ac:task-body></ac:task>$3'
+    );
+  }
+
+  if (convertCodeBlocks) {
+    html = html.replace(
+      /<pre><code class="language-(\w+)">([\s\S]*?)<\/code><\/pre>/g,
+      (match, language, code) => {
+        const unescapedCode = unescapeHtml(code);
+        return `<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">${language}</ac:parameter><ac:plain-text-body><![CDATA[${unescapedCode}]]></ac:plain-text-body></ac:structured-macro>`;
+      }
+    );
+
+    html = html.replace(
+      /<pre><code>([\s\S]*?)<\/code><\/pre>/g,
+      (match, code) => {
+        const unescapedCode = unescapeHtml(code);
+        return `<ac:structured-macro ac:name="code"><ac:plain-text-body><![CDATA[${unescapedCode}]]></ac:plain-text-body></ac:structured-macro>`;
+      }
+    );
+  }
+
+  if (convertTables) {
+    html = convertTablesToConfluence(html);
+  }
+
+  html = html.replace(/<p>\s*<\/p>/g, '');
+
+  return html.trim();
+}

@@ -1,0 +1,132 @@
+{
+  "name": "Clarity Ai",
+  "service": "dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "features": {
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/skriptfabrik/devcontainer-features/gitlab-cli:1": {},
+    "ghcr.io/devcontainers-extra/features/protoc:1": {},
+    "ghcr.io/localstack/devcontainer-feature/localstack-cli:latest": {
+      "version": "latest",
+      "awslocal": true, // if true, add in features manually: ghcr.io/devcontainers/features/aws-cli
+      "pulumilocal": false, // if true, add in features manually: ghcr.io/devcontainers-contrib/features/pulumi
+      "samlocal": false, // if true, add in features manually: ghcr.io/customink/codespaces-features/sam-cli
+      "tflocal": false // if true, add in features manually: ghcr.io/devcontainers-contrib/features/terraform-asdf
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "golang.go",
+        "bierner.markdown-mermaid",
+        "ms-vscode.makefile-tools",
+        "zxh404.vscode-proto3",
+        "plex.vscode-protolint",
+        "ms-azuretools.vscode-containers",
+        "streetsidesoftware.code-spell-checker",
+        "gitlab.gitlab-workflow"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          },
+          "zsh": {
+            "path": "zsh"
+          }
+        }
+      }
+    }
+  },
+  "remoteUser": "node",
+  "initializeCommand": {
+    "claude_commands": "mkdir -p ~/projects/claude-commands/commands",
+    "claude_shared": "mkdir -p ~/.claude-shared",
+    "env_setup": "cd '${localWorkspaceFolder}' && ./tools/setup-env-files.sh",
+    "networking": "cd '${localWorkspaceFolder}' && ./tools/setup-networking.sh"
+  },
+  "postCreateCommand": "/workspace/.devcontainer/post_create_command.sh",
+  "mounts": [
+    "source=claude-code-bashhistory-${devcontainerId},target=/commandhistory,type=volume",
+    "source=${localEnv:HOME}/.claude-shared,target=/home/node/.claude,type=bind",
+    "source=${localEnv:HOME}/projects/claude-commands/commands,target=/home/node/.claude/commands,type=bind",
+    "source=${localWorkspaceFolder}/..,target=/workspace/projects,type=bind"
+  ],
+  "containerEnv": {
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "CLAUDE_CONFIG_DIR": "/home/node/.claude",
+    "POWERLEVEL9K_DISABLE_GITSTATUS": "true",
+    "AWS_ACCESS_KEY_ID": "test",
+    "AWS_SECRET_ACCESS_KEY": "test",
+    "AWS_DEFAULT_REGION": "us-east-1",
+    "AWS_ENDPOINT_URL": "http://localhost.localstack.cloud:4566",
+    "AWS_ENDPOINT_URL_S3": "http://s3.localhost.localstack.cloud:4566",
+    "LC_ALL": "en_US.utf-8"
+  },
+  "workspaceFolder": "/workspace",
+  "postAttachCommand": "test -f /workspace/.env-git && . /workspace/.env-git || true",
+  "forwardPorts": [
+    6379, // Redis
+    8081 // Redis Commander
+  ],
+  "portsAttributes": {
+    "5050": {
+      "label": "pgAdmin",
+      "onAutoForward": "notify"
+    },
+    "5432": {
+      "label": "PostgreSQL",
+      "onAutoForward": "silent"
+    },
+    "5433": {
+      "label": "ImmuDB PostgreSQL",
+      "onAutoForward": "silent"
+    },
+    "3322": {
+      "label": "ImmuDB gRPC",
+      "onAutoForward": "silent"
+    },
+    "6379": {
+      "label": "Redis",
+      "onAutoForward": "silent"
+    },
+    "8080": {
+      "label": "ImmuDB Console",
+      "onAutoForward": "notify"
+    },
+    "8081": {
+      "label": "Redis Commander",
+      "onAutoForward": "notify"
+    },
+    "9497": {
+      "label": "ImmuDB Metrics",
+      "onAutoForward": "silent"
+    },
+    "4566": {
+      "label": "LocalStack",
+      "onAutoForward": "notify"
+    },
+    "50051": {
+      "label": "Ledger Service",
+      "onAutoForward": "silent"
+    },
+    "50052": {
+      "label": "Treasury Service",
+      "onAutoForward": "silent"
+    },
+    "50053": {
+      "label": "Payroll Service",
+      "onAutoForward": "silent"
+    }
+  }
+}

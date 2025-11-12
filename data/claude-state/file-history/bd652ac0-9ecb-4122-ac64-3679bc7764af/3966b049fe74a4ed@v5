@@ -1,0 +1,59 @@
+import { serverTables } from '../../lib/db/supabase-server';
+import WorkstreamCard from './WorkstreamCard';
+
+async function getAllWorkstreams() {
+  // Fetch workstreams with workspace info including confluence_base_url
+  const { data: workstreams } = await serverTables.workstreams()
+    .select('*, workspace:workspaces(name, confluence_base_url)')
+    .order('name');
+
+  if (!workstreams) return [];
+
+  // Fetch confluence pages for workstreams that have confluence_page_id
+  const confluencePageIds = workstreams
+    .map(ws => ws.confluence_page_id)
+    .filter(Boolean);
+
+  let confluencePagesMap = new Map();
+
+  if (confluencePageIds.length > 0) {
+    const { data: confluencePages } = await serverTables.confluencePages()
+      .select('confluence_page_id, title, confluence_space_key')
+      .in('confluence_page_id', confluencePageIds);
+
+    if (confluencePages) {
+      confluencePagesMap = new Map(
+        confluencePages.map(page => [page.confluence_page_id, page])
+      );
+    }
+  }
+
+  // Join confluence page data with workstreams
+  return workstreams.map(workstream => ({
+    ...workstream,
+    confluence_page: workstream.confluence_page_id
+      ? confluencePagesMap.get(workstream.confluence_page_id)
+      : null
+  }));
+}
+
+export default async function WorkstreamsPage() {
+  const workstreams = await getAllWorkstreams();
+
+  return (
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900">All Workstreams</h1>
+        <p className="mt-2 text-gray-600">
+          Browse all workstreams across the Clarity platform
+        </p>
+      </div>
+
+      <div className="space-y-4">
+        {workstreams.map((workstream) => (
+          <WorkstreamCard key={workstream.id} workstream={workstream} />
+        ))}
+      </div>
+    </div>
+  );
+}

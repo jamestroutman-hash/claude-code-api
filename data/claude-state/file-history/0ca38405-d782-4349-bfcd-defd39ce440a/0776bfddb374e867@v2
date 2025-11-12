@@ -1,0 +1,287 @@
+# Seed Data Summary
+
+This document describes the seed data loaded into the local Supabase database.
+
+## Test User
+
+- **Email**: `admin@clarity.dev`
+- **Password**: `password123`
+- **User ID**: `a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11`
+
+## Workspace
+
+**Clarity Platform** (`clarity`)
+- Confluence Space: `CTY`
+- Base URL: https://veritasprime.atlassian.net
+- Monday.com Workspace: 989659142
+
+## Workstreams (7)
+
+All workstreams are now linked to their Confluence Product Vision pages via foreign key relationships (not string IDs).
+
+| Name | Slug | Key | Confluence Page UUID | Monday Boards | Color |
+|------|------|-----|----------------------|---------------|-------|
+| Clarity Tax | `tax` | TAX | 660e8400-e29b-41d4-a716-446655440010 | Epic: 9762207072<br>Feature: 18007930608<br>Story: 9762207095 | #FF6B6B |
+| Clarity Treasury | `treasury` | TREAS | 660e8400-e29b-41d4-a716-446655440020 | Epic: 9762492452<br>Feature: 18018390488<br>Story: 9762492395 | #4ECDC4 |
+| Clarity Process Manager | `process` | PM | 660e8400-e29b-41d4-a716-446655440040 | Epic: 9811240019<br>Feature: 18027518486<br>Story: 9811240186 | #95E1D3 |
+| Clarity Garnishments | `garnishments` | GARN | 660e8400-e29b-41d4-a716-446655440030 | None configured | #F38181 |
+| Clarity AI | `ai` | AI | 660e8400-e29b-41d4-a716-446655440060 | Epic: 9762559007<br>Feature: 18157828248<br>Story: 9762558961 | #A8E6CF |
+| Clarity Foundation | `foundation` | FOUND | 660e8400-e29b-41d4-a716-446655440070 | Epic: 9762565656<br>Feature: 18065687927<br>Story: 9762565449 | #FFD3B6 |
+| Clarity DSH | `dsh` | DSH | 660e8400-e29b-41d4-a716-446655440050 | None configured | #FFAAA5 |
+
+## Monday.com Column Mappings
+
+Each workstream with Monday.com boards configured has a `settings` JSONB column containing `monday_column_mappings` that specify which board columns to use for different fields. This allows for flexible configuration as column IDs vary between boards.
+
+**Configured Workstreams:**
+
+### Tax Workstream
+```json
+{
+  "story": {
+    "status": "task_status",
+    "priority": "task_priority",
+    "parent_feature": "board_relation_mkwhncbd"
+  },
+  "feature": {
+    "status": "status"
+  },
+  "epic": {
+    "status": "epic_status",
+    "priority": "epic_priority"
+  }
+}
+```
+
+### Treasury Workstream
+```json
+{
+  "story": {
+    "status": "task_status",
+    "priority": "task_priority",
+    "parent_feature": "board_relation_mkw23r8e"
+  },
+  "feature": {
+    "status": "status"
+  },
+  "epic": {
+    "status": "epic_status",
+    "priority": "epic_priority"
+  }
+}
+```
+
+### Process Manager Workstream
+```json
+{
+  "story": {
+    "status": "task_status",
+    "priority": "task_priority",
+    "parent_feature": "board_relation_mkw21mb6"
+  },
+  "feature": {
+    "status": "status"
+  },
+  "epic": {
+    "status": "epic_status",
+    "priority": "epic_priority"
+  }
+}
+```
+
+### AI Workstream
+```json
+{
+  "story": {
+    "status": "task_status",
+    "priority": "task_priority",
+    "parent_feature": "board_relation_mkwk7bm1"
+  },
+  "feature": {
+    "status": "status"
+  },
+  "epic": {
+    "status": "epic_status",
+    "priority": "epic_priority"
+  }
+}
+```
+
+### Foundation Workstream
+```json
+{
+  "story": {
+    "status": "task_status",
+    "priority": "task_priority",
+    "parent_feature": "board_relation_mkw8ejt4"
+  },
+  "feature": {
+    "status": "status"
+  },
+  "epic": {
+    "status": "epic_status",
+    "priority": "epic_priority"
+  }
+}
+```
+
+**Key Points:**
+- ✅ Column mappings are stored in `workstreams.settings` JSONB column
+- ✅ Each workstream has unique `parent_feature` column IDs for linking stories to features
+- ✅ Status and priority columns are consistent across workstreams (e.g., `task_status`, `epic_status`)
+- ✅ The `getMondayColumnId()` helper function provides type-safe access with fallback to defaults
+- ✅ See `apps/web/types/workstream-settings.ts` for TypeScript interfaces
+- ✅ See `supabase/migrations/20251021000001_add_monday_column_mappings_to_settings.sql` for documentation
+
+**Usage in code:**
+```typescript
+import { getMondayColumnId, type WorkstreamSettings } from '@/types/workstream-settings';
+
+const settings = workstream.settings as WorkstreamSettings;
+const statusColumn = getMondayColumnId(settings, 'story', 'status'); // Returns 'task_status'
+const parentColumn = getMondayColumnId(settings, 'story', 'parent_feature'); // Returns workstream-specific column ID
+```
+
+## Confluence Pages (15 pages)
+
+All Confluence pages are now stored in the `confluence_pages` table with UUIDs. Work items (epics, features, stories, workstreams) reference these pages via foreign keys.
+
+### Platform Level
+- **UUID**: `660e8400-e29b-41d4-a716-446655440001`
+- **Confluence ID**: `989364236`
+- **Title**: Clarity Overview
+
+### Tax Workstream
+- **UUID**: `660e8400-e29b-41d4-a716-446655440010` | **Confluence ID**: `989397000` | **Title**: Clarity Tax - Product Vision
+- **UUID**: `660e8400-e29b-41d4-a716-446655440011` | **Confluence ID**: `989397039` | **Title**: Clarity Tax - Work Stream Overview
+
+### Treasury Workstream
+- **UUID**: `660e8400-e29b-41d4-a716-446655440020` | **Confluence ID**: `989364266` | **Title**: Clarity Treasury - Product Vision
+- **UUID**: `660e8400-e29b-41d4-a716-446655440021` | **Confluence ID**: `989954099` | **Title**: Clarity Treasury - Work Stream Overview
+
+### Garnishments Workstream
+- **UUID**: `660e8400-e29b-41d4-a716-446655440030` | **Confluence ID**: `989724680` | **Title**: Clarity Garnishments - Product Vision
+- **UUID**: `660e8400-e29b-41d4-a716-446655440031` | **Confluence ID**: `989560839` | **Title**: Clarity Garnishments - Work Stream Overview
+
+### Process Manager Workstream
+- **UUID**: `660e8400-e29b-41d4-a716-446655440040` | **Confluence ID**: `989986833` | **Title**: Clarity Process Manager - Product Vision
+- **UUID**: `660e8400-e29b-41d4-a716-446655440041` | **Confluence ID**: `995328040` | **Title**: Payroll Master Data
+
+### DSH Workstream
+- **UUID**: `660e8400-e29b-41d4-a716-446655440050` | **Confluence ID**: `989429767` | **Title**: Clarity DSH - Product Vision
+- **UUID**: `660e8400-e29b-41d4-a716-446655440051` | **Confluence ID**: `990085128` | **Title**: Clarity DSH - Work Stream Overview
+
+### AI Workstream
+- **UUID**: `660e8400-e29b-41d4-a716-446655440060` | **Confluence ID**: `989691909` | **Title**: Clarity AI - Product Vision
+- **UUID**: `660e8400-e29b-41d4-a716-446655440061` | **Confluence ID**: `989822990` | **Title**: Clarity AI - Work Stream Overview
+
+### Foundation Workstream
+- **UUID**: `660e8400-e29b-41d4-a716-446655440070` | **Confluence ID**: `989528070` | **Title**: Clarity Foundation - Product Vision
+- **UUID**: `660e8400-e29b-41d4-a716-446655440071` | **Confluence ID**: `989724715` | **Title**: Clarity Foundation - Work Stream Overview
+
+## Functional Areas
+
+Functional areas can now link to Confluence parent pages via foreign key relationships (UUID references to `confluence_pages` table).
+
+### Tax (6 functional areas)
+- Core Operations
+- Foundation
+- Tax Scheduling
+- Tax Payments
+- Tax Filings
+- 3rd Party Access
+
+### Treasury (3 functional areas)
+- Ledger Services
+- Treasury Services
+- Reconciliation
+
+### Process Manager (3 functional areas)
+- Process Manager
+- Clarity UI
+- Payroll Data Importer
+
+### AI (4 functional areas)
+- Payroll Agent
+- Audit Agent
+- Tax Agent
+- Automations
+
+### Foundation (6 functional areas)
+- Client Experience
+- Client Billing
+- Client Management
+- Identity & Access
+- Audit & Compliance
+- Platform Monitoring & Health
+
+## Database Schema Changes
+
+### Migration 20251015000001: Add Confluence Page Foreign Keys
+
+This migration adds foreign key relationships to the `confluence_pages` table:
+
+**Added FK Columns:**
+- `workstreams.confluence_page_id` → `confluence_pages(id)`
+- `epics.confluence_page_id` → `confluence_pages(id)`
+- `features.confluence_page_id` → `confluence_pages(id)`
+- `stories.confluence_page_id` → `confluence_pages(id)`
+- `functional_areas.confluence_parent_page_id` → `confluence_pages(id)` (updated from TEXT to UUID)
+
+**Benefits:**
+- ✅ Referential integrity via foreign key constraints
+- ✅ Cascade delete support (`ON DELETE SET NULL`)
+- ✅ Access to full Confluence page data via JOIN
+- ✅ No need to look up pages by string IDs
+- ✅ Better performance with indexed UUID lookups
+
+**Breaking Change:**
+The `functional_areas.confluence_parent_page_id` column was changed from `TEXT` to `UUID REFERENCES confluence_pages(id)`. Any code referencing this column must be updated to use UUIDs instead of Confluence page ID strings.
+
+## Verification
+
+To verify the seed data was loaded correctly and check the new foreign key relationships, run:
+
+```bash
+# Using psql (if installed)
+psql postgresql://postgres:postgres@127.0.0.1:54322/postgres -c "
+  SELECT 'Workspaces' as entity, COUNT(*) as count FROM workspaces
+  UNION ALL
+  SELECT 'Workstreams', COUNT(*) FROM workstreams
+  UNION ALL
+  SELECT 'Confluence Pages', COUNT(*) FROM confluence_pages
+  UNION ALL
+  SELECT 'Workstreams with Confluence Page', COUNT(*) FROM workstreams WHERE confluence_page_id IS NOT NULL
+  UNION ALL
+  SELECT 'Functional Areas', COUNT(*) FROM functional_areas;
+"
+```
+
+Expected output:
+- Workspaces: 1
+- Workstreams: 7
+- Confluence Pages: 15
+- Workstreams with Confluence Page: 7
+- Functional Areas: 22
+
+To verify foreign key relationships:
+
+```sql
+-- Check workstreams linked to Confluence pages
+SELECT
+  w.name as workstream_name,
+  w.slug,
+  cp.title as confluence_page_title,
+  cp.confluence_page_id as external_confluence_id
+FROM workstreams w
+LEFT JOIN confluence_pages cp ON w.confluence_page_id = cp.id
+ORDER BY w.name;
+```
+
+## Next Steps
+
+1. **Update application code** to use JOIN queries to access Confluence page data
+2. **Migrate existing data** if running against a production database
+3. **Update API endpoints** that reference confluence_page_id as strings
+4. **Update Monday.com sync** to handle the new foreign key relationships
+5. **Test all Confluence integration** features with the new schema

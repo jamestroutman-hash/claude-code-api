@@ -1,0 +1,84 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { serverTables } from '../../../../lib/db/supabase-server';
+
+interface RouteParams {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
+export async function PATCH(request: NextRequest, { params }: RouteParams) {
+  try {
+    const { slug } = await params;
+    const body = await request.json();
+
+    const { name, description, color, settings } = body;
+
+    // Validate required fields
+    if (!name || typeof name !== 'string') {
+      return NextResponse.json(
+        { error: 'Name is required and must be a string' },
+        { status: 400 }
+      );
+    }
+
+    // Validate settings if provided
+    if (settings !== undefined && settings !== null && typeof settings !== 'object') {
+      return NextResponse.json(
+        { error: 'Settings must be an object' },
+        { status: 400 }
+      );
+    }
+
+    // Get the workstream by slug
+    const { data: existingWorkstream, error: fetchError } = await serverTables
+      .workstreams()
+      .select('id')
+      .eq('slug', slug)
+      .single();
+
+    if (fetchError || !existingWorkstream) {
+      return NextResponse.json(
+        { error: 'Workstream not found' },
+        { status: 404 }
+      );
+    }
+
+    // Build update object
+    const updateData: any = {
+      name,
+      description: description || null,
+      color: color || null,
+      updated_at: new Date().toISOString(),
+    };
+
+    // Add settings if provided
+    if (settings !== undefined) {
+      updateData.settings = settings;
+    }
+
+    // Update the workstream
+    const { data, error } = await serverTables
+      .workstreams()
+      .update(updateData)
+      .eq('id', existingWorkstream.id)
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Error updating workstream:', error);
+      return NextResponse.json(
+        { error: 'Failed to update workstream' },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ data });
+  } catch (error) {
+    console.error('Error in PATCH /api/workstreams/[slug]:', error);
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+}

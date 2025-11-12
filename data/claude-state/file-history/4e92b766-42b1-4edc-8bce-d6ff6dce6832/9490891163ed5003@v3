@@ -1,0 +1,333 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { serverTables } from '../../../../lib/db/supabase-server';
+import { createConfluencePage } from '../../../../lib/integrations/confluence';
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+
+    const {
+      title,
+      description, // Markdown content
+      workspace_id,
+      workstream_id,
+      epic_id,
+      functional_area_id,
+      status = 'planned',
+      priority,
+    } = body;
+
+    // Validate required fields
+    if (!title || typeof title !== 'string') {
+      return NextResponse.json(
+        { error: 'Title is required and must be a string' },
+        { status: 400 }
+      );
+    }
+
+    if (!description || typeof description !== 'string') {
+      return NextResponse.json(
+        { error: 'Description is required and must be a string' },
+        { status: 400 }
+      );
+    }
+
+    if (!workspace_id || typeof workspace_id !== 'string') {
+      return NextResponse.json(
+        { error: 'Workspace ID is required' },
+        { status: 400 }
+      );
+    }
+
+    if (!workstream_id || typeof workstream_id !== 'string') {
+      return NextResponse.json(
+        { error: 'Workstream ID is required' },
+        { status: 400 }
+      );
+    }
+
+    // =========================================================================
+    // Step 1: Get workspace, workstream, and functional area info
+    // =========================================================================
+    const { data: workspace, error: workspaceError } = await serverTables
+      .workspaces()
+      .select('id, confluence_space_key')
+      .eq('id', workspace_id)
+      .single();
+
+    if (workspaceError || !workspace) {
+      return NextResponse.json(
+        { error: 'Workspace not found' },
+        { status: 404 }
+      );
+    }
+
+    const { data: workstream, error: workstreamError } = await serverTables
+      .workstreams()
+      .select('id, name, slug, settings')
+      .eq('id', workstream_id)
+      .single();
+
+    if (workstreamError || !workstream) {
+      return NextResponse.json(
+        { error: 'Workstream not found' },
+        { status: 404 }
+      );
+    }
+
+    // Get functional area if specified (to get parent page)
+    let functionalArea = null;
+    let confluenceParentPageId: string | undefined;
+
+    if (functional_area_id) {
+      const { data: fa, error: faError } = await serverTables
+        .functionalAreas()
+        .select('id, name, confluence_parent_page_id')
+        .eq('id', functional_area_id)
+        .single();
+
+      if (!faError && fa) {
+        functionalArea = fa;
+        confluenceParentPageId = fa.confluence_parent_page_id || undefined;
+      }
+    }
+
+    // =========================================================================
+    // Step 2: Create Confluence page
+    // =========================================================================
+    let confluencePageId: string | undefined;
+
+    if (!workspace.confluence_space_key) {
+      console.warn('[Feature Save] No Confluence space key configured for workspace');
+    } else {
+      try {
+        console.log('[Feature Save] Creating Confluence page:', {
+          spaceKey: workspace.confluence_space_key,
+          title,
+          parentId: confluenceParentPageId,
+        });
+
+        // Convert markdown to Confluence storage format (HTML)
+        const htmlContent = convertMarkdownToConfluenceStorage(description);
+
+        // v1 API accepts space key directly (not space ID)
+        const confluencePage = await createConfluencePage({
+          spaceId: workspace.confluence_space_key, // Actually a space KEY for v1 API
+          title,
+          body: {
+            representation: 'storage',
+            value: htmlContent,
+          },
+          parentId: confluenceParentPageId,
+        });
+
+        if (confluencePage) {
+          confluencePageId = confluencePage.id;
+          console.log('[Feature Save] Created Confluence page:', confluencePageId);
+        }
+      } catch (error: any) {
+        console.error('[Feature Save] Error creating Confluence page:', error);
+        // Don't fail the entire operation if Confluence fails
+        // Return partial success with error message
+      }
+    }
+
+    // =========================================================================
+    // Step 3: Save to confluence_pages table (for caching)
+    // =========================================================================
+    if (confluencePageId && workspace.confluence_space_key) {
+      try {
+        await serverTables.confluencePages().insert({
+          workspace_id,
+          workstream_id,
+          confluence_page_id: confluencePageId,
+          confluence_space_key: workspace.confluence_space_key,
+          title,
+          content: description,
+          version: 1,
+        });
+        console.log('[Feature Save] Saved to confluence_pages table');
+      } catch (error: any) {
+        console.error('[Feature Save] Error saving to confluence_pages:', error);
+        // Continue - this is just a cache
+      }
+    }
+
+    // =========================================================================
+    // Step 4: Generate feature key
+    // =========================================================================
+    const { data: existingFeatures } = await serverTables
+      .features()
+      .select('key')
+      .eq('workstream_id', workstream_id)
+      .order('created_at', { ascending: false })
+      .limit(1);
+
+    let featureNumber = 1;
+    if (existingFeatures && existingFeatures.length > 0) {
+      const lastKey = existingFeatures[0]?.key;
+      if (lastKey) {
+        const match = lastKey.match(/-F(\d+)$/);
+        if (match) {
+          featureNumber = parseInt(match[1] || '0', 10) + 1;
+        }
+      }
+    }
+
+    // Get epic key for the feature key prefix
+    let featureKey = `F${featureNumber}`;
+    if (epic_id) {
+      const { data: epic } = await serverTables
+        .epics()
+        .select('key')
+        .eq('id', epic_id)
+        .single();
+
+      if (epic?.key) {
+        featureKey = `${epic.key}-F${featureNumber}`;
+      }
+    }
+
+    // =========================================================================
+    // Step 5: Create the feature in the database
+    // =========================================================================
+    const insertData: any = {
+      title,
+      description,
+      workspace_id,
+      workstream_id,
+      epic_id: epic_id || null,
+      functional_area_id: functional_area_id || null,
+      key: featureKey,
+      status,
+      priority: priority || null,
+      confluence_page_id: confluencePageId || null,
+    };
+
+    const { data: feature, error: featureError } = await serverTables
+      .features()
+      .insert(insertData)
+      .select()
+      .single();
+
+    if (featureError) {
+      console.error('[Feature Save] Error creating feature:', featureError);
+      return NextResponse.json(
+        { error: 'Failed to create feature', details: featureError.message },
+        { status: 500 }
+      );
+    }
+
+    console.log('[Feature Save] Created feature:', feature.id);
+
+    // =========================================================================
+    // Step 6: Create Monday item (if configured)
+    // =========================================================================
+    let mondayItemId: string | undefined;
+
+    const settings = workstream.settings as any;
+    const featureBoardId = settings?.monday_boards?.feature_board_id;
+
+    if (featureBoardId) {
+      try {
+        console.log('[Feature Save] Creating Monday item on board:', featureBoardId);
+
+        // For now, we'll defer Monday creation to the sync process
+        // In a full implementation, you would call the Monday API here
+        // mondayItemId = await createMondayFeature(featureBoardId, feature);
+
+        console.log('[Feature Save] Monday creation deferred to sync process');
+      } catch (error: any) {
+        console.error('[Feature Save] Error creating Monday item:', error);
+        // Don't fail - Monday sync can be done later
+      }
+    } else {
+      console.log('[Feature Save] No Monday feature board configured for workstream');
+    }
+
+    // =========================================================================
+    // Step 7: Return success response
+    // =========================================================================
+    return NextResponse.json(
+      {
+        data: feature,
+        integrations: {
+          confluence: confluencePageId ? { pageId: confluencePageId } : null,
+          monday: mondayItemId ? { itemId: mondayItemId } : null,
+        },
+      },
+      { status: 201 }
+    );
+  } catch (error: any) {
+    console.error('[Feature Save] Unexpected error:', error);
+    return NextResponse.json(
+      { error: 'Internal server error', details: error.message },
+      { status: 500 }
+    );
+  }
+}
+
+/**
+ * Convert markdown to Confluence storage format (HTML)
+ * This is a basic implementation - consider using a proper markdown-to-confluence library
+ */
+function convertMarkdownToConfluenceStorage(markdown: string): string {
+  let html = markdown;
+
+  // Convert headings
+  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+
+  // Convert bold
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+  // Convert italic
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+  // Convert code blocks
+  html = html.replace(/```(\w+)?\n([\s\S]+?)```/g, '<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">$1</ac:parameter><ac:plain-text-body><![CDATA[$2]]></ac:plain-text-body></ac:structured-macro>');
+
+  // Convert inline code
+  html = html.replace(/`(.+?)`/g, '<code>$1</code>');
+
+  // Convert unordered lists
+  html = html.replace(/^\* (.+)$/gm, '<li>$1</li>');
+  html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
+  html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
+
+  // Convert ordered lists
+  html = html.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
+
+  // Convert paragraphs (lines separated by blank lines)
+  const lines = html.split('\n');
+  const processedLines: string[] = [];
+  let inParagraph = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+
+    // Skip if line is already wrapped in HTML tags
+    if (line.match(/^<(h[1-6]|ul|ol|li|code|pre|ac:|strong|em)/i) || line === '') {
+      if (inParagraph) {
+        processedLines.push('</p>');
+        inParagraph = false;
+      }
+      processedLines.push(lines[i]);
+    } else {
+      if (!inParagraph) {
+        processedLines.push('<p>');
+        inParagraph = true;
+      }
+      processedLines.push(line);
+
+      // Check if next line is blank or starts with HTML tag
+      if (i === lines.length - 1 || lines[i + 1].trim() === '' || lines[i + 1].match(/^<(h[1-6]|ul|ol|li|code|pre)/i)) {
+        processedLines.push('</p>');
+        inParagraph = false;
+      }
+    }
+  }
+
+  return processedLines.join('\n');
+}

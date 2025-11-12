@@ -1,0 +1,94 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { serverTables } from '../../../../lib/db/supabase-server';
+
+interface RouteParams {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
+export async function PATCH(request: NextRequest, { params }: RouteParams) {
+  try {
+    const { slug } = await params;
+    const body = await request.json();
+
+    const {
+      name,
+      description,
+      color,
+      settings,
+      monday_epic_board_id,
+      monday_feature_board_id,
+      monday_story_board_id,
+      confluence_page_id
+    } = body;
+
+    // Validate name only if provided (for config-only updates)
+    if (name !== undefined && (typeof name !== 'string' || name.trim() === '')) {
+      return NextResponse.json(
+        { error: 'Name must be a non-empty string' },
+        { status: 400 }
+      );
+    }
+
+    // Validate settings if provided
+    if (settings !== undefined && settings !== null && typeof settings !== 'object') {
+      return NextResponse.json(
+        { error: 'Settings must be an object' },
+        { status: 400 }
+      );
+    }
+
+    // Get the workstream by slug
+    const { data: existingWorkstream, error: fetchError } = await serverTables
+      .workstreams()
+      .select('id')
+      .eq('slug', slug)
+      .single();
+
+    if (fetchError || !existingWorkstream) {
+      return NextResponse.json(
+        { error: 'Workstream not found' },
+        { status: 404 }
+      );
+    }
+
+    // Build update object with only provided fields
+    const updateData: any = {
+      updated_at: new Date().toISOString(),
+    };
+
+    if (name !== undefined) updateData.name = name;
+    if (description !== undefined) updateData.description = description || null;
+    if (color !== undefined) updateData.color = color || null;
+    if (settings !== undefined) updateData.settings = settings;
+    if (monday_epic_board_id !== undefined) updateData.monday_epic_board_id = monday_epic_board_id || null;
+    if (monday_feature_board_id !== undefined) updateData.monday_feature_board_id = monday_feature_board_id || null;
+    if (monday_story_board_id !== undefined) updateData.monday_story_board_id = monday_story_board_id || null;
+    if (confluence_page_id !== undefined) updateData.confluence_page_id = confluence_page_id || null;
+
+    // Update the workstream
+    const { data, error } = await serverTables
+      .workstreams()
+      .update(updateData)
+      .eq('id', existingWorkstream.id)
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Error updating workstream:', error);
+      return NextResponse.json(
+        { error: 'Failed to update workstream' },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ data });
+  } catch (error) {
+    console.error('Error in PATCH /api/workstreams/[slug]:', error);
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+}

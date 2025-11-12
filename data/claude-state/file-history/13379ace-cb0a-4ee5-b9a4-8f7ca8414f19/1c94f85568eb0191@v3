@@ -1,0 +1,260 @@
+#!/usr/bin/env tsx
+
+/**
+ * Script to fetch Confluence pages and save them as Markdown
+ * Usage: tsx scripts/fetch-confluence-pages.ts
+ */
+
+import TurndownService from 'turndown';
+import { writeFileSync, mkdirSync } from 'fs';
+import { join } from 'path';
+import { config } from 'dotenv';
+
+// Load environment variables from apps/web/.env.local
+config({ path: join(process.cwd(), 'apps/web/.env.local') });
+
+// Confluence API configuration
+const CONFLUENCE_BASE_URL = process.env.CONFLUENCE_BASE_URL!;
+const CONFLUENCE_API_TOKEN = process.env.CONFLUENCE_API_TOKEN!;
+const CONFLUENCE_EMAIL = process.env.CONFLUENCE_EMAIL || process.env.CONFLUENCE_USERNAME!;
+
+if (!CONFLUENCE_BASE_URL || !CONFLUENCE_API_TOKEN || !CONFLUENCE_EMAIL) {
+  console.error('Error: Missing required environment variables');
+  console.error('Required: CONFLUENCE_BASE_URL, CONFLUENCE_API_TOKEN, CONFLUENCE_EMAIL (or CONFLUENCE_USERNAME)');
+  process.exit(1);
+}
+
+// Initialize Turndown for HTML to Markdown conversion
+const turndownService = new TurndownService({
+  headingStyle: 'atx',
+  codeBlockStyle: 'fenced',
+});
+
+interface ConfluencePage {
+  id: string;
+  title: string;
+  body?: {
+    storage?: {
+      value: string;
+    };
+  };
+  _links?: {
+    webui: string;
+  };
+}
+
+interface ChildPage {
+  id: string;
+  title: string;
+}
+
+/**
+ * Make a Confluence API request
+ */
+async function confluenceRequest<T>(endpoint: string): Promise<T> {
+  const url = `${CONFLUENCE_BASE_URL}/wiki${endpoint}`;
+  const authHeader = `Basic ${Buffer.from(`${CONFLUENCE_EMAIL}:${CONFLUENCE_API_TOKEN}`).toString('base64')}`;
+
+  console.log(`Fetching: ${url}`);
+
+  const response = await fetch(url, {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: authHeader,
+      Accept: 'application/json',
+    },
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`API request failed: ${response.statusText} - ${errorText}`);
+  }
+
+  return response.json();
+}
+
+/**
+ * Get a page by ID with its content
+ */
+async function getPage(pageId: string): Promise<ConfluencePage> {
+  return confluenceRequest<ConfluencePage>(
+    `/rest/api/content/${pageId}?expand=body.storage`
+  );
+}
+
+/**
+ * Get child pages of a parent page
+ */
+async function getChildPages(pageId: string): Promise<ChildPage[]> {
+  const result = await confluenceRequest<{ results: ChildPage[] }>(
+    `/rest/api/content/${pageId}/child/page?limit=500`
+  );
+  return result.results || [];
+}
+
+/**
+ * Convert Confluence storage format (HTML) to Markdown
+ */
+function convertToMarkdown(html: string, title: string): string {
+  const markdown = turndownService.turndown(html);
+  return `# ${title}\n\n${markdown}`;
+}
+
+/**
+ * Sanitize filename to be filesystem-safe
+ */
+function sanitizeFilename(name: string): string {
+  return name
+    .replace(/[^a-z0-9]/gi, '_')
+    .replace(/_+/g, '_')
+    .toLowerCase();
+}
+
+/**
+ * Fetch and save a page and optionally its children recursively
+ */
+async function fetchAndSavePage(
+  pageId: string,
+  recursive: boolean,
+  outputDir: string,
+  depth: number = 0
+): Promise<void> {
+  const indent = '  '.repeat(depth);
+  console.log(`${indent}Fetching page ${pageId}...`);
+
+  // Get page content
+  const page = await getPage(pageId);
+  console.log(`${indent}✓ ${page.title}`);
+
+  // Convert to markdown
+  const html = page.body?.storage?.value || '';
+  const markdown = convertToMarkdown(html, page.title);
+
+  // Save to file
+  const filename = `${sanitizeFilename(page.title)}_${pageId}.md`;
+  const filepath = join(outputDir, filename);
+  writeFileSync(filepath, markdown, 'utf-8');
+  console.log(`${indent}  Saved: ${filepath}`);
+
+  // If recursive, fetch child pages
+  if (recursive) {
+    const children = await getChildPages(pageId);
+    if (children.length > 0) {
+      console.log(`${indent}  Found ${children.length} child pages`);
+      for (const child of children) {
+        await fetchAndSavePage(child.id, true, outputDir, depth + 1);
+      }
+    }
+  }
+}
+
+// ============================================================
+// Page Collections
+// ============================================================
+
+/**
+ * Treasury Management pages collection
+ */
+const TREASURY_PAGES = [
+  { id: '989364266', recursive: false, description: 'Clarity Treasury Management' },
+  { id: '1016594441', recursive: true, description: 'Treasury Features Inventory' },
+  { id: '1028423709', recursive: true, description: 'Treasury User Stories & Requirements' },
+  { id: '1027670089', recursive: true, description: 'Treasury Business Rules Catalog' },
+];
+
+/**
+ * Tax Management pages collection
+ */
+const TAX_PAGES = [
+  { id: '989397000', recursive: false, description: 'Clarity Tax' },
+  { id: '1015808052', recursive: true, description: 'Tax Features Inventory' },
+  { id: '1016496148', recursive: true, description: 'Tax User Stories' },
+  { id: '1016496175', recursive: true, description: 'Tax Business Rules Catalog' },
+];
+
+/**
+ * Overview pages collection
+ */
+const OVERVIEW_PAGES = [
+  { id: '989364236', recursive: false, description: 'Clarity Overview' },
+];
+
+/**
+ * Main execution
+ */
+async function main() {
+  console.log('Confluence Page Fetcher\n');
+
+  // Determine which pages to fetch (can be passed as command line arg)
+  const collection = process.argv[2] || 'all';
+
+  // Base output directory
+  const baseOutputDir = join(process.cwd(), 'confluence-exports');
+  mkdirSync(baseOutputDir, { recursive: true });
+
+  // Define collections with their subdirectories
+  const collections: Array<{
+    name: string;
+    pages: Array<{ id: string; recursive: boolean; description?: string }>;
+    subdir: string;
+  }> = [];
+
+  switch (collection) {
+    case 'treasury':
+      collections.push({ name: 'Treasury Management', pages: TREASURY_PAGES, subdir: 'treasury' });
+      break;
+    case 'tax':
+      collections.push({ name: 'Tax Management', pages: TAX_PAGES, subdir: 'tax' });
+      break;
+    case 'overview':
+      collections.push({ name: 'Overview', pages: OVERVIEW_PAGES, subdir: 'overview' });
+      break;
+    case 'all':
+    default:
+      collections.push({ name: 'Overview', pages: OVERVIEW_PAGES, subdir: 'overview' });
+      collections.push({ name: 'Treasury Management', pages: TREASURY_PAGES, subdir: 'treasury' });
+      collections.push({ name: 'Tax Management', pages: TAX_PAGES, subdir: 'tax' });
+      console.log('Fetching all configured pages...\n');
+      break;
+  }
+
+  // Fetch each collection
+  for (const { name, pages, subdir } of collections) {
+    console.log(`\n${'='.repeat(60)}`);
+    console.log(`Fetching ${name} pages...`);
+    console.log('='.repeat(60));
+
+    // Create subdirectory for this collection
+    const outputDir = join(baseOutputDir, subdir);
+    mkdirSync(outputDir, { recursive: true });
+    console.log(`Output directory: ${outputDir}\n`);
+
+    // Fetch each page in this collection
+    for (const { id, recursive, description } of pages) {
+      console.log(`\n${'='.repeat(60)}`);
+      console.log(`Processing page ${id} (recursive: ${recursive})`);
+      if (description) {
+        console.log(`Description: ${description}`);
+      }
+      console.log('='.repeat(60));
+
+      try {
+        await fetchAndSavePage(id, recursive, outputDir);
+        console.log(`✓ Completed page ${id}`);
+      } catch (error) {
+        console.error(`✗ Error processing page ${id}:`, error);
+      }
+    }
+  }
+
+  console.log(`\n${'='.repeat(60)}`);
+  console.log('All pages processed!');
+  console.log(`Files saved to: ${baseOutputDir}`);
+  console.log('='.repeat(60));
+}
+
+// Run the script
+main().catch((error) => {
+  console.error('Fatal error:', error);
+  process.exit(1);
+});

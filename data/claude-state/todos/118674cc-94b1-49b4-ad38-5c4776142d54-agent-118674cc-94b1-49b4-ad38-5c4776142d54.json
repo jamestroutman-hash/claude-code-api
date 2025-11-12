@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Create main.go with JIRA client setup",
+    "status": "completed",
+    "activeForm": "Creating main.go with JIRA client setup"
+  },
+  {
+    "content": "Add JIRA API connection and authentication",
+    "status": "completed",
+    "activeForm": "Adding JIRA API connection and authentication"
+  },
+  {
+    "content": "Implement task querying functionality",
+    "status": "completed",
+    "activeForm": "Implementing task querying functionality"
+  },
+  {
+    "content": "Add pretty console UI with colors and formatting",
+    "status": "completed",
+    "activeForm": "Adding pretty console UI with colors and formatting"
+  },
+  {
+    "content": "Create go.mod file with dependencies",
+    "status": "in_progress",
+    "activeForm": "Creating go.mod file with dependencies"
+  },
+  {
+    "content": "Add configuration management for JIRA credentials",
+    "status": "pending",
+    "activeForm": "Adding configuration management for JIRA credentials"
+  }
+]

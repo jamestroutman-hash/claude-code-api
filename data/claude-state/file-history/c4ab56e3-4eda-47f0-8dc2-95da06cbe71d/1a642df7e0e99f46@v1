@@ -1,0 +1,267 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { serverTables } from '../../../../../lib/db/supabase-server';
+import { getWorkstreamBySlugServer } from '../../../../../lib/db/queries-server';
+import {
+  fetchBoardItems,
+  mapMondayItemToEpic,
+  mapMondaySubitemToFeature
+} from '../../../../../lib/integrations/monday';
+import { syncMultipleBoards } from '../../../../../lib/integrations/monday-multi-board-sync';
+
+export async function POST(
+  request: NextRequest,
+  { params }: { params: Promise<{ slug: string }> }
+) {
+  try {
+    const { slug } = await params;
+
+    // Get workspace (assuming first workspace for now)
+    const workspaces = await serverTables.workspaces().select('*').limit(1);
+    const workspace = workspaces.data?.[0];
+
+    if (!workspace) {
+      return NextResponse.json(
+        { error: 'No workspace found' },
+        { status: 404 }
+      );
+    }
+
+    // Get workstream by slug
+    const workstream = await getWorkstreamBySlugServer(workspace.id, slug);
+
+    if (!workstream) {
+      return NextResponse.json(
+        { error: 'Workstream not found' },
+        { status: 404 }
+      );
+    }
+
+    // Check for multi-board configuration in settings
+    const settings = workstream.settings as any || {};
+    const boardConfig = settings.monday_boards || {};
+
+    // Check if multi-board sync is configured
+    if (boardConfig.epic_board_id || boardConfig.feature_board_id || boardConfig.story_board_id) {
+      // Use multi-board sync
+      const results = await syncMultipleBoards(
+        workspace.id,
+        workstream.id,
+        workstream.slug,
+        {
+          epicBoardId: boardConfig.epic_board_id,
+          featureBoardId: boardConfig.feature_board_id,
+          storyBoardId: boardConfig.story_board_id,
+        }
+      );
+
+      const totalCreated =
+        results.epics.created +
+        results.features.created +
+        results.stories.created +
+        results.tasks.created;
+      const totalUpdated =
+        results.epics.updated +
+        results.features.updated +
+        results.stories.updated +
+        results.tasks.updated;
+
+      return NextResponse.json({
+        success: true,
+        message: `Synced across multiple boards`,
+        results,
+        summary: {
+          created: totalCreated,
+          updated: totalUpdated,
+        },
+      });
+    }
+
+    // Fall back to single-board sync (legacy)
+    if (!workstream.monday_board_id) {
+      return NextResponse.json(
+        { error: 'Workstream does not have Monday board(s) configured' },
+        { status: 400 }
+      );
+    }
+
+    // Fetch items from Monday.com
+    const mondayItems = await fetchBoardItems(workstream.monday_board_id);
+
+    const syncResults = {
+      epics: {
+        created: 0,
+        updated: 0,
+      },
+      features: {
+        created: 0,
+        updated: 0,
+      },
+      errors: [] as string[],
+    };
+
+    // Sync each epic and its features to the database
+    for (const mondayItem of mondayItems) {
+      try {
+        const epicData = mapMondayItemToEpic(mondayItem);
+
+        // Check if epic already exists by monday_item_id
+        const existingEpic = await serverTables
+          .epics()
+          .select('*')
+          .eq('monday_item_id', epicData.monday_item_id)
+          .eq('workstream_id', workstream.id)
+          .single();
+
+        let epicId: string;
+
+        if (existingEpic.data) {
+          // Update existing epic
+          const result = await serverTables
+            .epics()
+            .update({
+              title: epicData.title,
+              description: epicData.description,
+              status: epicData.status,
+              priority: epicData.priority,
+              updated_at: new Date().toISOString(),
+            })
+            .eq('id', existingEpic.data.id)
+            .select()
+            .single();
+
+          if (result.error) {
+            syncResults.errors.push(
+              `Error updating epic ${epicData.title}: ${result.error.message}`
+            );
+            continue;
+          } else {
+            syncResults.epics.updated++;
+            epicId = existingEpic.data.id;
+          }
+        } else {
+          // Create new epic
+          const result = await serverTables.epics().insert({
+            workspace_id: workspace.id,
+            workstream_id: workstream.id,
+            title: epicData.title,
+            description: epicData.description,
+            monday_item_id: epicData.monday_item_id,
+            status: epicData.status,
+            priority: epicData.priority,
+            key: `EPIC-${workstream.slug.toUpperCase()}-${String(syncResults.epics.created + 1).padStart(3, '0')}`,
+          }).select().single();
+
+          if (result.error || !result.data) {
+            syncResults.errors.push(
+              `Error creating epic ${epicData.title}: ${result.error?.message || 'Unknown error'}`
+            );
+            continue;
+          } else {
+            syncResults.epics.created++;
+            epicId = result.data.id;
+          }
+        }
+
+        // Now sync features (subitems) for this epic
+        if (mondayItem.subitems && mondayItem.subitems.length > 0) {
+          for (let i = 0; i < mondayItem.subitems.length; i++) {
+            const subitem = mondayItem.subitems[i];
+            if (!subitem) continue;
+
+            try {
+              const featureData = mapMondaySubitemToFeature(subitem);
+
+              // Check if feature already exists
+              const existingFeature = await serverTables
+                .features()
+                .select('*')
+                .eq('monday_item_id', featureData.monday_item_id)
+                .eq('workstream_id', workstream.id)
+                .single();
+
+              if (existingFeature.data) {
+                // Update existing feature
+                const result = await serverTables
+                  .features()
+                  .update({
+                    title: featureData.title,
+                    description: featureData.description,
+                    status: featureData.status,
+                    priority: featureData.priority,
+                    business_value: featureData.business_value,
+                    target_users: featureData.target_users,
+                    epic_id: epicId,
+                    position: i,
+                    updated_at: new Date().toISOString(),
+                  })
+                  .eq('id', existingFeature.data.id);
+
+                if (result.error) {
+                  syncResults.errors.push(
+                    `Error updating feature ${featureData.title}: ${result.error.message}`
+                  );
+                } else {
+                  syncResults.features.updated++;
+                }
+              } else {
+                // Create new feature
+                const result = await serverTables.features().insert({
+                  workspace_id: workspace.id,
+                  workstream_id: workstream.id,
+                  epic_id: epicId,
+                  title: featureData.title,
+                  description: featureData.description,
+                  monday_item_id: featureData.monday_item_id,
+                  status: featureData.status,
+                  priority: featureData.priority,
+                  business_value: featureData.business_value,
+                  target_users: featureData.target_users,
+                  key: `FEAT-${workstream.slug.toUpperCase()}-${String(syncResults.features.created + 1).padStart(3, '0')}`,
+                  position: i,
+                });
+
+                if (result.error) {
+                  syncResults.errors.push(
+                    `Error creating feature ${featureData.title}: ${result.error.message}`
+                  );
+                } else {
+                  syncResults.features.created++;
+                }
+              }
+            } catch (error) {
+              syncResults.errors.push(
+                `Error processing feature ${subitem.name}: ${error instanceof Error ? error.message : 'Unknown error'}`
+              );
+            }
+          }
+        }
+      } catch (error) {
+        syncResults.errors.push(
+          `Error processing epic ${mondayItem.name}: ${error instanceof Error ? error.message : 'Unknown error'}`
+        );
+      }
+    }
+
+    const totalCreated = syncResults.epics.created + syncResults.features.created;
+    const totalUpdated = syncResults.epics.updated + syncResults.features.updated;
+
+    return NextResponse.json({
+      success: true,
+      message: `Synced ${mondayItems.length} epics with features from Monday.com`,
+      results: syncResults,
+      summary: {
+        created: totalCreated,
+        updated: totalUpdated,
+      }
+    });
+  } catch (error) {
+    console.error('Sync error:', error);
+    return NextResponse.json(
+      {
+        error: 'Failed to sync with Monday.com',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
+      { status: 500 }
+    );
+  }
+}

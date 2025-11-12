@@ -1,0 +1,68 @@
+services:
+  dev:
+    build:
+      context: .
+      # This path is relative to above context.
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    hostname: devcontainer
+    dns:
+      # Set the DNS server to be the LocalStack container
+      - ${LOCALSTACK_DNS_ADDRESS:-10.0.2.20}
+    networks:
+      monorepo-network:
+        aliases:
+          - devcontainer
+    env_file:
+      - .env.atlassian
+      - .env.sentry
+      - .env.monday
+
+  redis:
+    image: redis:7-alpine
+    container_name: monorepo-redis-${COMPOSE_PROJECT_NAME}
+    command: redis-server --appendonly yes
+    ports:
+      - '${REDIS_PORT:-6379}:6379'
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      monorepo-network:
+        aliases:
+          - monorepo-redis
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: monorepo-redis-commander-${COMPOSE_PROJECT_NAME}
+    environment:
+      REDIS_HOSTS: local:redis:6379
+      HTTP_USER: admin
+      HTTP_PASSWORD: admin
+    ports:
+      - '${REDIS_COMMANDER_PORT:-8081}:8081'
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      monorepo-network:
+        aliases:
+          - monorepo-redis-commander
+
+volumes:
+  postgres_data:
+    driver: local
+  immudb_data:
+    driver: local
+  redis_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+  localstack_data:
+    driver: local

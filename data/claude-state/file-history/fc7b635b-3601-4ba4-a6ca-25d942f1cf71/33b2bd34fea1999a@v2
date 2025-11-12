@@ -1,0 +1,70 @@
+#!/bin/bash
+
+# Script to copy Claude Code configuration for Docker builds
+# This allows you to bake your Claude Code auth tokens into the Docker image
+
+set -e
+
+echo "Claude Code Configuration Copy Script"
+echo "======================================"
+echo ""
+
+# Check if Claude Code config exists
+CLAUDE_CONFIG_DIR="$HOME/.config/claude"
+ALT_CLAUDE_CONFIG_DIR="$HOME/.claude"
+
+if [ -d "$CLAUDE_CONFIG_DIR" ]; then
+    CONFIG_SOURCE="$CLAUDE_CONFIG_DIR"
+    echo "✓ Found Claude Code config at: $CLAUDE_CONFIG_DIR"
+elif [ -d "$ALT_CLAUDE_CONFIG_DIR" ]; then
+    CONFIG_SOURCE="$ALT_CLAUDE_CONFIG_DIR"
+    echo "✓ Found Claude Code config at: $ALT_CLAUDE_CONFIG_DIR"
+else
+    echo "✗ Error: Claude Code config not found!"
+    echo ""
+    echo "Expected locations:"
+    echo "  - $CLAUDE_CONFIG_DIR"
+    echo "  - $ALT_CLAUDE_CONFIG_DIR"
+    echo ""
+    echo "Please ensure Claude Code is installed and configured."
+    echo "Run 'claude-code' to set it up first."
+    exit 1
+fi
+
+# Create destination directory
+DEST_DIR=".claude-config"
+mkdir -p "$DEST_DIR"
+
+# Copy configuration files
+echo ""
+echo "Copying Claude Code config to $DEST_DIR/"
+cp -r "$CONFIG_SOURCE"/* "$DEST_DIR/"
+
+# Verify copy
+if [ -d "$DEST_DIR" ] && [ "$(ls -A $DEST_DIR)" ]; then
+    echo "✓ Configuration copied successfully!"
+    echo ""
+    echo "Files copied:"
+    ls -lh "$DEST_DIR"
+    echo ""
+    echo "⚠️  IMPORTANT SECURITY WARNING ⚠️"
+    echo "=================================="
+    echo "Your authentication tokens are now in: $DEST_DIR/"
+    echo ""
+    echo "These files are .gitignored and will NOT be committed to git."
+    echo "However, they WILL be baked into your Docker image."
+    echo ""
+    echo "Security considerations:"
+    echo "  1. Anyone with access to your Docker image can extract these tokens"
+    echo "  2. Never push Docker images with tokens to public registries"
+    echo "  3. For production, consider using environment variables instead"
+    echo "  4. Rotate your API keys regularly"
+    echo ""
+    echo "Next steps:"
+    echo "  1. Build your Docker image: docker build -t claude-code-api ."
+    echo "  2. Or deploy to Render: git push origin main"
+    echo ""
+else
+    echo "✗ Error: Failed to copy configuration"
+    exit 1
+fi

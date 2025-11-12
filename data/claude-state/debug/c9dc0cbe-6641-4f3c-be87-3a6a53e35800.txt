@@ -1,0 +1,2021 @@
+[DEBUG] Watching for changes in setting files /home/jamestroutman/.claude/settings.json, /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 60 allow rule(s) to destination 'localSettings': ["Bash(claude --print --output-format stream-json)","Bash(claude --print --verbose --output-format stream-json)","Bash(npx supabase migration:*)","Bash(npx supabase:*)","Bash(psql:*)","Bash(npm run build:*)","Read(//tmp/**)","Bash(curl:*)","Bash(npm run dev:*)","Bash(mkdir:*)","Bash(find:*)","Bash(docker exec:*)","Bash(node:*)","mcp__atlassian__getAccessibleAtlassianResources","mcp__atlassian__searchConfluenceUsingCql","Bash(lsof:*)","Bash(xargs kill:*)","Bash(turbo run:*)","Bash(pkill:*)","Read(//home/jamestroutman/.npm/_logs/**)","Bash(docker logs:*)","Bash(timeout 30 bash -c 'tail -f /dev/null & BG_PID=$!; kill $BG_PID 2>/dev/null; echo \"\"Waiting for next save attempt...\"\"')","Bash(cat:*)","Bash(npm run check-types:*)","Bash(npx tsc:*)","Bash(npm install:*)","Bash(test:*)","Bash(npx tsx:*)","mcp__monday__get_board_info","mcp__monday__create_item","mcp__monday__change_item_column_values","mcp__atlassian__createConfluencePage","mcp__chrome-devtools__navigate_page","mcp__playwright__browser_navigate","mcp__playwright__browser_wait_for","mcp__playwright__browser_take_screenshot","mcp__playwright__browser_click","mcp__playwright__browser_type","mcp__supabase__execute_sql","mcp__monday__get_board_items_page","mcp__playwright__browser_console_messages","mcp__atlassian__getConfluencePage","mcp__atlassian__getConfluencePageDescendants","Bash(if [ -f /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/.env.local ])","Bash(then source /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/.env.local)","Bash(else echo \"No .env.local file found\")","Bash(fi)","Bash(set -a)","Bash(source:*)","Bash(set +a)","Bash(xargs -I {} sh -c 'MONDAY_API_TOKEN={} node ../../scripts/check-monday-columns.js 18065687927')","Bash(xargs -I {} sh -c 'MONDAY_API_TOKEN={} node ../../scripts/check-monday-columns.js 9762565449')","Bash(xargs -I {} sh -c 'MONDAY_API_TOKEN={} node scripts/check-monday-columns.js 9762565449')","Bash(echo:*)","Bash(xargs -I {} sh -c 'MONDAY_API_TOKEN={} node scripts/check-monday-columns.js 18027518486')","Bash(xargs -I {} sh -c 'MONDAY_API_TOKEN={} node scripts/check-monday-columns.js 9811240186')","Bash(xargs -I {} sh -c 'MONDAY_API_TOKEN={} node scripts/check-monday-columns.js 18007930608')","Bash(xargs -I {} sh -c 'MONDAY_API_TOKEN={} node scripts/check-monday-columns.js 9762207095')","Bash(xargs -I {} sh -c 'MONDAY_API_TOKEN={} node scripts/check-monday-columns.js 18018390488')","Bash(xargs -I {} sh -c 'MONDAY_API_TOKEN={} node scripts/check-monday-columns.js 9762492395')"]
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/jamestroutman/.claude/skills, project=/home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+[DEBUG] Looking for shell config file: /home/jamestroutman/.zshrc
+[DEBUG] Snapshots directory: /home/jamestroutman/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /home/jamestroutman/.claude/shell-snapshots/snapshot-zsh-1761944020610-d7suo6.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/c9dc0cbe-6641-4f3c-be87-3a6a53e35800-agent-c9dc0cbe-6641-4f3c-be87-3a6a53e35800.json.tmp.1666807.1761944020615
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/c9dc0cbe-6641-4f3c-be87-3a6a53e35800-agent-c9dc0cbe-6641-4f3c-be87-3a6a53e35800.json.tmp.1666807.1761944020615 to /home/jamestroutman/.claude/todos/c9dc0cbe-6641-4f3c-be87-3a6a53e35800-agent-c9dc0cbe-6641-4f3c-be87-3a6a53e35800.json
+[DEBUG] File /home/jamestroutman/.claude/todos/c9dc0cbe-6641-4f3c-be87-3a6a53e35800-agent-c9dc0cbe-6641-4f3c-be87-3a6a53e35800.json written atomically
+[DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/x64-linux/rg)
+[DEBUG] Summarizing last 3 of 62 messages (~126234 tokens)
+[DEBUG] Agent file /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/agents/golang-pro.md is missing required 'name' in frontmatter
+[DEBUG] Failed to parse agent from /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/agents/golang-pro.md: Missing required "name" field in frontmatter
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] Shell snapshot created successfully (19795 bytes)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1666807.1761944020800
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1666807.1761944020800 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1666807.1761944020806
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1666807.1761944020806 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1666807.1761944020812
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1666807.1761944020812 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "chrome-devtools": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "figma-remote-mcp": Initializing HTTP transport to https://mcp.figma.com/mcp
+[DEBUG] MCP server "figma-remote-mcp": Node version: v24.9.0, Platform: linux
+[DEBUG] MCP server "figma-remote-mcp": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1666807.1761944021261
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1666807.1761944021261 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] MCP server "figma-remote-mcp": MTLS options: default
+[DEBUG] MCP server "figma-remote-mcp": HTTP transport options: {"url":"https://mcp.figma.com/mcp","headers":{"User-Agent":"claude-code/2.0.30"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "figma-remote-mcp": HTTP transport created successfully
+[DEBUG] MCP server "figma-remote-mcp": Client created, setting up request handler
+[DEBUG] MCP server "figma-remote-mcp": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "figma-remote-mcp": Testing basic HTTP connectivity to https://mcp.figma.com/mcp
+[DEBUG] MCP server "figma-remote-mcp": Parsed URL: host=mcp.figma.com, port=default, protocol=https:
+[DEBUG] MCP server "monday": SSE transport initialized, awaiting connection
+[DEBUG] MCP server "monday": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 581979s
+[DEBUG] MCP server "figma-remote-mcp": Token expired without refresh token
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1666807.1761944021319
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43379 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1666807.1761944021319 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1666807.1761944021325
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43379 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1666807.1761944021325 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] performStartupChecks called
+[DEBUG] Starting background plugin installations
+[DEBUG] performBackgroundPluginInstallations called
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1666807.1761944021957
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43379 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1666807.1761944021957 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1666807.1761944021965
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1666807.1761944021965 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+[DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[ERROR] MCP server "chrome-devtools" Server stderr: npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+[DEBUG] Summarizing last 2 of 125 messages (~86423 tokens)
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 581977s
+[DEBUG] Summarizing all 3 messages (~0 tokens)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 581977s
+[DEBUG] MCP server "monday": Successfully connected to sse server in 2159ms
+[DEBUG] MCP server "monday": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"monday.com","version":"1.0.0"}}
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 581977s
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "figma-remote-mcp": Found client info
+[DEBUG] MCP server "figma-remote-mcp": Token expired without refresh token
+[DEBUG] MCP server "figma-remote-mcp": Generated new OAuth state
+[DEBUG] MCP server "figma-remote-mcp": Saving code verifier
+[DEBUG] MCP server "figma-remote-mcp": Authorization URL: https://www.figma.com/oauth/mcp?response_type=code&client_id=FNYybnpcRpV6IPirKnXcPV&code_challenge=nfDJTHV5Ue04rjv2zLi5H7Sfx1XtyooLDEFlhcAu_mo&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A3118%2Fcallback&state=tiupn3MEz1BX1RQb6NbG20NhNjbsHV7OYIejvk4D97k&resource=https%3A%2F%2Fmcp.figma.com%2Fmcp
+[DEBUG] MCP server "figma-remote-mcp": Scopes in URL: NOT FOUND
+[DEBUG] MCP server "figma-remote-mcp": No scopes available from URL or metadata
+[DEBUG] MCP server "figma-remote-mcp": Redirection handling is disabled, skipping redirect
+[DEBUG] MCP server "figma-remote-mcp": HTTP Connection failed after 2428ms: Unauthorized (code: none, errno: none)
+[ERROR] MCP server "figma-remote-mcp" Error: Unauthorized
+[DEBUG] MCP server "figma-remote-mcp": Authentication required for HTTP server
+[DEBUG] Stream started - received first chunk
+[DEBUG] Summarizing last 3 of 18 messages (~132132 tokens)
+[DEBUG] Stream started - received first chunk
+[ERROR] MCP server "chrome-devtools" Server stderr: chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,
+debug, and modify any data in the browser or DevTools.
+Avoid sharing sensitive or personal information that you do not want to share with MCP clients.
+[DEBUG] MCP server "chrome-devtools": Successfully connected to stdio server in 3957ms
+[DEBUG] MCP server "chrome-devtools": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"0.9.0"}}
+[DEBUG] MCP server "context7": Initializing HTTP transport to https://mcp.context7.com/mcp
+[DEBUG] MCP server "context7": Node version: v24.9.0, Platform: linux
+[DEBUG] MCP server "context7": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "playwright": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "atlassian": SSE transport initialized, awaiting connection
+[DEBUG] MCP server "atlassian": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 2626s
+[DEBUG] MCP server "context7": MTLS options: default
+[DEBUG] MCP server "context7": HTTP transport options: {"url":"https://mcp.context7.com/mcp","headers":{"User-Agent":"claude-code/2.0.30"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "context7": HTTP transport created successfully
+[DEBUG] MCP server "context7": Client created, setting up request handler
+[DEBUG] MCP server "context7": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "context7": Testing basic HTTP connectivity to https://mcp.context7.com/mcp
+[DEBUG] MCP server "context7": Parsed URL: host=mcp.context7.com, port=default, protocol=https:
+[DEBUG] MCP server "context7": No token data found
+[ERROR] MCP server "playwright" Server stderr: npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": Successfully connected to http server in 187ms
+[DEBUG] MCP server "context7": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Context7","version":"1.0.13"}}
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] Summarizing last 1 of 335 messages (~0 tokens)
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 2626s
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 2626s
+[DEBUG] MCP server "atlassian": Successfully connected to sse server in 602ms
+[DEBUG] MCP server "atlassian": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"atlassian-mcp-server","version":"1.0.0"}}
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 2626s
+[DEBUG] MCP server "playwright": Successfully connected to stdio server in 787ms
+[DEBUG] MCP server "playwright": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Playwright","version":"0.0.44"}}
+[DEBUG] MCP server "supabase": Initializing HTTP transport to http://localhost:54321/mcp
+[DEBUG] MCP server "supabase": Node version: v24.9.0, Platform: linux
+[DEBUG] MCP server "supabase": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "ide": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "supabase": MTLS options: default
+[DEBUG] MCP server "supabase": HTTP transport options: {"url":"http://localhost:54321/mcp","headers":{"User-Agent":"claude-code/2.0.30"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "supabase": HTTP transport created successfully
+[DEBUG] MCP server "supabase": Client created, setting up request handler
+[DEBUG] MCP server "supabase": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "supabase": Testing basic HTTP connectivity to http://localhost:54321/mcp
+[DEBUG] MCP server "supabase": Parsed URL: host=localhost, port=54321, protocol=http:
+[DEBUG] MCP server "supabase": Using loopback address: localhost
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "ide": Successfully connected to ws-ide server in 12ms
+[DEBUG] MCP server "ide": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Claude Code VSCode MCP","version":"2.0.28"}}
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] MCP server "supabase": Successfully connected to http server in 34ms
+[DEBUG] MCP server "supabase": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"supabase","title":"Supabase","version":"0.5.5"}}
+[DEBUG] MCP server "supabase": No token data found
+[DEBUG] Stream started - received first chunk
+[DEBUG] Summarizing last 1 of 126 messages (~106994 tokens)
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Summarizing last 4 of 15 messages (~105971 tokens)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Summarizing last 4 of 59 messages (~133568 tokens)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Summarizing last 3 of 17 messages (~125668 tokens)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for ccfd59a5-3b01-4a69-a36a-46968144e991, tracking 0 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 24ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 20ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 13ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Permission suggestions for Edit: [
+  {
+    "type": "setMode",
+    "mode": "acceptEdits",
+    "destination": "session"
+  }
+]
+[DEBUG] MCP server "ide": Calling MCP tool: openDiff
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (30s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (60s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (90s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (120s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (150s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (180s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (210s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 236372s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "context7": HTTP connection dropped after 236372s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236311s elapsed)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 345601s
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236341s elapsed)
+[DEBUG] MCP server "atlassian": SSE connection dropped after 236411s uptime
+[DEBUG] MCP server "atlassian": Connection timeout - network issue or server unresponsive
+[DEBUG] MCP server "atlassian": Token expires in -233789s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236371s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236401s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236431s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236461s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236491s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236521s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236551s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236581s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236612s elapsed)
+[DEBUG] MCP server "context7": HTTP connection dropped after 236680s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 236684s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 345289s
+[DEBUG] MCP server "context7": HTTP connection dropped after 236686s uptime
+[DEBUG] MCP server "context7": Connection error: fetch failed
+[DEBUG] MCP server "context7": HTTP connection dropped after 236686s uptime
+[DEBUG] MCP server "context7": Connection error: Failed to reconnect SSE stream: fetch failed
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "context7": HTTP connection dropped after 236692s uptime
+[DEBUG] MCP server "context7": Connection error: fetch failed
+[DEBUG] MCP server "context7": HTTP connection dropped after 236692s uptime
+[DEBUG] MCP server "context7": Connection error: Failed to reconnect SSE stream: fetch failed
+[DEBUG] MCP server "context7": HTTP connection dropped after 236692s uptime
+[DEBUG] MCP server "context7": Connection error: Maximum reconnection attempts (2) exceeded.
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236642s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236672s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236702s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236732s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236762s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236792s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236822s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236852s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236882s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236912s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 236989s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 344984s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236943s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (236973s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237003s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237033s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237063s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237093s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237123s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237153s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237183s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237213s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 237295s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 344678s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237243s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237274s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237304s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237334s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237364s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237394s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237424s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237454s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237484s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237514s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 237601s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 344372s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237544s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237574s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237605s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237635s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237665s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237695s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237725s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237755s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237785s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237815s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 237907s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237845s elapsed)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 344066s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237875s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237906s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237936s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237966s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (237996s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238026s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238056s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238086s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238116s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238146s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 238212s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 343761s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238176s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238207s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238237s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238267s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238297s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238327s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238357s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238387s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238417s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238447s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 238518s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 343455s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238478s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238508s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238538s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238568s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238598s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238628s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238658s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238689s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238719s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238749s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 238823s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 343150s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238779s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238809s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238839s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238869s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238899s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238930s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238960s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (238990s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239020s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239050s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 239129s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 342844s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239080s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239110s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239141s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239171s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239201s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239231s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239261s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239291s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239321s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239351s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 239434s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 342539s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239381s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239412s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239442s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239472s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239502s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239532s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239562s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239592s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239622s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239653s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 239740s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 342233s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239683s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239713s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239743s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239773s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239803s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239833s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239863s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239894s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239924s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239954s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 240045s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (239984s elapsed)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 341928s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240014s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240044s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240074s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240104s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240134s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240165s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240195s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240225s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240255s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240285s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 240351s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 341622s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240315s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240345s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240375s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240406s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240436s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240466s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240496s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240526s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240556s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240586s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 240656s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 341317s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240616s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240647s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240677s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240707s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240737s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240767s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240797s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240827s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240857s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240888s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 240962s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 341011s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240918s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240948s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (240978s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241008s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241038s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241068s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241098s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241129s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241159s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241189s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 241267s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 340706s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241219s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241249s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241279s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241309s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241339s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241370s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241400s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241430s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241460s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241490s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 241573s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 340400s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241520s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241550s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241581s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241611s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241641s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241671s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241701s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241731s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241761s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241791s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 241878s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 340095s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241822s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241852s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241882s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241912s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241942s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (241972s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242002s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242032s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242063s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242093s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 242184s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242123s elapsed)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 339789s
+[DEBUG] MCP server "monday": SSE connection dropped after 242194s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 339779s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242153s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242183s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242213s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242243s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242274s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242304s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242334s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242364s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242394s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242425s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 242500s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 339473s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242455s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242485s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242515s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242545s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242575s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242605s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242635s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242666s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242696s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242726s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 242807s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 339167s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242756s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242786s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242816s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242846s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242877s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242907s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242937s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242967s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (242997s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243027s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 243113s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 338861s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243057s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243088s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243118s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243148s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243178s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243208s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243238s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243268s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243298s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243329s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 243419s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 338554s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243359s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243389s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243419s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243449s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243479s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243509s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243540s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243570s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243600s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243630s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243660s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 243724s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 338249s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243690s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243720s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243751s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243781s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243811s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243841s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243871s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243901s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243931s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243962s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 244030s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 337943s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (243992s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244022s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244052s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244082s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244112s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244142s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244173s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244203s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244233s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244263s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 244336s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 337637s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244293s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244323s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244354s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244384s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244414s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244444s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244474s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244504s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244534s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244565s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 244642s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 337331s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244595s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244625s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244655s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244685s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244715s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244745s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244776s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244806s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244836s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244866s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 244948s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 337025s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244896s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244926s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244957s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (244987s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245017s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245047s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245077s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245107s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245137s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245168s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 245253s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 336720s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245198s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245228s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245258s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245288s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245318s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245349s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245379s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245409s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245439s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245469s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 245560s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 336413s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245499s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245530s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245560s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245590s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245620s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245650s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245680s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245711s elapsed)
+[DEBUG] MCP server "atlassian": SSE connection dropped after 245785s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Token expires in -6073s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245741s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245771s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245801s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 245866s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 336107s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245831s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245861s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245892s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245922s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245952s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (245982s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246013s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246043s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246073s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246103s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 246172s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 335801s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246133s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246163s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246194s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246224s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246254s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246284s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246314s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246344s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246375s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246405s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 246478s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 335495s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246435s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246465s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246495s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246526s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246556s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246587s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246618s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246648s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246679s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246709s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 246787s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 335186s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246740s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246770s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246801s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246832s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246862s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246893s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246923s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246954s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (246985s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247015s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 247097s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 334876s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247046s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247077s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247107s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247138s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247169s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247199s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247230s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247260s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247291s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247322s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 247408s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 334565s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247352s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247383s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247414s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247444s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247475s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247506s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247536s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247567s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247598s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247628s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 247719s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 334254s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247659s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247690s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247721s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247751s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247782s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247813s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247843s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247874s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247905s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247935s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247966s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 248030s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 333942s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (247997s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248027s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248058s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248089s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248120s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248150s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248181s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248212s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248242s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248273s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 248342s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 333631s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248304s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248334s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248365s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248396s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248427s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248457s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248488s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248519s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248549s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248580s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 248654s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 333319s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248611s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248642s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248672s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248703s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248734s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248764s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248795s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248826s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248857s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248887s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 248965s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 333008s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248918s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248949s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (248980s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249010s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249041s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249072s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249103s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249133s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249164s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249195s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 249277s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 332696s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249226s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249256s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249287s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249318s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249349s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249379s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249410s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249441s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249472s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249502s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 249589s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 332384s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249533s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249564s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249595s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249626s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249656s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249687s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249718s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249749s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249779s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249810s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 249901s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 332072s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249841s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249872s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249902s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249933s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249964s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (249995s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250026s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250056s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250087s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250118s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250149s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 250213s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 331760s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250180s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250210s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250241s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250272s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250303s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250333s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250364s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250395s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250426s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250457s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 250526s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 331448s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250487s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250518s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250549s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250580s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250611s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250641s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250672s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 250748s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 331225s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250703s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250734s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250765s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250795s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250826s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250857s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250888s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 250956s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 331017s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250919s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250949s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (250980s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251011s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251042s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251073s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251104s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251134s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251165s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251196s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 251269s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 330704s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251227s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251258s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251288s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251319s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251350s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251381s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251412s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251443s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251473s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251504s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 251581s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 330392s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251535s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251566s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251597s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251628s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251658s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251689s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251720s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251751s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251782s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251813s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 251894s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 330079s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251844s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251874s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251905s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251936s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251967s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (251998s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252029s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252060s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252090s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252121s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 252207s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 329766s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252152s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252183s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252214s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252245s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252276s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252306s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252337s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252368s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252399s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252430s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 252521s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 329452s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252461s elapsed)
+[DEBUG] MCP server "atlassian": SSE connection dropped after 252524s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Token expires in -3438s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252492s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252522s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252553s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252584s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252615s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252646s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252677s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252708s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252738s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252769s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 252834s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 329138s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252800s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252831s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252862s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252893s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252924s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252955s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (252985s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253016s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253047s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 253141s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253078s elapsed)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 328832s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253109s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253140s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253171s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253202s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253232s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253263s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253294s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253325s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253356s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253387s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 253455s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 328518s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253418s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253449s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253480s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253510s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253541s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253572s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253603s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253634s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253665s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253696s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 253768s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 328205s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253727s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253758s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253789s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253819s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253850s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253881s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253912s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253943s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253974s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254005s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 254082s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 327891s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254036s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254067s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254098s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254129s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254160s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254190s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254221s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254252s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254283s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254314s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 254395s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 327578s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254345s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254376s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254407s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254438s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254469s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254500s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254531s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254562s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254592s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254623s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 254708s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 327265s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254654s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254685s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254716s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254747s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254778s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254809s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254840s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254871s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254902s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254933s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 255022s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 326951s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254964s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (254995s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255026s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255056s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255087s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255118s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255149s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255180s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255211s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255242s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 255335s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255273s elapsed)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 326638s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255304s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255335s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255366s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255397s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255428s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255459s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255490s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255521s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255552s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255582s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 255650s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 326323s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255613s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255644s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255675s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255706s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255737s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255768s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255799s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255830s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255861s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255892s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 255964s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 326009s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255923s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255954s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (255985s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256016s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256047s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256078s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256109s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256140s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256203s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256234s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 256310s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 325663s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256265s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256296s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256326s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256357s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256388s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256419s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256450s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256481s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256511s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256542s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 256623s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 325350s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256573s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256604s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256635s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256666s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256696s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256727s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256758s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256789s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256820s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256851s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 256935s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 325038s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256881s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256912s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256943s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (256974s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257005s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257036s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 257115s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 324858s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257067s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257098s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257128s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257159s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257190s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257221s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257252s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257283s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257314s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257345s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 257428s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 324545s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257375s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257406s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257437s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257468s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257499s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257530s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257561s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257592s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257623s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257654s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 257741s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 324232s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257685s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257715s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257746s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (257777s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258027s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258058s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258089s elapsed)
+[DEBUG] MCP server "atlassian": SSE connection dropped after 258155s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Token expires in -2329s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258120s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258151s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258182s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 258274s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258212s elapsed)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 323700s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258243s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258274s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258305s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258336s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258367s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258398s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258429s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258460s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258491s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258522s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 258587s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 323385s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258553s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258584s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258615s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258646s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258677s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258708s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258739s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258770s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258800s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258831s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 258902s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 323071s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258862s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258893s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 258965s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 323008s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258924s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258955s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (258986s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259017s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259048s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259079s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259110s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259141s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259172s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259203s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 259279s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 322694s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259234s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259265s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259296s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259327s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259358s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259389s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259420s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259451s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259482s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259513s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 259593s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 322380s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259544s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259575s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259606s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259637s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259668s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259699s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259730s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259761s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259792s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259823s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 259908s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 322065s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259854s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259885s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259916s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259947s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (259978s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260009s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260040s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260071s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260102s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260133s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 260223s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 321750s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260164s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260195s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260226s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260257s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260288s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260319s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260350s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260381s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260412s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260443s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 260537s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260474s elapsed)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 321436s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260505s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260536s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260567s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260598s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260629s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260660s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260691s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260723s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260754s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260785s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 260854s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 321119s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260816s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260847s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 260917s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 321056s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260878s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260909s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260940s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (260971s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261002s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261033s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261064s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261095s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261126s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261157s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 261232s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 320741s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261188s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261219s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261250s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261281s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261312s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261344s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261375s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261406s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261437s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261468s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 261547s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 320426s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261499s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261530s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261561s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261592s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261623s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261654s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261685s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261716s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261747s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261778s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 261862s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 320111s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261810s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261841s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261872s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261903s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261934s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261965s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (261996s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262027s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262058s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262089s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 262177s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 319796s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262120s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262152s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262531s elapsed)
+[DEBUG] MCP server "atlassian": SSE connection dropped after 262621s uptime
+[DEBUG] MCP server "atlassian": Connection reset - server may have crashed or restarted
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262562s elapsed)
+[DEBUG] MCP server "atlassian": Token expires in -1165s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262593s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262624s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262655s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262686s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262717s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262748s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 262841s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262780s elapsed)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 319132s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262811s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 262890s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 319083s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262842s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262873s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262904s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262935s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262966s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (262997s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263028s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263059s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263090s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263121s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 263205s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 318768s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263153s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263184s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263215s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263246s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263277s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263308s elapsed)
+[DEBUG] MCP server "atlassian": SSE connection dropped after 263378s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 2545s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263339s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263370s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263401s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263432s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 263520s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 318453s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263464s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263495s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263526s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263557s elapsed)
+[DEBUG] MCP server "atlassian": SSE connection dropped after 263621s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 2300s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263588s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263619s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263650s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263681s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263712s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263743s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 263837s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263775s elapsed)
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 318136s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263806s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263837s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263868s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263899s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263930s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263961s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (263992s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264024s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264055s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264086s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 264153s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 317819s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264117s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264148s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264179s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264210s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264241s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264273s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264304s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264335s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264366s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264397s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 264470s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 317503s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264428s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264459s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264491s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264522s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264553s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264584s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264615s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264646s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264678s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264709s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 264786s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 317187s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264740s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264771s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264802s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264833s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264864s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264896s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264927s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264958s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (264989s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (265020s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 265102s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 316871s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (265051s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (319776s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (319807s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 319873s uptime
+[DEBUG] MCP server "monday": Connection timeout - network issue or server unresponsive
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 262099s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 319892s uptime
+[DEBUG] MCP server "atlassian": Connection timeout - network issue or server unresponsive
+[DEBUG] MCP server "atlassian": Token expires in -53970s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (319839s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (319870s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (319901s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (319933s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (319964s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (319995s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320027s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320058s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320089s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320120s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 320192s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 261782s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320152s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320183s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320214s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320246s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320277s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320308s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320340s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320371s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320402s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320434s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 320510s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 261463s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320465s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320496s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320527s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320559s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320590s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320621s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320653s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320684s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320715s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320747s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 320828s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 261145s
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320778s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320809s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320841s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320872s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320904s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320935s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320966s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (320998s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (321029s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (321060s elapsed)
+[DEBUG] MCP server "monday": SSE connection dropped after 321145s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 260828s
+[DEBUG] MCP server "ide": Calling MCP tool: close_tab
+[DEBUG] Applying permission update: Setting mode to 'acceptEdits'
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'close_tab' completed successfully in 381ms
+[DEBUG] MCP server "ide": Tool 'openDiff' completed successfully in 5351m 31s
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 27ms
+[DEBUG] MCP server "ide": Calling MCP tool: close_tab
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/FeatureDetailClient.tsx
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/FeatureDetailClient.tsx.tmp.1666807.1762265178560
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 9463 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/FeatureDetailClient.tsx.tmp.1666807.1762265178560 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/FeatureDetailClient.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/FeatureDetailClient.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'close_tab' completed successfully in 250ms
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 60ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1666807.1762265179559
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1666807.1762265179559 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.1666807.1762265182212
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 43484 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.1666807.1762265182212 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 10ms
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/FeatureDetailClient.tsx.tmp.1666807.1762265189512
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 9301 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/FeatureDetailClient.tsx.tmp.1666807.1762265189512 to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/FeatureDetailClient.tsx
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/apps/web/components/FeatureDetailClient.tsx written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 22ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)

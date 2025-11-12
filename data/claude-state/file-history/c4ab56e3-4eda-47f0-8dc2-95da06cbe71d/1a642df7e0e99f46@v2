@@ -1,0 +1,90 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { serverTables } from '../../../../../lib/db/supabase-server';
+import { getWorkstreamBySlugServer } from '../../../../../lib/db/queries-server';
+import { syncMultipleBoards } from '../../../../../lib/integrations/monday-multi-board-sync';
+
+export async function POST(
+  request: NextRequest,
+  { params }: { params: Promise<{ slug: string }> }
+) {
+  try {
+    const { slug } = await params;
+
+    // Get workspace (assuming first workspace for now)
+    const workspaces = await serverTables.workspaces().select('*').limit(1);
+    const workspace = workspaces.data?.[0];
+
+    if (!workspace) {
+      return NextResponse.json(
+        { error: 'No workspace found' },
+        { status: 404 }
+      );
+    }
+
+    // Get workstream by slug
+    const workstream = await getWorkstreamBySlugServer(workspace.id, slug);
+
+    if (!workstream) {
+      return NextResponse.json(
+        { error: 'Workstream not found' },
+        { status: 404 }
+      );
+    }
+
+    // Check for multi-board configuration using dedicated columns
+    const hasMultiBoardConfig =
+      workstream.monday_epic_board_id ||
+      workstream.monday_feature_board_id ||
+      workstream.monday_story_board_id;
+
+    // Use multi-board sync if configured
+    if (hasMultiBoardConfig) {
+      const results = await syncMultipleBoards(
+        workspace.id,
+        workstream.id,
+        workstream.slug,
+        {
+          epicBoardId: workstream.monday_epic_board_id || undefined,
+          featureBoardId: workstream.monday_feature_board_id || undefined,
+          storyBoardId: workstream.monday_story_board_id || undefined,
+        }
+      );
+
+      const totalCreated =
+        results.epics.created +
+        results.features.created +
+        results.stories.created +
+        results.tasks.created;
+      const totalUpdated =
+        results.epics.updated +
+        results.features.updated +
+        results.stories.updated +
+        results.tasks.updated;
+
+      return NextResponse.json({
+        success: true,
+        message: `Synced across multiple boards`,
+        results,
+        summary: {
+          created: totalCreated,
+          updated: totalUpdated,
+        },
+      });
+    }
+
+    // No multi-board configuration found
+    return NextResponse.json(
+      { error: 'Workstream does not have Monday boards configured. Please configure epic, feature, and/or story board IDs.' },
+      { status: 400 }
+    );
+  } catch (error) {
+    console.error('Sync error:', error);
+    return NextResponse.json(
+      {
+        error: 'Failed to sync with Monday.com',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
+      { status: 500 }
+    );
+  }
+}

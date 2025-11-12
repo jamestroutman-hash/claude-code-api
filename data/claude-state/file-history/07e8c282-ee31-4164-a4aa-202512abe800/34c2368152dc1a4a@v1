@@ -1,0 +1,77 @@
+// Spec: apps/web/docs/specs/001-database-schema.md
+// Server-side Supabase client that bypasses RLS for Server Components
+
+import { createClient } from '@supabase/supabase-js';
+import type { Database } from '../../types/database.types';
+
+// Environment variables for Supabase
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'http://127.0.0.1:54321';
+const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+
+if (!supabaseServiceRoleKey) {
+  throw new Error('SUPABASE_SERVICE_ROLE_KEY is required for server-side operations');
+}
+
+/**
+ * Create a Supabase client for server-side operations
+ * This client uses the service role key and bypasses RLS
+ * ⚠️ ONLY use this in Server Components/Actions, NEVER expose to client
+ */
+export const createServerClient = () => {
+  return createClient<Database>(supabaseUrl, supabaseServiceRoleKey, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+    },
+  });
+};
+
+/**
+ * Type-safe table references for server-side operations
+ */
+export const serverTables = {
+  workspaces: () => createServerClient().from('workspaces'),
+  workstreams: () => createServerClient().from('workstreams'),
+  workspaceMembers: () => createServerClient().from('workspace_members'),
+  workstreamMembers: () => createServerClient().from('workstream_members'),
+  epics: () => createServerClient().from('epics'),
+  features: () => createServerClient().from('features'),
+  stories: () => createServerClient().from('stories'),
+  tasks: () => createServerClient().from('tasks'),
+  confluencePages: () => createServerClient().from('confluence_pages'),
+  mondayItems: () => createServerClient().from('monday_items'),
+  syncLogs: () => createServerClient().from('sync_logs'),
+  aiGenerations: () => createServerClient().from('ai_generations'),
+  contextLinks: () => createServerClient().from('context_links'),
+  auditLogs: () => createServerClient().from('audit_logs'),
+  functionalAreas: () => createServerClient().from('functional_areas'),
+} as const;
+
+// Re-export types for convenience
+export type {
+  Tables,
+  Workspace,
+  WorkspaceInsert,
+  WorkspaceUpdate,
+  Workstream,
+  WorkstreamInsert,
+  WorkstreamUpdate,
+  Epic,
+  EpicInsert,
+  EpicUpdate,
+  Feature,
+  FeatureInsert,
+  FeatureUpdate,
+  Story,
+  StoryInsert,
+  StoryUpdate,
+  Task,
+  TaskInsert,
+  TaskUpdate,
+  ConfluencePage,
+  MondayItem,
+  SyncLog,
+  AIGeneration,
+  ContextLink,
+  AuditLog,
+} from './supabase';

@@ -1,0 +1,490 @@
+/**
+ * Feature creation form with AI generation
+ * @see /docs/specs/feature-spec.md
+ * @see /docs/specs/ai-writer-spec.md
+ *
+ * Refactored to use useAIGeneration hook for simplified state management
+ */
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useToast } from '../../../../../../../components/Toast';
+import { useAIGeneration } from '../../../../../../../hooks/useAIGeneration';
+import { ConversationHistory } from '../../../../../../../components/ConversationHistory';
+import { MarkdownEditor } from '../../../../../../../components/MarkdownEditor';
+import { extractTitleFromMarkdown } from '../../../../../../../lib/utils/markdown';
+
+interface FunctionalArea {
+  id: string;
+  name: string;
+  description?: string | null;
+}
+
+interface FeatureCreationFormProps {
+  epic: {
+    id: string;
+    key: string;
+    title: string;
+    description?: string | null;
+    status: string;
+  };
+  workstream: {
+    id: string;
+    name: string;
+  };
+  workstreamSlug: string;
+  epicKey: string;
+}
+
+export function FeatureCreationForm({
+  epic,
+  workstream,
+  workstreamSlug,
+  epicKey,
+}: FeatureCreationFormProps) {
+  const router = useRouter();
+  const { addToast } = useToast();
+  const [isSaving, setIsSaving] = useState(false);
+  const [activeTab, setActiveTab] = useState<'edit' | 'preview' | 'console'>('edit');
+  const [functionalAreas, setFunctionalAreas] = useState<FunctionalArea[]>([]);
+  const [selectedFunctionalAreaId, setSelectedFunctionalAreaId] = useState<string>('');
+  const [isLoadingFunctionalAreas, setIsLoadingFunctionalAreas] = useState(true);
+
+  // Use AI generation hook
+  const ai = useAIGeneration({
+    generateEndpoint: '/api/generate-feature/stream',
+    revisionEndpoint: '/api/generate-feature/revision/stream',
+  });
+
+  /**
+   * Fetch functional areas for workstream to enable categorization
+   * @see /docs/specs/feature-spec.md#BR-008
+   */
+  useEffect(() => {
+    const fetchFunctionalAreas = async () => {
+      try {
+        setIsLoadingFunctionalAreas(true);
+        const response = await fetch(`/api/functional-areas?workstream_id=${workstream.id}`);
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch functional areas');
+        }
+
+        const { data } = await response.json();
+        setFunctionalAreas(data || []);
+      } catch (err: any) {
+        console.error('Error fetching functional areas:', err);
+      } finally {
+        setIsLoadingFunctionalAreas(false);
+      }
+    };
+
+    fetchFunctionalAreas();
+  }, [workstream.id]);
+
+  /**
+   * Generate initial feature specification
+   */
+  const handleGenerate = async () => {
+    await ai.generate({
+      prompt: ai.prompt,
+      workstreamId: workstream.id,
+      epicContext: {
+        title: epic.title,
+        description: epic.description,
+        status: epic.status,
+      },
+    });
+  };
+
+  /**
+   * Save feature with external integrations
+   * @see /docs/specs/feature-spec.md#BR-001
+   * @see /docs/specs/feature-spec.md#BR-008
+   * @see /docs/specs/feature-spec.md#BR-009
+   * @see /docs/specs/document-persistence-spec.md#BR-001 (Persistence Order: DB → Confluence → Monday)
+   * @see /docs/specs/document-persistence-spec.md#BR-002 (Features: DB + Confluence + Monday)
+   * @see /docs/specs/document-persistence-spec.md#BR-006 (Confluence Hierarchy - Features)
+   */
+  const handleSave = async () => {
+    if (!ai.markdown.trim()) {
+      addToast('Please generate a feature specification before saving', 'error');
+      return;
+    }
+
+    setIsSaving(true);
+
+    try {
+      // Extract title from markdown
+      // AI generates titles in format: ### FEAT-AI-004: Test Method Framework
+      let title = extractTitleFromMarkdown(ai.markdown);
+
+      if (!title) {
+        title = 'Untitled Feature';
+      }
+
+      // Get workspace ID
+      const workspaceResponse = await fetch('/api/workspaces');
+      const workspaceData = await workspaceResponse.json();
+      const workspace_id = workspaceData.data?.[0]?.id;
+
+      if (!workspace_id) {
+        throw new Error('Workspace not found');
+      }
+
+      // Save with integrations
+      const response = await fetch('/api/features/save-with-integrations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          title,
+          description: ai.markdown,
+          workspace_id,
+          workstream_id: workstream.id,
+          epic_id: epic.id,
+          functional_area_id: selectedFunctionalAreaId || null,
+          status: 'planned',
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to save feature');
+      }
+
+      const { data, integrations } = await response.json();
+
+      // Build success message
+      let successMessage = `Feature "${title}" saved successfully`;
+      const integrationDetails: string[] = [];
+
+      if (integrations?.confluence?.pageId) {
+        integrationDetails.push('Created Confluence page');
+      }
+
+      if (integrations?.monday?.itemId) {
+        integrationDetails.push('Created Monday.com item');
+      }
+
+      if (integrationDetails.length > 0) {
+        successMessage += ` (${integrationDetails.join(', ')})`;
+      }
+
+      addToast(successMessage, 'success');
+      router.push(`/workstreams/${workstreamSlug}/epics/${epicKey}/features/${data.key}`);
+    } catch (err: any) {
+      console.error('Error saving feature:', err);
+      const errorMessage = err.message || 'Failed to save feature';
+      addToast(errorMessage, 'error');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const handleCancel = () => {
+    router.push(`/workstreams/${workstreamSlug}/epics/${epicKey}`);
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Conversation History */}
+      {ai.conversationHistory.length > 0 && (
+        <ConversationHistory
+          messages={ai.conversationHistory}
+          expandedMessages={ai.expandedMessages}
+          onToggleMessage={ai.toggleMessage}
+        />
+      )}
+
+      {/* Prompt Input or Revision Input */}
+      {ai.state === 'idle' ? (
+        <div className="rounded-lg border border-gray-200 bg-white p-6">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">
+            Describe the Feature
+          </h2>
+          <div className="space-y-4">
+            <div>
+              <label
+                htmlFor="prompt"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                What feature would you like to create?
+              </label>
+              <textarea
+                id="prompt"
+                rows={4}
+                className="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                placeholder="Example: Add ability for users to export their data to CSV format..."
+                value={ai.prompt}
+                onChange={(e) => ai.setPrompt(e.target.value)}
+                disabled={ai.isGenerating}
+              />
+            </div>
+
+            <div className="flex justify-end gap-3">
+              <button
+                type="button"
+                onClick={handleCancel}
+                className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+                disabled={ai.isGenerating}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={handleGenerate}
+                disabled={!ai.canGenerate || ai.isGenerating}
+                className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {ai.isGenerating ? 'Generating...' : 'Generate Feature'}
+              </button>
+            </div>
+
+            {ai.error && (
+              <div className="rounded-md bg-red-50 border border-red-200 p-4">
+                <p className="text-sm text-red-800">{ai.error}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      ) : (
+        <div className="rounded-lg border border-gray-200 bg-white p-6">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">
+            Request Revisions
+          </h2>
+          <div className="space-y-4">
+            <div>
+              <label
+                htmlFor="revisionPrompt"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                What changes would you like to make?
+              </label>
+              <textarea
+                id="revisionPrompt"
+                rows={3}
+                className="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                placeholder="Example: Add more details about the API endpoints..."
+                value={ai.revisionPrompt}
+                onChange={(e) => ai.setRevisionPrompt(e.target.value)}
+                disabled={ai.isGenerating}
+              />
+            </div>
+
+            <div className="flex justify-end gap-3">
+              <button
+                type="button"
+                onClick={handleCancel}
+                className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+                disabled={ai.isGenerating}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={ai.revise}
+                disabled={!ai.canRevise || ai.isGenerating}
+                className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {ai.isGenerating ? 'Generating Revision...' : 'Generate Revision'}
+              </button>
+            </div>
+
+            {ai.error && (
+              <div className="rounded-md bg-red-50 border border-red-200 p-4">
+                <p className="text-sm text-red-800">{ai.error}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* AI Generation Progress Indicator */}
+      {ai.isGenerating && (
+        <div className="rounded-lg border border-blue-200 bg-blue-50 p-6">
+          <div className="flex items-start space-x-4">
+            {/* Animated spinner */}
+            <div className="flex-shrink-0">
+              <svg
+                className="animate-spin h-8 w-8 text-blue-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                />
+              </svg>
+            </div>
+
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm font-semibold text-blue-900 mb-2">
+                {ai.state === 'generating'
+                  ? '🤖 AI is generating your feature specification...'
+                  : '🔄 AI is revising the specification...'}
+              </h3>
+              <p className="text-sm text-blue-700 mb-3">
+                This may take 30-60 seconds. The AI is analyzing your requirements and
+                consulting relevant Confluence documentation.
+              </p>
+
+              {/* Progress steps - dynamically updated based on console output */}
+              <div className="space-y-2">
+                {(() => {
+                  // Parse console output to determine current step
+                  const hasSessionStarted = ai.consoleOutput.includes('Session started');
+                  const isUsingTools = ai.consoleOutput.includes('Using tool:');
+                  const hasToolResults = ai.consoleOutput.includes('Tool result');
+                  const isComplete = ai.consoleOutput.includes('Complete!') || ai.state === 'complete';
+
+                  return (
+                    <>
+                      {/* Step 1: Analyzing prompt - complete when session starts */}
+                      <div className="flex items-center text-xs text-blue-600">
+                        {hasSessionStarted || isUsingTools || hasToolResults || isComplete ? (
+                          <svg className="h-4 w-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                        ) : (
+                          <div className="h-4 w-4 mr-2 flex-shrink-0 flex items-center justify-center">
+                            <div className="h-2 w-2 bg-blue-600 rounded-full animate-pulse" />
+                          </div>
+                        )}
+                        <span>Analyzing your prompt</span>
+                      </div>
+
+                      {/* Step 2: Retrieving Confluence context - in progress when using tools */}
+                      <div className={`flex items-center text-xs ${isUsingTools || hasToolResults ? 'text-blue-600' : 'text-blue-500'}`}>
+                        {hasToolResults || isComplete ? (
+                          <svg className="h-4 w-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                        ) : isUsingTools ? (
+                          <div className="h-4 w-4 mr-2 flex-shrink-0 flex items-center justify-center">
+                            <div className="h-2 w-2 bg-blue-600 rounded-full animate-pulse" />
+                          </div>
+                        ) : (
+                          <div className="h-4 w-4 mr-2 flex-shrink-0" />
+                        )}
+                        <span>Retrieving relevant context from Confluence</span>
+                      </div>
+
+                      {/* Step 3: Generating specification - active after tools complete */}
+                      <div className={`flex items-center text-xs ${hasToolResults || isComplete ? 'text-blue-600' : 'text-blue-500'}`}>
+                        {isComplete ? (
+                          <svg className="h-4 w-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                        ) : hasToolResults ? (
+                          <div className="h-4 w-4 mr-2 flex-shrink-0 flex items-center justify-center">
+                            <div className="h-2 w-2 bg-blue-600 rounded-full animate-pulse" />
+                          </div>
+                        ) : (
+                          <div className="h-4 w-4 mr-2 flex-shrink-0" />
+                        )}
+                        <span>Generating comprehensive specification</span>
+                      </div>
+                    </>
+                  );
+                })()}
+              </div>
+
+              {/* Real-time console preview */}
+              {ai.consoleOutput && (
+                <div className="mt-4 rounded border border-blue-300 bg-blue-900 p-3 max-h-32 overflow-y-auto">
+                  <pre className="text-xs text-blue-100 font-mono whitespace-pre-wrap">
+                    {ai.consoleOutput.split('\n').slice(-10).join('\n')}
+                  </pre>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Markdown Editor */}
+      {ai.markdown && (
+        <div className="rounded-lg border border-gray-200 bg-white p-6">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">
+            Draft Feature Specification
+          </h2>
+
+          <MarkdownEditor
+            markdown={ai.markdown}
+            onMarkdownChange={ai.setMarkdown}
+            consoleOutput={ai.consoleOutput}
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
+            isGenerating={ai.isGenerating}
+          />
+
+          {/* Save Actions */}
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            {/* Functional Area Selection */}
+            <div className="mb-4">
+              <label
+                htmlFor="functionalArea"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Functional Area
+              </label>
+              <select
+                id="functionalArea"
+                value={selectedFunctionalAreaId}
+                onChange={(e) => setSelectedFunctionalAreaId(e.target.value)}
+                className="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                disabled={isLoadingFunctionalAreas || isSaving}
+              >
+                <option value="">Select a functional area (optional)</option>
+                {functionalAreas.map((area) => (
+                  <option key={area.id} value={area.id}>
+                    {area.name}
+                    {area.description ? ` - ${area.description}` : ''}
+                  </option>
+                ))}
+              </select>
+              {isLoadingFunctionalAreas && (
+                <p className="mt-1 text-sm text-gray-500">Loading functional areas...</p>
+              )}
+              {!isLoadingFunctionalAreas && functionalAreas.length === 0 && (
+                <p className="mt-1 text-sm text-gray-500">No functional areas defined for this workstream</p>
+              )}
+            </div>
+
+            <div className="flex justify-end gap-3">
+              <button
+                type="button"
+                onClick={handleCancel}
+                className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+                disabled={isSaving}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={handleSave}
+                disabled={isSaving || !ai.markdown.trim()}
+                className="rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSaving ? 'Saving...' : 'Save Feature'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

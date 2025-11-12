@@ -1,0 +1,28 @@
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for e3a695df-5f37-4ffd-b572-f60680afdd35, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.927959.1762473298124
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45123 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.927959.1762473298124 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-06T23_54_58_652Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593

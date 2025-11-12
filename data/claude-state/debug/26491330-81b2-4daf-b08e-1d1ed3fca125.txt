@@ -1,0 +1,7 @@
+[DEBUG] Watching for changes in setting files /home/jamestroutman/.claude/settings.json, /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json...
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.558968.1762457627481
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45123 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.558968.1762457627481 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically

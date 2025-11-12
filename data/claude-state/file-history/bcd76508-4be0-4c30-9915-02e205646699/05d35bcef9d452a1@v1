@@ -1,0 +1,76 @@
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const settingsNavItems = [
+  {
+    name: 'Templates',
+    href: '/settings/templates',
+    description: 'Manage document templates',
+  },
+  {
+    name: 'Integrations',
+    href: '/settings/integrations',
+    description: 'Configure external integrations',
+  },
+  {
+    name: 'General',
+    href: '/settings',
+    description: 'General settings',
+  },
+];
+
+export default function SettingsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === '/settings') {
+      return pathname === '/settings';
+    }
+    return pathname.startsWith(href);
+  };
+
+  return (
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900">Settings</h1>
+        <p className="mt-2 text-sm text-gray-600">
+          Manage your application settings and configurations
+        </p>
+      </div>
+
+      <div className="flex gap-8">
+        {/* Side Navigation */}
+        <nav className="w-64 flex-shrink-0">
+          <ul className="space-y-1">
+            {settingsNavItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`block rounded-md px-3 py-2 text-sm font-medium ${
+                    isActive(item.href)
+                      ? 'bg-blue-50 text-blue-700'
+                      : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                  }`}
+                >
+                  <div>{item.name}</div>
+                  <div className="text-xs font-normal text-gray-500 mt-0.5">
+                    {item.description}
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Content Area */}
+        <div className="flex-1 min-w-0">{children}</div>
+      </div>
+    </div>
+  );
+}

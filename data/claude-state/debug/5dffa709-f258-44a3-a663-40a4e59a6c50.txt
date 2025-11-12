@@ -1,0 +1,347 @@
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for b3009049-7ace-469b-afa4-84dd2bc3a4cc, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761757063236
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 294537 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761757063236 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761757063248
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 294621 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761757063248 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761757064632
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 294621 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761757064632 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 77ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message e5b50215-ef0d-456c-afb6-f4fe4338cac6
+[DEBUG] FileHistory: Added snapshot for e5b50215-ef0d-456c-afb6-f4fe4338cac6, tracking 0 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 25ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761757083595
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 294621 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761757083595 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Stream started - received first chunk
+[ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at JD (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1175:4413)
+    at file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1175:4141
+    at Array.map (<anonymous>)
+    at MF (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1175:4132)
+    at ATQ (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1798:6306)
+    at Cw (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:73:19414)
+    at Ao (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:75:42806)
+    at T9 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:75:38347)
+    at Uc (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:75:38275)
+    at qw (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:75:38129)
+[DEBUG] executePreToolHooks called for tool: Glob
+[DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Glob
+[DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] No hook environment files found
+[DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 18ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 14ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761757107065
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 294621 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761757107065 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761757107091
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 294621 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761757107091 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761757107103
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 310645 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761757107103 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 15ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message ea0594be-cabb-4d51-ad7a-36fc5783f4df
+[DEBUG] FileHistory: Added snapshot for ea0594be-cabb-4d51-ad7a-36fc5783f4df, tracking 0 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 17ms
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761757169290
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 310645 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761757169290 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Permission suggestions for Edit: [
+  {
+    "type": "setMode",
+    "mode": "acceptEdits",
+    "destination": "session"
+  }
+]
+[DEBUG] MCP server "ide": Calling MCP tool: openDiff
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (31s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (63s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (95s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (126s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (158s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (190s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (222s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (253s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (285s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (317s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (348s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (380s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (412s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (444s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (475s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (507s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (539s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (571s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (602s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (634s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (666s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (698s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (729s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (761s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (793s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (825s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (856s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (888s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (920s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (952s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (984s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1015s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1047s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1079s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1111s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1143s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1175s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1206s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1238s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1270s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1302s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1334s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1365s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1397s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1429s elapsed)
+[DEBUG] MCP server "ide": Tool 'openDiff' still running (1461s elapsed)
+[DEBUG] MCP server "ide": Calling MCP tool: close_tab
+[DEBUG] Applying permission update: Setting mode to 'acceptEdits'
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 7ms
+[DEBUG] FileHistory: Tracked file modification for /home/jamestroutman/code/experiments/clarity-ai/.devcontainer/devcontainer.json
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-ai/.devcontainer/devcontainer.json.tmp.9490.1761758666887
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 4260 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-ai/.devcontainer/devcontainer.json.tmp.9490.1761758666887 to /home/jamestroutman/code/experiments/clarity-ai/.devcontainer/devcontainer.json
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-ai/.devcontainer/devcontainer.json written atomically
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'close_tab' completed successfully in 153ms
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 32ms
+[DEBUG] MCP server "ide": Tool 'openDiff' completed successfully in 24m 51s
+[DEBUG] MCP server "ide": Calling MCP tool: close_tab
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] MCP server "ide": Tool 'close_tab' completed successfully in 49ms
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 14ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "chmod:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] Persisting permission update: addRules to source 'localSettings'
+[DEBUG] Persisting 1 allow rule(s) to localSettings
+[DEBUG] Writing to temp file: /home/jamestroutman/code/experiments/clarity-ai/.claude/settings.local.json.tmp.9490.1761758681692
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 124 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/code/experiments/clarity-ai/.claude/settings.local.json.tmp.9490.1761758681692 to /home/jamestroutman/code/experiments/clarity-ai/.claude/settings.local.json
+[DEBUG] File /home/jamestroutman/code/experiments/clarity-ai/.claude/settings.local.json written atomically
+[DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["Bash(chmod:*)"]
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 24ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 20ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761758693768
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 310645 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761758693768 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761758693794
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 310645 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761758693794 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.9490.1761758693806
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 310758 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.9490.1761758693806 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false

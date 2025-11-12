@@ -78,7 +78,7 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 RUN mkdir -p /app/data /home/claudeuser/.config/claude /home/claudeuser/.claude/debug && \
     chown -R claudeuser:claudeuser /app /home/claudeuser
 
-# Copy persisted Claude state (credentials, settings, history, etc.)
+# Copy persisted Claude state (credentials, settings, history) for CI/CD
 COPY --chown=claudeuser:claudeuser data/claude-state /home/claudeuser/.claude
 
 # Secure the credentials file

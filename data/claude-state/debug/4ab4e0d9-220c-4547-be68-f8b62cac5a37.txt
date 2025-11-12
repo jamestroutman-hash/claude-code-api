@@ -1,0 +1,739 @@
+[DEBUG] Executing hooks for SessionStart:clear
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Added snapshot for a3c61282-04c0-4449-a8be-da5d19023200, tracking 0 files
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.2214374.1762271701447
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 44580 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.2214374.1762271701447 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.2214374.1762271701452
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 44664 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.2214374.1762271701452 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T15_55_01_872Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253
+[DEBUG] MCP server "monday": SSE connection dropped after 316s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "context7": HTTP connection dropped after 316s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 254131s
+[DEBUG] MCP server "context7": HTTP connection dropped after 633s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 636s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 253811s
+[DEBUG] MCP server "context7": HTTP connection dropped after 951s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 956s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 253491s
+[DEBUG] MCP server "context7": HTTP connection dropped after 1268s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 1276s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 253171s
+[DEBUG] MCP server "context7": HTTP connection dropped after 1586s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 1596s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 252850s
+[DEBUG] MCP server "context7": HTTP connection dropped after 1904s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 1918s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 252529s
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T16_26_37_682Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.current (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253)
+[DEBUG] MCP server "context7": HTTP connection dropped after 2222s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 2239s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 252208s
+[DEBUG] MCP server "context7": HTTP connection dropped after 2540s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 2559s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 251887s
+[DEBUG] MCP server "context7": HTTP connection dropped after 2858s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 2880s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 251567s
+[DEBUG] MCP server "context7": HTTP connection dropped after 3176s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 3201s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 251246s
+[DEBUG] MCP server "atlassian": SSE connection dropped after 3420s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Token expires in -125s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "context7": HTTP connection dropped after 3494s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 3521s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 250925s
+[DEBUG] MCP server "context7": HTTP connection dropped after 3812s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 3842s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 250604s
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T16_58_16_663Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.current (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253)
+[DEBUG] MCP server "context7": HTTP connection dropped after 4131s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 4163s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 250282s
+[DEBUG] MCP server "context7": HTTP connection dropped after 4451s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 4486s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 249961s
+[DEBUG] MCP server "context7": HTTP connection dropped after 4769s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 4808s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 249639s
+[DEBUG] MCP server "context7": HTTP connection dropped after 5088s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 5129s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 249318s
+[DEBUG] MCP server "context7": HTTP connection dropped after 5406s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 5450s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 248997s
+[DEBUG] MCP server "context7": HTTP connection dropped after 5725s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 5771s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 248675s
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T17_29_57_781Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.current (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253)
+[DEBUG] MCP server "context7": HTTP connection dropped after 6044s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 6093s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 248354s
+[DEBUG] MCP server "context7": HTTP connection dropped after 6363s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 6416s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 248031s
+[DEBUG] MCP server "context7": HTTP connection dropped after 6682s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 6737s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 247710s
+[DEBUG] MCP server "context7": HTTP connection dropped after 7000s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 7058s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 247388s
+[DEBUG] MCP server "context7": HTTP connection dropped after 7319s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 7380s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 247067s
+[DEBUG] MCP server "context7": HTTP connection dropped after 7638s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 7701s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 246745s
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T18_01_41_525Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.current (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253)
+[DEBUG] MCP server "context7": HTTP connection dropped after 7958s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 8023s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 246423s
+[DEBUG] MCP server "monday": SSE connection dropped after 8127s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 246318s
+[DEBUG] MCP server "context7": HTTP connection dropped after 8277s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "atlassian": SSE connection dropped after 8334s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: undefined
+[DEBUG] MCP server "atlassian": Token expires in -1613s, attempting proactive refresh
+[DEBUG] MCP server "atlassian": Starting token refresh
+[DEBUG] MCP server "atlassian": Found client info
+[DEBUG] MCP server "atlassian": Token refresh successful, saving new tokens
+[DEBUG] MCP server "atlassian": Saving tokens
+[DEBUG] MCP server "atlassian": Token expires in: 3300
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Token refreshed successfully
+[DEBUG] MCP server "atlassian": SSE connection dropped after 8387s uptime
+[DEBUG] MCP server "atlassian": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "atlassian": Returning tokens
+[DEBUG] MCP server "atlassian": Token length: 93
+[DEBUG] MCP server "atlassian": Has refresh token: true
+[DEBUG] MCP server "atlassian": Expires in: 3248s
+[DEBUG] MCP server "monday": SSE connection dropped after 8451s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 245996s
+[DEBUG] MCP server "context7": HTTP connection dropped after 8597s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 8773s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 245674s
+[DEBUG] MCP server "context7": HTTP connection dropped after 8916s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 9095s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 245352s
+[DEBUG] MCP server "context7": HTTP connection dropped after 9236s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 9417s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 245030s
+[DEBUG] MCP server "context7": HTTP connection dropped after 9555s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T18_33_27_952Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.current (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253)
+[DEBUG] MCP server "monday": SSE connection dropped after 9740s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 244707s
+[DEBUG] MCP server "context7": HTTP connection dropped after 9875s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 10062s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 244385s
+[DEBUG] MCP server "context7": HTTP connection dropped after 10196s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 10387s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 244059s
+[DEBUG] MCP server "context7": HTTP connection dropped after 10516s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 10710s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 243737s
+[DEBUG] MCP server "context7": HTTP connection dropped after 10836s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 11032s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 243414s
+[DEBUG] MCP server "context7": HTTP connection dropped after 11156s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 11355s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 243092s
+[DEBUG] MCP server "context7": HTTP connection dropped after 11476s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T19_05_17_408Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.current (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253)
+[DEBUG] MCP server "monday": SSE connection dropped after 11681s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 242766s
+[DEBUG] MCP server "context7": HTTP connection dropped after 11796s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12003s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 242444s
+[DEBUG] MCP server "context7": HTTP connection dropped after 12116s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12326s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 242119s
+[DEBUG] MCP server "context7": HTTP connection dropped after 12436s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12650s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 241796s
+[DEBUG] MCP server "context7": HTTP connection dropped after 12757s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 12973s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 241474s
+[DEBUG] MCP server "context7": HTTP connection dropped after 13077s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 13296s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 241151s
+[DEBUG] MCP server "context7": HTTP connection dropped after 13397s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T19_37_08_917Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.current (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253)
+[DEBUG] MCP server "monday": SSE connection dropped after 13619s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 240828s
+[DEBUG] MCP server "context7": HTTP connection dropped after 13718s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 13942s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 240505s
+[DEBUG] MCP server "context7": HTTP connection dropped after 14038s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 14265s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 240182s
+[DEBUG] MCP server "context7": HTTP connection dropped after 14359s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 14588s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 239857s
+[DEBUG] MCP server "context7": HTTP connection dropped after 14677s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 14901s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 239545s
+[DEBUG] MCP server "context7": HTTP connection dropped after 14985s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 15210s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 239237s
+[DEBUG] MCP server "context7": HTTP connection dropped after 15290s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T20_08_26_428Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.current (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253)
+[DEBUG] MCP server "monday": SSE connection dropped after 15515s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 238931s
+[DEBUG] MCP server "context7": HTTP connection dropped after 15593s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 15820s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 238627s
+[DEBUG] MCP server "context7": HTTP connection dropped after 15895s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 16124s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 238322s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16197s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 16428s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 238018s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16498s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 16733s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 237714s
+[DEBUG] MCP server "context7": HTTP connection dropped after 16800s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 17037s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 237409s
+[DEBUG] MCP server "context7": HTTP connection dropped after 17102s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T20_38_27_466Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.current (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253)
+[DEBUG] MCP server "monday": SSE connection dropped after 17342s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 237105s
+[DEBUG] MCP server "context7": HTTP connection dropped after 17404s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 17646s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 236801s
+[DEBUG] MCP server "context7": HTTP connection dropped after 17706s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 17950s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 236496s
+[DEBUG] MCP server "context7": HTTP connection dropped after 18008s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 18255s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 236192s
+[DEBUG] MCP server "context7": HTTP connection dropped after 18310s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 18559s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 235887s
+[DEBUG] MCP server "context7": HTTP connection dropped after 18612s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 18864s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 235583s
+[DEBUG] MCP server "context7": HTTP connection dropped after 18914s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdater: Detected installation type: unknown
+[DEBUG] AutoUpdater: Unknown installation type, falling back to config
+[ERROR] sg1: sg1: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-04T21_08_28_612Z-debug-0.log
+    at KX1 (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:1749:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.current (file:///usr/lib/node_modules/@anthropic-ai/claude-code/cli.js:2627:11253)
+[DEBUG] MCP server "monday": SSE connection dropped after 19170s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 235276s
+[DEBUG] MCP server "context7": HTTP connection dropped after 19216s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] MCP server "monday": SSE connection dropped after 19475s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 234972s
+[DEBUG] MCP server "context7": HTTP connection dropped after 19518s uptime
+[DEBUG] MCP server "context7": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "context7": No token data found
+[DEBUG] AutoUpdaterWrapper: Installation type: unknown, using native: false
+[DEBUG] AutoUpdaterWrapper: Installation type: unknown, using native: false
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)

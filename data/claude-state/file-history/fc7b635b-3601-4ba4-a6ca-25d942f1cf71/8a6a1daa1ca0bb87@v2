@@ -1,0 +1,291 @@
+# Admin Console Guide
+
+The Claude Code API includes a powerful web-based admin console for managing authentication and executing Claude Code commands remotely.
+
+## Accessing the Admin Console
+
+Once your API is running, open your browser to:
+
+```
+http://localhost:8000/admin/console
+```
+
+Or for deployed instances:
+```
+https://your-service-name.onrender.com/admin/console
+```
+
+## Features
+
+### 1. Status Monitoring
+
+View the current Claude Code configuration:
+- Claude binary path
+- Claude version
+- API key status
+- Config directory location
+
+Click "Check Status" to refresh the information.
+
+### 2. Set API Key
+
+The easiest way to authenticate after deployment:
+
+1. Get your Anthropic API key from https://console.anthropic.com/
+2. Paste it in the "Anthropic API Key" field
+3. Click "Set API Key"
+
+This sets the `ANTHROPIC_API_KEY` environment variable for the current session.
+
+### 3. Execute Commands
+
+Run any Claude Code command through the web interface:
+
+**Common Commands:**
+- `/login` - Interactive login flow
+- `/logout` - Log out
+- `/help` - Show available commands
+- `--version` - Check Claude version
+- `-p "your prompt"` - Run a prompt
+
+**Examples:**
+```bash
+/login
+--help
+-p "Hello, Claude!"
+```
+
+### 4. Quick Actions
+
+Pre-configured buttons for common operations:
+- **Login** - Start the login flow
+- **Logout** - Log out from Claude
+- **Check Version** - Display Claude version
+- **Help** - Show available commands
+
+## Use Cases
+
+### Post-Deployment Authentication
+
+Perfect for services deployed to Render.com or other platforms:
+
+1. Deploy your service (without baking credentials)
+2. Open the admin console: `https://your-app.onrender.com/admin/console`
+3. Click "Set API Key" and paste your Anthropic API key
+4. Test with a chat completion request
+
+### Debugging
+
+Execute Claude commands to diagnose issues:
+- Check if Claude is properly installed
+- Verify authentication status
+- Test command execution
+- View real-time output
+
+### Remote Management
+
+Manage Claude Code from anywhere:
+- Update API keys
+- Check service status
+- Run administrative commands
+- Monitor command output
+
+## API Endpoints
+
+The admin console uses these underlying API endpoints:
+
+### GET /admin/status
+
+Check Claude Code status:
+
+```bash
+curl http://localhost:8000/admin/status
+```
+
+Response:
+```json
+{
+  "claude_binary": "/usr/local/bin/claude",
+  "claude_version": "2.0.35 (Claude Code)",
+  "has_api_key": false,
+  "config_directory": "/home/appuser/.config/claude"
+}
+```
+
+### POST /admin/set-api-key
+
+Set the Anthropic API key:
+
+```bash
+curl -X POST "http://localhost:8000/admin/set-api-key?api_key=sk-ant-..."
+```
+
+Response:
+```json
+{
+  "success": true,
+  "message": "API key set successfully",
+  "version": "2.0.35 (Claude Code)"
+}
+```
+
+### POST /admin/execute
+
+Execute a Claude Code command with streaming output:
+
+```bash
+curl -X POST http://localhost:8000/admin/execute \
+  -H "Content-Type: application/json" \
+  -d '{
+    "command": "claude",
+    "args": ["--version"]
+  }'
+```
+
+Response (NDJSON stream):
+```json
+{"type":"stream","stream":"stdout","data":"2.0.35 (Claude Code)\n"}
+{"type":"complete","exit_code":0,"success":true}
+```
+
+### POST /admin/login
+
+Start the Claude login flow:
+
+```bash
+curl -X POST http://localhost:8000/admin/login
+```
+
+This streams the interactive login process output.
+
+## Security Considerations
+
+### Production Deployment
+
+For production environments, consider:
+
+1. **Add Authentication**: Protect admin endpoints with API keys or OAuth
+2. **Use HTTPS**: Always use TLS in production
+3. **Rate Limiting**: Add rate limits to prevent abuse
+4. **IP Whitelisting**: Restrict access to known IPs
+5. **Environment Variables**: Prefer `ANTHROPIC_API_KEY` env var over web-based key setting
+
+### Example: Adding Basic Auth
+
+```python
+from fastapi import Depends, HTTPException, status
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
+
+security = HTTPBasic()
+
+def verify_admin(credentials: HTTPBasicCredentials = Depends(security)):
+    if credentials.username != "admin" or credentials.password != "your-secure-password":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid credentials"
+        )
+    return credentials
+
+# Protect admin routes
+@router.get("/status", dependencies=[Depends(verify_admin)])
+async def get_status():
+    ...
+```
+
+### Docker Environment Variables
+
+Set the API key via Docker environment variable (more secure):
+
+```bash
+docker run -d \
+  -p 8000:8000 \
+  -e ANTHROPIC_API_KEY=sk-ant-... \
+  claude-code-api
+```
+
+Or in docker-compose.yml:
+
+```yaml
+environment:
+  - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+```
+
+## Troubleshooting
+
+### API Key Not Working
+
+If setting the API key doesn't work:
+1. Check the key is valid at https://console.anthropic.com/
+2. Verify no typos in the key
+3. Check server logs for error messages
+4. Try setting via environment variable instead
+
+### Commands Failing
+
+If commands fail to execute:
+1. Check Claude Code is installed (`/admin/status`)
+2. Verify correct binary path
+3. Check file permissions in container
+4. View stderr output in console
+
+### Console Not Loading
+
+If the admin console doesn't load:
+1. Check the service is running: `curl http://localhost:8000/health`
+2. Verify port is accessible
+3. Check browser console for errors
+4. Try accessing `/docs` endpoint
+
+## Examples
+
+### Complete Setup Flow
+
+1. **Start the service**:
+   ```bash
+   docker run -d -p 8000:8000 claude-code-api
+   ```
+
+2. **Open admin console**:
+   ```
+   http://localhost:8000/admin/console
+   ```
+
+3. **Set API key**:
+   - Paste your Anthropic API key
+   - Click "Set API Key"
+   - Wait for success message
+
+4. **Test it**:
+   ```bash
+   curl -X POST http://localhost:8000/v1/chat/completions \
+     -H "Content-Type: application/json" \
+     -d '{
+       "model": "claude-3-5-haiku-20241022",
+       "messages": [{"role": "user", "content": "Hello!"}]
+     }'
+   ```
+
+### Render.com Deployment
+
+After deploying to Render:
+
+1. Visit: `https://your-app.onrender.com/admin/console`
+2. Set your API key through the web interface
+3. Start using the API immediately
+
+No need to rebuild or redeploy!
+
+## Best Practices
+
+1. **Use Environment Variables in Production**: Set `ANTHROPIC_API_KEY` in your deployment platform's settings
+2. **Protect Admin Endpoints**: Add authentication for production deployments
+3. **Monitor Usage**: Check logs and usage regularly
+4. **Rotate Keys**: Change API keys periodically for security
+5. **Use HTTPS**: Always use encrypted connections in production
+
+## Support
+
+For issues or questions:
+- Check the [main README](README.md)
+- View API docs at `/docs`
+- Submit issues on GitHub

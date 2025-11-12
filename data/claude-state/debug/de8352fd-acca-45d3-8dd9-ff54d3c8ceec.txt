@@ -1,0 +1,155 @@
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] FileHistory: Added snapshot for d4c1cc5c-e417-4db7-b644-d9b6c38813ff, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/clear</command-name>
+            <command-message>clear</command-message>
+           ...
+[DEBUG] UserCommandMessage rendering: "clear" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762880035840
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47127 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762880035840 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T16_53_56_407Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 415ms
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] FileHistory: Making snapshot for message 1a1475fa-7b9e-42e7-a4dd-19fa8864ae75
+[DEBUG] FileHistory: Added snapshot for 1a1475fa-7b9e-42e7-a4dd-19fa8864ae75, tracking 0 files
+[DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+[DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 147ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: BashOutput
+[DEBUG] Getting matching hook commands for PreToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: BashOutput
+[DEBUG] Getting matching hook commands for PreToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: BashOutput
+[DEBUG] Getting matching hook commands for PreToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] Getting matching hook commands for PostToolUse with query: BashOutput
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "BashOutput" (0 before deduplication)
+[DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 18ms
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at zD (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1177:4413)
+    at file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1177:4141
+    at Array.map (<anonymous>)
+    at SF (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1177:4132)
+    at _SQ (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1800:6585)
+    at _w (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:74:19414)
+    at Gt (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:76:42806)
+    at _9 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:76:38347)
+    at Bp (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:76:38275)
+    at pw (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:76:38129)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762880074895
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47127 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762880074895 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.192951.1762880074926
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47127 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.192951.1762880074926 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 8,
+  "rejected_count": 0
+}
+[DEBUG] MCP server "render": HTTP connection dropped after 13382s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 13685s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 13988s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 14291s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 14593s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T17_24_02_373Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] MCP server "render": HTTP connection dropped after 14896s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 15199s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 15502s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 15805s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 16108s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] MCP server "render": HTTP connection dropped after 16410s uptime
+[DEBUG] MCP server "render": Connection error: SSE stream disconnected: TypeError: terminated
+[DEBUG] MCP server "render": No token data found
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)

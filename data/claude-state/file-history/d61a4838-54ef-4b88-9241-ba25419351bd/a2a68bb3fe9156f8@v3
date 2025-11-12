@@ -1,0 +1,240 @@
+# MCP Server Configuration Guide
+
+This document explains how to configure the Atlassian Confluence and Monday.com MCP servers that are installed in the Docker container.
+
+## Installed MCP Servers
+
+1. **@aashari/mcp-server-atlassian-confluence** - Access Confluence spaces, pages, and search via CQL
+2. **@mondaydotcomorg/monday-api-mcp** - Interact with Monday.com boards, items, and API
+
+## Docker Environment Variables
+
+### Atlassian Confluence MCP
+
+Set these environment variables when running the Docker container:
+
+```bash
+docker run -e ATLASSIAN_SITE_NAME=your-company \
+           -e ATLASSIAN_USER_EMAIL=you@example.com \
+           -e ATLASSIAN_API_TOKEN=your-api-token \
+           -p 8000:8000 claude-code-api
+```
+
+**Required variables:**
+- `ATLASSIAN_SITE_NAME` - First part of your Confluence URL (e.g., for `https://mycompany.atlassian.net`, use `mycompany`)
+- `ATLASSIAN_USER_EMAIL` - Your Atlassian account email
+- `ATLASSIAN_API_TOKEN` - Generate from https://id.atlassian.com/manage-profile/security/api-tokens
+
+### Monday.com MCP
+
+```bash
+docker run -e monday_token=your-monday-api-token \
+           -p 8000:8000 claude-code-api
+```
+
+**Required variables:**
+- `monday_token` - Your Monday.com API token (get from your Monday.com account settings)
+
+### Combined Configuration
+
+```bash
+docker run -e ATLASSIAN_SITE_NAME=your-company \
+           -e ATLASSIAN_USER_EMAIL=you@example.com \
+           -e ATLASSIAN_API_TOKEN=your-atlassian-token \
+           -e monday_token=your-monday-token \
+           -p 8000:8000 claude-code-api
+```
+
+## Docker Compose Example
+
+Create a `docker-compose.yml` file:
+
+```yaml
+version: '3.8'
+services:
+  claude-code-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.secure
+    ports:
+      - "8000:8000"
+    environment:
+      # Atlassian Confluence
+      - ATLASSIAN_SITE_NAME=${ATLASSIAN_SITE_NAME}
+      - ATLASSIAN_USER_EMAIL=${ATLASSIAN_USER_EMAIL}
+      - ATLASSIAN_API_TOKEN=${ATLASSIAN_API_TOKEN}
+      # Monday.com
+      - monday_token=${MONDAY_TOKEN}
+    volumes:
+      - ./data:/app/data
+```
+
+Then create a `.env` file (do not commit this!):
+
+```bash
+# Atlassian Confluence Configuration
+ATLASSIAN_SITE_NAME=your-company
+ATLASSIAN_USER_EMAIL=you@example.com
+ATLASSIAN_API_TOKEN=your-atlassian-api-token
+
+# Monday.com Configuration
+MONDAY_TOKEN=your-monday-api-token
+```
+
+## Claude Desktop Configuration
+
+If you want to use these MCP servers with Claude Desktop directly (outside Docker), add to `~/.claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "atlassian-confluence": {
+      "command": "npx",
+      "args": ["-y", "@aashari/mcp-server-atlassian-confluence@latest"],
+      "env": {
+        "ATLASSIAN_SITE_NAME": "your-company",
+        "ATLASSIAN_USER_EMAIL": "you@example.com",
+        "ATLASSIAN_API_TOKEN": "your-api-token"
+      }
+    },
+    "monday-api": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mondaydotcomorg/monday-api-mcp@latest",
+        "-t",
+        "your-monday-token"
+      ]
+    }
+  }
+}
+```
+
+## Obtaining API Tokens
+
+### Atlassian API Token
+1. Go to https://id.atlassian.com/manage-profile/security/api-tokens
+2. Click "Create API token"
+3. Give it a label and copy the generated token
+4. Note: The MCP server only requires **read access** to Confluence
+
+### Monday.com API Token
+1. Log into your Monday.com account
+2. Click your profile picture → Admin
+3. Go to API section
+4. Generate a new API token
+5. Copy and securely store the token
+
+## Security Best Practices
+
+- **Never commit API tokens** to version control
+- Use environment variables or Docker secrets for token management
+- Rotate API tokens regularly
+- Use read-only access when possible
+- Consider using the `--read-only` flag for Monday.com MCP when only reading data
+
+## MCP Server Features
+
+### Atlassian Confluence
+- List and retrieve Confluence spaces
+- Get page content (formatted as Markdown)
+- Search using Confluence Query Language (CQL)
+- Supports Confluence Cloud only
+
+### Monday.com
+- Access boards and items
+- Query using Monday.com GraphQL API
+- Support for Apps Framework mode
+- Optional read-only mode for safety
+
+## Verifying MCP Configuration
+
+### Check MCP Status via Health Endpoint
+
+The API health endpoint includes MCP server status:
+
+```bash
+curl http://localhost:8000/health
+```
+
+Response will include MCP server information:
+```json
+{
+  "status": "healthy",
+  "mcp": {
+    "available": true,
+    "servers": {
+      "atlassian-confluence": {
+        "status": "connected",
+        "command": "npx -y @aashari/mcp-server-atlassian-confluence@latest"
+      },
+      "monday-api": {
+        "status": "connected",
+        "command": "npx -y @mondaydotcomorg/monday-api-mcp@latest"
+      }
+    },
+    "total": 2,
+    "connected": 2
+  }
+}
+```
+
+### Check MCP Status via CLI
+
+Inside the container, you can use the Claude CLI:
+```bash
+docker exec -it <container-name> claude mcp list
+```
+
+This will show:
+```
+Checking MCP server health...
+
+atlassian-confluence: npx -y @aashari/mcp-server-atlassian-confluence@latest - ✓ Connected
+monday-api: npx -y @mondaydotcomorg/monday-api-mcp@latest - ✓ Connected
+```
+
+## Troubleshooting
+
+### MCP Server Not Found
+Ensure the npm packages are installed globally in the container:
+```bash
+docker exec -it <container-id> npm list -g --depth=0
+```
+
+You should see:
+```
+├── @aashari/mcp-server-atlassian-confluence@latest
+├── @mondaydotcomorg/monday-api-mcp@latest
+└── @anthropic-ai/claude-code-cli@latest
+```
+
+### Authentication Errors
+- Verify API tokens are valid and not expired
+- Check that environment variables are properly set:
+  ```bash
+  docker exec -it <container-name> env | grep -E 'ATLASSIAN|monday'
+  ```
+- For Atlassian, ensure the site name matches your URL exactly
+- For Monday.com, verify the token has sufficient permissions
+- Check the health endpoint to see specific MCP connection status
+
+### MCP Servers Show as Disconnected
+If the health endpoint shows `"status": "disconnected"` for MCP servers:
+1. Verify environment variables are set correctly
+2. Check that API tokens have not expired
+3. Ensure the container can reach external APIs (Atlassian/Monday.com)
+4. Review container logs for authentication errors:
+   ```bash
+   docker logs <container-name>
+   ```
+
+### Connection Issues
+- Ensure your Docker container can access external APIs
+- Check firewall and network settings
+- Verify the API endpoints are accessible from your network
+- Test connectivity from within the container:
+  ```bash
+  docker exec -it <container-name> curl -I https://api.monday.com/v2
+  docker exec -it <container-name> curl -I https://your-site.atlassian.net
+  ```

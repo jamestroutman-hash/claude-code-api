@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Create helper function to fetch user integration credentials",
+    "status": "completed",
+    "activeForm": "Creating helper function to fetch user integration credentials"
+  },
+  {
+    "content": "Update Confluence integration to accept credentials as parameters",
+    "status": "completed",
+    "activeForm": "Updating Confluence integration to accept credentials as parameters"
+  },
+  {
+    "content": "Update Monday.com integration to accept credentials as parameters",
+    "status": "completed",
+    "activeForm": "Updating Monday.com integration to accept credentials as parameters"
+  },
+  {
+    "content": "Test integrations with user credentials",
+    "status": "pending",
+    "activeForm": "Testing integrations with user credentials"
+  }
+]

@@ -1,0 +1,55 @@
+import fs from 'fs';
+import path from 'path';
+
+/**
+ * Simple template engine for prompt templates
+ * Replaces {{VARIABLE_NAME}} placeholders with actual values
+ */
+
+export interface TemplateVariables {
+  [key: string]: string | number | boolean | null | undefined;
+}
+
+/**
+ * Load a template file from the prompts directory
+ * @param templateName - Name of the template file (without .md extension)
+ * @returns Template content as string
+ */
+export function loadTemplate(templateName: string): string {
+  const templatePath = path.join(process.cwd(), 'prompts', `${templateName}.md`);
+
+  try {
+    return fs.readFileSync(templatePath, 'utf-8');
+  } catch (error) {
+    throw new Error(`Failed to load template: ${templateName}. Error: ${error}`);
+  }
+}
+
+/**
+ * Populate a template with variables
+ * @param template - Template string with {{VARIABLE}} placeholders
+ * @param variables - Object with variable values
+ * @returns Populated template string
+ */
+export function populateTemplate(template: string, variables: TemplateVariables): string {
+  let result = template;
+
+  for (const [key, value] of Object.entries(variables)) {
+    const placeholder = `{{${key}}}`;
+    const replacement = value?.toString() || '';
+    result = result.replace(new RegExp(placeholder, 'g'), replacement);
+  }
+
+  return result;
+}
+
+/**
+ * Load and populate a template in one step
+ * @param templateName - Name of the template file (without .md extension)
+ * @param variables - Object with variable values
+ * @returns Populated template string
+ */
+export function renderTemplate(templateName: string, variables: TemplateVariables): string {
+  const template = loadTemplate(templateName);
+  return populateTemplate(template, variables);
+}

@@ -1,0 +1,142 @@
+[DEBUG] Executing hooks for SessionStart:clear
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Added snapshot for fc9aa187-0121-47d1-bc3d-425eb8c09619, tracking 0 files
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.8719.1760052274848
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 249783 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.8719.1760052274848 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.8719.1760052274861
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 249867 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.8719.1760052274861 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "monday": SSE connection dropped after 4935s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 499642s
+[DEBUG] MCP server "monday": SSE connection dropped after 5240s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 499336s
+[DEBUG] MCP server "monday": SSE connection dropped after 5546s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 499031s
+[DEBUG] MCP server "monday": SSE connection dropped after 5852s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 498725s
+[DEBUG] MCP server "monday": SSE connection dropped after 6157s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 498419s
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 47 rule(s): ["mcp__figma-remote-mcp__get_code","mcp__figma-remote-mcp__get_screenshot","Bash(npm run build:*)","Bash(npm run dev:*)","Bash(curl:*)","Bash(supabase status:*)","Bash(cat:*)","Bash(mkdir:*)","Bash(supabase db reset:*)","Bash(npm install:*)","Bash(supabase db:*)","Bash(psql:*)","Bash(supabase migration:*)","Bash(docker exec:*)","Bash(npm run check-types:*)","Bash(python3:*)","mcp__monday__list_workspaces","mcp__monday__workspace_info","mcp__monday__get_board_info","mcp__monday__get_board_items_page","mcp__monday__all_monday_api","WebFetch(domain:developer.monday.com)","Bash(turbo run build:*)","Bash(npx tsc:*)","Bash(docker ps:*)","Bash(netstat:*)","Bash(ss:*)","Read(//dev/pts/**)","Bash(node:*)","Bash(docker logs:*)","mcp__chrome-devtools__take_snapshot","mcp__chrome-devtools__list_pages","Bash(dpkg:*)","mcp__chrome-devtools__navigate_page","mcp__chrome-devtools__take_screenshot","mcp__chrome-devtools__list_console_messages","mcp__chrome-devtools__list_network_requests","mcp__chrome-devtools__click","mcp__chrome-devtools__evaluate_script","mcp__chrome-devtools__navigate_page_history","Bash(git add:*)","Bash(git commit:*)","Bash(npx supabase migration:*)","Bash(npx supabase:*)","Bash(lsof:*)","Bash(xargs -r kill)","Read(//home/jamestroutman/.config/**)"]
+[DEBUG] MCP server "monday": SSE connection dropped after 6463s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 498114s
+[DEBUG] MCP server "monday": SSE connection dropped after 6769s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 497808s
+[DEBUG] MCP server "monday": SSE connection dropped after 7075s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 497502s
+[DEBUG] MCP server "monday": SSE connection dropped after 7380s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 497196s
+[DEBUG] MCP server "monday": SSE connection dropped after 7686s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 496890s
+[DEBUG] MCP server "monday": SSE connection dropped after 7992s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 496585s
+[DEBUG] MCP server "monday": SSE connection dropped after 8300s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 496276s
+[DEBUG] MCP server "monday": SSE connection dropped after 8610s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 495966s
+[DEBUG] MCP server "monday": SSE connection dropped after 8922s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 495655s
+[DEBUG] MCP server "monday": SSE connection dropped after 9232s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 495344s
+[DEBUG] MCP server "monday": SSE connection dropped after 9267s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: other side closed
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 495309s
+[DEBUG] MCP server "monday": SSE connection dropped after 9579s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 494998s
+[DEBUG] MCP server "monday": SSE connection dropped after 9890s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 494687s
+[DEBUG] MCP server "monday": SSE connection dropped after 10202s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: TypeError: terminated: Body Timeout Error
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 494375s
+[DEBUG] MCP server "monday": SSE connection dropped after 10341s uptime
+[DEBUG] MCP server "monday": Connection error: SSE error: undefined
+[DEBUG] MCP server "monday": Returning tokens
+[DEBUG] MCP server "monday": Token length: 58
+[DEBUG] MCP server "monday": Has refresh token: true
+[DEBUG] MCP server "monday": Expires in: 494236s
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/clarity-turbo/my-turborepo/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 48 rule(s): ["mcp__figma-remote-mcp__get_code","mcp__figma-remote-mcp__get_screenshot","Bash(npm run build:*)","Bash(npm run dev:*)","Bash(curl:*)","Bash(supabase status:*)","Bash(cat:*)","Bash(mkdir:*)","Bash(supabase db reset:*)","Bash(npm install:*)","Bash(supabase db:*)","Bash(psql:*)","Bash(supabase migration:*)","Bash(docker exec:*)","Bash(npm run check-types:*)","Bash(python3:*)","mcp__monday__list_workspaces","mcp__monday__workspace_info","mcp__monday__get_board_info","mcp__monday__get_board_items_page","mcp__monday__all_monday_api","WebFetch(domain:developer.monday.com)","Bash(turbo run build:*)","Bash(npx tsc:*)","Bash(docker ps:*)","Bash(netstat:*)","Bash(ss:*)","Read(//dev/pts/**)","Bash(node:*)","Bash(docker logs:*)","mcp__chrome-devtools__take_snapshot","mcp__chrome-devtools__list_pages","Bash(dpkg:*)","mcp__chrome-devtools__navigate_page","mcp__chrome-devtools__take_screenshot","mcp__chrome-devtools__list_console_messages","mcp__chrome-devtools__list_network_requests","mcp__chrome-devtools__click","mcp__chrome-devtools__evaluate_script","mcp__chrome-devtools__navigate_page_history","Bash(git add:*)","Bash(git commit:*)","Bash(npx supabase migration:*)","Bash(npx supabase:*)","Bash(lsof:*)","Bash(xargs -r kill)","Read(//home/jamestroutman/.config/**)","Bash(claude mcp list:*)"]

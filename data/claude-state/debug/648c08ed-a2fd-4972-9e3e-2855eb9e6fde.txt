@@ -1,0 +1,94 @@
+[DEBUG] Watching for changes in setting files /home/jamestroutman/.claude/settings.json, /home/jamestroutman/code/experiments/clarity-ai/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 3 allow rule(s) to destination 'localSettings': ["Bash(mkdir:*)","Bash(chmod:*)","Bash(docker compose:*)"]
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/jamestroutman/.claude/skills, project=/home/jamestroutman/code/experiments/clarity-ai/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+[DEBUG] Looking for shell config file: /home/jamestroutman/.zshrc
+[DEBUG] Snapshots directory: /home/jamestroutman/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /home/jamestroutman/.claude/shell-snapshots/snapshot-zsh-1761759250074-y5neth.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/648c08ed-a2fd-4972-9e3e-2855eb9e6fde-agent-648c08ed-a2fd-4972-9e3e-2855eb9e6fde.json.tmp.21019.1761759250077
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/648c08ed-a2fd-4972-9e3e-2855eb9e6fde-agent-648c08ed-a2fd-4972-9e3e-2855eb9e6fde.json.tmp.21019.1761759250077 to /home/jamestroutman/.claude/todos/648c08ed-a2fd-4972-9e3e-2855eb9e6fde-agent-648c08ed-a2fd-4972-9e3e-2855eb9e6fde.json
+[DEBUG] File /home/jamestroutman/.claude/todos/648c08ed-a2fd-4972-9e3e-2855eb9e6fde-agent-648c08ed-a2fd-4972-9e3e-2855eb9e6fde.json written atomically
+[DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/x64-linux/rg)
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] Shell snapshot created successfully (19741 bytes)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.21019.1761759250260
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 329188 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.21019.1761759250260 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.21019.1761759250272
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 329188 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.21019.1761759250272 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "chrome-devtools": Starting connection with timeout of 30000ms
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.21019.1761759250651
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 329188 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.21019.1761759250651 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.21019.1761759250735
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 329083 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.21019.1761759250735 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.21019.1761759250752
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 329083 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.21019.1761759250752 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.21019.1761759250767
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 329083 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.21019.1761759250767 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] performStartupChecks called
+[DEBUG] Starting background plugin installations
+[DEBUG] performBackgroundPluginInstallations called
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.21019.1761759251606
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 329188 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.21019.1761759251606 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+[DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+[DEBUG] Stream started - received first chunk
+[DEBUG] MCP server "ide": Starting connection with timeout of 30000ms
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Stream started - received first chunk
+[ERROR] MCP server "chrome-devtools" Server stderr: chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,
+debug, and modify any data in the browser or DevTools.
+Avoid sharing sensitive or personal information that you do not want to share with MCP clients.
+[DEBUG] MCP server "chrome-devtools": Successfully connected to stdio server in 1554ms
+[DEBUG] MCP server "chrome-devtools": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"0.9.0"}}
+[DEBUG] MCP server "ide": Successfully connected to ws-ide server in 188ms
+[DEBUG] MCP server "ide": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Claude Code VSCode MCP","version":"2.0.28"}}
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)

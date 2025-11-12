@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: claude-code-api
+    env: docker
+    region: oregon
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0
+      - key: ANTHROPIC_API_KEY
+        sync: false  # Set this in Render dashboard as a secret
+      - key: REQUIRE_AUTH
+        value: false
+      - key: LOG_LEVEL
+        value: INFO
+    healthCheckPath: /health
+    autoDeploy: true

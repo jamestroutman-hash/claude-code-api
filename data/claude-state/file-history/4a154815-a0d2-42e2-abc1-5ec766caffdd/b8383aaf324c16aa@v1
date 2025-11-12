@@ -1,0 +1,80 @@
+import { notFound } from 'next/navigation';
+import { serverTables } from '../../../../../../../lib/db/supabase-server';
+import { FeatureCreationForm } from './feature-creation-form';
+
+interface PageProps {
+  params: Promise<{ slug: string; epicKey: string }>;
+}
+
+async function getEpicData(workstreamSlug: string, epicKey: string) {
+  // Get workspace
+  const workspaces = await serverTables.workspaces().select('*').limit(1);
+  const workspace = workspaces.data?.[0];
+  if (!workspace) return null;
+
+  // Get workstream
+  const workstreams = await serverTables
+    .workstreams()
+    .select('*')
+    .eq('workspace_id', workspace.id)
+    .eq('slug', workstreamSlug)
+    .single();
+
+  if (!workstreams.data) return null;
+  const workstream = workstreams.data;
+
+  // Get epic
+  const epics = await serverTables
+    .epics()
+    .select('*')
+    .eq('workstream_id', workstream.id)
+    .eq('key', epicKey)
+    .limit(1);
+
+  if (!epics.data || epics.data.length === 0) return null;
+  const epic = epics.data[0]!;
+
+  return {
+    workspace,
+    workstream,
+    epic,
+  };
+}
+
+export default async function NewFeaturePage({ params }: PageProps) {
+  const { slug, epicKey } = await params;
+  const data = await getEpicData(slug, epicKey);
+
+  if (!data) {
+    notFound();
+  }
+
+  const { workstream, epic } = data;
+
+  return (
+    <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900">Create New Feature</h1>
+        <p className="mt-2 text-sm text-gray-600">
+          Use AI to generate a feature specification for {epic.title}
+        </p>
+      </div>
+
+      <FeatureCreationForm
+        epic={{
+          id: epic.id,
+          key: epic.key || '',
+          title: epic.title,
+          description: epic.description,
+          status: epic.status,
+        }}
+        workstream={{
+          id: workstream.id,
+          name: workstream.name,
+        }}
+        workstreamSlug={slug}
+        epicKey={epicKey}
+      />
+    </div>
+  );
+}

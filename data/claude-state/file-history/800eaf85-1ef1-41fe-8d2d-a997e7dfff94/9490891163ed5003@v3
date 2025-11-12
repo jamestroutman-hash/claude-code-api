@@ -1,0 +1,342 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { serverTables } from '../../../../lib/db/supabase-server';
+import { createConfluencePage } from '../../../../lib/integrations/confluence';
+import { createMondayItem } from '../../../../lib/integrations/monday';
+import { markdownToConfluence } from '../../../../lib/utils/markdown-to-confluence';
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+
+    const {
+      title,
+      description, // Markdown content
+      workspace_id,
+      workstream_id,
+      epic_id,
+      functional_area_id,
+      status = 'planned',
+      priority,
+    } = body;
+
+    // Validate required fields
+    if (!title || typeof title !== 'string') {
+      return NextResponse.json(
+        { error: 'Title is required and must be a string' },
+        { status: 400 }
+      );
+    }
+
+    if (!description || typeof description !== 'string') {
+      return NextResponse.json(
+        { error: 'Description is required and must be a string' },
+        { status: 400 }
+      );
+    }
+
+    if (!workspace_id || typeof workspace_id !== 'string') {
+      return NextResponse.json(
+        { error: 'Workspace ID is required' },
+        { status: 400 }
+      );
+    }
+
+    if (!workstream_id || typeof workstream_id !== 'string') {
+      return NextResponse.json(
+        { error: 'Workstream ID is required' },
+        { status: 400 }
+      );
+    }
+
+    // =========================================================================
+    // Step 1: Get workspace, workstream, and functional area info
+    // =========================================================================
+    const { data: workspace, error: workspaceError } = await serverTables
+      .workspaces()
+      .select('id, confluence_space_key')
+      .eq('id', workspace_id)
+      .single();
+
+    if (workspaceError || !workspace) {
+      return NextResponse.json(
+        { error: 'Workspace not found' },
+        { status: 404 }
+      );
+    }
+
+    const { data: workstream, error: workstreamError } = await serverTables
+      .workstreams()
+      .select('id, name, slug, settings, monday_epic_board_id, monday_feature_board_id, monday_story_board_id, confluence_page_id')
+      .eq('id', workstream_id)
+      .single();
+
+    if (workstreamError || !workstream) {
+      return NextResponse.json(
+        { error: 'Workstream not found' },
+        { status: 404 }
+      );
+    }
+
+    // Get functional area if specified (to get parent page)
+    let functionalArea = null;
+    let confluenceParentPageId: string | undefined;
+
+    if (functional_area_id) {
+      const { data: fa, error: faError } = await serverTables
+        .functionalAreas()
+        .select('id, name, confluence_parent_page_id')
+        .eq('id', functional_area_id)
+        .single();
+
+      if (!faError && fa) {
+        functionalArea = fa;
+
+        // Resolve the UUID from confluence_pages table to get actual Confluence page ID
+        if (fa.confluence_parent_page_id) {
+          const { data: parentPage } = await serverTables
+            .confluencePages()
+            .select('confluence_page_id')
+            .eq('id', fa.confluence_parent_page_id)
+            .single();
+
+          if (parentPage) {
+            confluenceParentPageId = parentPage.confluence_page_id;
+            console.log('[Feature Save] Resolved functional area parent from UUID to Confluence ID:', confluenceParentPageId);
+          }
+        }
+      }
+    }
+
+    // Fall back to workstream's Confluence page if no functional area parent
+    if (!confluenceParentPageId && workstream.confluence_page_id) {
+      const { data: workstreamPage } = await serverTables
+        .confluencePages()
+        .select('confluence_page_id')
+        .eq('id', workstream.confluence_page_id)
+        .single();
+
+      if (workstreamPage) {
+        confluenceParentPageId = workstreamPage.confluence_page_id;
+        console.log('[Feature Save] Using workstream Confluence page as parent:', confluenceParentPageId);
+      }
+    }
+
+    // =========================================================================
+    // Step 2: Create Confluence page
+    // =========================================================================
+    let confluencePageId: string | undefined;
+
+    if (!workspace.confluence_space_key) {
+      console.warn('[Feature Save] No Confluence space key configured for workspace');
+    } else {
+      try {
+        console.log('[Feature Save] Creating Confluence page:', {
+          spaceKey: workspace.confluence_space_key,
+          title,
+          parentId: confluenceParentPageId,
+        });
+
+        // Convert markdown to Confluence storage format (HTML)
+        const htmlContent = markdownToConfluence(description);
+
+        // v1 API accepts space key directly (not space ID)
+        const confluencePage = await createConfluencePage({
+          spaceId: workspace.confluence_space_key, // Actually a space KEY for v1 API
+          title,
+          body: {
+            representation: 'storage',
+            value: htmlContent,
+          },
+          parentId: confluenceParentPageId,
+        });
+
+        if (confluencePage) {
+          confluencePageId = confluencePage.id;
+          console.log('[Feature Save] Created Confluence page:', confluencePageId);
+        }
+      } catch (error: any) {
+        console.error('[Feature Save] Error creating Confluence page:', error);
+        // Don't fail the entire operation if Confluence fails
+        // Return partial success with error message
+      }
+    }
+
+    // =========================================================================
+    // Step 3: Save to confluence_pages table (for caching)
+    // =========================================================================
+    let confluencePageUuid: string | undefined; // UUID from confluence_pages table
+
+    if (confluencePageId && workspace.confluence_space_key) {
+      try {
+        const { data: confluencePage, error: confluenceError } = await serverTables
+          .confluencePages()
+          .insert({
+            workspace_id,
+            workstream_id,
+            confluence_page_id: confluencePageId, // Confluence ID string like "1143865346"
+            confluence_space_key: workspace.confluence_space_key,
+            title,
+            content: description,
+            version: 1,
+          })
+          .select()
+          .single();
+
+        if (confluenceError) {
+          console.error('[Feature Save] Error saving to confluence_pages:', confluenceError);
+        } else if (confluencePage) {
+          confluencePageUuid = confluencePage.id; // This is the UUID we need for FK
+          console.log('[Feature Save] Saved to confluence_pages table with UUID:', confluencePageUuid);
+        }
+      } catch (error: any) {
+        console.error('[Feature Save] Error saving to confluence_pages:', error);
+        // Continue - this is just a cache
+      }
+    }
+
+    // =========================================================================
+    // Step 4: Generate feature key
+    // =========================================================================
+    const { data: existingFeatures } = await serverTables
+      .features()
+      .select('key')
+      .eq('workstream_id', workstream_id)
+      .order('created_at', { ascending: false })
+      .limit(1);
+
+    let featureNumber = 1;
+    if (existingFeatures && existingFeatures.length > 0) {
+      const lastKey = existingFeatures[0]?.key;
+      if (lastKey) {
+        const match = lastKey.match(/-F(\d+)$/);
+        if (match) {
+          featureNumber = parseInt(match[1] || '0', 10) + 1;
+        }
+      }
+    }
+
+    // Get epic key for the feature key prefix
+    let featureKey = `F${featureNumber}`;
+    if (epic_id) {
+      const { data: epic } = await serverTables
+        .epics()
+        .select('key')
+        .eq('id', epic_id)
+        .single();
+
+      if (epic?.key) {
+        featureKey = `${epic.key}-F${featureNumber}`;
+      }
+    }
+
+    // =========================================================================
+    // Step 5: Create the feature in the database
+    // =========================================================================
+    const insertData: any = {
+      title,
+      description,
+      workspace_id,
+      workstream_id,
+      epic_id: epic_id || null,
+      functional_area_id: functional_area_id || null,
+      key: featureKey,
+      status,
+      priority: priority || null,
+      confluence_page_id: confluencePageUuid || null, // Use UUID from confluence_pages table
+    };
+
+    const { data: feature, error: featureError } = await serverTables
+      .features()
+      .insert(insertData)
+      .select()
+      .single();
+
+    if (featureError) {
+      console.error('[Feature Save] Error creating feature:', featureError);
+      return NextResponse.json(
+        { error: 'Failed to create feature', details: featureError.message },
+        { status: 500 }
+      );
+    }
+
+    console.log('[Feature Save] Created feature:', feature.id);
+
+    // =========================================================================
+    // Step 6: Create Monday item (if configured)
+    // =========================================================================
+    let mondayItemId: string | undefined;
+
+    const featureBoardId = workstream.monday_feature_board_id;
+
+    if (featureBoardId) {
+      try {
+        console.log('[Feature Save] Creating Monday item on board:', featureBoardId);
+
+        // Create the Monday item
+        const mondayItem = await createMondayItem({
+          boardId: featureBoardId,
+          itemName: title,
+          columnValues: {
+            // Add any relevant column values here
+            // For example: status, priority, description, etc.
+            // These would need to match your Monday board column IDs
+          },
+        });
+
+        if (mondayItem) {
+          mondayItemId = mondayItem.id;
+          console.log('[Feature Save] Created Monday item:', mondayItemId);
+
+          // Save to monday_items table for tracking
+          try {
+            await serverTables.mondayItems().insert({
+              workspace_id,
+              workstream_id,
+              monday_item_id: mondayItemId,
+              monday_board_id: featureBoardId,
+              local_entity_type: 'feature',
+              local_entity_id: feature.id,
+              item_name: title,
+              sync_status: 'synced',
+            });
+            console.log('[Feature Save] Saved to monday_items table');
+          } catch (error: any) {
+            console.error('[Feature Save] Error saving to monday_items:', error);
+            // Continue - this is just tracking
+          }
+
+          // Also update the feature with the Monday item ID
+          await serverTables
+            .features()
+            .update({ monday_item_id: mondayItemId })
+            .eq('id', feature.id);
+        }
+      } catch (error: any) {
+        console.error('[Feature Save] Error creating Monday item:', error);
+        // Don't fail - Monday sync can be done later
+      }
+    } else {
+      console.log('[Feature Save] No Monday feature board configured for workstream');
+    }
+
+    // =========================================================================
+    // Step 7: Return success response
+    // =========================================================================
+    return NextResponse.json(
+      {
+        data: feature,
+        integrations: {
+          confluence: confluencePageId ? { pageId: confluencePageId } : null,
+          monday: mondayItemId ? { itemId: mondayItemId } : null,
+        },
+      },
+      { status: 201 }
+    );
+  } catch (error: any) {
+    console.error('[Feature Save] Unexpected error:', error);
+    return NextResponse.json(
+      { error: 'Internal server error', details: error.message },
+      { status: 500 }
+    );
+  }
+}

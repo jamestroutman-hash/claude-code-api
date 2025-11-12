@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+import json
+import requests
+
+API_URL = "http://localhost:8001/v1/chat/completions"
+
+# Load first response
+with open('/tmp/response1.json') as f:
+    response1 = json.load(f)
+
+session_id = response1['session_id']
+first_content = response1['choices'][0]['message']['content']
+
+print(f"Session ID: {session_id}")
+print(f"First response: {first_content[:50]}...")
+print("\nSending follow-up message...")
+
+# Send follow-up
+payload = {
+    "model": "claude-3-5-haiku-20241022",
+    "messages": [
+        {"role": "user", "content": "My name is Alice. Just say hello to me."},
+        {"role": "assistant", "content": first_content},
+        {"role": "user", "content": "What is my name?"}
+    ],
+    "session_id": session_id,
+    "stream": False
+}
+
+response = requests.post(API_URL, json=payload)
+print("\nSecond response:")
+print(json.dumps(response.json(), indent=2))

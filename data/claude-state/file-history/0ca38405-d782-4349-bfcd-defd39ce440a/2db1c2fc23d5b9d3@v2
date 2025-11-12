@@ -1,0 +1,115 @@
+/**
+ * Type definitions for workstream settings JSONB column
+ * @see /supabase/migrations/20251021000001_add_monday_column_mappings_to_settings.sql
+ */
+
+/**
+ * Monday.com column mappings for a specific entity type (e.g., story, feature)
+ */
+export interface MondayColumnMapping {
+  /**
+   * Column ID for status field
+   * @example "status"
+   */
+  status?: string;
+
+  /**
+   * Column ID for priority field
+   * @example "priority"
+   */
+  priority?: string;
+
+  /**
+   * Column ID for linking to parent feature (for stories)
+   * @example "connect_boards" or "connected_boards_1"
+   */
+  parent_feature?: string;
+
+  /**
+   * Column ID for story points
+   * @example "numbers" or "story_points"
+   */
+  story_points?: string;
+
+  /**
+   * Additional custom column mappings
+   */
+  [key: string]: string | undefined;
+}
+
+/**
+ * Monday.com column mappings configuration
+ */
+export interface MondayColumnMappings {
+  /**
+   * Column mappings for stories
+   */
+  story?: MondayColumnMapping;
+
+  /**
+   * Column mappings for features
+   */
+  feature?: MondayColumnMapping;
+
+  /**
+   * Column mappings for epics
+   */
+  epic?: MondayColumnMapping;
+}
+
+/**
+ * Workstream settings stored in the settings JSONB column
+ */
+export interface WorkstreamSettings {
+  /**
+   * Monday.com column mappings for different entity types
+   */
+  monday_column_mappings?: MondayColumnMappings;
+
+  /**
+   * Additional settings can be added here
+   */
+  [key: string]: any;
+}
+
+/**
+ * Default column mappings if none are configured
+ */
+export const DEFAULT_MONDAY_COLUMN_MAPPINGS: MondayColumnMappings = {
+  story: {
+    status: 'status',
+    priority: 'priority',
+    parent_feature: 'connect_boards',
+  },
+  feature: {
+    status: 'status',
+    priority: 'priority',
+  },
+  epic: {
+    status: 'status',
+    priority: 'priority',
+  },
+};
+
+/**
+ * Get Monday column mapping for a specific entity type and field
+ * Falls back to default if not configured
+ */
+export function getMondayColumnId(
+  settings: WorkstreamSettings | null | undefined,
+  entityType: 'story' | 'feature' | 'epic',
+  field: string
+): string | undefined {
+  const columnMappings = settings?.monday_column_mappings?.[entityType];
+  if (columnMappings && field in columnMappings) {
+    return columnMappings[field];
+  }
+
+  // Fallback to defaults
+  const defaultMappings = DEFAULT_MONDAY_COLUMN_MAPPINGS[entityType];
+  if (defaultMappings && field in defaultMappings) {
+    return defaultMappings[field];
+  }
+
+  return undefined;
+}

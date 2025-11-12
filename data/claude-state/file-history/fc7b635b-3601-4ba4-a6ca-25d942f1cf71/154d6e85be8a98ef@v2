@@ -1,0 +1,8 @@
+# This directory is for Claude Code configuration files
+# Place your Claude Code config files here to include them in the Docker image
+#
+# To copy your local Claude Code config:
+# cp -r ~/.config/claude/* .claude-config/
+#
+# WARNING: Do NOT commit authentication tokens to git!
+# Add .claude-config/* to .gitignore (except this .gitkeep file)

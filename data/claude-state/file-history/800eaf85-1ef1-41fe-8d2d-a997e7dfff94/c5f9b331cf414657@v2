@@ -1,0 +1,155 @@
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { serverTables } from '../../../../../../../lib/db/supabase-server';
+import { FeatureHeader } from '../../../../../../../components/FeatureHeader';
+import { FeatureDetailClient } from '../../../../../../../components/FeatureDetailClient';
+
+interface PageProps {
+  params: Promise<{ slug: string; epicKey: string; featureKey: string }>;
+}
+
+async function getFeatureData(
+  workstreamSlug: string,
+  epicKey: string,
+  featureKey: string
+) {
+  // Get workspace
+  const workspaces = await serverTables.workspaces().select('*').limit(1);
+  const workspace = workspaces.data?.[0];
+  if (!workspace) return null;
+
+  // Get workstream
+  const workstreams = await serverTables
+    .workstreams()
+    .select('*')
+    .eq('workspace_id', workspace.id)
+    .eq('slug', workstreamSlug)
+    .limit(1);
+
+  if (workstreams.error || !workstreams.data || workstreams.data.length === 0) return null;
+  const workstream = workstreams.data[0]!;
+
+  // Get epic by key (using limit(1) to handle duplicates)
+  const epics = await serverTables
+    .epics()
+    .select('*')
+    .eq('workstream_id', workstream.id)
+    .eq('key', epicKey)
+    .limit(1);
+
+  if (epics.error || !epics.data || epics.data.length === 0) return null;
+  const epic = epics.data[0]!;
+
+  // Get feature by key (using limit(1) to handle duplicates)
+  const features = await serverTables
+    .features()
+    .select('*, functional_areas(id, name), monday_item_id')
+    .eq('epic_id', epic.id)
+    .eq('key', featureKey)
+    .limit(1);
+
+  if (features.error || !features.data || features.data.length === 0) return null;
+  const feature = features.data[0]!;
+
+  // Get stories for this feature with their tasks
+  const stories = await serverTables
+    .stories()
+    .select('*, tasks(id, title, key, status, priority)')
+    .eq('feature_id', feature.id)
+    .order('key', { ascending: true });
+
+  // Get Confluence page content if feature has a confluence_page_id
+  // Note: feature.confluence_page_id is a UUID FK to confluence_pages.id
+  let confluencePage = null;
+  let actualConfluencePageId: string | null = null;
+  if (feature.confluence_page_id) {
+    const confluenceResult = await serverTables
+      .confluencePages()
+      .select('*')
+      .eq('id', feature.confluence_page_id) // Query by UUID, not by confluence_page_id
+      .limit(1);
+
+    if (confluenceResult.data && confluenceResult.data.length > 0) {
+      confluencePage = confluenceResult.data[0];
+      actualConfluencePageId = confluencePage.confluence_page_id; // Get the actual Confluence page ID
+    }
+  }
+
+  return {
+    workspace,
+    workstream,
+    epic,
+    feature,
+    stories: stories.data || [],
+    confluencePage,
+    actualConfluencePageId,
+  };
+}
+
+export default async function FeatureDetailPage({ params }: PageProps) {
+  const { slug, epicKey, featureKey } = await params;
+  const data = await getFeatureData(slug, epicKey, featureKey);
+
+  if (!data) {
+    notFound();
+  }
+
+  const { workspace, workstream, epic, feature, stories, confluencePage, actualConfluencePageId } = data;
+
+  // Build Confluence base URL from workspace settings
+  const confluenceBaseUrl = workspace.confluence_base_url || 'https://veritasprime.atlassian.net';
+  const confluenceSpaceKey = workspace.confluence_space_key || 'CTY';
+
+  return (
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      {/* Breadcrumb */}
+      <div className="mb-8">
+        <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
+          <Link href="/workstreams" className="hover:text-gray-700">
+            Workstreams
+          </Link>
+          <span>/</span>
+          <Link href={`/workstreams/${slug}`} className="hover:text-gray-700">
+            {workstream.name}
+          </Link>
+          <span>/</span>
+          <Link
+            href={`/workstreams/${slug}/epics/${epicKey}`}
+            className="hover:text-gray-700"
+          >
+            {epic.key}
+          </Link>
+          <span>/</span>
+          <span className="text-gray-900">{feature.key}</span>
+        </div>
+
+        {/* Feature Header */}
+        <FeatureHeader
+          feature={feature}
+          confluenceBaseUrl={confluenceBaseUrl}
+          confluenceSpaceKey={confluenceSpaceKey}
+          confluencePageId={actualConfluencePageId}
+          mondayBoardId={workstream.monday_feature_board_id}
+        />
+
+        {/* Confluence Page Content */}
+        {confluencePage && (
+          <div className="mt-6 rounded-lg border border-gray-200 bg-white p-6">
+            <div className="prose max-w-none">
+              <div dangerouslySetInnerHTML={{ __html: confluencePage.content || '' }} />
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Client-side Stories Section */}
+      <FeatureDetailClient
+        feature={feature}
+        epic={epic}
+        workstream={workstream}
+        workspace_id={workspace.id}
+        stories={stories}
+      />
+    </div>
+  );
+}

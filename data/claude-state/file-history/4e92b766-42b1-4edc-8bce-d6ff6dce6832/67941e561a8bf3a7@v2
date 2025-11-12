@@ -1,0 +1,440 @@
+/**
+ * Confluence Integration
+ * Handles interaction with Confluence API for pages, spaces, and content
+ */
+
+const CONFLUENCE_API_VERSION = 'v2';
+
+export interface ConfluenceError {
+  message: string;
+  statusCode?: number;
+}
+
+export interface ConfluenceSpace {
+  id: string;
+  key: string;
+  name: string;
+  type: string;
+  status: string;
+}
+
+export interface ConfluencePage {
+  id: string;
+  status: string;
+  title: string;
+  spaceId: string;
+  parentId?: string;
+  parentType?: string;
+  version: {
+    number: number;
+    message?: string;
+  };
+  body?: {
+    storage?: {
+      value: string;
+      representation: string;
+    };
+  };
+}
+
+export interface ConfluencePageCreate {
+  spaceId: string;
+  title: string;
+  body: {
+    representation: 'storage' | 'atlas_doc_format';
+    value: string;
+  };
+  parentId?: string;
+}
+
+export interface ConfluencePageUpdate {
+  id: string;
+  version: {
+    number: number;
+    message?: string;
+  };
+  title: string;
+  body: {
+    representation: 'storage' | 'atlas_doc_format';
+    value: string;
+  };
+}
+
+/**
+ * Get Confluence API credentials from environment
+ */
+function getConfluenceConfig() {
+  const baseUrl = process.env.CONFLUENCE_BASE_URL;
+  const apiToken = process.env.CONFLUENCE_API_TOKEN;
+  // Support both CONFLUENCE_EMAIL and CONFLUENCE_USERNAME
+  const email = process.env.CONFLUENCE_EMAIL || process.env.CONFLUENCE_USERNAME;
+
+  if (!baseUrl) {
+    throw new Error('CONFLUENCE_BASE_URL environment variable is not set');
+  }
+
+  if (!apiToken) {
+    throw new Error('CONFLUENCE_API_TOKEN environment variable is not set');
+  }
+
+  return { baseUrl: baseUrl.replace(/\/$/, ''), apiToken, email };
+}
+
+/**
+ * Execute a REST API request to Confluence
+ */
+async function confluenceRequest<T>(
+  endpoint: string,
+  options: RequestInit = {}
+): Promise<T> {
+  const { baseUrl, apiToken, email } = getConfluenceConfig();
+  const url = `${baseUrl}/wiki/api/${CONFLUENCE_API_VERSION}${endpoint}`;
+
+  // Use Basic Auth if email is provided, otherwise use Bearer token
+  const authHeader = email
+    ? `Basic ${Buffer.from(`${email}:${apiToken}`).toString('base64')}`
+    : `Bearer ${apiToken}`;
+
+  const response = await fetch(url, {
+    ...options,
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: authHeader,
+      Accept: 'application/json',
+      ...options.headers,
+    },
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    let errorMessage = `Confluence API request failed: ${response.statusText}`;
+    try {
+      const errorJson = JSON.parse(errorText);
+      errorMessage = errorJson.message || errorMessage;
+    } catch {
+      errorMessage = errorText || errorMessage;
+    }
+    throw new Error(errorMessage);
+  }
+
+  return response.json();
+}
+
+/**
+ * Get all spaces accessible to the user
+ */
+export async function getConfluenceSpaces(): Promise<ConfluenceSpace[]> {
+  try {
+    const result = await confluenceRequest<{
+      results: ConfluenceSpace[];
+    }>('/spaces');
+
+    return result.results || [];
+  } catch (error) {
+    console.error('Error fetching Confluence spaces:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get a specific space by key
+ * Note: v2 API /spaces/{id} endpoint requires space ID, not key
+ * So we need to use the v1 API to get space by key
+ */
+export async function getConfluenceSpace(
+  spaceKey: string
+): Promise<ConfluenceSpace | null> {
+  try {
+    // Use v1 API which supports space keys
+    const { baseUrl, apiToken, email } = getConfluenceConfig();
+    const authHeader = email
+      ? `Basic ${Buffer.from(`${email}:${apiToken}`).toString('base64')}`
+      : `Bearer ${apiToken}`;
+
+    const v1Url = `${baseUrl}/wiki/rest/api/space/${spaceKey}`;
+    console.log(`[Confluence] Fetching space by key using v1 API: ${spaceKey}`);
+
+    const response = await fetch(v1Url, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: authHeader,
+        Accept: 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error(`[Confluence] v1 API error response:`, errorText);
+      throw new Error(`V1 API failed: ${response.statusText} - ${errorText}`);
+    }
+
+    const v1Data = await response.json();
+    console.log(`[Confluence] v1 API success, space:`, v1Data.key);
+
+    // Transform v1 response to match v2 interface
+    return {
+      id: v1Data.id,
+      key: v1Data.key,
+      name: v1Data.name,
+      type: v1Data.type,
+      status: v1Data.status || 'current',
+    };
+  } catch (error) {
+    console.error(`Error fetching Confluence space ${spaceKey}:`, error);
+    return null;
+  }
+}
+
+/**
+ * Get pages in a space with pagination support
+ * Note: spaceKey is the space key (e.g., "CTY"), not the numeric space ID
+ */
+export async function getConfluencePages(spaceKey: string): Promise<ConfluencePage[]> {
+  console.log(`[Confluence] Fetching all pages for space ${spaceKey}`);
+
+  try {
+    // Use v1 API with ancestors to get parent information
+    console.log(`[Confluence] Fetching pages with parent information for space ${spaceKey}`);
+    const { baseUrl, apiToken, email } = getConfluenceConfig();
+    const authHeader = email
+      ? `Basic ${Buffer.from(`${email}:${apiToken}`).toString('base64')}`
+      : `Bearer ${apiToken}`;
+
+    const allPages: ConfluencePage[] = [];
+    let start = 0;
+    const limit = 100;
+    let hasMore = true;
+
+    while (hasMore) {
+      // Request ancestors to get parent information
+      const v1Url = `${baseUrl}/wiki/rest/api/content?spaceKey=${spaceKey}&type=page&expand=body.storage,version,ancestors&limit=${limit}&start=${start}`;
+      console.log(`[Confluence] Fetching page ${start} to ${start + limit}...`);
+
+      const response = await fetch(v1Url, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: authHeader,
+          Accept: 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error(`[Confluence] API error response:`, errorText);
+        throw new Error(`API failed: ${response.statusText} - ${errorText}`);
+      }
+
+      const v1Data = await response.json();
+      const pageCount = v1Data.results?.length || 0;
+
+      // Log pagination info for debugging
+      console.log(`[Confluence] Fetched ${pageCount} pages (total so far: ${allPages.length + pageCount})`);
+      console.log(`[Confluence] API Response - size: ${v1Data.size}, start: ${v1Data.start}, limit: ${v1Data.limit}`);
+
+      // Transform and add pages to our collection
+      const transformedPages: ConfluencePage[] =
+        v1Data.results?.map((page: any) => {
+          // Extract parent ID from ancestors array
+          // The last item in ancestors is the immediate parent
+          const ancestors = page.ancestors || [];
+          const parentId = ancestors.length > 0 ? ancestors[ancestors.length - 1].id : undefined;
+
+          return {
+            id: page.id,
+            status: page.status,
+            title: page.title,
+            spaceId: page.space?.id || '',
+            parentId,
+            parentType: ancestors.length > 0 ? ancestors[ancestors.length - 1].type : undefined,
+            version: {
+              number: page.version?.number || 1,
+              message: page.version?.message,
+            },
+            body: {
+              storage: {
+                value: page.body?.storage?.value || '',
+                representation: 'storage',
+              },
+            },
+          };
+        }) || [];
+
+      allPages.push(...transformedPages);
+
+      // Check if there are more pages
+      // Continue if we got a full page of results (indicates more might exist)
+      hasMore = pageCount === limit;
+
+      // Additional check: if API provides a _links.next, there are more pages
+      if (v1Data._links?.next) {
+        hasMore = true;
+      }
+
+      start += limit;
+
+      // Safety check to avoid infinite loops
+      if (start > 10000) {
+        console.warn('[Confluence] Reached safety limit of 10000 pages');
+        break;
+      }
+    }
+
+    console.log(`[Confluence] API complete, fetched ${allPages.length} total pages`);
+    return allPages;
+  } catch (error) {
+    console.error(`[Confluence] API failed for space ${spaceKey}:`, error);
+    throw error;
+  }
+}
+
+/**
+ * Get a specific page by ID
+ * Note: Confluence API v2 requires the page ID to be a string
+ * You can also expand body content using body-format parameter
+ */
+export async function getConfluencePage(
+  pageId: string
+): Promise<ConfluencePage | null> {
+  console.log(`[Confluence] Fetching page ${pageId}`);
+
+  try {
+    // Try v2 API first with body content expanded
+    console.log(`[Confluence] Trying v2 API for page ${pageId}`);
+    const page = await confluenceRequest<ConfluencePage>(
+      `/pages/${pageId}?body-format=storage`
+    );
+    console.log(`[Confluence] v2 API success for page ${pageId}`);
+    return page;
+  } catch (error) {
+    console.error(`[Confluence] v2 API error for page ${pageId}:`, error);
+
+    // If v2 fails, try the legacy v1 API as fallback
+    try {
+      console.log(`[Confluence] Trying v1 API fallback for page ${pageId}`);
+      const { baseUrl, apiToken, email } = getConfluenceConfig();
+      const authHeader = email
+        ? `Basic ${Buffer.from(`${email}:${apiToken}`).toString('base64')}`
+        : `Bearer ${apiToken}`;
+
+      const v1Url = `${baseUrl}/wiki/rest/api/content/${pageId}?expand=body.storage,version`;
+      console.log(`[Confluence] v1 API URL: ${v1Url}`);
+
+      const response = await fetch(v1Url, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: authHeader,
+          Accept: 'application/json',
+        },
+      });
+
+      console.log(`[Confluence] v1 API response status: ${response.status}`);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error(`[Confluence] v1 API error response:`, errorText);
+        throw new Error(`V1 API failed: ${response.statusText} - ${errorText}`);
+      }
+
+      const v1Data = await response.json();
+      console.log(`[Confluence] v1 API success, page title:`, v1Data.title);
+
+      // Transform v1 response to match our interface
+      return {
+        id: v1Data.id,
+        status: v1Data.status,
+        title: v1Data.title,
+        spaceId: v1Data.space?.id || '',
+        version: {
+          number: v1Data.version?.number || 1,
+          message: v1Data.version?.message,
+        },
+        body: {
+          storage: {
+            value: v1Data.body?.storage?.value || '',
+            representation: 'storage',
+          },
+        },
+      };
+    } catch (v1Error) {
+      console.error(`[Confluence] v1 API also failed for page ${pageId}:`, v1Error);
+      return null;
+    }
+  }
+}
+
+/**
+ * Create a new Confluence page
+ */
+export async function createConfluencePage(
+  params: ConfluencePageCreate
+): Promise<ConfluencePage | null> {
+  try {
+    const page = await confluenceRequest<ConfluencePage>('/pages', {
+      method: 'POST',
+      body: JSON.stringify(params),
+    });
+
+    return page;
+  } catch (error) {
+    console.error('Error creating Confluence page:', error);
+    throw error;
+  }
+}
+
+/**
+ * Update an existing Confluence page
+ */
+export async function updateConfluencePage(
+  params: ConfluencePageUpdate
+): Promise<ConfluencePage | null> {
+  try {
+    const page = await confluenceRequest<ConfluencePage>(
+      `/pages/${params.id}`,
+      {
+        method: 'PUT',
+        body: JSON.stringify({
+          version: params.version,
+          title: params.title,
+          body: params.body,
+        }),
+      }
+    );
+
+    return page;
+  } catch (error) {
+    console.error(`Error updating Confluence page ${params.id}:`, error);
+    throw error;
+  }
+}
+
+/**
+ * Delete a Confluence page
+ */
+export async function deleteConfluencePage(pageId: string): Promise<boolean> {
+  try {
+    await confluenceRequest(`/pages/${pageId}`, {
+      method: 'DELETE',
+    });
+
+    return true;
+  } catch (error) {
+    console.error(`Error deleting Confluence page ${pageId}:`, error);
+    throw error;
+  }
+}
+
+/**
+ * Search Confluence content using CQL (Confluence Query Language)
+ */
+export async function searchConfluence(cql: string): Promise<ConfluencePage[]> {
+  try {
+    const result = await confluenceRequest<{
+      results: ConfluencePage[];
+    }>(`/search?cql=${encodeURIComponent(cql)}`);
+
+    return result.results || [];
+  } catch (error) {
+    console.error('Error searching Confluence:', error);
+    throw error;
+  }
+}

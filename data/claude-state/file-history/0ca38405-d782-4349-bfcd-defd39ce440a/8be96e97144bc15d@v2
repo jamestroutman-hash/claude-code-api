@@ -1,0 +1,662 @@
+-- Seed Data for AI Project Management Assistant
+-- Spec: apps/web/docs/specs/001-database-schema.md
+
+-- ============================================================================
+-- CREATE TEST USER (for development)
+-- ============================================================================
+
+-- Note: In production, users will be created via Supabase Auth
+-- This creates a test user for local development
+INSERT INTO auth.users (
+  id,
+  email,
+  encrypted_password,
+  email_confirmed_at,
+  created_at,
+  updated_at,
+  raw_app_meta_data,
+  raw_user_meta_data,
+  is_super_admin,
+  role
+) VALUES (
+  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11',
+  'admin@clarity.dev',
+  crypt('password123', gen_salt('bf')),
+  NOW(),
+  NOW(),
+  NOW(),
+  '{"provider":"email","providers":["email"]}',
+  '{"name":"Admin User"}',
+  false,
+  'authenticated'
+) ON CONFLICT (id) DO NOTHING;
+
+-- ============================================================================
+-- CREATE WORKSPACE
+-- ============================================================================
+
+INSERT INTO workspaces (
+  id,
+  name,
+  description,
+  slug,
+  confluence_space_key,
+  confluence_base_url,
+  monday_workspace_id,
+  created_by
+) VALUES (
+  '550e8400-e29b-41d4-a716-446655440000',
+  'Clarity Platform',
+  'AI-powered project management for Clarity platform development',
+  'clarity',
+  'CTY',
+  'https://veritasprime.atlassian.net',
+  '989659142',
+  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11'
+);
+
+-- ============================================================================
+-- SEED CONFLUENCE PAGES (MUST BE BEFORE WORKSTREAMS)
+-- ============================================================================
+
+-- Platform Overview
+INSERT INTO confluence_pages (
+  id,
+  workspace_id,
+  confluence_page_id,
+  confluence_space_key,
+  title,
+  content_plain,
+  version,
+  last_modified,
+  cached_at
+) VALUES (
+  '660e8400-e29b-41d4-a716-446655440001',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989364236',
+  'CTY',
+  'Clarity Overview',
+  'Platform overview and strategic vision for the Clarity platform',
+  1,
+  NOW(),
+  NOW()
+);
+
+-- Tax Workstream Pages
+INSERT INTO confluence_pages (
+  id,
+  workspace_id,
+  confluence_page_id,
+  confluence_space_key,
+  title,
+  content_plain,
+  version,
+  last_modified,
+  cached_at
+) VALUES (
+  '660e8400-e29b-41d4-a716-446655440010',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989397000',
+  'CTY',
+  'Clarity Tax - Product Vision',
+  'Tax payment orchestration product vision and strategic objectives',
+  1,
+  NOW(),
+  NOW()
+),
+(
+  '660e8400-e29b-41d4-a716-446655440011',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989397039',
+  'CTY',
+  'Clarity Tax - Work Stream Overview',
+  'Tax workstream overview including team structure and delivery roadmap',
+  1,
+  NOW(),
+  NOW()
+);
+
+-- Treasury Workstream Pages
+INSERT INTO confluence_pages (
+  id,
+  workspace_id,
+  confluence_page_id,
+  confluence_space_key,
+  title,
+  content_plain,
+  version,
+  last_modified,
+  cached_at
+) VALUES (
+  '660e8400-e29b-41d4-a716-446655440020',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989364266',
+  'CTY',
+  'Clarity Treasury - Product Vision',
+  'Treasury management product vision and financial operations strategy',
+  1,
+  NOW(),
+  NOW()
+),
+(
+  '660e8400-e29b-41d4-a716-446655440021',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989954099',
+  'CTY',
+  'Clarity Treasury - Work Stream Overview',
+  'Treasury workstream overview and delivery plan',
+  1,
+  NOW(),
+  NOW()
+);
+
+-- Garnishments Workstream Pages
+INSERT INTO confluence_pages (
+  id,
+  workspace_id,
+  confluence_page_id,
+  confluence_space_key,
+  title,
+  content_plain,
+  version,
+  last_modified,
+  cached_at
+) VALUES (
+  '660e8400-e29b-41d4-a716-446655440030',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989724680',
+  'CTY',
+  'Clarity Garnishments - Product Vision',
+  'Garnishment processing product vision and compliance strategy',
+  1,
+  NOW(),
+  NOW()
+),
+(
+  '660e8400-e29b-41d4-a716-446655440031',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989560839',
+  'CTY',
+  'Clarity Garnishments - Work Stream Overview',
+  'Garnishments workstream overview and implementation roadmap',
+  1,
+  NOW(),
+  NOW()
+);
+
+-- Process Manager Workstream Pages
+INSERT INTO confluence_pages (
+  id,
+  workspace_id,
+  confluence_page_id,
+  confluence_space_key,
+  title,
+  content_plain,
+  version,
+  last_modified,
+  cached_at
+) VALUES (
+  '660e8400-e29b-41d4-a716-446655440040',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989986833',
+  'CTY',
+  'Clarity Process Manager - Product Vision',
+  'Process orchestration and payroll master data management vision',
+  1,
+  NOW(),
+  NOW()
+),
+(
+  '660e8400-e29b-41d4-a716-446655440041',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '995328040',
+  'CTY',
+  'Payroll Master Data',
+  'Payroll master data management feature specification',
+  1,
+  NOW(),
+  NOW()
+);
+
+-- DSH Workstream Pages
+INSERT INTO confluence_pages (
+  id,
+  workspace_id,
+  confluence_page_id,
+  confluence_space_key,
+  title,
+  content_plain,
+  version,
+  last_modified,
+  cached_at
+) VALUES (
+  '660e8400-e29b-41d4-a716-446655440050',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989429767',
+  'CTY',
+  'Clarity DSH - Product Vision',
+  'Data Services Hub product vision and analytics strategy',
+  1,
+  NOW(),
+  NOW()
+),
+(
+  '660e8400-e29b-41d4-a716-446655440051',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '990085128',
+  'CTY',
+  'Clarity DSH - Work Stream Overview',
+  'DSH workstream overview and data platform roadmap',
+  1,
+  NOW(),
+  NOW()
+);
+
+-- AI Workstream Pages
+INSERT INTO confluence_pages (
+  id,
+  workspace_id,
+  confluence_page_id,
+  confluence_space_key,
+  title,
+  content_plain,
+  version,
+  last_modified,
+  cached_at
+) VALUES (
+  '660e8400-e29b-41d4-a716-446655440060',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989691909',
+  'CTY',
+  'Clarity AI - Product Vision',
+  'AI and intelligent automation product vision',
+  1,
+  NOW(),
+  NOW()
+),
+(
+  '660e8400-e29b-41d4-a716-446655440061',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989822990',
+  'CTY',
+  'Clarity AI - Work Stream Overview',
+  'AI workstream overview and machine learning roadmap',
+  1,
+  NOW(),
+  NOW()
+);
+
+-- Foundation Workstream Pages
+INSERT INTO confluence_pages (
+  id,
+  workspace_id,
+  confluence_page_id,
+  confluence_space_key,
+  title,
+  content_plain,
+  version,
+  last_modified,
+  cached_at
+) VALUES (
+  '660e8400-e29b-41d4-a716-446655440070',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989528070',
+  'CTY',
+  'Clarity Foundation - Product Vision',
+  'Core platform infrastructure and shared services vision',
+  1,
+  NOW(),
+  NOW()
+),
+(
+  '660e8400-e29b-41d4-a716-446655440071',
+  '550e8400-e29b-41d4-a716-446655440000',
+  '989724715',
+  'CTY',
+  'Clarity Foundation - Work Stream Overview',
+  'Foundation workstream overview and platform capabilities roadmap',
+  1,
+  NOW(),
+  NOW()
+);
+
+-- ============================================================================
+-- CREATE WORKSTREAMS (7 domains)
+-- ============================================================================
+-- @see /docs/specs/document-id-keys-spec.md#BR-004
+
+-- Tax Workstream
+INSERT INTO workstreams (
+  id,
+  workspace_id,
+  name,
+  slug,
+  key,
+  description,
+  color,
+  monday_epic_board_id,
+  monday_feature_board_id,
+  monday_story_board_id,
+  created_by
+) VALUES (
+  '550e8400-e29b-41d4-a716-446655440001',
+  '550e8400-e29b-41d4-a716-446655440000',
+  'Clarity Tax',
+  'tax',
+  'TAX',
+  'Tax payment orchestration and compliance monitoring',
+  '#FF6B6B',
+  '9762207072',
+  '18007930608',
+  '9762207095',
+  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11'
+);
+
+-- Treasury Workstream
+INSERT INTO workstreams (
+  id,
+  workspace_id,
+  name,
+  slug,
+  key,
+  description,
+  color,
+  monday_epic_board_id,
+  monday_feature_board_id,
+  monday_story_board_id,
+  created_by
+) VALUES (
+  '550e8400-e29b-41d4-a716-446655440002',
+  '550e8400-e29b-41d4-a716-446655440000',
+  'Clarity Treasury',
+  'treasury',
+  'TREAS',
+  'Treasury management and financial operations',
+  '#4ECDC4',
+  '9762492452',
+  '18018390488',
+  '9762492395',
+  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11'
+);
+
+-- Process Manager Workstream
+INSERT INTO workstreams (
+  id,
+  workspace_id,
+  name,
+  slug,
+  key,
+  description,
+  color,
+  monday_epic_board_id,
+  monday_feature_board_id,
+  monday_story_board_id,
+  created_by
+) VALUES (
+  '550e8400-e29b-41d4-a716-446655440003',
+  '550e8400-e29b-41d4-a716-446655440000',
+  'Clarity Process Manager',
+  'process',
+  'PM',
+  'Payroll process orchestration and master data management',
+  '#95E1D3',
+  '9811240019',
+  '18027518486',
+  '9811240186',
+  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11'
+);
+
+-- Garnishments Workstream (no Monday.com boards configured)
+INSERT INTO workstreams (
+  id,
+  workspace_id,
+  name,
+  slug,
+  key,
+  description,
+  color,
+  created_by
+) VALUES (
+  '550e8400-e29b-41d4-a716-446655440004',
+  '550e8400-e29b-41d4-a716-446655440000',
+  'Clarity Garnishments',
+  'garnishments',
+  'GARN',
+  'Garnishment processing and compliance',
+  '#F38181',
+  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11'
+);
+
+-- AI Workstream
+INSERT INTO workstreams (
+  id,
+  workspace_id,
+  name,
+  slug,
+  key,
+  description,
+  color,
+  monday_epic_board_id,
+  monday_feature_board_id,
+  monday_story_board_id,
+  created_by
+) VALUES (
+  '550e8400-e29b-41d4-a716-446655440005',
+  '550e8400-e29b-41d4-a716-446655440000',
+  'Clarity AI',
+  'ai',
+  'AI',
+  'AI-powered features and intelligent automation',
+  '#A8E6CF',
+  '9762559007',
+  '18157828248',
+  '9762558961',
+  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11'
+);
+
+-- Foundation Workstream
+INSERT INTO workstreams (
+  id,
+  workspace_id,
+  name,
+  slug,
+  key,
+  description,
+  color,
+  monday_epic_board_id,
+  monday_feature_board_id,
+  monday_story_board_id,
+  created_by
+) VALUES (
+  '550e8400-e29b-41d4-a716-446655440006',
+  '550e8400-e29b-41d4-a716-446655440000',
+  'Clarity Foundation',
+  'foundation',
+  'FOUND',
+  'Core platform infrastructure and shared services',
+  '#FFD3B6',
+  '9762565656',
+  '18065687927',
+  '9762565449',
+  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11'
+);
+
+-- DSH Workstream (no Monday board ID provided)
+INSERT INTO workstreams (
+  id,
+  workspace_id,
+  name,
+  slug,
+  key,
+  description,
+  color,
+  created_by
+) VALUES (
+  '550e8400-e29b-41d4-a716-446655440007',
+  '550e8400-e29b-41d4-a716-446655440000',
+  'Clarity DSH',
+  'dsh',
+  'DSH',
+  'Data Services Hub and analytics platform',
+  '#FFAAA5',
+  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11'
+);
+
+-- ============================================================================
+-- LINK WORKSTREAMS TO CONFLUENCE PAGES
+-- ============================================================================
+
+-- Update workstreams to link to their Product Vision pages
+UPDATE workstreams SET confluence_page_id = '660e8400-e29b-41d4-a716-446655440010' WHERE id = '550e8400-e29b-41d4-a716-446655440001'; -- Tax
+UPDATE workstreams SET confluence_page_id = '660e8400-e29b-41d4-a716-446655440020' WHERE id = '550e8400-e29b-41d4-a716-446655440002'; -- Treasury
+UPDATE workstreams SET confluence_page_id = '660e8400-e29b-41d4-a716-446655440040' WHERE id = '550e8400-e29b-41d4-a716-446655440003'; -- Process Manager
+UPDATE workstreams SET confluence_page_id = '660e8400-e29b-41d4-a716-446655440030' WHERE id = '550e8400-e29b-41d4-a716-446655440004'; -- Garnishments
+UPDATE workstreams SET confluence_page_id = '660e8400-e29b-41d4-a716-446655440060' WHERE id = '550e8400-e29b-41d4-a716-446655440005'; -- AI
+UPDATE workstreams SET confluence_page_id = '660e8400-e29b-41d4-a716-446655440070' WHERE id = '550e8400-e29b-41d4-a716-446655440006'; -- Foundation
+UPDATE workstreams SET confluence_page_id = '660e8400-e29b-41d4-a716-446655440050' WHERE id = '550e8400-e29b-41d4-a716-446655440007'; -- DSH
+
+-- ============================================================================
+-- CONFIGURE MONDAY.COM COLUMN MAPPINGS
+-- ============================================================================
+-- @see /supabase/migrations/20251021000001_add_monday_column_mappings_to_settings.sql
+-- @see /apps/web/types/workstream-settings.ts
+--
+-- These mappings configure which Monday.com board columns are used for different
+-- fields when syncing stories, features, and epics. Column IDs are specific to
+-- each workstream's boards and were discovered using the Monday.com API.
+
+-- Tax Workstream Monday Column Mappings
+UPDATE workstreams SET settings = jsonb_build_object(
+  'monday_column_mappings', jsonb_build_object(
+    'story', jsonb_build_object(
+      'status', 'task_status',
+      'priority', 'task_priority',
+      'parent_feature', 'board_relation_mkwhncbd'
+    ),
+    'feature', jsonb_build_object(
+      'status', 'status'
+    ),
+    'epic', jsonb_build_object(
+      'status', 'epic_status',
+      'priority', 'epic_priority'
+    )
+  )
+)
+WHERE id = '550e8400-e29b-41d4-a716-446655440001';
+
+-- Treasury Workstream Monday Column Mappings
+UPDATE workstreams SET settings = jsonb_build_object(
+  'monday_column_mappings', jsonb_build_object(
+    'story', jsonb_build_object(
+      'status', 'task_status',
+      'priority', 'task_priority',
+      'parent_feature', 'board_relation_mkw23r8e'
+    ),
+    'feature', jsonb_build_object(
+      'status', 'status'
+    ),
+    'epic', jsonb_build_object(
+      'status', 'epic_status',
+      'priority', 'epic_priority'
+    )
+  )
+)
+WHERE id = '550e8400-e29b-41d4-a716-446655440002';
+
+-- Process Manager Workstream Monday Column Mappings
+UPDATE workstreams SET settings = jsonb_build_object(
+  'monday_column_mappings', jsonb_build_object(
+    'story', jsonb_build_object(
+      'status', 'task_status',
+      'priority', 'task_priority',
+      'parent_feature', 'board_relation_mkw21mb6'
+    ),
+    'feature', jsonb_build_object(
+      'status', 'status'
+    ),
+    'epic', jsonb_build_object(
+      'status', 'epic_status',
+      'priority', 'epic_priority'
+    )
+  )
+)
+WHERE id = '550e8400-e29b-41d4-a716-446655440003';
+
+-- AI Workstream Monday Column Mappings
+UPDATE workstreams SET settings = jsonb_build_object(
+  'monday_column_mappings', jsonb_build_object(
+    'story', jsonb_build_object(
+      'status', 'task_status',
+      'priority', 'task_priority',
+      'parent_feature', 'board_relation_mkwk7bm1'
+    ),
+    'feature', jsonb_build_object(
+      'status', 'status'
+    ),
+    'epic', jsonb_build_object(
+      'status', 'epic_status',
+      'priority', 'epic_priority'
+    )
+  )
+)
+WHERE id = '550e8400-e29b-41d4-a716-446655440005';
+
+-- Foundation Workstream Monday Column Mappings
+UPDATE workstreams SET settings = jsonb_build_object(
+  'monday_column_mappings', jsonb_build_object(
+    'story', jsonb_build_object(
+      'status', 'task_status',
+      'priority', 'task_priority',
+      'parent_feature', 'board_relation_mkw8ejt4'
+    ),
+    'feature', jsonb_build_object(
+      'status', 'status'
+    ),
+    'epic', jsonb_build_object(
+      'status', 'epic_status',
+      'priority', 'epic_priority'
+    )
+  )
+)
+WHERE id = '550e8400-e29b-41d4-a716-446655440006';
+
+-- ============================================================================
+-- SEED FUNCTIONAL AREAS
+-- ============================================================================
+
+-- Tax Functional Areas
+INSERT INTO functional_areas (workspace_id, workstream_id, name) VALUES
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440001', 'Core Operations'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440001', 'Foundation'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440001', 'Tax Scheduling'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440001', 'Tax Payments'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440001', 'Tax Filings'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440001', '3rd Party Access');
+
+-- Treasury Functional Areas
+INSERT INTO functional_areas (workspace_id, workstream_id, name) VALUES
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440002', 'Ledger Services'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440002', 'Treasury Services'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440002', 'Reconciliation');
+
+-- Process Manager Functional Areas
+INSERT INTO functional_areas (workspace_id, workstream_id, name) VALUES
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440003', 'Process Manager'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440003', 'Clarity UI'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440003', 'Payroll Data Importer');
+
+-- AI Functional Areas
+INSERT INTO functional_areas (workspace_id, workstream_id, name) VALUES
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440005', 'Payroll Agent'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440005', 'Audit Agent'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440005', 'Tax Agent'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440005', 'Automations');
+
+-- Foundation Functional Areas
+INSERT INTO functional_areas (workspace_id, workstream_id, name) VALUES
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440006', 'Client Experience'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440006', 'Client Billing'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440006', 'Client Management'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440006', 'Identity & Access'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440006', 'Audit & Compliance'),
+  ('550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440006', 'Platform Monitoring & Health');

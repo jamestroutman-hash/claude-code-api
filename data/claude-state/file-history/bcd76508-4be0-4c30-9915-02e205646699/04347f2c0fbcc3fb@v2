@@ -1,0 +1,389 @@
+'use client';
+
+import { useState, useEffect, FormEvent } from 'react';
+import type { WorkstreamSettings, MondayColumnMappings } from '../types/workstream-settings';
+
+interface EditWorkstreamConfigModalProps {
+  workstream: {
+    id: string;
+    name: string;
+    slug: string;
+    monday: {
+      epic_board_id: string | null;
+      feature_board_id: string | null;
+      story_board_id: string | null;
+    };
+    confluence: {
+      page_id: string | null;
+    };
+    settings: WorkstreamSettings;
+  };
+  isOpen: boolean;
+  onClose: () => void;
+  onSuccess: () => void;
+}
+
+export function EditWorkstreamConfigModal({
+  workstream,
+  isOpen,
+  onClose,
+  onSuccess,
+}: EditWorkstreamConfigModalProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const [formData, setFormData] = useState({
+    epicBoardId: workstream.monday.epic_board_id || '',
+    featureBoardId: workstream.monday.feature_board_id || '',
+    storyBoardId: workstream.monday.story_board_id || '',
+    confluencePageId: workstream.confluence.page_id || '',
+    // Monday column mappings
+    epicStatus: workstream.settings.monday_column_mappings?.epic?.status || '',
+    epicPriority: workstream.settings.monday_column_mappings?.epic?.priority || '',
+    featureStatus: workstream.settings.monday_column_mappings?.feature?.status || '',
+    featurePriority: workstream.settings.monday_column_mappings?.feature?.priority || '',
+    storyStatus: workstream.settings.monday_column_mappings?.story?.status || '',
+    storyPriority: workstream.settings.monday_column_mappings?.story?.priority || '',
+    storyParentFeature: workstream.settings.monday_column_mappings?.story?.parent_feature || '',
+    storyPoints: workstream.settings.monday_column_mappings?.story?.story_points || '',
+  });
+
+  // Reset form data when modal opens or workstream changes
+  useEffect(() => {
+    if (isOpen) {
+      setFormData({
+        epicBoardId: workstream.monday.epic_board_id || '',
+        featureBoardId: workstream.monday.feature_board_id || '',
+        storyBoardId: workstream.monday.story_board_id || '',
+        confluencePageId: workstream.confluence.page_id || '',
+        epicStatus: workstream.settings.monday_column_mappings?.epic?.status || '',
+        epicPriority: workstream.settings.monday_column_mappings?.epic?.priority || '',
+        featureStatus: workstream.settings.monday_column_mappings?.feature?.status || '',
+        featurePriority: workstream.settings.monday_column_mappings?.feature?.priority || '',
+        storyStatus: workstream.settings.monday_column_mappings?.story?.status || '',
+        storyPriority: workstream.settings.monday_column_mappings?.story?.priority || '',
+        storyParentFeature: workstream.settings.monday_column_mappings?.story?.parent_feature || '',
+        storyPoints: workstream.settings.monday_column_mappings?.story?.story_points || '',
+      });
+      setError(null);
+    }
+  }, [isOpen, workstream]);
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      // Build the column mappings object
+      const mondayColumnMappings: MondayColumnMappings = {};
+
+      // Epic mappings
+      if (formData.epicStatus || formData.epicPriority) {
+        mondayColumnMappings.epic = {};
+        if (formData.epicStatus) mondayColumnMappings.epic.status = formData.epicStatus;
+        if (formData.epicPriority) mondayColumnMappings.epic.priority = formData.epicPriority;
+      }
+
+      // Feature mappings
+      if (formData.featureStatus || formData.featurePriority) {
+        mondayColumnMappings.feature = {};
+        if (formData.featureStatus) mondayColumnMappings.feature.status = formData.featureStatus;
+        if (formData.featurePriority) mondayColumnMappings.feature.priority = formData.featurePriority;
+      }
+
+      // Story mappings
+      if (formData.storyStatus || formData.storyPriority || formData.storyParentFeature || formData.storyPoints) {
+        mondayColumnMappings.story = {};
+        if (formData.storyStatus) mondayColumnMappings.story.status = formData.storyStatus;
+        if (formData.storyPriority) mondayColumnMappings.story.priority = formData.storyPriority;
+        if (formData.storyParentFeature) mondayColumnMappings.story.parent_feature = formData.storyParentFeature;
+        if (formData.storyPoints) mondayColumnMappings.story.story_points = formData.storyPoints;
+      }
+
+      const settings: WorkstreamSettings = {
+        ...workstream.settings,
+        monday_column_mappings: Object.keys(mondayColumnMappings).length > 0 ? mondayColumnMappings : undefined,
+      };
+
+      const response = await fetch(`/api/workstreams/${workstream.slug}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          monday_epic_board_id: formData.epicBoardId || null,
+          monday_feature_board_id: formData.featureBoardId || null,
+          monday_story_board_id: formData.storyBoardId || null,
+          confluence_page_id: formData.confluencePageId || null,
+          settings,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to update workstream configuration');
+      }
+
+      onSuccess();
+      onClose();
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : 'An error occurred';
+      setError(errorMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 overflow-y-auto">
+      <div className="flex min-h-screen items-center justify-center p-4">
+        {/* Backdrop */}
+        <div
+          className="fixed inset-0 bg-black bg-opacity-30 transition-opacity"
+          onClick={onClose}
+        />
+
+        {/* Modal */}
+        <div className="relative w-full max-w-2xl rounded-lg bg-white shadow-xl max-h-[90vh] overflow-y-auto">
+          <div className="p-6">
+            <h2 className="text-xl font-semibold text-gray-900 mb-1">
+              Edit Configuration: {workstream.name}
+            </h2>
+            <p className="text-sm text-gray-600 mb-6">
+              Configure Monday.com boards, Confluence integration, and column mappings
+            </p>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Monday Board IDs Section */}
+              <div>
+                <h3 className="text-sm font-medium text-gray-900 mb-3">
+                  Monday.com Board IDs
+                </h3>
+                <div className="space-y-3">
+                  <div>
+                    <label
+                      htmlFor="epicBoardId"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Epic Board ID
+                    </label>
+                    <input
+                      type="text"
+                      id="epicBoardId"
+                      value={formData.epicBoardId}
+                      onChange={(e) =>
+                        setFormData({ ...formData, epicBoardId: e.target.value })
+                      }
+                      placeholder="e.g., 9762207072"
+                      className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="featureBoardId"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Feature Board ID
+                    </label>
+                    <input
+                      type="text"
+                      id="featureBoardId"
+                      value={formData.featureBoardId}
+                      onChange={(e) =>
+                        setFormData({ ...formData, featureBoardId: e.target.value })
+                      }
+                      placeholder="e.g., 18007930608"
+                      className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="storyBoardId"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Story Board ID
+                    </label>
+                    <input
+                      type="text"
+                      id="storyBoardId"
+                      value={formData.storyBoardId}
+                      onChange={(e) =>
+                        setFormData({ ...formData, storyBoardId: e.target.value })
+                      }
+                      placeholder="e.g., 9762207095"
+                      className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Confluence Section */}
+              <div className="border-t border-gray-200 pt-4">
+                <h3 className="text-sm font-medium text-gray-900 mb-3">
+                  Confluence Integration
+                </h3>
+                <div>
+                  <label
+                    htmlFor="confluencePageId"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Confluence Page ID
+                  </label>
+                  <input
+                    type="text"
+                    id="confluencePageId"
+                    value={formData.confluencePageId}
+                    onChange={(e) =>
+                      setFormData({ ...formData, confluencePageId: e.target.value })
+                    }
+                    placeholder="e.g., 660e8400-e29b-41d4-a716-446655440010"
+                    className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+
+              {/* Column Mappings Section */}
+              <div className="border-t border-gray-200 pt-4">
+                <h3 className="text-sm font-medium text-gray-900 mb-3">
+                  Monday Column Mappings
+                </h3>
+
+                {/* Epic Column Mappings */}
+                <div className="mb-4">
+                  <h4 className="text-xs font-medium text-gray-700 uppercase mb-2">Epic</h4>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">Status Column</label>
+                      <input
+                        type="text"
+                        value={formData.epicStatus}
+                        onChange={(e) => setFormData({ ...formData, epicStatus: e.target.value })}
+                        placeholder="e.g., epic_status"
+                        className="w-full rounded-md border border-gray-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">Priority Column</label>
+                      <input
+                        type="text"
+                        value={formData.epicPriority}
+                        onChange={(e) => setFormData({ ...formData, epicPriority: e.target.value })}
+                        placeholder="e.g., epic_priority"
+                        className="w-full rounded-md border border-gray-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Feature Column Mappings */}
+                <div className="mb-4">
+                  <h4 className="text-xs font-medium text-gray-700 uppercase mb-2">Feature</h4>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">Status Column</label>
+                      <input
+                        type="text"
+                        value={formData.featureStatus}
+                        onChange={(e) => setFormData({ ...formData, featureStatus: e.target.value })}
+                        placeholder="e.g., status"
+                        className="w-full rounded-md border border-gray-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">Priority Column</label>
+                      <input
+                        type="text"
+                        value={formData.featurePriority}
+                        onChange={(e) => setFormData({ ...formData, featurePriority: e.target.value })}
+                        placeholder="e.g., priority"
+                        className="w-full rounded-md border border-gray-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Story Column Mappings */}
+                <div>
+                  <h4 className="text-xs font-medium text-gray-700 uppercase mb-2">Story</h4>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">Status Column</label>
+                      <input
+                        type="text"
+                        value={formData.storyStatus}
+                        onChange={(e) => setFormData({ ...formData, storyStatus: e.target.value })}
+                        placeholder="e.g., task_status"
+                        className="w-full rounded-md border border-gray-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">Priority Column</label>
+                      <input
+                        type="text"
+                        value={formData.storyPriority}
+                        onChange={(e) => setFormData({ ...formData, storyPriority: e.target.value })}
+                        placeholder="e.g., task_priority"
+                        className="w-full rounded-md border border-gray-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">Parent Feature Column</label>
+                      <input
+                        type="text"
+                        value={formData.storyParentFeature}
+                        onChange={(e) => setFormData({ ...formData, storyParentFeature: e.target.value })}
+                        placeholder="e.g., board_relation_mkwhncbd"
+                        className="w-full rounded-md border border-gray-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-600 mb-1">Story Points Column</label>
+                      <input
+                        type="text"
+                        value={formData.storyPoints}
+                        onChange={(e) => setFormData({ ...formData, storyPoints: e.target.value })}
+                        placeholder="e.g., numbers"
+                        className="w-full rounded-md border border-gray-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Error */}
+              {error && (
+                <div className="rounded-md bg-red-50 p-3 text-sm text-red-800">
+                  {error}
+                </div>
+              )}
+
+              {/* Actions */}
+              <div className="flex justify-end gap-3 pt-4 border-t border-gray-200">
+                <button
+                  type="button"
+                  onClick={onClose}
+                  disabled={isSubmitting}
+                  className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
+                >
+                  {isSubmitting ? 'Saving...' : 'Save Changes'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

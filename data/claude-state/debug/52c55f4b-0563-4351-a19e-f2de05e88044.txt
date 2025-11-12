@@ -1,0 +1,472 @@
+[DEBUG] Watching for changes in setting files /home/jamestroutman/.claude/settings.json, /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json...
+[DEBUG] Applying permission update: Adding 13 allow rule(s) to destination 'localSettings': ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)"]
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Total LSP servers loaded: 0
+[DEBUG] LSP manager initialized with 0 servers
+[DEBUG] LSP server manager initialized successfully
+[DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/jamestroutman/.claude/skills, project=/home/jamestroutman/code/experiments/claude-code-api/.claude/skills
+[DEBUG] >>>>> getPluginSkills CALLED <<<<<
+[DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+[DEBUG] Looking for shell config file: /home/jamestroutman/.zshrc
+[DEBUG] Snapshots directory: /home/jamestroutman/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /home/jamestroutman/.claude/shell-snapshots/snapshot-zsh-1762796484399-kej9qh.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude/todos/52c55f4b-0563-4351-a19e-f2de05e88044-agent-52c55f4b-0563-4351-a19e-f2de05e88044.json.tmp.126349.1762796484407
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/jamestroutman/.claude/todos/52c55f4b-0563-4351-a19e-f2de05e88044-agent-52c55f4b-0563-4351-a19e-f2de05e88044.json.tmp.126349.1762796484407 to /home/jamestroutman/.claude/todos/52c55f4b-0563-4351-a19e-f2de05e88044-agent-52c55f4b-0563-4351-a19e-f2de05e88044.json
+[DEBUG] File /home/jamestroutman/.claude/todos/52c55f4b-0563-4351-a19e-f2de05e88044-agent-52c55f4b-0563-4351-a19e-f2de05e88044.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762796484421
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45886 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762796484421 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/x64-linux/rg)
+[DEBUG] Shell snapshot created successfully (19795 bytes)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762796484642
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45886 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762796484642 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762796484651
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45886 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762796484651 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762796484660
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45886 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762796484660 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[ERROR] Error streaming, falling back to non-streaming mode: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+[ERROR] Error streaming, falling back to non-streaming mode: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+[ERROR] Error in non-streaming fallback: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+[ERROR] Error: Error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+    at Dk.validateHeaders (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:930)
+    at Dk.buildHeaders (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:8423)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Dk.buildRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:7481)
+    at async Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:3309)
+    at async Vc2.FA1.model (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14776)
+    at async FA1 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2745:39781)
+    at async Vc2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14930)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8667
+    at async $A0 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:1970)
+[ERROR] Error in non-streaming fallback: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+[ERROR] Error: Error: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+    at Dk.validateHeaders (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:930)
+    at Dk.buildHeaders (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:8423)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Dk.buildRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:7481)
+    at async Dk.makeRequest (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:360:3309)
+    at async Vc2.FA1.model (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14776)
+    at async FA1 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2745:39781)
+    at async Vc2 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:14930)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:8667
+    at async $A0 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:3397:1970)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762796494244
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45886 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762796494244 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762796494251
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45886 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762796494251 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] Telemetry flushed successfully
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797204472
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45886 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797204472 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797204480
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 45886 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797204480 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797204890
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46170 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797204890 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797205131
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46279 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797205131 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797222283
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46320 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797222283 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797222296
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46319 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797222296 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "chrome-devtools": Starting connection with timeout of 30000ms
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797222343
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46319 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797222343 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797222390
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46214 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797222390 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797222398
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46214 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797222398 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797222404
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46214 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797222404 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] performStartupChecks called
+[DEBUG] Starting background plugin installations
+[DEBUG] performBackgroundPluginInstallations called
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762797223294
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 46319 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762797223294 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+[DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+[ERROR] MCP server "chrome-devtools" Server stderr: chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,
+debug, and modify any data in the browser or DevTools.
+Avoid sharing sensitive or personal information that you do not want to share with MCP clients.
+[DEBUG] MCP server "ide": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "chrome-devtools": Successfully connected to stdio server in 1518ms
+[DEBUG] MCP server "chrome-devtools": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"0.10.1"}}
+[DEBUG] MCP server "ide": Successfully connected to ws-ide server in 88ms
+[DEBUG] MCP server "ide": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Claude Code VSCode MCP","version":"2.0.34"}}
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-10T17_53_45_131Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593
+[DEBUG] Metrics opt-out API response: enabled=true
+[DEBUG] BigQuery metrics exported successfully
+[DEBUG] API Response: {
+  "accepted_count": 1,
+  "rejected_count": 0
+}
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-10T18_25_51_670Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 14 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 15 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)"]
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-10T18_58_00_564Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 16 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)"]
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-10T19_30_11_363Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-10T20_00_26_674Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 18 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 19 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)"]
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-10T20_30_27_015Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 20 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 21 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 22 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 23 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 24 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 25 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 26 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)"]
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-10T21_00_28_277Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 27 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 28 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 29 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys","mcp__render__list_logs"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 30 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys","mcp__render__list_logs","mcp__render__get_deploy"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 31 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys","mcp__render__list_logs","mcp__render__get_deploy","mcp__render__select_workspace"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 32 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys","mcp__render__list_logs","mcp__render__get_deploy","mcp__render__select_workspace","Bash(claude-code-api:test)"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 33 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys","mcp__render__list_logs","mcp__render__get_deploy","mcp__render__select_workspace","Bash(claude-code-api:test)","Bash(git commit -m \"$(cat <<''EOF''\nUpdate Dockerfile with MCP support and local code build\n\n- Replace old Dockerfile with MCP-enabled version from Dockerfile.secure\n- Use multi-stage build with Python 3.11-slim for smaller image\n- Build from local code instead of cloning from GitHub\n- Install Atlassian Confluence and Monday.com MCP servers\n- Add docker-entrypoint.sh for runtime MCP configuration\n- Configure environment variables for MCP authentication\n- Update health check to verify MCP server status\n- Remove Dockerfile.secure to avoid confusion\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"]
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T13_34_06_852Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T14_04_07_397Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T14_34_08_421Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 34 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys","mcp__render__list_logs","mcp__render__get_deploy","mcp__render__select_workspace","Bash(claude-code-api:test)","Bash(git commit -m \"$(cat <<''EOF''\nUpdate Dockerfile with MCP support and local code build\n\n- Replace old Dockerfile with MCP-enabled version from Dockerfile.secure\n- Use multi-stage build with Python 3.11-slim for smaller image\n- Build from local code instead of cloning from GitHub\n- Install Atlassian Confluence and Monday.com MCP servers\n- Add docker-entrypoint.sh for runtime MCP configuration\n- Configure environment variables for MCP authentication\n- Update health check to verify MCP server status\n- Remove Dockerfile.secure to avoid confusion\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git commit -m \"$(cat <<''EOF''\nFix Monday.com MCP server connection by adding missing dependency\n\n- Install @mondaydotcomorg/agent-toolkit package required by monday-api-mcp\n- Copy agent-toolkit to final Docker image stage\n- Resolves \"Cannot find module '@mondaydotcomorg/agent-toolkit/mcp'\" error\n- Both Atlassian Confluence and Monday.com MCP servers now connect successfully\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"]
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T15_04_10_769Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 35 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys","mcp__render__list_logs","mcp__render__get_deploy","mcp__render__select_workspace","Bash(claude-code-api:test)","Bash(git commit -m \"$(cat <<''EOF''\nUpdate Dockerfile with MCP support and local code build\n\n- Replace old Dockerfile with MCP-enabled version from Dockerfile.secure\n- Use multi-stage build with Python 3.11-slim for smaller image\n- Build from local code instead of cloning from GitHub\n- Install Atlassian Confluence and Monday.com MCP servers\n- Add docker-entrypoint.sh for runtime MCP configuration\n- Configure environment variables for MCP authentication\n- Update health check to verify MCP server status\n- Remove Dockerfile.secure to avoid confusion\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git commit -m \"$(cat <<''EOF''\nFix Monday.com MCP server connection by adding missing dependency\n\n- Install @mondaydotcomorg/agent-toolkit package required by monday-api-mcp\n- Copy agent-toolkit to final Docker image stage\n- Resolves \"Cannot find module '@mondaydotcomorg/agent-toolkit/mcp'\" error\n- Both Atlassian Confluence and Monday.com MCP servers now connect successfully\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git commit -m \"$(cat <<''EOF''\nOptimize Docker image for low memory usage (512MB)\n\nMemory optimizations for Render free tier:\n- Remove git from runtime to save memory\n- Add NODE_ENV=production to reduce Node.js footprint\n- Set NODE_OPTIONS=\"--max-old-space-size=256\" to limit Node.js heap\n- Add PYTHONOPTIMIZE=1 to optimize Python bytecode\n- Use single uvicorn worker with --workers 1\n- Limit concurrent connections with --limit-concurrency 10\n- Clean npm cache after installation to reduce image size\n\nResults:\n- Reduced image size from 1.04GB to 979MB (61MB reduction)\n- Both MCP servers (Atlassian Confluence and Monday.com) connect successfully\n- Tested locally and verified all functionality works\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"]
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T15_34_12_795Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 36 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys","mcp__render__list_logs","mcp__render__get_deploy","mcp__render__select_workspace","Bash(claude-code-api:test)","Bash(git commit -m \"$(cat <<''EOF''\nUpdate Dockerfile with MCP support and local code build\n\n- Replace old Dockerfile with MCP-enabled version from Dockerfile.secure\n- Use multi-stage build with Python 3.11-slim for smaller image\n- Build from local code instead of cloning from GitHub\n- Install Atlassian Confluence and Monday.com MCP servers\n- Add docker-entrypoint.sh for runtime MCP configuration\n- Configure environment variables for MCP authentication\n- Update health check to verify MCP server status\n- Remove Dockerfile.secure to avoid confusion\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git commit -m \"$(cat <<''EOF''\nFix Monday.com MCP server connection by adding missing dependency\n\n- Install @mondaydotcomorg/agent-toolkit package required by monday-api-mcp\n- Copy agent-toolkit to final Docker image stage\n- Resolves \"Cannot find module '@mondaydotcomorg/agent-toolkit/mcp'\" error\n- Both Atlassian Confluence and Monday.com MCP servers now connect successfully\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git commit -m \"$(cat <<''EOF''\nOptimize Docker image for low memory usage (512MB)\n\nMemory optimizations for Render free tier:\n- Remove git from runtime to save memory\n- Add NODE_ENV=production to reduce Node.js footprint\n- Set NODE_OPTIONS=\"--max-old-space-size=256\" to limit Node.js heap\n- Add PYTHONOPTIMIZE=1 to optimize Python bytecode\n- Use single uvicorn worker with --workers 1\n- Limit concurrent connections with --limit-concurrency 10\n- Clean npm cache after installation to reduce image size\n\nResults:\n- Reduced image size from 1.04GB to 979MB (61MB reduction)\n- Both MCP servers (Atlassian Confluence and Monday.com) connect successfully\n- Tested locally and verified all functionality works\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(timeout 5 curl -s https://claude-code-api-302i.onrender.com/)"]
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T16_04_16_245Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 37 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys","mcp__render__list_logs","mcp__render__get_deploy","mcp__render__select_workspace","Bash(claude-code-api:test)","Bash(git commit -m \"$(cat <<''EOF''\nUpdate Dockerfile with MCP support and local code build\n\n- Replace old Dockerfile with MCP-enabled version from Dockerfile.secure\n- Use multi-stage build with Python 3.11-slim for smaller image\n- Build from local code instead of cloning from GitHub\n- Install Atlassian Confluence and Monday.com MCP servers\n- Add docker-entrypoint.sh for runtime MCP configuration\n- Configure environment variables for MCP authentication\n- Update health check to verify MCP server status\n- Remove Dockerfile.secure to avoid confusion\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git commit -m \"$(cat <<''EOF''\nFix Monday.com MCP server connection by adding missing dependency\n\n- Install @mondaydotcomorg/agent-toolkit package required by monday-api-mcp\n- Copy agent-toolkit to final Docker image stage\n- Resolves \"Cannot find module '@mondaydotcomorg/agent-toolkit/mcp'\" error\n- Both Atlassian Confluence and Monday.com MCP servers now connect successfully\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git commit -m \"$(cat <<''EOF''\nOptimize Docker image for low memory usage (512MB)\n\nMemory optimizations for Render free tier:\n- Remove git from runtime to save memory\n- Add NODE_ENV=production to reduce Node.js footprint\n- Set NODE_OPTIONS=\"--max-old-space-size=256\" to limit Node.js heap\n- Add PYTHONOPTIMIZE=1 to optimize Python bytecode\n- Use single uvicorn worker with --workers 1\n- Limit concurrent connections with --limit-concurrency 10\n- Clean npm cache after installation to reduce image size\n\nResults:\n- Reduced image size from 1.04GB to 979MB (61MB reduction)\n- Both MCP servers (Atlassian Confluence and Monday.com) connect successfully\n- Tested locally and verified all functionality works\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(timeout 5 curl -s https://claude-code-api-302i.onrender.com/)","Bash(/tmp/monitor.sh)"]
+[DEBUG] Detected change to /home/jamestroutman/code/experiments/claude-code-api/.claude/settings.local.json
+[DEBUG] Replacing all allow rules for destination 'localSettings' with 38 rule(s): ["Bash(chmod:*)","Bash(./copy-claude-config.sh)","Bash(docker build:*)","Bash(claude --version:*)","Bash(docker run:*)","Bash(docker logs:*)","Bash(curl:*)","Bash(docker exec:*)","Bash(docker stop:*)","Bash(docker rm:*)","Bash(cat:*)","Bash(python3:*)","Bash(./diagnose-websocket.sh:*)","WebSearch","WebFetch(domain:www.npmjs.com)","WebFetch(domain:github.com)","Bash(docker ps:*)","Bash(xargs:*)","Bash(claude-code-api:latest)","Bash(git add:*)","Bash(git commit -m \"$(cat <<''EOF''\nAdd MCP server support with Atlassian Confluence and Monday.com\n\n- Add MCP server configuration with runtime environment variable injection\n- Install @aashari/mcp-server-atlassian-confluence and @mondaydotcomorg/monday-api-mcp\n- Create docker-entrypoint.sh to generate ~/.claude.json from env vars\n- Update health endpoint to include MCP server status (without exposing tokens)\n- Add comprehensive MCP_CONFIGURATION.md documentation\n- Update README with MCP health check examples\n- Support for ATLASSIAN_SITE_NAME, ATLASSIAN_USER_EMAIL, ATLASSIAN_API_TOKEN, and MONDAY_TOKEN env vars\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git push:*)","Bash(git remote set-url:*)","Bash(git config:*)","Bash(git fetch:*)","Bash(git pull:*)","mcp__render__get_service","mcp__render__list_deploys","mcp__render__list_logs","mcp__render__get_deploy","mcp__render__select_workspace","Bash(claude-code-api:test)","Bash(git commit -m \"$(cat <<''EOF''\nUpdate Dockerfile with MCP support and local code build\n\n- Replace old Dockerfile with MCP-enabled version from Dockerfile.secure\n- Use multi-stage build with Python 3.11-slim for smaller image\n- Build from local code instead of cloning from GitHub\n- Install Atlassian Confluence and Monday.com MCP servers\n- Add docker-entrypoint.sh for runtime MCP configuration\n- Configure environment variables for MCP authentication\n- Update health check to verify MCP server status\n- Remove Dockerfile.secure to avoid confusion\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git commit -m \"$(cat <<''EOF''\nFix Monday.com MCP server connection by adding missing dependency\n\n- Install @mondaydotcomorg/agent-toolkit package required by monday-api-mcp\n- Copy agent-toolkit to final Docker image stage\n- Resolves \"Cannot find module '@mondaydotcomorg/agent-toolkit/mcp'\" error\n- Both Atlassian Confluence and Monday.com MCP servers now connect successfully\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(git commit -m \"$(cat <<''EOF''\nOptimize Docker image for low memory usage (512MB)\n\nMemory optimizations for Render free tier:\n- Remove git from runtime to save memory\n- Add NODE_ENV=production to reduce Node.js footprint\n- Set NODE_OPTIONS=\"--max-old-space-size=256\" to limit Node.js heap\n- Add PYTHONOPTIMIZE=1 to optimize Python bytecode\n- Use single uvicorn worker with --workers 1\n- Limit concurrent connections with --limit-concurrency 10\n- Clean npm cache after installation to reduce image size\n\nResults:\n- Reduced image size from 1.04GB to 979MB (61MB reduction)\n- Both MCP servers (Atlassian Confluence and Monday.com) connect successfully\n- Tested locally and verified all functionality works\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")","Bash(timeout 5 curl -s https://claude-code-api-302i.onrender.com/)","Bash(/tmp/monitor.sh)","Bash(git commit:*)"]
+[DEBUG] AutoUpdater: Detected installation type: npm-global
+[DEBUG] AutoUpdater: Using global update method
+[ERROR] lnA: lnA: Failed to install new version of claude:  npm error code ENOTEMPTY
+npm error syscall rename
+npm error path /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code
+npm error dest /home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3
+npm error errno -39
+npm error ENOTEMPTY: directory not empty, rename '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code' -> '/home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/.claude-code-YY4U4Fz3'
+npm error A complete log of this run can be found in: /home/jamestroutman/.npm/_logs/2025-11-11T16_34_20_728Z-debug-0.log
+    at iDA (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1875:389)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.current (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2861:32593)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /home/jamestroutman/.claude/shell-snapshots/snapshot-zsh-1762796484399-kej9qh.sh
+[DEBUG] MCP server "chrome-devtools": Sending SIGINT to MCP server process
+[DEBUG] LSP server manager shut down successfully
+[DEBUG] FileHistory: Added snapshot for 480692d9-75c1-4ab3-b322-4b6ad1b374cc, tracking 0 files
+[DEBUG] Rendering user message with 1 content blocks
+[DEBUG] Block 0: <command-name>/exit</command-name>
+            <command-message>exit</command-message>
+            <...
+[DEBUG] UserCommandMessage rendering: "exit" (args: "none")
+[DEBUG] isSkillFormat: false, prefix: "/"
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762880589101
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47127 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762880589101 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically
+[DEBUG] MCP server "chrome-devtools": SIGINT failed, sending SIGTERM to MCP server process
+[DEBUG] Failed to check metrics opt-out status: Request failed with status code 401
+[ERROR] AxiosError: AxiosError: Request failed with status code 401
+    at dR (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:25:1136)
+    at IncomingMessage.<anonymous> (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:30:9845)
+    at IncomingMessage.emit (node:events:520:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at o7A.request (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:32:2129)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async pE5 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1997:49782)
+[DEBUG] MCP server "chrome-devtools": MCP server process exited cleanly
+[DEBUG] BigQuery metrics export failed: Request failed with status code 401
+[ERROR] AxiosError: AxiosError: Request failed with status code 401
+    at dR (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:25:1136)
+    at IncomingMessage.<anonymous> (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:30:9845)
+    at IncomingMessage.emit (node:events:520:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at o7A.request (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:32:2129)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Pp1.doExport (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1997:51222)
+[ERROR] Error: Error: {"stack":"Error: PeriodicExportingMetricReader: metrics export failed (error AxiosError: Request failed with status code 401)\n    at WsQ._doRun (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:154284)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async WsQ._runOnce (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:153521)\n    at async WsQ.onForceFlush (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:154508)\n    at async WsQ.onShutdown (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:154631)\n    at async WsQ.shutdown (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:152106)\n    at async CtQ.shutdown (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1969:8622)\n    at async Promise.all (index 0)\n    at async ktQ.shutdown (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1969:12914)\n    at async Promise.all (index 0)","message":"PeriodicExportingMetricReader: metrics export failed (error AxiosError: Request failed with status code 401)","name":"Error"}
+    at Rp1.error (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1997:49442)
+    at qh1.error (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:12661)
+    at file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:61648
+    at rp6 (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:62194)
+    at WsQ._runOnce (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:153754)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async WsQ.onForceFlush (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:154508)
+    at async WsQ.onShutdown (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:154631)
+    at async WsQ.shutdown (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1956:152106)
+    at async CtQ.shutdown (file:///home/linuxbrew/.linuxbrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1969:8622)
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter shutdown complete
+[DEBUG] Writing to temp file: /home/jamestroutman/.claude.json.tmp.126349.1762880589317
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 47511 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/jamestroutman/.claude.json.tmp.126349.1762880589317 to /home/jamestroutman/.claude.json
+[DEBUG] File /home/jamestroutman/.claude.json written atomically

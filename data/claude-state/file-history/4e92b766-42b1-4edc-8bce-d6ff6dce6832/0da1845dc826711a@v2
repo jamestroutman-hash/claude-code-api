@@ -1,0 +1,96 @@
+/**
+ * Markdown utility functions
+ */
+
+/**
+ * Extract title from AI-generated markdown content
+ *
+ * Handles formats like:
+ * - `### FEAT-AI-004: Test Method Framework`
+ * - `## User Story Title`
+ * - `# Legacy Format`
+ *
+ * Extracts the text after the colon (if present) and removes markdown formatting
+ *
+ * @param markdown - The markdown content to parse
+ * @returns Extracted title or empty string if no heading found
+ *
+ * @example
+ * ```ts
+ * extractTitleFromMarkdown('### FEAT-AI-004: Test Method Framework **Priority**: High')
+ * // Returns: 'Test Method Framework'
+ * ```
+ */
+export function extractTitleFromMarkdown(markdown: string): string {
+  const lines = markdown.split('\n');
+
+  for (const line of lines) {
+    const trimmedLine = line.trim();
+
+    // Check for any heading level (###, ##, or #)
+    if (
+      trimmedLine.startsWith('### ') ||
+      trimmedLine.startsWith('## ') ||
+      trimmedLine.startsWith('# ')
+    ) {
+      // Remove heading markers
+      let headingText = trimmedLine.replace(/^#+\s+/, '').trim();
+
+      // Extract title after colon if present (e.g., "FEAT-AI-004: Title" -> "Title")
+      const colonIndex = headingText.indexOf(':');
+      if (colonIndex !== -1) {
+        headingText = headingText.substring(colonIndex + 1).trim();
+      }
+
+      // Remove markdown formatting like ** (bold), __ (italic), etc.
+      headingText = headingText
+        .replace(/\*\*/g, '') // Remove bold
+        .replace(/__/g, '')   // Remove italic
+        .replace(/\*/g, '')   // Remove single asterisk
+        .replace(/_/g, '')    // Remove single underscore
+        .trim();
+
+      return headingText;
+    }
+  }
+
+  return '';
+}
+
+/**
+ * Extract feature key from AI-generated markdown heading
+ *
+ * @param markdown - The markdown content to parse
+ * @returns Feature key (e.g., "FEAT-AI-004") or empty string
+ *
+ * @example
+ * ```ts
+ * extractFeatureKeyFromMarkdown('### FEAT-AI-004: Test Method Framework')
+ * // Returns: 'FEAT-AI-004'
+ * ```
+ */
+export function extractFeatureKeyFromMarkdown(markdown: string): string {
+  const lines = markdown.split('\n');
+
+  for (const line of lines) {
+    const trimmedLine = line.trim();
+
+    // Check for any heading level
+    if (
+      trimmedLine.startsWith('### ') ||
+      trimmedLine.startsWith('## ') ||
+      trimmedLine.startsWith('# ')
+    ) {
+      // Remove heading markers
+      const headingText = trimmedLine.replace(/^#+\s+/, '').trim();
+
+      // Extract key before colon (e.g., "FEAT-AI-004: Title" -> "FEAT-AI-004")
+      const colonIndex = headingText.indexOf(':');
+      if (colonIndex !== -1) {
+        return headingText.substring(0, colonIndex).trim();
+      }
+    }
+  }
+
+  return '';
+}

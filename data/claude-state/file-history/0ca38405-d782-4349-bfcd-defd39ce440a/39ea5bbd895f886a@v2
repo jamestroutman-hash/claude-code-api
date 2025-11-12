@@ -1,0 +1,622 @@
+'use client';
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useToast } from './Toast';
+import { useAIGeneration } from '../hooks/useAIGeneration';
+
+interface StoryCreationModalProps {
+  feature: {
+    id: string;
+    key: string;
+    title: string;
+    description?: string | null;
+    status: string;
+    confluence_page_id?: string | null;
+  };
+  epic: {
+    title: string;
+  };
+  workstream: {
+    id: string;
+    slug: string;
+  };
+  workspace_id: string;
+  epicKey: string;
+  onClose: () => void;
+}
+
+export function StoryCreationModal({
+  feature,
+  epic,
+  workstream,
+  workspace_id,
+  epicKey,
+  onClose,
+}: StoryCreationModalProps) {
+  const router = useRouter();
+  const { addToast } = useToast();
+
+  // Initialize AI generation hook
+  const ai = useAIGeneration({
+    generateEndpoint: '/api/generate-story/stream',
+    revisionEndpoint: '/api/generate-story/revision/stream',
+  });
+
+  const [isSaving, setIsSaving] = useState(false);
+  const [activeTab, setActiveTab] = useState<'edit' | 'preview' | 'console'>('edit');
+  const [title, setTitle] = useState<string>('');
+
+  /**
+   * Generate AI-powered user story from prompt
+   * @see /docs/specs/story-spec.md#creating-a-story-ai-generated
+   * Implements BR-004: User Story Format (auto-generates role, goal, benefit)
+   * Implements BR-008: AI Generation Tracking
+   */
+  const handleGenerate = async () => {
+    await ai.generate({
+      prompt: ai.prompt,
+      workstreamId: workstream.id,
+      featureContext: {
+        title: feature.title,
+        epicTitle: epic.title,
+        description: feature.description,
+        status: feature.status,
+        confluence_page_id: feature.confluence_page_id,
+      },
+    });
+
+    // Auto-extract title from markdown
+    const extractedTitle = extractTitleFromMarkdown(ai.markdown);
+    if (extractedTitle) {
+      setTitle(extractedTitle);
+    }
+  };
+
+  /**
+   * Revise AI-generated story based on user feedback
+   * @see /docs/specs/story-spec.md#ai-story-revision
+   * Implements BR-008: AI Generation Tracking with iterative refinement
+   */
+  const handleRevision = async () => {
+    await ai.revise();
+
+    // Update title if it changed in the revision
+    const extractedTitle = extractTitleFromMarkdown(ai.markdown);
+    if (extractedTitle) {
+      setTitle(extractedTitle);
+    }
+  };
+
+  /**
+   * Extract title from markdown content
+   */
+  const extractTitleFromMarkdown = (md: string): string => {
+    const lines = md.split('\n');
+    for (const line of lines) {
+      if (line.startsWith('## ') || line.startsWith('# ')) {
+        return line.replace(/^#+\s+/, '').trim();
+      }
+    }
+    return '';
+  };
+
+  /**
+   * Save story with external integrations (Confluence, Monday.com)
+   * @see /docs/specs/story-spec.md#creating-a-story-manual
+   * @see /docs/specs/document-persistence-spec.md#BR-001 (Persistence Order: DB → Confluence → Monday)
+   * @see /docs/specs/document-persistence-spec.md#BR-002 (Stories: DB + Confluence + Monday)
+   * @see /docs/specs/document-persistence-spec.md#BR-005 (Confluence Hierarchy - Stories)
+   * Implements BR-001-BR-003: Required associations and identifiers
+   * Implements BR-008: AI Generation Tracking (sets ai_generated flag)
+   * Implements BR-009: External Integration Links
+   */
+  const handleSave = async () => {
+    if (!ai.markdown.trim()) {
+      ai.setMarkdown(''); // Trigger error state if needed
+      return;
+    }
+
+    if (!title.trim()) {
+      return;
+    }
+
+    setIsSaving(true);
+
+    try {
+      // Use the new integrated save endpoint
+      const response = await fetch('/api/stories/save-with-integrations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          title,
+          description: ai.markdown,
+          workspace_id,
+          workstream_id: workstream.id,
+          feature_id: feature.id,
+          status: 'draft',
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to save story');
+      }
+
+      const { data, integrations } = await response.json();
+
+      // Build success message with integration details
+      let successMessage = `Story "${title}" saved successfully`;
+      const integrationDetails: string[] = [];
+
+      if (integrations?.confluence?.pageId) {
+        integrationDetails.push('Created Confluence page');
+      }
+
+      if (integrations?.monday?.itemId) {
+        integrationDetails.push('Created Monday.com item');
+      }
+
+      if (integrationDetails.length > 0) {
+        successMessage += ` (${integrationDetails.join(', ')})`;
+      }
+
+      // Show success toast
+      addToast(successMessage, 'success');
+
+      // Close modal and refresh the page
+      onClose();
+      router.refresh();
+    } catch (err: any) {
+      console.error('Error saving story:', err);
+      const errorMessage = err.message || 'Failed to save story';
+
+      // Show error toast
+      addToast(errorMessage, 'error');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 overflow-y-auto">
+      <div className="flex min-h-screen items-center justify-center p-4">
+        {/* Backdrop */}
+        <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
+
+        {/* Modal */}
+        <div className="relative z-10 w-full max-w-4xl rounded-lg bg-white shadow-xl">
+          <div className="max-h-[90vh] overflow-y-auto p-6">
+            {/* Header */}
+            <div className="mb-6 flex items-center justify-between">
+              <h2 className="text-2xl font-bold text-gray-900">Create User Story with AI</h2>
+              <button
+                onClick={onClose}
+                className="text-gray-400 hover:text-gray-600"
+                disabled={ai.isGenerating || isSaving}
+              >
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {/* Feature Context */}
+            <div className="mb-6 rounded-lg bg-gray-50 p-4">
+              <div className="text-sm text-gray-600">
+                <p>
+                  <span className="font-medium">Feature:</span> {feature.title}
+                </p>
+                <p>
+                  <span className="font-medium">Epic:</span> {epic.title}
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              {/* Conversation History */}
+              {ai.conversationHistory.length > 0 && (
+                <div className="space-y-4">
+                  {ai.conversationHistory.map((message, idx) => {
+                    const isExpanded = ai.expandedMessages.has(idx);
+                    const isLong = message.content.length > 200;
+                    const displayContent =
+                      isExpanded || !isLong
+                        ? message.content
+                        : message.content.substring(0, 200) + '...';
+
+                    return (
+                      <div
+                        key={idx}
+                        className={`rounded-lg border ${
+                          message.role === 'user'
+                            ? 'bg-blue-50 border-blue-200 ml-12'
+                            : 'bg-gray-50 border-gray-200 mr-12'
+                        }`}
+                      >
+                        <button
+                          onClick={() => ai.toggleMessage(idx)}
+                          className="w-full text-left p-4 hover:opacity-80 transition-opacity"
+                        >
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="text-xs font-semibold text-gray-500">
+                              {message.role === 'user' ? 'You' : 'Claude'}
+                            </div>
+                            {isLong && (
+                              <svg
+                                className={`h-5 w-5 text-gray-400 transition-transform ${
+                                  isExpanded ? 'rotate-180' : ''
+                                }`}
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            )}
+                          </div>
+                          <div className="text-sm text-gray-900 whitespace-pre-wrap">
+                            {displayContent}
+                          </div>
+                        </button>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/* Prompt Input Section */}
+              {!ai.sessionId ? (
+                <div className="rounded-lg border border-gray-200 bg-white p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                    Describe the User Story
+                  </h3>
+                  <div className="space-y-4">
+                    <div>
+                      <label
+                        htmlFor="prompt"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
+                        What user story would you like to create?
+                      </label>
+                      <textarea
+                        id="prompt"
+                        rows={4}
+                        className="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        placeholder="Example: As a user, I want to be able to filter search results by date..."
+                        value={ai.prompt}
+                        onChange={(e) => ai.setPrompt(e.target.value)}
+                        disabled={ai.isGenerating}
+                      />
+                    </div>
+
+                    <div className="flex justify-end gap-3">
+                      <button
+                        type="button"
+                        onClick={onClose}
+                        className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+                        disabled={ai.isGenerating}
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        type="button"
+                        onClick={handleGenerate}
+                        disabled={ai.isGenerating || !ai.prompt.trim()}
+                        className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {ai.isGenerating ? (
+                          <span className="flex items-center gap-2">
+                            <svg
+                              className="animate-spin h-4 w-4"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <circle
+                                className="opacity-25"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                              />
+                              <path
+                                className="opacity-75"
+                                fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                              />
+                            </svg>
+                            Generating...
+                          </span>
+                        ) : (
+                          'Generate Story'
+                        )}
+                      </button>
+                    </div>
+
+                    {ai.error && (
+                      <div className="rounded-md bg-red-50 border border-red-200 p-4">
+                        <p className="text-sm text-red-800">{ai.error}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                /* Revision Input Section */
+                <div className="rounded-lg border border-gray-200 bg-white p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                    Request Revisions
+                  </h3>
+                  <div className="space-y-4">
+                    <div>
+                      <label
+                        htmlFor="revisionPrompt"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
+                        What changes would you like to make?
+                      </label>
+                      <textarea
+                        id="revisionPrompt"
+                        rows={3}
+                        className="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        placeholder="Example: Add more acceptance criteria..."
+                        value={ai.revisionPrompt}
+                        onChange={(e) => ai.setRevisionPrompt(e.target.value)}
+                        disabled={ai.isGenerating}
+                      />
+                    </div>
+
+                    <div className="flex justify-end gap-3">
+                      <button
+                        type="button"
+                        onClick={handleRevision}
+                        disabled={ai.isGenerating || !ai.revisionPrompt.trim()}
+                        className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {ai.isGenerating ? (
+                          <span className="flex items-center gap-2">
+                            <svg
+                              className="animate-spin h-4 w-4"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <circle
+                                className="opacity-25"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                              />
+                              <path
+                                className="opacity-75"
+                                fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                              />
+                            </svg>
+                            Generating Revision...
+                          </span>
+                        ) : (
+                          'Generate Revision'
+                        )}
+                      </button>
+                    </div>
+
+                    {ai.error && (
+                      <div className="rounded-md bg-red-50 border border-red-200 p-4">
+                        <p className="text-sm text-red-800">{ai.error}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Markdown Editor Section */}
+              {ai.markdown && (
+                <div className="rounded-lg border border-gray-200 bg-white p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                    Draft User Story
+                  </h3>
+
+                  {/* Title Input */}
+                  <div className="mb-6">
+                    <label
+                      htmlFor="title"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Story Title
+                    </label>
+                    <input
+                      type="text"
+                      id="title"
+                      className="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      placeholder="Enter a title for this story"
+                      value={title}
+                      onChange={(e) => setTitle(e.target.value)}
+                    />
+                  </div>
+
+                  {/* Tabs */}
+                  <div className="border-b border-gray-200 mb-4">
+                    <nav className="-mb-px flex space-x-8" aria-label="Tabs">
+                      <button
+                        onClick={() => setActiveTab('edit')}
+                        className={`${
+                          activeTab === 'edit'
+                            ? 'border-blue-500 text-blue-600'
+                            : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                        } whitespace-nowrap border-b-2 py-2 px-1 text-sm font-medium`}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => setActiveTab('preview')}
+                        className={`${
+                          activeTab === 'preview'
+                            ? 'border-blue-500 text-blue-600'
+                            : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                        } whitespace-nowrap border-b-2 py-2 px-1 text-sm font-medium`}
+                      >
+                        Preview
+                      </button>
+                      <button
+                        onClick={() => setActiveTab('console')}
+                        className={`${
+                          activeTab === 'console'
+                            ? 'border-blue-500 text-blue-600'
+                            : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                        } whitespace-nowrap border-b-2 py-2 px-1 text-sm font-medium`}
+                      >
+                        Console
+                      </button>
+                    </nav>
+                  </div>
+
+                  {/* Tab Content */}
+                  <div className="space-y-4">
+                    {activeTab === 'edit' && (
+                      <div>
+                        <label
+                          htmlFor="markdown"
+                          className="block text-sm font-medium text-gray-700 mb-2"
+                        >
+                          Edit the generated user story
+                        </label>
+                        <textarea
+                          id="markdown"
+                          rows={20}
+                          className="block w-full rounded-md border border-gray-300 px-3 py-2 font-mono text-sm shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                          value={ai.markdown}
+                          onChange={(e) => ai.setMarkdown(e.target.value)}
+                        />
+                      </div>
+                    )}
+
+                    {activeTab === 'preview' && (
+                      <div className="rounded-md border border-gray-200 bg-gray-50 p-4 prose prose-sm max-w-none min-h-[400px]">
+                        {ai.markdown.split('\n').map((line, idx) => {
+                          // Simple markdown rendering for preview
+                          if (line.startsWith('# ')) {
+                            return (
+                              <h1 key={idx} className="text-2xl font-bold mb-2">
+                                {line.substring(2)}
+                              </h1>
+                            );
+                          }
+                          if (line.startsWith('## ')) {
+                            return (
+                              <h2 key={idx} className="text-xl font-bold mb-2 mt-4">
+                                {line.substring(3)}
+                              </h2>
+                            );
+                          }
+                          if (line.startsWith('### ')) {
+                            return (
+                              <h3 key={idx} className="text-lg font-semibold mb-1 mt-3">
+                                {line.substring(4)}
+                              </h3>
+                            );
+                          }
+                          if (line.startsWith('- ') || line.startsWith('* ')) {
+                            return (
+                              <li key={idx} className="ml-4">
+                                {line.substring(2)}
+                              </li>
+                            );
+                          }
+                          if (line.trim() === '') {
+                            return <br key={idx} />;
+                          }
+                          return (
+                            <p key={idx} className="mb-2">
+                              {line}
+                            </p>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    {activeTab === 'console' && (
+                      <div className="rounded-md border border-gray-200 bg-black p-4 min-h-[400px] max-h-[500px] overflow-y-auto">
+                        <pre className="text-xs text-green-400 font-mono whitespace-pre-wrap">
+                          {ai.consoleOutput || 'Console output will appear here...'}
+                        </pre>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Save Actions */}
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="flex justify-end gap-3">
+                      <button
+                        type="button"
+                        onClick={onClose}
+                        className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+                        disabled={isSaving}
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        type="button"
+                        onClick={handleSave}
+                        disabled={isSaving || !ai.markdown.trim()}
+                        className="rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {isSaving ? (
+                          <span className="flex items-center gap-2">
+                            <svg
+                              className="animate-spin h-4 w-4"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <circle
+                                className="opacity-25"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                              />
+                              <path
+                                className="opacity-75"
+                                fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                              />
+                            </svg>
+                            Saving...
+                          </span>
+                        ) : (
+                          'Save Story'
+                        )}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

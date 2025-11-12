@@ -1,0 +1,126 @@
+'use client';
+
+import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import rehypeSanitize from 'rehype-sanitize';
+import { EditFeatureModal } from './EditFeatureModal';
+
+interface FeatureHeaderProps {
+  feature: {
+    id: string;
+    key: string | null;
+    title: string;
+    description?: string | null;
+    status: string;
+    priority?: string | null;
+    start_date?: string | null;
+    target_date?: string | null;
+    business_value?: string | null;
+    target_users?: string | null;
+    functional_areas?: { id: string; name: string } | null;
+    confluence_page_id?: string | null;
+  };
+  confluenceBaseUrl?: string;
+  confluenceSpaceKey?: string;
+}
+
+/**
+ * Feature header component displaying key metadata and edit controls
+ * @see /docs/specs/feature-spec.md#BR-003
+ * @see /docs/specs/feature-spec.md#BR-004
+ * @see /docs/specs/feature-spec.md#BR-005
+ * @see /docs/specs/feature-spec.md#BR-006
+ * @see /docs/specs/feature-spec.md#BR-009
+ * Displays feature key (BR-003), title/description (BR-004), status (BR-005),
+ * priority (BR-006), and functional area (BR-009)
+ */
+export function FeatureHeader({ feature, confluenceBaseUrl, confluenceSpaceKey }: FeatureHeaderProps) {
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+
+  return (
+    <>
+      <div className="mb-4">
+        <div className="flex items-start justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-sm font-mono text-gray-500">{feature.key}</span>
+              {/* Status pill */}
+              <span
+                className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                  feature.status === 'in_progress'
+                    ? 'bg-blue-100 text-blue-800'
+                    : feature.status === 'completed'
+                    ? 'bg-green-100 text-green-800'
+                    : feature.status === 'discovery'
+                    ? 'bg-purple-100 text-purple-800'
+                    : 'bg-gray-100 text-gray-800'
+                }`}
+              >
+                {feature.status}
+              </span>
+              {/* Priority pill */}
+              <span
+                className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                  feature.priority === 'critical'
+                    ? 'bg-red-100 text-red-800'
+                    : feature.priority === 'high'
+                    ? 'bg-orange-100 text-orange-800'
+                    : feature.priority === 'medium'
+                    ? 'bg-yellow-100 text-yellow-800'
+                    : 'bg-gray-100 text-gray-800'
+                }`}
+              >
+                {feature.priority}
+              </span>
+              {/* Functional Area pill */}
+              {feature.functional_areas && (
+                <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium bg-indigo-100 text-indigo-800">
+                  {feature.functional_areas.name}
+                </span>
+              )}
+            </div>
+            <h1 className="text-3xl font-bold text-gray-900">{feature.title}</h1>
+            {feature.description && (
+              <div className="mt-4 prose prose-sm max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900 prose-code:text-pink-600 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 prose-pre:text-gray-100">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw, rehypeSanitize]}
+                >
+                  {feature.description}
+                </ReactMarkdown>
+              </div>
+            )}
+            {feature.confluence_page_id && confluenceBaseUrl && confluenceSpaceKey && (
+              <div className="mt-3 text-sm text-gray-600">
+                <span className="text-gray-500">Confluence:</span>{' '}
+                <a
+                  href={`${confluenceBaseUrl}/wiki/spaces/${confluenceSpaceKey}/pages/${feature.confluence_page_id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 hover:underline"
+                >
+                  View Page
+                </a>
+              </div>
+            )}
+          </div>
+
+          <button
+            onClick={() => setIsEditModalOpen(true)}
+            className="ml-4 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+
+      <EditFeatureModal
+        feature={feature}
+        isOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
+      />
+    </>
+  );
+}

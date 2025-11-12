@@ -1,0 +1,386 @@
+"""Admin endpoints for Claude Code management."""
+
+import asyncio
+import json
+from typing import Optional
+from fastapi import APIRouter, HTTPException
+from fastapi.responses import StreamingResponse, HTMLResponse
+from pydantic import BaseModel
+import structlog
+
+from ..core.config import settings
+
+logger = structlog.get_logger()
+
+router = APIRouter(prefix="/admin", tags=["admin"])
+
+
+@router.get("/console", response_class=HTMLResponse)
+async def admin_console():
+    """Serve the admin console HTML interface."""
+    html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code API - Admin Console</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1e1e1e; color: #d4d4d4; padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #fff; margin-bottom: 30px; }
+        .section { background: #252526; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+        .section h2 { color: #fff; margin-bottom: 15px; font-size: 18px; }
+        .input-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; color: #9cdcfe; }
+        input, textarea {
+            width: 100%; padding: 10px; background: #1e1e1e;
+            border: 1px solid #3e3e42; border-radius: 4px; color: #d4d4d4;
+            font-family: 'Courier New', monospace;
+        }
+        button {
+            background: #0e639c; color: #fff; border: none;
+            padding: 10px 20px; border-radius: 4px; cursor: pointer;
+            font-size: 14px; margin-right: 10px;
+        }
+        button:hover { background: #1177bb; }
+        button:disabled { background: #3e3e42; cursor: not-allowed; }
+        .output {
+            background: #1e1e1e; border: 1px solid #3e3e42; border-radius: 4px;
+            padding: 15px; min-height: 300px; max-height: 500px; overflow-y: auto;
+            font-family: 'Courier New', monospace; font-size: 13px;
+            white-space: pre-wrap; word-wrap: break-word;
+        }
+        .output .stdout { color: #d4d4d4; }
+        .output .stderr { color: #f48771; }
+        .output .success { color: #4ec9b0; }
+        .output .error { color: #f48771; }
+        .status {
+            background: #1e1e1e; border: 1px solid #3e3e42; border-radius: 4px;
+            padding: 15px; font-family: 'Courier New', monospace; font-size: 13px;
+        }
+        .status-item { margin-bottom: 8px; }
+        .status-label { color: #9cdcfe; display: inline-block; width: 150px; }
+        .status-value { color: #4ec9b0; }
+        .quick-commands { display: flex; gap: 10px; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Claude Code API - Admin Console</h1>
+        <div class="section">
+            <h2>📊 Status</h2>
+            <div class="status" id="status">Click "Check Status" to load...</div><br>
+            <button onclick="checkStatus()">Check Status</button>
+        </div>
+        <div class="section">
+            <h2>⚡ Quick Actions</h2>
+            <div class="quick-commands">
+                <button onclick="quickCommand('/login')">Login</button>
+                <button onclick="quickCommand('/logout')">Logout</button>
+                <button onclick="quickCommand('--version')">Check Version</button>
+                <button onclick="quickCommand('/help')">Help</button>
+            </div>
+        </div>
+        <div class="section">
+            <h2>🔑 Set API Key</h2>
+            <div class="input-group">
+                <label>Anthropic API Key:</label>
+                <input type="password" id="apiKey" placeholder="sk-ant-...">
+            </div>
+            <button onclick="setApiKey()">Set API Key</button>
+        </div>
+        <div class="section">
+            <h2>💻 Execute Command</h2>
+            <div class="input-group">
+                <label>Command (e.g., /login, --help):</label>
+                <input type="text" id="command" placeholder="/login" value="/login">
+            </div>
+            <button onclick="executeCommand()" id="executeBtn">Execute</button>
+            <button onclick="clearOutput()">Clear Output</button>
+        </div>
+        <div class="section">
+            <h2>📤 Output</h2>
+            <div class="output" id="output"></div>
+        </div>
+    </div>
+    <script>
+        const API_BASE = window.location.origin;
+        function appendOutput(text, className = '') {
+            const output = document.getElementById('output');
+            const line = document.createElement('div');
+            line.className = className; line.textContent = text;
+            output.appendChild(line); output.scrollTop = output.scrollHeight;
+        }
+        function clearOutput() { document.getElementById('output').innerHTML = ''; }
+        async function checkStatus() {
+            try {
+                const response = await fetch(`${API_BASE}/admin/status`);
+                const data = await response.json();
+                document.getElementById('status').innerHTML = `
+                    <div class="status-item"><span class="status-label">Claude Binary:</span><span class="status-value">${data.claude_binary || 'unknown'}</span></div>
+                    <div class="status-item"><span class="status-label">Claude Version:</span><span class="status-value">${data.claude_version || 'unknown'}</span></div>
+                    <div class="status-item"><span class="status-label">Has API Key:</span><span class="status-value">${data.has_api_key ? 'Yes ✓' : 'No ✗'}</span></div>
+                    <div class="status-item"><span class="status-label">Config Directory:</span><span class="status-value">${data.config_directory || 'unknown'}</span></div>
+                `;
+            } catch (error) {
+                document.getElementById('status').innerHTML = `<div class="error">Error: ${error.message}</div>`;
+            }
+        }
+        async function setApiKey() {
+            const apiKey = document.getElementById('apiKey').value.trim();
+            if (!apiKey) { alert('Please enter an API key'); return; }
+            clearOutput(); appendOutput('Setting API key...', 'stdout');
+            try {
+                const response = await fetch(`${API_BASE}/admin/set-api-key?api_key=${encodeURIComponent(apiKey)}`, { method: 'POST' });
+                const data = await response.json();
+                if (data.success) {
+                    appendOutput('✓ API key set successfully!', 'success');
+                    appendOutput(`Claude version: ${data.version}`, 'stdout');
+                    checkStatus();
+                } else {
+                    appendOutput('✗ Failed to set API key', 'error');
+                    appendOutput(data.error || data.message, 'stderr');
+                }
+            } catch (error) { appendOutput(`✗ Error: ${error.message}`, 'error'); }
+        }
+        async function executeCommand() {
+            const command = document.getElementById('command').value.trim();
+            if (!command) { alert('Please enter a command'); return; }
+            const executeBtn = document.getElementById('executeBtn');
+            executeBtn.disabled = true; clearOutput();
+            appendOutput(`> claude ${command}`, 'stdout'); appendOutput('', 'stdout');
+            try {
+                const response = await fetch(`${API_BASE}/admin/execute`, {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ command: 'claude', args: command.split(' ') })
+                });
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    const text = decoder.decode(value);
+                    const lines = text.split('\\n').filter(l => l.trim());
+                    for (const line of lines) {
+                        try {
+                            const data = JSON.parse(line);
+                            if (data.type === 'stream') {
+                                appendOutput(data.data, data.stream === 'stderr' ? 'stderr' : 'stdout');
+                            } else if (data.type === 'complete') {
+                                appendOutput('', 'stdout');
+                                appendOutput(`Command completed with exit code ${data.exit_code}`, data.success ? 'success' : 'error');
+                            } else if (data.type === 'error') {
+                                appendOutput(`Error: ${data.error}`, 'error');
+                            }
+                        } catch (e) { appendOutput(line, 'stdout'); }
+                    }
+                }
+            } catch (error) { appendOutput(`Error: ${error.message}`, 'error');
+            } finally { executeBtn.disabled = false; }
+        }
+        function quickCommand(args) { document.getElementById('command').value = args; executeCommand(); }
+        window.addEventListener('load', checkStatus);
+    </script>
+</body>
+</html>"""
+    return HTMLResponse(content=html_content)
+
+
+class CommandRequest(BaseModel):
+    """Request to execute a Claude Code command."""
+    command: str
+    args: list[str] = []
+    cwd: Optional[str] = None
+
+
+class CommandResponse(BaseModel):
+    """Response from command execution."""
+    success: bool
+    exit_code: int
+    output: str
+    error: str
+
+
+async def stream_command_output(cmd: list[str], cwd: Optional[str] = None):
+    """Execute a command and stream its output."""
+    try:
+        logger.info(
+            "Executing admin command",
+            command=" ".join(cmd),
+            cwd=cwd
+        )
+
+        # Start the process
+        process = await asyncio.create_subprocess_exec(
+            *cmd,
+            cwd=cwd or "/app",
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            stdin=asyncio.subprocess.PIPE
+        )
+
+        # Stream stdout
+        async def read_stream(stream, stream_name):
+            while True:
+                line = await stream.readline()
+                if not line:
+                    break
+
+                text = line.decode('utf-8', errors='replace')
+                yield json.dumps({
+                    "type": "stream",
+                    "stream": stream_name,
+                    "data": text
+                }) + "\n"
+
+        # Read both stdout and stderr
+        async for chunk in read_stream(process.stdout, "stdout"):
+            yield chunk
+
+        async for chunk in read_stream(process.stderr, "stderr"):
+            yield chunk
+
+        # Wait for process to complete
+        await process.wait()
+
+        # Send final status
+        yield json.dumps({
+            "type": "complete",
+            "exit_code": process.returncode,
+            "success": process.returncode == 0
+        }) + "\n"
+
+    except Exception as e:
+        logger.error(
+            "Command execution failed",
+            error=str(e)
+        )
+        yield json.dumps({
+            "type": "error",
+            "error": str(e)
+        }) + "\n"
+
+
+@router.post("/execute", response_class=StreamingResponse)
+async def execute_command(request: CommandRequest):
+    """
+    Execute a Claude Code command and stream the output.
+
+    This endpoint allows you to run any Claude Code command, including:
+    - /login - Authenticate with Anthropic
+    - /logout - Log out
+    - /status - Check current status
+    - Any other Claude CLI command
+
+    Example:
+    ```json
+    {
+        "command": "claude",
+        "args": ["/login"]
+    }
+    ```
+    """
+    # Build the full command
+    cmd = [request.command] + request.args
+
+    # Security: Only allow claude commands
+    if request.command not in ["claude", settings.claude_binary_path]:
+        raise HTTPException(
+            status_code=400,
+            detail="Only Claude Code commands are allowed"
+        )
+
+    return StreamingResponse(
+        stream_command_output(cmd, request.cwd),
+        media_type="application/x-ndjson"
+    )
+
+
+@router.post("/login")
+async def login():
+    """
+    Initiate Claude Code login flow.
+
+    This will start the interactive login process.
+    You'll receive a URL to visit in your browser to authenticate.
+    """
+    cmd = [settings.claude_binary_path, "/login"]
+
+    return StreamingResponse(
+        stream_command_output(cmd),
+        media_type="application/x-ndjson"
+    )
+
+
+@router.post("/set-api-key")
+async def set_api_key(api_key: str):
+    """
+    Set the Anthropic API key directly via environment variable.
+
+    Note: This sets the key for the current session only.
+    For persistent configuration, use the /login endpoint or
+    set ANTHROPIC_API_KEY environment variable.
+    """
+    import os
+    os.environ['ANTHROPIC_API_KEY'] = api_key
+
+    # Test the key by running a simple command
+    cmd = [settings.claude_binary_path, "--version"]
+
+    try:
+        process = await asyncio.create_subprocess_exec(
+            *cmd,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            env={**os.environ, 'ANTHROPIC_API_KEY': api_key}
+        )
+        stdout, stderr = await process.communicate()
+
+        if process.returncode == 0:
+            return {
+                "success": True,
+                "message": "API key set successfully",
+                "version": stdout.decode().strip()
+            }
+        else:
+            return {
+                "success": False,
+                "message": "Failed to validate API key",
+                "error": stderr.decode()
+            }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to set API key: {str(e)}"
+        )
+
+
+@router.get("/status")
+async def get_status():
+    """Get Claude Code status and configuration."""
+    cmd = [settings.claude_binary_path, "--version"]
+
+    try:
+        process = await asyncio.create_subprocess_exec(
+            *cmd,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE
+        )
+        stdout, stderr = await process.communicate()
+
+        import os
+        return {
+            "claude_binary": settings.claude_binary_path,
+            "claude_version": stdout.decode().strip() if process.returncode == 0 else "unknown",
+            "has_api_key": "ANTHROPIC_API_KEY" in os.environ,
+            "config_directory": os.path.expanduser("~/.config/claude")
+        }
+    except Exception as e:
+        return {
+            "error": str(e),
+            "claude_binary": settings.claude_binary_path
+        }
